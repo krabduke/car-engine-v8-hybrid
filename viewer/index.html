@@ -139,6 +139,16 @@
   #rpm:focus-visible{outline:2px solid #C99A5E; outline-offset:3px}
   #rpmval{font-size:11px; color:#DCE6EB; font-variant-numeric:tabular-nums;
           min-width:64px; text-align:right}
+
+  #about{
+    position:absolute; left:16px; bottom:96px; max-width:320px; z-index:5;
+    font-size:11px; line-height:1.55; color:#8A969D;
+    background:rgba(16,22,25,.82); border:1px solid #2C383E; border-radius:3px;
+    padding:10px 12px;
+  }
+  #about b{color:#C6D2D8; font-weight:600; display:block; margin-bottom:4px;
+           font-size:11.5px}
+  @media (max-width:900px){ #about{display:none} }
 </style>
 </head>
 <body>
@@ -191,6 +201,9 @@
     <button class="btn" id="reset" type="button">Reset view</button>
   </div>
 </div>
+
+
+<div id="about"><b>What this is</b>A 2.0-litre flat-plane V8 turning 16,000 rpm, built to power the VX-1. Flat-plane means all four crankpins lie in one plane, which gives an even firing interval on a 90-degree V and lets the engine rev; the penalty is secondary imbalance, which a light reciprocating assembly keeps tolerable. Run it and the crank, rods and pistons move on a real slider-crank solved live — the piston travel is the stroke to three figures because it is the same kinematics the geometry was built from.</div>
 
 <div id="load">
   <p id="loadtxt">Loading engine…</p>
