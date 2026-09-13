@@ -10,11 +10,12 @@ sys.path.insert(0, HERE)
 import spec              # noqa: E402
 import mesh as meshlib   # noqa: E402
 import materials         # noqa: E402
-from parts import (block, bottomend, heads, induction,   # noqa: E402
+from parts import (block, bottomend, heads, plumbing, induction,   # noqa: E402
                    turbo, hybrid, drive, detail)
 
 MM = 0.001
 MODULES = [("block", block), ("bottom end", bottomend), ("heads", heads),
+           ("plumbing", plumbing),
            ("induction", induction), ("turbo", turbo), ("hybrid", hybrid),
            ("drive", drive), ("detail", detail)]
 COLLECTIONS = ["01 Block", "02 Bottom End", "03 Heads and Valvetrain",
@@ -26,7 +27,7 @@ def collection_for(n):
     n = n.lower()
     if n.startswith(("valve_spring", "spring_retainer", "retainer_",
                      "bucket_", "tappet_", "head_stud", "sparkplug",
-                     "camcover", "oil_filler")):
+                     "camcover", "oil_filler", "collets_", "cam_caps")):
         return "03 Heads and Valvetrain"
     if n.startswith(("timing_", "oil_", "coolant_", "sump_bolt", "dry_sump",
                      "sensor", "water_outlet", "gallery_plug", "mount_boss")):
@@ -34,17 +35,22 @@ def collection_for(n):
     if n.startswith(("turbo_wheel", "heat_shield")):
         return "05 Turbo and Exhaust"
     if n.startswith(("crank", "piston", "conrod", "rod_cap", "rings_",
-                     "gudgeon_")):
+                     "ring_", "gudgeon_", "main_shell", "main_cap",
+                     "rod_shell", "rod_bolts")):
         return "02 Bottom End"
     if n.startswith(("head", "cam", "valve", "injector", "coil")):
         return "03 Heads and Valvetrain"
-    if n.startswith(("plenum", "trumpet", "throttle")):
+    if n.startswith(("plenum", "trumpet", "throttle", "runner_")):
         return "04 Induction"
-    if n.startswith(("turbo", "exhaust", "tailpipe", "wastegate")):
+    if n.startswith(("turbo", "exhaust", "tailpipe", "wastegate",
+                     "primary_", "collector_")):
         return "05 Turbo and Exhaust"
     if n.startswith(("mgu", "inverter", "battery", "ecu")):
         return "06 Hybrid"
-    if n.startswith(("flywheel", "clutch", "bellhousing", "pump")):
+    if n.startswith(("flywheel", "clutch", "bellhousing", "pump",
+                     "alternator", "starter", "accessory_", "breathers",
+                     "catch_tank", "dipstick", "fuel_rail", "fuel_feeds",
+                     "hp_fuel_pump")):
         return "07 Drive and Ancillaries"
     return "01 Block"
 

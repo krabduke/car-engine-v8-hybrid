@@ -111,7 +111,23 @@ def _valves():
         vv = common.along_bank(vv, s["x"], spec.DECK_HEIGHT - 1.0,
                                s["bank"], s["lat"])
         kind = "in" if s["is_in"] else "ex"
-        out[f"valve_{kind}_{s['n']}_{s['k'] % 2 + 1}"] = (vv, vf)
+        tag = f"{s['n']}_{s['k'] % 2 + 1}"
+        out[f"valve_{kind}_{tag}"] = (vv, vf)
+
+        # the pair of collets that grip the keeper groove and hold the
+        # retainer down. They are what actually keeps the valve in the engine.
+        cv, cf = mesh.revolve_closed(
+            [(-4.2, V["stem_r"] - V["keeper_groove"] * 0.8),
+             (4.2, V["stem_r"] - V["keeper_groove"] * 0.8),
+             (4.2, V["stem_r"] + 2.6), (-4.2, V["stem_r"] + 2.6)],
+            12, sweep=math.pi * 0.86)
+        t = s["tilt"]
+        cv = [(px - V["length"] + 6.0, py, pz) for (px, py, pz) in cv]
+        cv = [(px * math.cos(t) - py * math.sin(t),
+               px * math.sin(t) + py * math.cos(t), pz) for (px, py, pz) in cv]
+        cv = common.along_bank(cv, s["x"], spec.DECK_HEIGHT - 1.0,
+                               s["bank"], s["lat"])
+        out[f"collets_{kind}_{tag}"] = (cv, cf)
     return out
 
 

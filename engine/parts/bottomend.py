@@ -104,13 +104,15 @@ def _pistons_and_rods():
         pv = common.along_bank(pv, x, along, bank)
         out[f"piston_{n}"] = (pv, pf)
 
-        # ring pack: three rings in the crown grooves
-        rings = []
-        for k, (dz, rr) in enumerate(((-2.2, r - 0.4), (-5.4, r - 0.5),
-                                      (-9.0, r - 0.6))):
-            rv, rf = mesh.tube(dz - 1.1, dz + 1.1, rr - 2.6, rr, 28)
-            rings.append((common.along_bank(rv, x, along, bank), rf))
-        out[f"rings_{n}"] = mesh.join(*rings)
+        # Ring pack: top compression, second compression, oil control. Three
+        # separate parts with three different jobs and three different
+        # sections -- the oil ring is a scraper and is nothing like the other
+        # two -- so three objects, not one called "rings".
+        for tag, dz, rr, t, h in (("top", -2.2, r - 0.4, 2.6, 1.1),
+                                  ("second", -5.4, r - 0.5, 2.9, 1.2),
+                                  ("oil", -9.0, r - 0.6, 3.6, 1.5)):
+            rv, rf = mesh.tube(dz - h, dz + h, rr - t, rr, 28)
+            out[f"ring_{tag}_{n}"] = (common.along_bank(rv, x, along, bank), rf)
 
         # gudgeon pin
         gv, gf = mesh.tube(-13.0, 13.0, 0.0, P["pin_r"], 16)

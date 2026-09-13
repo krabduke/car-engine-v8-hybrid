@@ -141,29 +141,29 @@
    "key": "02 Bottom End",
    "label": "Bottom end",
    "color": "#8E939A",
-   "parts": 41,
-   "faces": 13120
+   "parts": 89,
+   "faces": 15810
   },
   {
    "key": "03 Heads and Valvetrain",
    "label": "Heads",
    "color": "#7E8A93",
-   "parts": 201,
-   "faces": 34864
+   "parts": 234,
+   "faces": 36816
   },
   {
    "key": "04 Induction",
    "label": "Induction",
    "color": "#5A6B74",
-   "parts": 3,
-   "faces": 1568
+   "parts": 11,
+   "faces": 1776
   },
   {
    "key": "05 Turbo and Exhaust",
    "label": "Turbo",
    "color": "#A8663C",
-   "parts": 5,
-   "faces": 2752
+   "parts": 15,
+   "faces": 3184
   },
   {
    "key": "06 Hybrid",
@@ -176,8 +176,8 @@
    "key": "07 Drive and Ancillaries",
    "label": "Drive",
    "color": "#77706A",
-   "parts": 15,
-   "faces": 10710
+   "parts": 27,
+   "faces": 12120
   }
  ],
  "parts": {
@@ -783,173 +783,173 @@
     "cyl": 8
    }
   },
-  "rings_1": {
+  "ring_oil_1": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -194.0,
+   "x1": -112.0,
+   "f": 112
+  },
+  "ring_oil_2": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -194.0,
+   "x1": -112.0,
+   "f": 112
+  },
+  "ring_oil_3": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -92.1,
+   "x1": -9.9,
+   "f": 112
+  },
+  "ring_oil_4": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -92.1,
+   "x1": -9.9,
+   "f": 112
+  },
+  "ring_oil_5": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 9.9,
+   "x1": 92.1,
+   "f": 112
+  },
+  "ring_oil_6": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 9.9,
+   "x1": 92.1,
+   "f": 112
+  },
+  "ring_oil_7": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 112.0,
+   "x1": 194.0,
+   "f": 112
+  },
+  "ring_oil_8": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 112.0,
+   "x1": 194.0,
+   "f": 112
+  },
+  "ring_second_1": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -194.2,
-   "x1": -111.7,
-   "f": 336,
-   "pivot": {
-    "p": [
-     -153.0,
-     -53.25,
-     53.25
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 1
-   }
+   "x1": -111.9,
+   "f": 112
   },
-  "rings_2": {
+  "ring_second_2": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -194.2,
+   "x1": -111.9,
+   "f": 112
+  },
+  "ring_second_3": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -92.2,
+   "x1": -9.9,
+   "f": 112
+  },
+  "ring_second_4": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -92.2,
+   "x1": -9.9,
+   "f": 112
+  },
+  "ring_second_5": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 9.9,
+   "x1": 92.2,
+   "f": 112
+  },
+  "ring_second_6": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 9.9,
+   "x1": 92.2,
+   "f": 112
+  },
+  "ring_second_7": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 111.9,
+   "x1": 194.2,
+   "f": 112
+  },
+  "ring_second_8": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 111.9,
+   "x1": 194.2,
+   "f": 112
+  },
+  "ring_top_1": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -194.3,
    "x1": -111.7,
-   "f": 336,
-   "pivot": {
-    "p": [
-     -153.0,
-     75.43,
-     75.43
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 2
-   }
+   "f": 112
   },
-  "rings_3": {
+  "ring_top_2": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -92.3,
-   "x1": -9.7,
-   "f": 336,
-   "pivot": {
-    "p": [
-     -51.0,
-     -64.68,
-     64.68
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 3
-   }
+   "x0": -194.3,
+   "x1": -111.7,
+   "f": 112
   },
-  "rings_4": {
+  "ring_top_3": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -92.3,
-   "x1": -9.7,
-   "f": 336,
-   "pivot": {
-    "p": [
-     -51.0,
-     45.66,
-     45.66
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 4
-   }
+   "x0": -92.2,
+   "x1": -9.8,
+   "f": 112
   },
-  "rings_5": {
+  "ring_top_4": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": 9.7,
-   "x1": 92.3,
-   "f": 336,
-   "pivot": {
-    "p": [
-     51.0,
-     -64.68,
-     64.68
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 5
-   }
+   "x0": -92.2,
+   "x1": -9.8,
+   "f": 112
   },
-  "rings_6": {
+  "ring_top_5": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": 9.7,
-   "x1": 92.3,
-   "f": 336,
-   "pivot": {
-    "p": [
-     51.0,
-     45.66,
-     45.66
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 6
-   }
+   "x0": 9.8,
+   "x1": 92.2,
+   "f": 112
   },
-  "rings_7": {
+  "ring_top_6": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": 9.8,
+   "x1": 92.2,
+   "f": 112
+  },
+  "ring_top_7": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 111.7,
-   "x1": 194.2,
-   "f": 336,
-   "pivot": {
-    "p": [
-     153.0,
-     -53.25,
-     53.25
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 7
-   }
+   "x1": 194.3,
+   "f": 112
   },
-  "rings_8": {
+  "ring_top_8": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 111.7,
-   "x1": 194.2,
-   "f": 336,
-   "pivot": {
-    "p": [
-     153.0,
-     75.43,
-     75.43
-    ],
-    "axis": [
-     1.0,
-     0.0,
-     0.0
-    ],
-    "role": "slider",
-    "cyl": 8
-   }
+   "x1": 194.3,
+   "f": 112
   },
   "rod_cap_1": {
    "g": "02 Bottom End",
@@ -1483,6 +1483,230 @@
    "x1": 227.0,
    "f": 112
   },
+  "collets_ex_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -166.8,
+   "x1": -161.6,
+   "f": 50
+  },
+  "collets_ex_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -139.2,
+   "x1": -134.0,
+   "f": 50
+  },
+  "collets_ex_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -166.8,
+   "x1": -161.6,
+   "f": 50
+  },
+  "collets_ex_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -139.2,
+   "x1": -134.0,
+   "f": 50
+  },
+  "collets_ex_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -64.8,
+   "x1": -59.6,
+   "f": 50
+  },
+  "collets_ex_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -37.2,
+   "x1": -32.0,
+   "f": 50
+  },
+  "collets_ex_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -64.8,
+   "x1": -59.6,
+   "f": 50
+  },
+  "collets_ex_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -37.2,
+   "x1": -32.0,
+   "f": 50
+  },
+  "collets_ex_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 37.2,
+   "x1": 42.4,
+   "f": 50
+  },
+  "collets_ex_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 64.8,
+   "x1": 70.0,
+   "f": 50
+  },
+  "collets_ex_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 37.2,
+   "x1": 42.4,
+   "f": 50
+  },
+  "collets_ex_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 64.8,
+   "x1": 70.0,
+   "f": 50
+  },
+  "collets_ex_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 139.2,
+   "x1": 144.4,
+   "f": 50
+  },
+  "collets_ex_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 166.8,
+   "x1": 172.0,
+   "f": 50
+  },
+  "collets_ex_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 139.2,
+   "x1": 144.4,
+   "f": 50
+  },
+  "collets_ex_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 166.8,
+   "x1": 172.0,
+   "f": 50
+  },
+  "collets_in_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -169.1,
+   "x1": -164.0,
+   "f": 50
+  },
+  "collets_in_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -136.8,
+   "x1": -131.7,
+   "f": 50
+  },
+  "collets_in_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -169.1,
+   "x1": -164.0,
+   "f": 50
+  },
+  "collets_in_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -136.8,
+   "x1": -131.7,
+   "f": 50
+  },
+  "collets_in_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -67.1,
+   "x1": -62.0,
+   "f": 50
+  },
+  "collets_in_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -34.9,
+   "x1": -29.7,
+   "f": 50
+  },
+  "collets_in_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -67.1,
+   "x1": -62.0,
+   "f": 50
+  },
+  "collets_in_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -34.9,
+   "x1": -29.7,
+   "f": 50
+  },
+  "collets_in_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 34.9,
+   "x1": 40.0,
+   "f": 50
+  },
+  "collets_in_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 67.1,
+   "x1": 72.3,
+   "f": 50
+  },
+  "collets_in_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 34.9,
+   "x1": 40.0,
+   "f": 50
+  },
+  "collets_in_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 67.1,
+   "x1": 72.3,
+   "f": 50
+  },
+  "collets_in_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 136.8,
+   "x1": 142.0,
+   "f": 50
+  },
+  "collets_in_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 169.1,
+   "x1": 174.3,
+   "f": 50
+  },
+  "collets_in_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 136.8,
+   "x1": 142.0,
+   "f": 50
+  },
+  "collets_in_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 169.1,
+   "x1": 174.3,
+   "f": 50
+  },
   "head_l": {
    "g": "03 Heads and Valvetrain",
    "mat": "alu_cast",
@@ -1846,6 +2070,447 @@
    "x0": 152.2,
    "x1": 186.1,
    "f": 280
+  },
+  "accessory_belt": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "rubber_blk",
+   "x0": -259.0,
+   "x1": -245.0,
+   "f": 294
+  },
+  "accessory_pulleys": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -259.0,
+   "x1": -237.0,
+   "f": 320
+  },
+  "alternator": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_cast",
+   "x0": -318.0,
+   "x1": -242.0,
+   "f": 220
+  },
+  "breathers": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -228.7,
+   "x1": -148.8,
+   "f": 44
+  },
+  "cam_caps": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "alu_forged",
+   "x0": -185.6,
+   "x1": 140.5,
+   "f": 352
+  },
+  "catch_tank": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -196.0,
+   "x1": -64.0,
+   "f": 90
+  },
+  "collector_1": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -178.0,
+   "x1": -124.0,
+   "f": 64
+  },
+  "collector_2": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": 58.0,
+   "x1": 112.0,
+   "f": 64
+  },
+  "dipstick": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "steel_nitrided",
+   "x0": 168.0,
+   "x1": 196.0,
+   "f": 8
+  },
+  "fuel_feeds_l": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "steel_nitrided",
+   "x0": -157.5,
+   "x1": 157.5,
+   "f": 72
+  },
+  "fuel_feeds_r": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "steel_nitrided",
+   "x0": -157.5,
+   "x1": 157.5,
+   "f": 72
+  },
+  "fuel_rail_l": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -218.0,
+   "x1": 218.0,
+   "f": 14
+  },
+  "fuel_rail_r": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -218.0,
+   "x1": 218.0,
+   "f": 14
+  },
+  "hp_fuel_pump": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_cast",
+   "x0": -238.0,
+   "x1": -166.0,
+   "f": 154
+  },
+  "main_cap_1": {
+   "g": "02 Bottom End",
+   "mat": "alu_forged",
+   "x0": -214.4,
+   "x1": -197.6,
+   "f": 22
+  },
+  "main_cap_2": {
+   "g": "02 Bottom End",
+   "mat": "alu_forged",
+   "x0": -111.4,
+   "x1": -94.6,
+   "f": 22
+  },
+  "main_cap_3": {
+   "g": "02 Bottom End",
+   "mat": "alu_forged",
+   "x0": -8.4,
+   "x1": 8.4,
+   "f": 22
+  },
+  "main_cap_4": {
+   "g": "02 Bottom End",
+   "mat": "alu_forged",
+   "x0": 94.6,
+   "x1": 111.4,
+   "f": 22
+  },
+  "main_cap_5": {
+   "g": "02 Bottom End",
+   "mat": "alu_forged",
+   "x0": 197.6,
+   "x1": 214.4,
+   "f": 22
+  },
+  "main_shell_1_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -212.1,
+   "x1": -199.9,
+   "f": 82
+  },
+  "main_shell_1_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -212.1,
+   "x1": -199.9,
+   "f": 82
+  },
+  "main_shell_2_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -109.1,
+   "x1": -96.9,
+   "f": 82
+  },
+  "main_shell_2_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -109.1,
+   "x1": -96.9,
+   "f": 82
+  },
+  "main_shell_3_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -6.1,
+   "x1": 6.1,
+   "f": 82
+  },
+  "main_shell_3_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -6.1,
+   "x1": 6.1,
+   "f": 82
+  },
+  "main_shell_4_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 96.9,
+   "x1": 109.1,
+   "f": 82
+  },
+  "main_shell_4_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 96.9,
+   "x1": 109.1,
+   "f": 82
+  },
+  "main_shell_5_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 199.9,
+   "x1": 212.1,
+   "f": 82
+  },
+  "main_shell_5_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 199.9,
+   "x1": 212.1,
+   "f": 82
+  },
+  "primary_1": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -175.5,
+   "x1": -118.5,
+   "f": 38
+  },
+  "primary_2": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -176.9,
+   "x1": -118.0,
+   "f": 38
+  },
+  "primary_3": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -170.7,
+   "x1": -37.3,
+   "f": 38
+  },
+  "primary_4": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -173.0,
+   "x1": -36.9,
+   "f": 38
+  },
+  "primary_5": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": 37.3,
+   "x1": 104.7,
+   "f": 38
+  },
+  "primary_6": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": 36.9,
+   "x1": 104.3,
+   "f": 38
+  },
+  "primary_7": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": 64.2,
+   "x1": 167.2,
+   "f": 38
+  },
+  "primary_8": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": 61.9,
+   "x1": 167.7,
+   "f": 38
+  },
+  "rod_bolts": {
+   "g": "02 Bottom End",
+   "mat": "titanium",
+   "x0": -158.7,
+   "x1": 158.7,
+   "f": 576
+  },
+  "rod_shell_1_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -162.0,
+   "x1": -144.0,
+   "f": 74
+  },
+  "rod_shell_1_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -162.0,
+   "x1": -144.0,
+   "f": 74
+  },
+  "rod_shell_2_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -162.0,
+   "x1": -144.0,
+   "f": 74
+  },
+  "rod_shell_2_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -162.0,
+   "x1": -144.0,
+   "f": 74
+  },
+  "rod_shell_3_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -60.0,
+   "x1": -42.0,
+   "f": 74
+  },
+  "rod_shell_3_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -60.0,
+   "x1": -42.0,
+   "f": 74
+  },
+  "rod_shell_4_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -60.0,
+   "x1": -42.0,
+   "f": 74
+  },
+  "rod_shell_4_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": -60.0,
+   "x1": -42.0,
+   "f": 74
+  },
+  "rod_shell_5_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 42.0,
+   "x1": 60.0,
+   "f": 74
+  },
+  "rod_shell_5_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 42.0,
+   "x1": 60.0,
+   "f": 74
+  },
+  "rod_shell_6_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 42.0,
+   "x1": 60.0,
+   "f": 74
+  },
+  "rod_shell_6_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 42.0,
+   "x1": 60.0,
+   "f": 74
+  },
+  "rod_shell_7_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 144.0,
+   "x1": 162.0,
+   "f": 74
+  },
+  "rod_shell_7_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 144.0,
+   "x1": 162.0,
+   "f": 74
+  },
+  "rod_shell_8_lower": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 144.0,
+   "x1": 162.0,
+   "f": 74
+  },
+  "rod_shell_8_upper": {
+   "g": "02 Bottom End",
+   "mat": "copper_wound",
+   "x0": 144.0,
+   "x1": 162.0,
+   "f": 74
+  },
+  "runner_1": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": -170.0,
+   "x1": -136.0,
+   "f": 26
+  },
+  "runner_2": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": -170.0,
+   "x1": -136.0,
+   "f": 26
+  },
+  "runner_3": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": -68.0,
+   "x1": -34.0,
+   "f": 26
+  },
+  "runner_4": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": -68.0,
+   "x1": -34.0,
+   "f": 26
+  },
+  "runner_5": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": 34.0,
+   "x1": 68.0,
+   "f": 26
+  },
+  "runner_6": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": 34.0,
+   "x1": 68.0,
+   "f": 26
+  },
+  "runner_7": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": 136.0,
+   "x1": 170.0,
+   "f": 26
+  },
+  "runner_8": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": 136.0,
+   "x1": 170.0,
+   "f": 26
+  },
+  "starter": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_cast",
+   "x0": 82.0,
+   "x1": 194.0,
+   "f": 108
   },
   "plenum": {
    "g": "04 Induction",

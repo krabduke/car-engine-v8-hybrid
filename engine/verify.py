@@ -113,7 +113,9 @@ def main():
         c.true(f"{stem} count", len(have) == want_n,
                f"{len(have)} of {want_n}")
 
-    for stem in ("piston", "rings", "gudgeon_pin", "conrod", "rod_cap"):
+    for stem in ("piston", "gudgeon_pin", "conrod", "rod_cap",
+                 "ring_top", "ring_second", "ring_oil",
+                 "primary", "runner"):
         have = [k for k in by if k.startswith(stem + "_")]
         c.true(f"{stem} per cylinder", len(have) == spec.N_CYL,
                f"{len(have)} of {spec.N_CYL}")
@@ -122,6 +124,9 @@ def main():
             "valve_in_1_1", "valve_ex_8_2", "camlobe_l_in_1_1",
             "injector_1", "coil_8", "sparkplug_4",
             "valve_spring_1_0", "retainer_8_3", "tappet_5_2",
+            "collets_in_1_1", "main_shell_3_upper", "rod_shell_5_lower",
+            "main_cap_2", "cam_caps", "rod_bolts", "fuel_rail_l",
+            "collector_1", "alternator", "starter", "catch_tank",
             "plenum", "throttle", "turbos", "flywheel", "clutch",
             "mguk", "mguh", "ecu", "pump_oil", "pump_water"]
     missing = [w for w in want if w not in by]
