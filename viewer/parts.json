@@ -1,0 +1,416 @@
+{
+ "name": "RX-8V Vertex",
+ "config": "90-degree V8, flat-plane crank, twin-turbo, hybrid",
+ "displacement": 1999.4704142884082,
+ "bore": 84.0,
+ "stroke": 45.1,
+ "cylinders": 8,
+ "v_angle": 90.0,
+ "redline": 16000.0,
+ "ice_kw": 735.0,
+ "mguk_kw": 200.0,
+ "mguh_kw": 80.0,
+ "combined_kw": 935.0,
+ "hp": 1253.835,
+ "mass": 146.0,
+ "piston_speed": 24.053333333333335,
+ "specific_kw_l": 367.59733714868656,
+ "firing_order": [
+  1,
+  8,
+  3,
+  6,
+  4,
+  5,
+  2,
+  7
+ ],
+ "firing_interval": 90.0,
+ "boost": 3.4,
+ "compression": 14.2,
+ "palette": {
+  "alu_cast": {
+   "rgb": [
+    0.318,
+    0.326,
+    0.338
+   ],
+   "metal": 1.0,
+   "rough": 0.62
+  },
+  "alu_forged": {
+   "rgb": [
+    0.402,
+    0.412,
+    0.428
+   ],
+   "metal": 1.0,
+   "rough": 0.42
+  },
+  "magnesium": {
+   "rgb": [
+    0.276,
+    0.272,
+    0.258
+   ],
+   "metal": 1.0,
+   "rough": 0.58
+  },
+  "steel_nitrided": {
+   "rgb": [
+    0.226,
+    0.232,
+    0.244
+   ],
+   "metal": 1.0,
+   "rough": 0.34
+  },
+  "titanium": {
+   "rgb": [
+    0.372,
+    0.386,
+    0.408
+   ],
+   "metal": 1.0,
+   "rough": 0.36
+  },
+  "spring_steel": {
+   "rgb": [
+    0.3,
+    0.306,
+    0.318
+   ],
+   "metal": 1.0,
+   "rough": 0.3
+  },
+  "carbon": {
+   "rgb": [
+    0.056,
+    0.058,
+    0.064
+   ],
+   "metal": 0.3,
+   "rough": 0.36
+  },
+  "inconel": {
+   "rgb": [
+    0.318,
+    0.246,
+    0.192
+   ],
+   "metal": 1.0,
+   "rough": 0.54
+  },
+  "copper_wound": {
+   "rgb": [
+    0.43,
+    0.226,
+    0.108
+   ],
+   "metal": 1.0,
+   "rough": 0.44
+  },
+  "anodised": {
+   "rgb": [
+    0.108,
+    0.136,
+    0.17
+   ],
+   "metal": 1.0,
+   "rough": 0.4
+  },
+  "rubber_blk": {
+   "rgb": [
+    0.042,
+    0.042,
+    0.046
+   ],
+   "metal": 0.0,
+   "rough": 0.86
+  }
+ },
+ "groups": [
+  {
+   "key": "01 Block",
+   "label": "Block",
+   "color": "#6E7478",
+   "parts": 6,
+   "faces": 2126
+  },
+  {
+   "key": "02 Bottom End",
+   "label": "Bottom end",
+   "color": "#8E939A",
+   "parts": 3,
+   "faces": 8864
+  },
+  {
+   "key": "03 Heads and Valvetrain",
+   "label": "Heads",
+   "color": "#7E8A93",
+   "parts": 8,
+   "faces": 8856
+  },
+  {
+   "key": "04 Induction",
+   "label": "Induction",
+   "color": "#5A6B74",
+   "parts": 3,
+   "faces": 1568
+  },
+  {
+   "key": "05 Turbo and Exhaust",
+   "label": "Turbo",
+   "color": "#A8663C",
+   "parts": 3,
+   "faces": 1136
+  },
+  {
+   "key": "06 Hybrid",
+   "label": "Hybrid",
+   "color": "#C06A30",
+   "parts": 5,
+   "faces": 618
+  },
+  {
+   "key": "07 Drive and Ancillaries",
+   "label": "Drive",
+   "color": "#77706A",
+   "parts": 5,
+   "faces": 768
+  }
+ ],
+ "parts": {
+  "bedplate": {
+   "g": "01 Block",
+   "mat": "alu_cast",
+   "x0": -232.0,
+   "x1": 232.0,
+   "f": 536
+  },
+  "block_bank_l": {
+   "g": "01 Block",
+   "mat": "alu_cast",
+   "x0": -232.0,
+   "x1": 232.0,
+   "f": 6
+  },
+  "block_bank_r": {
+   "g": "01 Block",
+   "mat": "alu_cast",
+   "x0": -232.0,
+   "x1": 232.0,
+   "f": 6
+  },
+  "block_crankcase": {
+   "g": "01 Block",
+   "mat": "alu_cast",
+   "x0": -232.0,
+   "x1": 232.0,
+   "f": 36
+  },
+  "block_liners": {
+   "g": "01 Block",
+   "mat": "alu_cast",
+   "x0": -200.5,
+   "x1": 200.5,
+   "f": 1536
+  },
+  "sump": {
+   "g": "01 Block",
+   "mat": "magnesium",
+   "x0": -196.0,
+   "x1": 196.0,
+   "f": 6
+  },
+  "conrods": {
+   "g": "02 Bottom End",
+   "mat": "titanium",
+   "x0": -162.5,
+   "x1": 162.5,
+   "f": 1632
+  },
+  "crankshaft": {
+   "g": "02 Bottom End",
+   "mat": "steel_nitrided",
+   "x0": -286.0,
+   "x1": 229.0,
+   "f": 3648
+  },
+  "pistons": {
+   "g": "02 Bottom End",
+   "mat": "alu_forged",
+   "x0": -194.6,
+   "x1": 194.6,
+   "f": 3584
+  },
+  "camcover_l": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "magnesium",
+   "x0": -221.0,
+   "x1": 221.0,
+   "f": 6
+  },
+  "camcover_r": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "magnesium",
+   "x0": -221.0,
+   "x1": 221.0,
+   "f": 6
+  },
+  "camshafts": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -228.0,
+   "x1": 228.0,
+   "f": 3392
+  },
+  "coils": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": -153.0,
+   "x1": 227.0,
+   "f": 480
+  },
+  "head_l": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "alu_cast",
+   "x0": -228.0,
+   "x1": 228.0,
+   "f": 6
+  },
+  "head_r": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "alu_cast",
+   "x0": -228.0,
+   "x1": 228.0,
+   "f": 6
+  },
+  "injectors": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -153.0,
+   "x1": 215.0,
+   "f": 480
+  },
+  "valves": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -186.1,
+   "x1": 186.1,
+   "f": 4480
+  },
+  "plenum": {
+   "g": "04 Induction",
+   "mat": "carbon",
+   "x0": -186.0,
+   "x1": 186.0,
+   "f": 192
+  },
+  "throttle": {
+   "g": "04 Induction",
+   "mat": "alu_forged",
+   "x0": -248.0,
+   "x1": -186.0,
+   "f": 128
+  },
+  "trumpets": {
+   "g": "04 Induction",
+   "mat": "carbon",
+   "x0": -153.0,
+   "x1": 249.0,
+   "f": 1248
+  },
+  "exhaust_manifolds": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -168.2,
+   "x1": 168.2,
+   "f": 240
+  },
+  "tailpipes": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -187.8,
+   "x1": 304.4,
+   "f": 60
+  },
+  "turbos": {
+   "g": "05 Turbo and Exhaust",
+   "mat": "inconel",
+   "x0": -168.6,
+   "x1": 182.0,
+   "f": 836
+  },
+  "battery": {
+   "g": "06 Hybrid",
+   "mat": "anodised",
+   "x0": -196.0,
+   "x1": 196.0,
+   "f": 6
+  },
+  "ecu": {
+   "g": "06 Hybrid",
+   "mat": "anodised",
+   "x0": -84.0,
+   "x1": 84.0,
+   "f": 6
+  },
+  "inverter": {
+   "g": "06 Hybrid",
+   "mat": "anodised",
+   "x0": -98.0,
+   "x1": 98.0,
+   "f": 6
+  },
+  "mguh": {
+   "g": "06 Hybrid",
+   "mat": "copper_wound",
+   "x0": -154.0,
+   "x1": 154.0,
+   "f": 240
+  },
+  "mguk": {
+   "g": "06 Hybrid",
+   "mat": "copper_wound",
+   "x0": -340.0,
+   "x1": -232.0,
+   "f": 360
+  },
+  "bellhousing": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "magnesium",
+   "x0": 240.0,
+   "x1": 318.0,
+   "f": 192
+  },
+  "clutch": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_cast",
+   "x0": 276.0,
+   "x1": 294.0,
+   "f": 192
+  },
+  "flywheel": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "steel_nitrided",
+   "x0": 252.0,
+   "x1": 274.0,
+   "f": 192
+  },
+  "pump_oil": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -262.0,
+   "x1": -234.0,
+   "f": 96
+  },
+  "pump_water": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -264.0,
+   "x1": -232.0,
+   "f": 96
+  }
+ }
+}

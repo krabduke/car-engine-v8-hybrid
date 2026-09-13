@@ -1,0 +1,32 @@
+BLENDER := /Applications/Blender.app/Contents/MacOS/Blender
+BLEND   := build/engine.blend
+SAMPLES ?= 128
+
+.PHONY: all build verify render export stl manifest viewer clean
+
+all: build verify render export manifest
+
+build:
+	$(BLENDER) --background --python engine/assemble.py
+
+verify:
+	python3 engine/verify.py
+
+render:
+	$(BLENDER) -b $(BLEND) -P engine/render.py -- all $(SAMPLES)
+
+export:
+	$(BLENDER) -b $(BLEND) -P engine/export.py -- glb
+
+stl:
+	$(BLENDER) -b $(BLEND) -P engine/export.py -- stl
+
+manifest:
+	python3 tools/make_manifest.py
+
+viewer:
+	@echo "Serving http://localhost:8790/viewer/ - Ctrl-C to stop"
+	@python3 -m http.server 8790 --bind 127.0.0.1
+
+clean:
+	rm -rf build renders

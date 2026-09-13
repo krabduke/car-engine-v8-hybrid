@@ -1,0 +1,34 @@
+name,collection,material,verts,faces,x_min_mm,x_max_mm,y_min_mm,y_max_mm,z_min_mm,z_max_mm
+bedplate,01 Block,alu_cast,468,536,-232.0,232.0,-94.4,94.4,-118.0,-9.6
+block_bank_l,01 Block,alu_cast,8,6,-232.0,232.0,-18.7,141.1,-30.1,129.8
+block_bank_r,01 Block,alu_cast,8,6,-232.0,232.0,-129.8,30.1,-18.7,141.1
+block_crankcase,01 Block,alu_cast,48,36,-232.0,232.0,-101.5,101.5,-96.0,28.0
+block_liners,01 Block,alu_cast,1536,1536,-200.5,200.5,-123.7,123.7,-7.1,123.7
+sump,01 Block,magnesium,8,6,-196.0,196.0,-94.0,94.0,-180.0,-118.0
+conrods,02 Bottom End,titanium,1696,1632,-162.5,162.5,-65.6,76.3,-40.2,76.3
+crankshaft,02 Bottom End,steel_nitrided,3648,3648,-286.0,229.0,-70.8,70.8,-63.7,63.7
+pistons,02 Bottom End,alu_forged,3584,3584,-194.6,194.6,-94.1,104.9,-5.7,104.9
+camcover_l,03 Heads and Valvetrain,magnesium,8,6,-221.0,221.0,109.8,214.8,98.4,203.5
+camcover_r,03 Heads and Valvetrain,magnesium,8,6,-221.0,221.0,-203.5,-98.4,109.8,214.8
+camshafts,03 Heads and Valvetrain,steel_nitrided,3392,3392,-228.0,228.0,-167.9,167.9,83.1,167.9
+coils,03 Heads and Valvetrain,rubber_blk,400,480,-153.0,227.0,-107.9,107.9,86.6,107.9
+head_l,03 Heads and Valvetrain,alu_cast,8,6,-228.0,228.0,52.7,191.3,41.4,180.0
+head_r,03 Heads and Valvetrain,alu_cast,8,6,-228.0,228.0,-180.0,-41.4,52.7,191.3
+injectors,03 Heads and Valvetrain,steel_nitrided,400,480,-153.0,215.0,-77.4,124.9,63.9,124.9
+valves,03 Heads and Valvetrain,titanium,3904,4480,-186.1,186.1,-103.5,101.5,16.7,103.5
+plenum,04 Induction,carbon,192,192,-186.0,186.0,-62.0,62.0,230.0,354.0
+throttle,04 Induction,alu_forged,128,128,-248.0,-186.0,-46.0,46.0,246.0,338.0
+trumpets,04 Induction,carbon,1248,1248,-153.0,249.0,-198.4,160.9,95.0,198.4
+exhaust_manifolds,05 Turbo and Exhaust,inconel,336,240,-168.2,168.2,-101.4,134.8,79.7,197.5
+tailpipes,05 Turbo and Exhaust,inconel,84,60,-187.8,304.4,-78.9,78.8,189.2,280.7
+turbos,05 Turbo and Exhaust,inconel,804,836,-168.6,182.0,-64.0,70.2,150.4,277.6
+battery,06 Hybrid,anodised,8,6,-196.0,196.0,-116.0,116.0,-222.0,-134.0
+ecu,06 Hybrid,anodised,8,6,-84.0,84.0,73.0,191.0,154.0,198.0
+inverter,06 Hybrid,anodised,8,6,-98.0,98.0,-73.0,73.0,305.0,367.0
+mguh,06 Hybrid,copper_wound,240,240,-154.0,154.0,-40.0,40.0,174.2,253.8
+mguk,06 Hybrid,copper_wound,416,360,-340.0,-232.0,-84.5,84.5,-84.5,84.5
+bellhousing,07 Drive and Ancillaries,magnesium,192,192,240.0,318.0,-152.0,152.0,-152.0,152.0
+clutch,07 Drive and Ancillaries,alu_cast,192,192,276.0,294.0,-82.6,82.6,-82.6,82.6
+flywheel,07 Drive and Ancillaries,steel_nitrided,192,192,252.0,274.0,-96.0,96.0,-96.0,96.0
+pump_oil,07 Drive and Ancillaries,alu_forged,96,96,-262.0,-234.0,-120.0,-52.0,-80.0,-12.0
+pump_water,07 Drive and Ancillaries,alu_forged,96,96,-264.0,-232.0,46.0,126.0,-74.0,6.0
