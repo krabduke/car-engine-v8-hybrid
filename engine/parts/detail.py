@@ -11,6 +11,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import spec
 import mesh
+import shapes
 from parts import common
 
 H = spec.HEAD
@@ -111,7 +112,7 @@ def _gear(x, y, z, r, teeth):
     parts = [mesh.tube(x - 7.0, x + 7.0, r * 0.28, r * 0.88, 26)]
     for k in range(teeth):
         a = 2 * math.pi * k / teeth
-        tv, tf = mesh.box(x, r * 0.94, 0.0, 13.0, r * 0.16, 5.2)
+        tv, tf = shapes.rounded_box(x, r * 0.94, 0.0, 13.0, r * 0.16, 5.2, 0.7)
         tv = mesh.rot_x(tv, a)
         parts.append(([(px, py + y, pz + z) for (px, py, pz) in tv], tf))
     v, f = mesh.join(*parts)
@@ -130,7 +131,8 @@ def _pumps():
     # oil pump body, pickup and pressure line
     parts.append(mesh.pipe([(xo, -86.0, -46.0), (xo + 60.0, -96.0, -110.0),
                             (xo + 190.0, -60.0, -132.0)], 13.0, 12))
-    pv, pf = mesh.box(xo + 200.0, -50.0, -140.0, 120.0, 70.0, 26.0)
+    pv, pf = shapes.rounded_box(xo + 200.0, -50.0, -140.0, 120.0, 70.0, 26.0,
+                                   9.0, draft=2.0)
     parts.append((pv, pf))
     out["oil_pickup"] = mesh.join(*parts)
 
@@ -163,7 +165,7 @@ def _turbo_internals():
                           hub[1]))
             for k in range(blades):
                 a = 2 * math.pi * k / blades
-                bv, bf = mesh.box(xc, (15.0 + r) / 2, 0.0, 22.0, r - 15.0, 3.4)
+                bv, bf = shapes.rounded_box(xc, (15.0 + r) / 2, 0.0, 22.0, r - 15.0, 3.4, 1.0)
                 pitch = math.radians(34.0 if back else -30.0)
                 bv = [(px * math.cos(pitch) - pz * math.sin(pitch), py,
                        px * math.sin(pitch) + pz * math.cos(pitch))
@@ -211,19 +213,59 @@ def _sensors():
         v, f = mesh.cylinder(0.0, 46.0, 9.0, 10)
         v = [(pz + x, px + y, py + z) for (px, py, pz) in v]
         parts.append((v, f))
-        cv, cf = mesh.box(x, y * 1.12, z + 26.0, 26.0, 22.0, 20.0)
+        cv, cf = shapes.rounded_box(x, y * 1.12, z + 26.0, 26.0, 22.0, 20.0, 4.0)
         parts.append((cv, cf))
     return {"sensors": mesh.join(*parts)}
+
+
+def _sheet(rows, t):
+    """Give a grid of stations thickness in z and close it into a solid."""
+    nr, nc = len(rows), len(rows[0])
+    lo = [(x, y, z - t/2) for r in rows for (x, y, z) in r]
+    hi = [(x, y, z + t/2) for r in rows for (x, y, z) in r]
+    verts = lo + hi
+    o = len(lo)
+    faces = []
+    for i in range(nr - 1):
+        for j in range(nc - 1):
+            k = i*nc + j
+            faces.append((k, k+nc, k+nc+1, k+1))
+            faces.append((o+k, o+k+1, o+k+nc+1, o+k+nc))
+    for i in range(nr - 1):
+        for j in (0, nc - 1):
+            k = i*nc + j
+            faces.append((k, k+nc, o+k+nc, o+k) if j == 0
+                         else (k+nc, k, o+k, o+k+nc))
+    for j in range(nc - 1):
+        for i in (0, nr - 1):
+            k = i*nc + j
+            faces.append((k+1, k, o+k, o+k+1) if i == 0
+                         else (k, k+1, o+k+1, o+k))
+    return verts, faces
 
 
 def _heat_shields():
     """Shields over the hot vee, keeping radiant heat off the plenum."""
     parts = []
     for sgn in (-1.0, 1.0):
-        v, f = mesh.box(0.0, sgn * 82.0, T["z"] + 62.0,
-                        spec.BLOCK["x_rear"] - spec.BLOCK["x_front"] - 90.0,
-                        62.0, 3.0)
-        parts.append((v, f))
+        # a heat shield is pressed sheet that wraps what it shields, with a
+        # swaged rib down it for stiffness -- not a flat plate floating above
+        x0 = spec.BLOCK["x_front"] + 45.0
+        x1 = spec.BLOCK["x_rear"] - 45.0
+        rows = []
+        for i in range(9):
+            fx = i / 8
+            x = x0 + (x1 - x0) * fx
+            row = []
+            for j in range(7):
+                fy = j / 6
+                y = sgn * (52.0 + 62.0 * fy)
+                # curve it around the manifold below
+                dz = -26.0 * (1 - math.cos((fy - 0.5) * 2.2)) \
+                     - 5.0 * math.sin(fx * math.pi * 3.0)
+                row.append((x, y, T["z"] + 62.0 + dz))
+            rows.append(row)
+        parts.append(_sheet(rows, 2.4))
     return {"heat_shields": mesh.join(*parts)}
 
 

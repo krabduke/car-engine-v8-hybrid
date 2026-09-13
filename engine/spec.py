@@ -220,6 +220,17 @@ ANCILLARY = {
 # --------------------------------------------------------------------------
 
 MATERIAL_MAP = {
+    "ecu_connector": "rubber_blk",
+    "battery_terminal": "copper_wound",
+    "battery_module": "anodised",
+    "inverter_conn": "rubber_blk",
+    "oil_filler": "anodised",
+    "camcover_bolt": "titanium",
+    "sump_baffle": "alu_forged",
+    "sump_drain": "steel_nitrided",
+    "mount_boss": "alu_cast",
+    "gallery_plug": "steel_nitrided",
+    "water_outlet": "alu_cast",
     "tappet_": "steel_nitrided",
     "retainer_": "titanium",
     "valve_spring": "spring_steel",

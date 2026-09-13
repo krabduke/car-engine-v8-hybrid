@@ -6,6 +6,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import spec
 import mesh
+import shapes
 from parts import common
 
 H = spec.HEAD
@@ -30,8 +31,10 @@ def _heads():
     for bank in (0, 1):
         a = spec.bank_angle_rad(bank)
         ca, sa = math.cos(a), math.sin(a)
-        v, f = mesh.box(0.0, 8.0, spec.DECK_HEIGHT + H["height"] / 2,
-                        H["x_rear"] - H["x_front"], H["half_width"] * 2, H["height"])
+        v, f = shapes.rounded_box(
+            0.0, 8.0, spec.DECK_HEIGHT + H["height"] / 2,
+            H["x_rear"] - H["x_front"], H["half_width"] * 2, H["height"],
+            r=11.0, seg=5, draft=1.2)
         v = [(x, y * ca - z * sa, y * sa + z * ca) for (x, y, z) in v]
         # the box was built about the world origin; rotate then it already sits
         # on the bank axis because its centre was placed along +z
@@ -210,15 +213,45 @@ def _cams():
 
 
 def _covers():
+    """Cam covers, oil filler and the bolt flange that holds them down.
+
+    A cam cover is not a lid. It is a casting: crowned so it clears the valve
+    gear, ribbed so it does not drum at 16,000 rpm, drafted down the sides,
+    and bolted round its perimeter. It was a rectangular box.
+    """
     out = {}
     for bank in (0, 1):
         a = spec.bank_angle_rad(bank)
         ca, sa = math.cos(a), math.sin(a)
-        z = spec.DECK_HEIGHT + H["height"] + 20.0
-        v, f = mesh.box(0.0, 8.0, z, H["x_rear"] - H["x_front"] - 14.0,
-                        H["half_width"] * 1.78, 40.0)
-        v = [(x, y * ca - zz * sa, y * sa + zz * ca) for (x, y, zz) in v]
-        out[f"camcover_{'lr'[bank]}"] = (v, f)
+        z = spec.DECK_HEIGHT + H["height"] + 12.0
+        rot = lambda vs: [(x, y * ca - zz * sa, y * sa + zz * ca)
+                          for (x, y, zz) in vs]
+
+        v, f = shapes.ribbed_cover(
+            H["x_front"] + 7.0, H["x_rear"] - 7.0,
+            H["half_width"] * 0.92, z, 34.0, n_ribs=9, rib_h=5.0, rib_w=8.0)
+        v = [(x, y + 8.0, zz) for (x, y, zz) in v]
+        out[f"camcover_{'lr'[bank]}"] = (rot(v), f)
+
+        bolts = []
+        n = 11
+        for i in range(n):
+            fx = (i + 0.5) / n
+            x = H["x_front"] + (H["x_rear"] - H["x_front"]) * fx
+            for sgn in (-1.0, 1.0):
+                bv, bf = shapes.bolt_boss(0, 0, 0, 7.0, 9.0)
+                bv = [(pz + x, py + 8.0 + sgn * H["half_width"] * 0.88,
+                       px + z - 4.0) for (px, py, pz) in bv]
+                bolts.append((bv, bf))
+        out[f"camcover_bolts_{'lr'[bank]}"] = (rot(mesh.join(*bolts)[0]),
+                                               mesh.join(*bolts)[1])
+
+        fv, ff = mesh.revolve_open(
+            [(0.0, 0.0), (0.0, 21.0), (9.0, 23.0), (17.0, 20.0), (17.0, 0.0)],
+            16, cap_start=True, cap_end=True)
+        fv = [(pz + H["x_front"] + 46.0, py + 8.0, px + z + 26.0)
+              for (px, py, pz) in fv]
+        out[f"oil_filler_{'lr'[bank]}"] = (rot(fv), ff)
     return out
 
 

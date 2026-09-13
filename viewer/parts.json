@@ -134,8 +134,8 @@
    "key": "01 Block",
    "label": "Block",
    "color": "#6E7478",
-   "parts": 6,
-   "faces": 2126
+   "parts": 8,
+   "faces": 2626
   },
   {
    "key": "02 Bottom End",
@@ -148,8 +148,8 @@
    "key": "03 Heads and Valvetrain",
    "label": "Heads",
    "color": "#7E8A93",
-   "parts": 197,
-   "faces": 31496
+   "parts": 201,
+   "faces": 34864
   },
   {
    "key": "04 Induction",
@@ -163,21 +163,21 @@
    "label": "Turbo",
    "color": "#A8663C",
    "parts": 5,
-   "faces": 1876
+   "faces": 2752
   },
   {
    "key": "06 Hybrid",
    "label": "Hybrid",
    "color": "#C06A30",
-   "parts": 5,
-   "faces": 618
+   "parts": 9,
+   "faces": 3004
   },
   {
    "key": "07 Drive and Ancillaries",
    "label": "Drive",
    "color": "#77706A",
-   "parts": 12,
-   "faces": 5934
+   "parts": 15,
+   "faces": 10710
   }
  ],
  "parts": {
@@ -186,28 +186,28 @@
    "mat": "alu_cast",
    "x0": -232.0,
    "x1": 232.0,
-   "f": 536
+   "f": 636
   },
   "block_bank_l": {
    "g": "01 Block",
    "mat": "alu_cast",
    "x0": -232.0,
    "x1": 232.0,
-   "f": 6
+   "f": 26
   },
   "block_bank_r": {
    "g": "01 Block",
    "mat": "alu_cast",
    "x0": -232.0,
    "x1": 232.0,
-   "f": 6
+   "f": 26
   },
   "block_crankcase": {
    "g": "01 Block",
    "mat": "alu_cast",
    "x0": -232.0,
    "x1": 232.0,
-   "f": 36
+   "f": 136
   },
   "block_liners": {
    "g": "01 Block",
@@ -216,12 +216,47 @@
    "x1": 200.5,
    "f": 1536
   },
+  "gallery_plugs": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "steel_nitrided",
+   "x0": -201.3,
+   "x1": 201.3,
+   "f": 480
+  },
+  "mount_bosses": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_cast",
+   "x0": -184.4,
+   "x1": 184.4,
+   "f": 360
+  },
   "sump": {
    "g": "01 Block",
    "mat": "magnesium",
    "x0": -196.0,
    "x1": 196.0,
-   "f": 6
+   "f": 130
+  },
+  "sump_baffles": {
+   "g": "01 Block",
+   "mat": "alu_forged",
+   "x0": -149.5,
+   "x1": 149.5,
+   "f": 88
+  },
+  "sump_drain": {
+   "g": "01 Block",
+   "mat": "steel_nitrided",
+   "x0": 57.6,
+   "x1": 83.6,
+   "f": 48
+  },
+  "water_outlets": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_cast",
+   "x0": -190.5,
+   "x1": 190.5,
+   "f": 576
   },
   "conrod_1": {
    "g": "02 Bottom End",
@@ -1112,19 +1147,33 @@
    "x1": 134.3,
    "f": 320
   },
+  "camcover_bolts_l": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -213.9,
+   "x1": 213.9,
+   "f": 1320
+  },
+  "camcover_bolts_r": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -213.9,
+   "x1": 213.9,
+   "f": 1320
+  },
   "camcover_l": {
    "g": "03 Heads and Valvetrain",
    "mat": "magnesium",
    "x0": -221.0,
    "x1": 221.0,
-   "f": 6
+   "f": 254
   },
   "camcover_r": {
    "g": "03 Heads and Valvetrain",
    "mat": "magnesium",
    "x0": -221.0,
    "x1": 221.0,
-   "f": 6
+   "f": 254
   },
   "camlobe_l_ex_1_1": {
    "g": "03 Heads and Valvetrain",
@@ -1439,14 +1488,14 @@
    "mat": "alu_cast",
    "x0": -228.0,
    "x1": 228.0,
-   "f": 6
+   "f": 26
   },
   "head_r": {
    "g": "03 Heads and Valvetrain",
    "mat": "alu_cast",
    "x0": -228.0,
    "x1": 228.0,
-   "f": 6
+   "f": 26
   },
   "injector_1": {
    "g": "03 Heads and Valvetrain",
@@ -1503,6 +1552,20 @@
    "x0": 153.0,
    "x1": 215.0,
    "f": 140
+  },
+  "oil_filler_l": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": -205.0,
+   "x1": -159.0,
+   "f": 96
+  },
+  "oil_filler_r": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": -205.0,
+   "x1": -159.0,
+   "f": 96
   },
   "sparkplug_1": {
    "g": "03 Heads and Valvetrain",
@@ -1831,21 +1894,49 @@
    "mat": "anodised",
    "x0": -196.0,
    "x1": 196.0,
-   "f": 6
+   "f": 330
+  },
+  "battery_modules": {
+   "g": "06 Hybrid",
+   "mat": "anodised",
+   "x0": -189.1,
+   "x1": 189.1,
+   "f": 132
+  },
+  "battery_terminals": {
+   "g": "06 Hybrid",
+   "mat": "copper_wound",
+   "x0": -134.6,
+   "x1": 139.7,
+   "f": 164
   },
   "ecu": {
    "g": "06 Hybrid",
    "mat": "anodised",
    "x0": -84.0,
    "x1": 84.0,
-   "f": 6
+   "f": 220
+  },
+  "ecu_connector": {
+   "g": "06 Hybrid",
+   "mat": "rubber_blk",
+   "x0": -105.0,
+   "x1": -79.7,
+   "f": 322
   },
   "inverter": {
    "g": "06 Hybrid",
    "mat": "anodised",
    "x0": -98.0,
    "x1": 98.0,
-   "f": 6
+   "f": 264
+  },
+  "inverter_connectors": {
+   "g": "06 Hybrid",
+   "mat": "rubber_blk",
+   "x0": -124.0,
+   "x1": 128.2,
+   "f": 524
   },
   "mguh": {
    "g": "06 Hybrid",
@@ -1859,7 +1950,7 @@
    "mat": "copper_wound",
    "x0": -340.0,
    "x1": -232.0,
-   "f": 360
+   "f": 808
   },
   "bellhousing": {
    "g": "07 Drive and Ancillaries",
@@ -1922,14 +2013,14 @@
    "mat": "inconel",
    "x0": -187.0,
    "x1": 187.0,
-   "f": 12
+   "f": 248
   },
   "oil_pickup": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": -257.3,
    "x1": 12.0,
-   "f": 32
+   "f": 48
   },
   "retainer_1_0": {
    "g": "03 Heads and Valvetrain",
@@ -2160,7 +2251,7 @@
    "mat": "anodised",
    "x0": -225.0,
    "x1": 205.0,
-   "f": 280
+   "f": 360
   },
   "sump_bolts": {
    "g": "07 Drive and Ancillaries",
@@ -2405,14 +2496,14 @@
    "mat": "magnesium",
    "x0": -269.0,
    "x1": -255.0,
-   "f": 3096
+   "f": 6360
   },
   "turbo_wheels": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -164.0,
    "x1": 164.0,
-   "f": 728
+   "f": 1368
   },
   "valve_spring_1_0": {
    "g": "03 Heads and Valvetrain",
