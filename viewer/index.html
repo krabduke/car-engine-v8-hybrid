@@ -122,6 +122,23 @@
     #probe{left:16px; right:16px; max-width:none}
   }
   @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms !important}}
+
+  /* --- engine run controls --------------------------------------------- */
+  #run{display:flex; align-items:center; gap:9px; margin-right:10px}
+  #run label{font-size:11px; color:#96A3AB}
+  #rpm{
+    -webkit-appearance:none; appearance:none; width:118px; height:2px;
+    background:#36444B; border-radius:2px; outline:none;
+  }
+  #rpm::-webkit-slider-thumb{
+    -webkit-appearance:none; width:13px; height:13px; border-radius:50%;
+    background:#C99A5E; cursor:grab; border:2px solid #12181B;
+  }
+  #rpm::-moz-range-thumb{width:13px; height:13px; border-radius:50%;
+    background:#C99A5E; cursor:grab; border:2px solid #12181B}
+  #rpm:focus-visible{outline:2px solid #C99A5E; outline-offset:3px}
+  #rpmval{font-size:11px; color:#DCE6EB; font-variant-numeric:tabular-nums;
+          min-width:64px; text-align:right}
 </style>
 </head>
 <body>
@@ -163,6 +180,12 @@
   </div>
   <div id="groups"></div>
   <div id="controls">
+    <button class="btn" id="crank" type="button" aria-pressed="false">Run engine</button>
+    <div id="run">
+      <label for="rpm">rpm</label>
+      <input type="range" id="rpm" min="600" max="16000" step="100" value="3200">
+      <span id="rpmval">3,200</span>
+    </div>
     <button class="btn" id="skin" type="button" aria-pressed="false">Show internals</button>
     <button class="btn" id="spin" type="button" aria-pressed="false">Spin</button>
     <button class="btn" id="reset" type="button">Reset view</button>
@@ -199,6 +222,10 @@ const SKIN = ['block_bank_l', 'block_bank_r', 'head_l', 'head_r',
 let scene, camera, renderer, controls, root, raycaster, clock;
 let data, byGroup = new Map(), info = new Map(), pickable = [];
 let hidden = new Set(), hovered = null, corners = [], viewDir, spinning = false;
+// The engine runs from a real slider-crank, solved per frame. `moving` holds
+// each part with the cylinder it belongs to and how it moves; `kin` is the
+// geometry it moves by, straight out of the spec the block was built from.
+let moving = [], kin = null, running = false, crankDeg = 0, rpmVal = 3200;
 
 init();
 
@@ -328,6 +355,9 @@ function ready(model){
       o.material.depthWrite = false;
     }
     info.set(o, nfo);
+    if(nfo.pivot && nfo.pivot.role && nfo.pivot.role !== 'spin')
+      moving.push({o, role: nfo.pivot.role, cyl: nfo.pivot.cyl,
+                   base: o.position.clone()});
     pickable.push(o);
     if(!byGroup.has(nfo.g)) byGroup.set(nfo.g, []);
     byGroup.get(nfo.g).push(o);
@@ -347,7 +377,8 @@ function ready(model){
   addEventListener('resize', onResize);
   renderer.domElement.addEventListener('pointermove', onMove);
   renderer.domElement.addEventListener('pointerleave', () => setProbe(null));
-  window.__dbg = {scene, camera, renderer, root, byGroup};
+  window.__dbg = {scene, camera, renderer, root, moving, setCrank, byGroup};
+  kin = data.kinematics || null;
   $('#load').classList.add('done');
   renderer.setAnimationLoop(tick);
 }
@@ -381,8 +412,56 @@ function onResize(){
   renderer.setSize(s.clientWidth, s.clientHeight);
 }
 
+/* Slider-crank, solved live.
+ *
+ * The pin is at `throw` from the crank centreline at (pin angle + crank
+ * angle). Resolve that offset along and across each bank's bore axis; the rod
+ * closes the triangle, so the gudgeon pin sits at
+ *
+ *     along + sqrt(L^2 - across^2)
+ *
+ * from the centreline, and the rod leans by asin(across / L). The parts were
+ * built at a crank angle of 24 degrees, so everything moves by the difference
+ * from there -- which means the model the viewer draws at 24 degrees is
+ * exactly the model that was exported.
+ */
+function setCrank(deg){
+  if(!kin) return;
+  crankDeg = deg;
+  const rad = Math.PI/180;
+  for(const m of moving){
+    if(m.role === 'crank'){
+      // Blender x is three.js x; the y/z swap leaves the sense unchanged
+      m.o.rotation.x = (deg - kin.build_angle) * rad;
+      continue;
+    }
+    const c = kin.cylinders[m.cyl - 1];
+    if(!c) continue;
+    const a = (kin.pins[c.pair] + deg) * rad;
+    const py = kin.throw * Math.cos(a), pz = kin.throw * Math.sin(a);
+    // bank unit vectors, in Blender's y-z plane
+    const dy = c.dir[0], dz = c.dir[1];
+    const ly = dz, lz = -dy;
+    const along  = py*dy + pz*dz;
+    const across = py*ly + pz*lz;
+    const s2 = along + Math.sqrt(Math.max(kin.rod*kin.rod - across*across, 1));
+    const ds = (s2 - c.along0) * 0.001;          // mm -> m
+    // Blender (y, z) -> three (-z, y)
+    m.o.position.set(m.base.x, m.base.y + ds*dz, m.base.z - ds*dy);
+    if(m.role === 'rod'){
+      const tilt = Math.asin(Math.max(-1, Math.min(1, across/kin.rod)));
+      m.o.rotation.x = tilt - c.tilt0;
+    }
+  }
+}
+
 function tick(){
   const dt = Math.min(clock.getDelta(), 0.05);
+  if(running){
+    // 16,000 rpm is 96,000 deg/s. Shown at a fixed 1/40 so the motion is
+    // legible; the kinematics are untouched, only the clock.
+    setCrank((crankDeg + dt * rpmVal * 6.0 / 40.0) % 360);
+  }
   if(spinning && root) root.rotation.y += dt * 0.35;
   controls.update();
   renderer.render(scene, camera);
@@ -444,6 +523,16 @@ function buildRail(){
     });
     box.appendChild(el);
   }
+
+  $('#crank').addEventListener('click', () => {
+    running = !running;
+    $('#crank').setAttribute('aria-pressed', String(running));
+    $('#crank').textContent = running ? 'Stop engine' : 'Run engine';
+  });
+  $('#rpm').addEventListener('input', e => {
+    rpmVal = +e.target.value;
+    $('#rpmval').textContent = rpmVal.toLocaleString();
+  });
 
   $('#skin').addEventListener('click', () => {
     const b = $('#skin');

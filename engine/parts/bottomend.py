@@ -150,3 +150,68 @@ def _rod(small, big):
         v = [(px + c[0], py + c[1], pz + c[2]) for (px, py, pz) in v]
         parts.append((v, f))
     return mesh.join(*parts)
+
+
+def pin_centre(pair, theta_deg):
+    """Crankpin centre in the y-z plane at a given crank angle."""
+    a = math.radians(spec.CRANKPIN_ANGLES[pair] + theta_deg)
+    return (C["throw"] * math.cos(a), C["throw"] * math.sin(a))
+
+
+def piston_along(pair, bank, theta_deg):
+    """Gudgeon pin distance from the crank centreline, along the bore axis."""
+    py, pz = pin_centre(pair, theta_deg)
+    d, l = common.bank_dir(bank), common.bank_lat(bank)
+    along = py * d[1] + pz * d[2]
+    across = py * l[1] + pz * l[2]
+    return along + math.sqrt(max(spec.ROD_LENGTH ** 2 - across ** 2, 1.0))
+
+
+def rod_tilt(pair, bank, theta_deg):
+    """Rod angle from the bore axis, radians. asin(across / L)."""
+    py, pz = pin_centre(pair, theta_deg)
+    l = common.bank_lat(bank)
+    across = py * l[1] + pz * l[2]
+    return math.asin(max(-1.0, min(1.0, across / spec.ROD_LENGTH)))
+
+
+def kinematics():
+    """Everything the viewer needs to turn a crank angle into part positions.
+
+    The slider-crank is solved in the viewer rather than baked, so the engine
+    can be run at any angle. These are the same functions the geometry was
+    built from, so the model at the build angle and the model the viewer
+    draws at that angle are the same model.
+    """
+    out = {"build_angle": CRANK_ANGLE, "throw": C["throw"],
+           "rod": spec.ROD_LENGTH, "pins": spec.CRANKPIN_ANGLES,
+           "firing_order": spec.FIRING_ORDER, "cylinders": []}
+    for (n, pair, bank, x, ang) in spec.cylinders():
+        d = common.bank_dir(bank)
+        out["cylinders"].append({
+            "n": n, "pair": pair, "bank": bank, "x": x,
+            "dir": [d[1], d[2]],
+            "along0": piston_along(pair, bank, CRANK_ANGLE),
+            "tilt0": rod_tilt(pair, bank, CRANK_ANGLE),
+        })
+    return out
+
+
+def pivots():
+    """Moving parts and what they move about.
+
+    Pistons and their rings and pins slide along the bore, so their pivot is
+    the gudgeon pin. Rods swing about that same pin, so they share it. The
+    crankshaft turns about its own centreline.
+    """
+    out = {}
+    out["crankshaft"] = ((0.0, 0.0, 0.0), (1.0, 0.0, 0.0), 1.0, "crank", "")
+    for (n, pair, bank, x, ang) in spec.cylinders():
+        along = piston_along(pair, bank, CRANK_ANGLE)
+        d = common.bank_dir(bank)
+        pin = (x, d[1] * along, d[2] * along)
+        for stem, role in (("piston", "slider"), ("rings", "slider"),
+                           ("gudgeon_pin", "slider"), ("conrod", "rod"),
+                           ("rod_cap", "rod")):
+            out[f"{stem}_{n}"] = (pin, (1.0, 0.0, 0.0), 1.0, role, n)
+    return out

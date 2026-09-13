@@ -62,13 +62,24 @@ def clear_scene():
     sc.unit_settings.length_unit = "MILLIMETERS"
 
 
-def make_object(name, verts, faces, coll):
+def make_object(name, verts, faces, coll, pivot=None):
+    """Build one object. `pivot` (in mm) becomes the object's origin.
+
+    Geometry is authored in world millimetres, so without this every object's
+    origin is the world origin -- a piston would travel in an arc about the
+    front of the crankcase instead of up and down its own bore. Putting the
+    pivot in the object transform exports a glTF node that moves correctly
+    for any consumer of the file, not just our viewer.
+    """
+    px, py, pz = (pivot or (0.0, 0.0, 0.0))
     me = bpy.data.meshes.new(name)
-    me.from_pydata([(x * MM, y * MM, z * MM) for (x, y, z) in verts],
+    me.from_pydata([((x - px) * MM, (y - py) * MM, (z - pz) * MM)
+                    for (x, y, z) in verts],
                    [], [list(f) for f in faces])
     me.validate(verbose=False)
     me.update()
     ob = bpy.data.objects.new(name, me)
+    ob.location = (px * MM, py * MM, pz * MM)
     coll.objects.link(ob)
     return ob
 
@@ -124,16 +135,31 @@ def main():
     for label, module in MODULES:
         t1 = time.time()
         built = module.build()
+        piv = module.pivots() if hasattr(module, "pivots") else {}
         for name, (v, f) in sorted(built.items()):
             cname = collection_for(name)
-            ob = make_object(name, v, f, cols[cname])
+            spec_p = piv.get(name)
+            ob = make_object(name, v, f, cols[cname],
+                             pivot=spec_p[0] if spec_p else None)
             recalc_normals(ob)
             mname = material_for(name)
             ob.data.materials.append(mats[mname])
             n_sharp += shade(ob)
-            bb = meshlib.bbox([tuple(x.co) for x in ob.data.vertices])
+            # World bounds computed directly: matrix_world lags an origin
+            # move, and the transform here is a pure translation anyway.
+            lx, ly, lz = ob.location
+            bb = meshlib.bbox([(x.co.x + lx, x.co.y + ly, x.co.z + lz)
+                               for x in ob.data.vertices])
+            ax = spec_p[1] if spec_p else ("", "", "")
             rows.append({
                 "name": name, "collection": cname, "material": mname,
+                "pivot_x_mm": round(spec_p[0][0], 2) if spec_p else "",
+                "pivot_y_mm": round(spec_p[0][1], 2) if spec_p else "",
+                "pivot_z_mm": round(spec_p[0][2], 2) if spec_p else "",
+                "axis_x": ax[0], "axis_y": ax[1], "axis_z": ax[2],
+                "spin": spec_p[2] if spec_p and len(spec_p) > 2 else "",
+                "role": spec_p[3] if spec_p and len(spec_p) > 3 else "",
+                "cyl": spec_p[4] if spec_p and len(spec_p) > 4 else "",
                 "verts": len(ob.data.vertices), "faces": len(ob.data.polygons),
                 "x_min_mm": round(bb[0]/MM, 1), "x_max_mm": round(bb[3]/MM, 1),
                 "y_min_mm": round(bb[1]/MM, 1), "y_max_mm": round(bb[4]/MM, 1),

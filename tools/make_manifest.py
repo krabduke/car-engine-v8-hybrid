@@ -4,7 +4,8 @@ import csv, json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "engine"))
-import spec  # noqa: E402
+import spec
+from parts import bottomend  # noqa: E402
 
 GROUPS = [
     ("01 Block",                   "Block",       "#6E7478"),
@@ -27,9 +28,28 @@ def main():
         groups.append({"key": key, "label": label, "color": colour,
                        "parts": len(mine),
                        "faces": sum(int(r["faces"]) for r in mine)})
-    parts = {r["name"]: {"g": r["collection"], "mat": r["material"],
-                         "x0": float(r["x_min_mm"]), "x1": float(r["x_max_mm"]),
-                         "f": int(r["faces"])} for r in rows}
+    def pivot(r):
+        """Moving parts carry their own origin, axis and role, so the viewer
+        can run the engine instead of showing it frozen."""
+        if not r.get("pivot_x_mm"):
+            return None
+        return {"p": [float(r["pivot_x_mm"]), float(r["pivot_y_mm"]),
+                      float(r["pivot_z_mm"])],
+                "axis": [float(r["axis_x"]), float(r["axis_y"]),
+                         float(r["axis_z"])],
+                "role": r.get("role") or "spin",
+                "cyl": int(r["cyl"]) if r.get("cyl") else None}
+
+    parts = {}
+    for r in rows:
+        e = {k2: v2 for k2, v2 in (
+            ("g", r["collection"]), ("mat", r["material"]),
+            ("x0", float(r["x_min_mm"])), ("x1", float(r["x_max_mm"])),
+            ("f", int(r["faces"])))}
+        pv = pivot(r)
+        if pv:
+            e["pivot"] = pv
+        parts[r["name"]] = e
     out = {
         "name": spec.NAME, "config": spec.CONFIG,
         "displacement": spec.swept_volume_cc(),
@@ -49,6 +69,7 @@ def main():
         "palette": {k: {"rgb": list(v[0]), "metal": v[1], "rough": v[2]}
                     for k, v in spec.PALETTE.items()},
         "groups": groups, "parts": parts,
+        "kinematics": bottomend.kinematics(),
     }
     p = os.path.join(ROOT, "viewer", "parts.json")
     json.dump(out, open(p, "w"), indent=1)
