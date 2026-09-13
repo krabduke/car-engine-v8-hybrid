@@ -234,6 +234,14 @@ MATERIAL_MAP = {
     "pump":       "alu_forged",
     "injector":   "steel_nitrided",
     "coil":       "rubber_blk",
+    "spring":     "spring_steel", "retainer": "titanium",
+    "bucket":     "steel_nitrided", "timing": "magnesium",
+    "gear":       "steel_nitrided", "stud": "steel_nitrided",
+    "bolt":       "steel_nitrided", "pickup": "alu_forged",
+    "plumbing":   "alu_forged", "sensor": "anodised",
+    "shield":     "inconel", "wheel": "titanium",
+    "ring":       "steel_nitrided", "cap": "titanium",
+    "gudgeon":    "steel_nitrided", "sump_line": "alu_forged",
 }
 DEFAULT_MATERIAL = "alu_cast"
 

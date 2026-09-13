@@ -86,7 +86,10 @@ def _crankshaft():
 
 
 def _pistons_and_rods():
-    pistons, rods = [], []
+    """Each piston, gudgeon pin and rod is its own object. They are separate
+    components on the real engine and they move relative to each other, so
+    merging them into one mesh loses information."""
+    out = {}
     r = spec.BORE / 2 - 0.35
     for (n, pair, bank, x, a) in spec.cylinders():
         along = _piston_along(pair, bank)
@@ -99,20 +102,42 @@ def _pistons_and_rods():
              (-P["skirt_len"], r - 7.0), (0.0 - P["crown_t"] - 1.0, r - 7.0)],
             SEG)
         pv = common.along_bank(pv, x, along, bank)
-        pistons.append((pv, pf))
+        out[f"piston_{n}"] = (pv, pf)
+
+        # ring pack: three rings in the crown grooves
+        rings = []
+        for k, (dz, rr) in enumerate(((-2.2, r - 0.4), (-5.4, r - 0.5),
+                                      (-9.0, r - 0.6))):
+            rv, rf = mesh.tube(dz - 1.1, dz + 1.1, rr - 2.6, rr, 28)
+            rings.append((common.along_bank(rv, x, along, bank), rf))
+        out[f"rings_{n}"] = mesh.join(*rings)
 
         # gudgeon pin
         gv, gf = mesh.tube(-13.0, 13.0, 0.0, P["pin_r"], 16)
         gv = [(z, y, px) for (px, y, z) in gv]      # axis +x -> engine +x
         gv = common.along_bank(gv, x, along - P["crown_t"] - 12.0, bank)
-        pistons.append((gv, gf))
+        out[f"gudgeon_pin_{n}"] = (gv, gf)
 
         # rod: small end at the gudgeon pin, big end on the crankpin
         py, pz = _pin_centre(pair)
         small = common.bank_point(x, along - P["crown_t"] - 12.0, 0.0, bank)
         big = (x, py, pz)
-        rods.append(_rod(small, big))
-    return {"pistons": mesh.join(*pistons), "conrods": mesh.join(*rods)}
+        out[f"conrod_{n}"] = _rod(small, big)
+        out[f"rod_cap_{n}"] = _rod_cap(big)
+    return out
+
+
+def _rod_cap(big):
+    """Big-end cap and its two bolts."""
+    parts = []
+    v, f = mesh.tube(-9.5, 9.5, C["pin_r"] + 1.2, R["big_end_r"], 24)
+    parts.append(([(px + big[0], py + big[1], pz + big[2]) for (px, py, pz) in v], f))
+    for sgn in (-1, 1):
+        bv, bf = mesh.cylinder(0.0, 34.0, 4.2, 10)
+        bv = [(pz + big[0], py + big[1] + sgn * (R["big_end_r"] - 5.0),
+               px + big[2] - 17.0) for (px, py, pz) in bv]
+        parts.append((bv, bf))
+    return mesh.join(*parts)
 
 
 def _rod(small, big):

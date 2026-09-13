@@ -101,9 +101,18 @@ def main():
                f"crown max z {pz:.1f} mm, deck {spec.DECK_HEIGHT:.1f} along bore")
 
     print("\nCOMPLETENESS")
+    # one piston, ring pack, pin, rod and cap per cylinder
+    for stem in ("piston", "rings", "gudgeon_pin", "conrod", "rod_cap"):
+        have = [k for k in by if k.startswith(stem + "_")]
+        c.true(f"{stem} per cylinder", len(have) == spec.N_CYL,
+               f"{len(have)} of {spec.N_CYL}")
     want = ["block_bank_l", "block_bank_r", "block_liners", "block_crankcase",
-            "bedplate", "sump", "crankshaft", "pistons", "conrods",
+            "bedplate", "sump", "crankshaft",
             "head_l", "head_r", "camshafts", "valves", "injectors", "coils",
+            "valve_springs", "spring_retainers", "bucket_tappets",
+            "timing_gears", "timing_cover", "head_studs", "sump_bolts",
+            "turbo_wheels", "sensors", "heat_shields", "oil_pickup",
+            "coolant_plumbing", "dry_sump_lines",
             "plenum", "trumpets", "throttle", "turbos", "exhaust_manifolds",
             "tailpipes", "mguk", "mguh", "inverter", "battery", "ecu",
             "flywheel", "clutch", "bellhousing"]

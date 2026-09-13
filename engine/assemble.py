@@ -11,12 +11,12 @@ import spec              # noqa: E402
 import mesh as meshlib   # noqa: E402
 import materials         # noqa: E402
 from parts import (block, bottomend, heads, induction,   # noqa: E402
-                   turbo, hybrid, drive)
+                   turbo, hybrid, drive, detail)
 
 MM = 0.001
 MODULES = [("block", block), ("bottom end", bottomend), ("heads", heads),
            ("induction", induction), ("turbo", turbo), ("hybrid", hybrid),
-           ("drive", drive)]
+           ("drive", drive), ("detail", detail)]
 COLLECTIONS = ["01 Block", "02 Bottom End", "03 Heads and Valvetrain",
                "04 Induction", "05 Turbo and Exhaust", "06 Hybrid",
                "07 Drive and Ancillaries"]
@@ -24,6 +24,13 @@ COLLECTIONS = ["01 Block", "02 Bottom End", "03 Heads and Valvetrain",
 
 def collection_for(n):
     n = n.lower()
+    if n.startswith(("valve_spring", "spring_retainer", "bucket_", "head_stud")):
+        return "03 Heads and Valvetrain"
+    if n.startswith(("timing_", "oil_", "coolant_", "sump_bolt", "dry_sump",
+                     "sensor")):
+        return "07 Drive and Ancillaries"
+    if n.startswith(("turbo_wheel", "heat_shield")):
+        return "05 Turbo and Exhaust"
     if n.startswith(("crank", "piston", "conrod")):
         return "02 Bottom End"
     if n.startswith(("head", "cam", "valve", "injector", "coil")):
