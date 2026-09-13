@@ -5,7 +5,7 @@ from a single specification file. Built to power the
 [VX-1 Vortex](https://github.com/krabduke/aero-hypercar), a car whose brief is
 to beat Formula 1 cars on a Formula 1 circuit.
 
-**84 assemblies · 2.0 L · 1,254 hp combined · 16,000 rpm · 146 kg**
+**269 assemblies · 2.0 L · 1,254 hp combined · 16,000 rpm · 146 kg**
 
 ![hero](renders/01_hero.png)
 
@@ -49,7 +49,7 @@ Requires Blender (`brew install --cask blender`). Nothing else.
 
 ```
 make build      # generate geometry, assemble build/engine.blend, write parts.csv
-make verify     # 25 architecture, kinematic and output checks
+make verify     # 34 architecture, kinematic and output checks
 make render     # hero, front, cutaway and exploded views
 make export     # build/engine.glb
 make manifest   # viewer/parts.json
@@ -58,7 +58,7 @@ make viewer     # serve the interactive viewer
 
 ## Verification
 
-`make verify` runs 25 checks. Some are dimensional, measured out of
+`make verify` runs 34 checks. Some are dimensional, measured out of
 `build/parts.csv`. The interesting ones are design rules:
 
 - **Deck height against the slider-crank.** The deck must sit at throw + rod

@@ -118,6 +118,10 @@ HEAD = {
 
 VALVE = {
     "n_per_cyl": 4,
+    "seat_angle": 45.0,          # the classic seat, cut into head and valve
+    "margin": 1.4,               # flat land at the head's outer edge
+    "tulip": 0.62,               # how far the underhead blends into the stem
+    "keeper_groove": 1.1,        # where the collets grip the tip
     "intake_head_r": 17.0,
     "exhaust_head_r": 14.5,
     "stem_r": 2.6,
@@ -132,6 +136,16 @@ CAM = {
     "lobe_lift": 12.5,
     "lobe_w": 11.0,
     "n_cams": 4,
+    # A lobe is not a circle. Duration is the crank angle over which the valve
+    # is off its seat; the lobe occupies half that in cam angle, because the
+    # cam turns at half crank speed. 280 degrees at 16,000 rpm is a racing
+    # profile -- long enough to fill the cylinder at peak power, and the
+    # reason this engine has no low-speed manners to speak of.
+    "duration_in": 280.0,        # crank degrees
+    "duration_ex": 272.0,
+    "lobe_centre_in": 104.0,     # crank degrees after TDC overlap
+    "lobe_centre_ex": 108.0,     # before TDC
+    "ramp": 0.06,                # fraction of duration spent on the quiet ramp
 }
 
 # --------------------------------------------------------------------------
@@ -206,6 +220,17 @@ ANCILLARY = {
 # --------------------------------------------------------------------------
 
 MATERIAL_MAP = {
+    "tappet_": "steel_nitrided",
+    "retainer_": "titanium",
+    "valve_spring": "spring_steel",
+    "coil_": "rubber_blk",
+    "injector_": "steel_nitrided",
+    "sparkplug": "anodised",
+    "cam_journals": "steel_nitrided",
+    "camlobe": "steel_nitrided",
+    "camshaft": "steel_nitrided",
+    "valve_ex": "inconel",
+    "valve_in": "titanium",
     "block":      "alu_cast",
     "bedplate":   "alu_cast",
     "head":       "alu_cast",

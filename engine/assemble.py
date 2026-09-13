@@ -24,14 +24,16 @@ COLLECTIONS = ["01 Block", "02 Bottom End", "03 Heads and Valvetrain",
 
 def collection_for(n):
     n = n.lower()
-    if n.startswith(("valve_spring", "spring_retainer", "bucket_", "head_stud")):
+    if n.startswith(("valve_spring", "spring_retainer", "retainer_",
+                     "bucket_", "tappet_", "head_stud", "sparkplug")):
         return "03 Heads and Valvetrain"
     if n.startswith(("timing_", "oil_", "coolant_", "sump_bolt", "dry_sump",
                      "sensor")):
         return "07 Drive and Ancillaries"
     if n.startswith(("turbo_wheel", "heat_shield")):
         return "05 Turbo and Exhaust"
-    if n.startswith(("crank", "piston", "conrod")):
+    if n.startswith(("crank", "piston", "conrod", "rod_cap", "rings_",
+                     "gudgeon_")):
         return "02 Bottom End"
     if n.startswith(("head", "cam", "valve", "injector", "coil")):
         return "03 Heads and Valvetrain"

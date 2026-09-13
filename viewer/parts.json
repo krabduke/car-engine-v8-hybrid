@@ -134,22 +134,22 @@
    "key": "01 Block",
    "label": "Block",
    "color": "#6E7478",
-   "parts": 30,
-   "faces": 6894
+   "parts": 6,
+   "faces": 2126
   },
   {
    "key": "02 Bottom End",
    "label": "Bottom end",
    "color": "#8E939A",
-   "parts": 17,
-   "faces": 8352
+   "parts": 41,
+   "faces": 13120
   },
   {
    "key": "03 Heads and Valvetrain",
    "label": "Heads",
    "color": "#7E8A93",
-   "parts": 12,
-   "faces": 24664
+   "parts": 197,
+   "faces": 31496
   },
   {
    "key": "04 Induction",
@@ -413,7 +413,7 @@
    }
   },
   "gudgeon_pin_1": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -166.0,
    "x1": -140.0,
@@ -434,7 +434,7 @@
    }
   },
   "gudgeon_pin_2": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -166.0,
    "x1": -140.0,
@@ -455,7 +455,7 @@
    }
   },
   "gudgeon_pin_3": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -64.0,
    "x1": -38.0,
@@ -476,7 +476,7 @@
    }
   },
   "gudgeon_pin_4": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -64.0,
    "x1": -38.0,
@@ -497,7 +497,7 @@
    }
   },
   "gudgeon_pin_5": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 38.0,
    "x1": 64.0,
@@ -518,7 +518,7 @@
    }
   },
   "gudgeon_pin_6": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 38.0,
    "x1": 64.0,
@@ -539,7 +539,7 @@
    }
   },
   "gudgeon_pin_7": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 140.0,
    "x1": 166.0,
@@ -560,7 +560,7 @@
    }
   },
   "gudgeon_pin_8": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 140.0,
    "x1": 166.0,
@@ -749,7 +749,7 @@
    }
   },
   "rings_1": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -194.2,
    "x1": -111.7,
@@ -770,7 +770,7 @@
    }
   },
   "rings_2": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -194.2,
    "x1": -111.7,
@@ -791,7 +791,7 @@
    }
   },
   "rings_3": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -92.3,
    "x1": -9.7,
@@ -812,7 +812,7 @@
    }
   },
   "rings_4": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": -92.3,
    "x1": -9.7,
@@ -833,7 +833,7 @@
    }
   },
   "rings_5": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 9.7,
    "x1": 92.3,
@@ -854,7 +854,7 @@
    }
   },
   "rings_6": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 9.7,
    "x1": 92.3,
@@ -875,7 +875,7 @@
    }
   },
   "rings_7": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 111.7,
    "x1": 194.2,
@@ -896,7 +896,7 @@
    }
   },
   "rings_8": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "steel_nitrided",
    "x0": 111.7,
    "x1": 194.2,
@@ -917,7 +917,7 @@
    }
   },
   "rod_cap_1": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": -162.5,
    "x1": -143.5,
@@ -938,7 +938,7 @@
    }
   },
   "rod_cap_2": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": -162.5,
    "x1": -143.5,
@@ -959,7 +959,7 @@
    }
   },
   "rod_cap_3": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": -60.5,
    "x1": -41.5,
@@ -980,7 +980,7 @@
    }
   },
   "rod_cap_4": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": -60.5,
    "x1": -41.5,
@@ -1001,7 +1001,7 @@
    }
   },
   "rod_cap_5": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": 41.5,
    "x1": 60.5,
@@ -1022,7 +1022,7 @@
    }
   },
   "rod_cap_6": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": 41.5,
    "x1": 60.5,
@@ -1043,7 +1043,7 @@
    }
   },
   "rod_cap_7": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": 143.5,
    "x1": 162.5,
@@ -1064,7 +1064,7 @@
    }
   },
   "rod_cap_8": {
-   "g": "01 Block",
+   "g": "02 Bottom End",
    "mat": "titanium",
    "x0": 143.5,
    "x1": 162.5,
@@ -1084,6 +1084,34 @@
     "cyl": 8
    }
   },
+  "cam_journals_l_ex": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -179.4,
+   "x1": 134.3,
+   "f": 320
+  },
+  "cam_journals_l_in": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -179.4,
+   "x1": 134.3,
+   "f": 320
+  },
+  "cam_journals_r_ex": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -179.4,
+   "x1": 134.3,
+   "f": 320
+  },
+  "cam_journals_r_in": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -179.4,
+   "x1": 134.3,
+   "f": 320
+  },
   "camcover_l": {
    "g": "03 Heads and Valvetrain",
    "mat": "magnesium",
@@ -1098,19 +1126,313 @@
    "x1": 221.0,
    "f": 6
   },
-  "camshafts": {
+  "camlobe_l_ex_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -189.0,
+   "x1": -152.7,
+   "f": 74
+  },
+  "camlobe_l_ex_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -162.6,
+   "x1": -126.3,
+   "f": 74
+  },
+  "camlobe_l_ex_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -77.7,
+   "x1": -44.9,
+   "f": 74
+  },
+  "camlobe_l_ex_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -51.3,
+   "x1": -18.5,
+   "f": 74
+  },
+  "camlobe_l_ex_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 24.3,
+   "x1": 51.3,
+   "f": 74
+  },
+  "camlobe_l_ex_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 50.7,
+   "x1": 77.7,
+   "f": 74
+  },
+  "camlobe_l_ex_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 114.0,
+   "x1": 153.3,
+   "f": 74
+  },
+  "camlobe_l_ex_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 140.4,
+   "x1": 179.7,
+   "f": 74
+  },
+  "camlobe_l_in_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -179.7,
+   "x1": -143.6,
+   "f": 74
+  },
+  "camlobe_l_in_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -153.3,
+   "x1": -117.2,
+   "f": 74
+  },
+  "camlobe_l_in_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -77.7,
+   "x1": -44.3,
+   "f": 74
+  },
+  "camlobe_l_in_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -51.3,
+   "x1": -17.9,
+   "f": 74
+  },
+  "camlobe_l_in_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 12.0,
+   "x1": 51.3,
+   "f": 74
+  },
+  "camlobe_l_in_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 38.4,
+   "x1": 77.7,
+   "f": 74
+  },
+  "camlobe_l_in_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 126.3,
+   "x1": 153.3,
+   "f": 74
+  },
+  "camlobe_l_in_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 152.7,
+   "x1": 179.7,
+   "f": 74
+  },
+  "camlobe_r_ex_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -185.5,
+   "x1": -152.7,
+   "f": 74
+  },
+  "camlobe_r_ex_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -159.1,
+   "x1": -126.3,
+   "f": 74
+  },
+  "camlobe_r_ex_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -77.7,
+   "x1": -41.4,
+   "f": 74
+  },
+  "camlobe_r_ex_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -51.3,
+   "x1": -15.0,
+   "f": 74
+  },
+  "camlobe_r_ex_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 24.3,
+   "x1": 63.6,
+   "f": 74
+  },
+  "camlobe_r_ex_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 50.7,
+   "x1": 90.0,
+   "f": 74
+  },
+  "camlobe_r_ex_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 126.3,
+   "x1": 153.3,
+   "f": 74
+  },
+  "camlobe_r_ex_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 152.7,
+   "x1": 179.7,
+   "f": 74
+  },
+  "camlobe_r_in_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -186.1,
+   "x1": -152.7,
+   "f": 74
+  },
+  "camlobe_r_in_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -159.7,
+   "x1": -126.3,
+   "f": 74
+  },
+  "camlobe_r_in_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -86.8,
+   "x1": -50.7,
+   "f": 74
+  },
+  "camlobe_r_in_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -60.4,
+   "x1": -24.3,
+   "f": 74
+  },
+  "camlobe_r_in_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 24.3,
+   "x1": 51.3,
+   "f": 74
+  },
+  "camlobe_r_in_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 50.7,
+   "x1": 77.7,
+   "f": 74
+  },
+  "camlobe_r_in_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 126.3,
+   "x1": 165.6,
+   "f": 74
+  },
+  "camlobe_r_in_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 152.7,
+   "x1": 192.0,
+   "f": 74
+  },
+  "camshaft_l_ex": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": -228.0,
    "x1": 228.0,
-   "f": 3392
+   "f": 80
   },
-  "coils": {
+  "camshaft_l_in": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -228.0,
+   "x1": 228.0,
+   "f": 80
+  },
+  "camshaft_r_ex": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -228.0,
+   "x1": 228.0,
+   "f": 80
+  },
+  "camshaft_r_in": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -228.0,
+   "x1": 228.0,
+   "f": 80
+  },
+  "coil_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "rubber_blk",
    "x0": -153.0,
+   "x1": -79.0,
+   "f": 112
+  },
+  "coil_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": -153.0,
+   "x1": -79.0,
+   "f": 112
+  },
+  "coil_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": -51.0,
+   "x1": 23.0,
+   "f": 112
+  },
+  "coil_4": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": -51.0,
+   "x1": 23.0,
+   "f": 112
+  },
+  "coil_5": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": 51.0,
+   "x1": 125.0,
+   "f": 112
+  },
+  "coil_6": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": 51.0,
+   "x1": 125.0,
+   "f": 112
+  },
+  "coil_7": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": 153.0,
    "x1": 227.0,
-   "f": 480
+   "f": 112
+  },
+  "coil_8": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "rubber_blk",
+   "x0": 153.0,
+   "x1": 227.0,
+   "f": 112
   },
   "head_l": {
    "g": "03 Heads and Valvetrain",
@@ -1126,19 +1448,341 @@
    "x1": 228.0,
    "f": 6
   },
-  "injectors": {
+  "injector_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": -153.0,
-   "x1": 215.0,
-   "f": 480
+   "x1": -91.0,
+   "f": 140
   },
-  "valves": {
+  "injector_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -153.0,
+   "x1": -91.0,
+   "f": 140
+  },
+  "injector_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -51.0,
+   "x1": 11.0,
+   "f": 140
+  },
+  "injector_4": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -51.0,
+   "x1": 11.0,
+   "f": 140
+  },
+  "injector_5": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 51.0,
+   "x1": 113.0,
+   "f": 140
+  },
+  "injector_6": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 51.0,
+   "x1": 113.0,
+   "f": 140
+  },
+  "injector_7": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 153.0,
+   "x1": 215.0,
+   "f": 140
+  },
+  "injector_8": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 153.0,
+   "x1": 215.0,
+   "f": 140
+  },
+  "sparkplug_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": -153.0,
+   "x1": -127.0,
+   "f": 90
+  },
+  "sparkplug_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": -153.0,
+   "x1": -127.0,
+   "f": 90
+  },
+  "sparkplug_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": -51.0,
+   "x1": -25.0,
+   "f": 90
+  },
+  "sparkplug_4": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": -51.0,
+   "x1": -25.0,
+   "f": 90
+  },
+  "sparkplug_5": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": 51.0,
+   "x1": 77.0,
+   "f": 90
+  },
+  "sparkplug_6": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": 51.0,
+   "x1": 77.0,
+   "f": 90
+  },
+  "sparkplug_7": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": 153.0,
+   "x1": 179.0,
+   "f": 90
+  },
+  "sparkplug_8": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "anodised",
+   "x0": 153.0,
+   "x1": 179.0,
+   "f": 90
+  },
+  "valve_ex_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -181.3,
+   "x1": -152.3,
+   "f": 280
+  },
+  "valve_ex_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -153.7,
+   "x1": -124.7,
+   "f": 280
+  },
+  "valve_ex_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -181.3,
+   "x1": -152.3,
+   "f": 280
+  },
+  "valve_ex_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -153.7,
+   "x1": -124.7,
+   "f": 280
+  },
+  "valve_ex_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -79.3,
+   "x1": -50.3,
+   "f": 280
+  },
+  "valve_ex_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -51.7,
+   "x1": -22.7,
+   "f": 280
+  },
+  "valve_ex_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -79.3,
+   "x1": -50.3,
+   "f": 280
+  },
+  "valve_ex_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": -51.7,
+   "x1": -22.7,
+   "f": 280
+  },
+  "valve_ex_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 22.7,
+   "x1": 51.7,
+   "f": 280
+  },
+  "valve_ex_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 50.3,
+   "x1": 79.3,
+   "f": 280
+  },
+  "valve_ex_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 22.7,
+   "x1": 51.7,
+   "f": 280
+  },
+  "valve_ex_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 50.3,
+   "x1": 79.3,
+   "f": 280
+  },
+  "valve_ex_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 124.7,
+   "x1": 153.7,
+   "f": 280
+  },
+  "valve_ex_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 152.3,
+   "x1": 181.3,
+   "f": 280
+  },
+  "valve_ex_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 124.7,
+   "x1": 153.7,
+   "f": 280
+  },
+  "valve_ex_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "inconel",
+   "x0": 152.3,
+   "x1": 181.3,
+   "f": 280
+  },
+  "valve_in_1_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "titanium",
    "x0": -186.1,
+   "x1": -152.2,
+   "f": 280
+  },
+  "valve_in_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -153.9,
+   "x1": -119.9,
+   "f": 280
+  },
+  "valve_in_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -186.1,
+   "x1": -152.2,
+   "f": 280
+  },
+  "valve_in_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -153.9,
+   "x1": -119.9,
+   "f": 280
+  },
+  "valve_in_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -84.2,
+   "x1": -50.1,
+   "f": 280
+  },
+  "valve_in_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -51.8,
+   "x1": -17.9,
+   "f": 280
+  },
+  "valve_in_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -84.2,
+   "x1": -50.1,
+   "f": 280
+  },
+  "valve_in_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -51.8,
+   "x1": -17.9,
+   "f": 280
+  },
+  "valve_in_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 17.9,
+   "x1": 51.8,
+   "f": 280
+  },
+  "valve_in_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 50.1,
+   "x1": 84.2,
+   "f": 280
+  },
+  "valve_in_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 17.9,
+   "x1": 51.8,
+   "f": 280
+  },
+  "valve_in_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 50.1,
+   "x1": 84.2,
+   "f": 280
+  },
+  "valve_in_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 119.9,
+   "x1": 153.9,
+   "f": 280
+  },
+  "valve_in_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 152.2,
    "x1": 186.1,
-   "f": 4480
+   "f": 280
+  },
+  "valve_in_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 119.9,
+   "x1": 153.9,
+   "f": 280
+  },
+  "valve_in_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 152.2,
+   "x1": 186.1,
+   "f": 280
   },
   "plenum": {
    "g": "04 Induction",
@@ -1252,13 +1896,6 @@
    "x1": -232.0,
    "f": 96
   },
-  "bucket_tappets": {
-   "g": "03 Heads and Valvetrain",
-   "mat": "steel_nitrided",
-   "x0": -178.1,
-   "x1": 178.1,
-   "f": 2304
-  },
   "coolant_plumbing": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
@@ -1294,6 +1931,230 @@
    "x1": 12.0,
    "f": 32
   },
+  "retainer_1_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -172.2,
+   "x1": -166.2,
+   "f": 64
+  },
+  "retainer_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -139.9,
+   "x1": -133.8,
+   "f": 64
+  },
+  "retainer_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -169.8,
+   "x1": -163.8,
+   "f": 64
+  },
+  "retainer_1_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -142.2,
+   "x1": -136.2,
+   "f": 64
+  },
+  "retainer_2_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -172.2,
+   "x1": -166.2,
+   "f": 64
+  },
+  "retainer_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -139.9,
+   "x1": -133.8,
+   "f": 64
+  },
+  "retainer_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -169.8,
+   "x1": -163.8,
+   "f": 64
+  },
+  "retainer_2_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -142.2,
+   "x1": -136.2,
+   "f": 64
+  },
+  "retainer_3_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -70.2,
+   "x1": -64.1,
+   "f": 64
+  },
+  "retainer_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -37.8,
+   "x1": -31.8,
+   "f": 64
+  },
+  "retainer_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -67.8,
+   "x1": -61.8,
+   "f": 64
+  },
+  "retainer_3_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -40.2,
+   "x1": -34.2,
+   "f": 64
+  },
+  "retainer_4_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -70.2,
+   "x1": -64.1,
+   "f": 64
+  },
+  "retainer_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -37.8,
+   "x1": -31.8,
+   "f": 64
+  },
+  "retainer_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -67.8,
+   "x1": -61.8,
+   "f": 64
+  },
+  "retainer_4_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": -40.2,
+   "x1": -34.2,
+   "f": 64
+  },
+  "retainer_5_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 31.8,
+   "x1": 37.8,
+   "f": 64
+  },
+  "retainer_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 64.1,
+   "x1": 70.2,
+   "f": 64
+  },
+  "retainer_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 34.2,
+   "x1": 40.2,
+   "f": 64
+  },
+  "retainer_5_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 61.8,
+   "x1": 67.8,
+   "f": 64
+  },
+  "retainer_6_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 31.8,
+   "x1": 37.8,
+   "f": 64
+  },
+  "retainer_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 64.1,
+   "x1": 70.2,
+   "f": 64
+  },
+  "retainer_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 34.2,
+   "x1": 40.2,
+   "f": 64
+  },
+  "retainer_6_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 61.8,
+   "x1": 67.8,
+   "f": 64
+  },
+  "retainer_7_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 133.8,
+   "x1": 139.9,
+   "f": 64
+  },
+  "retainer_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 166.2,
+   "x1": 172.2,
+   "f": 64
+  },
+  "retainer_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 136.2,
+   "x1": 142.2,
+   "f": 64
+  },
+  "retainer_7_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 163.8,
+   "x1": 169.8,
+   "f": 64
+  },
+  "retainer_8_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 133.8,
+   "x1": 139.9,
+   "f": 64
+  },
+  "retainer_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 166.2,
+   "x1": 172.2,
+   "f": 64
+  },
+  "retainer_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 136.2,
+   "x1": 142.2,
+   "f": 64
+  },
+  "retainer_8_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "titanium",
+   "x0": 163.8,
+   "x1": 169.8,
+   "f": 64
+  },
   "sensors": {
    "g": "07 Drive and Ancillaries",
    "mat": "anodised",
@@ -1301,19 +2162,236 @@
    "x1": 205.0,
    "f": 280
   },
-  "spring_retainers": {
-   "g": "03 Heads and Valvetrain",
-   "mat": "titanium",
-   "x0": -172.2,
-   "x1": 172.2,
-   "f": 2048
-  },
   "sump_bolts": {
    "g": "07 Drive and Ancillaries",
    "mat": "magnesium",
    "x0": -200.4,
    "x1": 200.4,
    "f": 1440
+  },
+  "tappet_1_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -178.1,
+   "x1": -160.2,
+   "f": 72
+  },
+  "tappet_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -145.9,
+   "x1": -127.8,
+   "f": 72
+  },
+  "tappet_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -175.8,
+   "x1": -157.8,
+   "f": 72
+  },
+  "tappet_1_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -148.2,
+   "x1": -130.2,
+   "f": 72
+  },
+  "tappet_2_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -178.1,
+   "x1": -160.2,
+   "f": 72
+  },
+  "tappet_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -145.9,
+   "x1": -127.8,
+   "f": 72
+  },
+  "tappet_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -175.8,
+   "x1": -157.8,
+   "f": 72
+  },
+  "tappet_2_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -148.2,
+   "x1": -130.2,
+   "f": 72
+  },
+  "tappet_3_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -76.2,
+   "x1": -58.2,
+   "f": 72
+  },
+  "tappet_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -43.9,
+   "x1": -25.8,
+   "f": 72
+  },
+  "tappet_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -73.8,
+   "x1": -55.8,
+   "f": 72
+  },
+  "tappet_3_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -46.2,
+   "x1": -28.2,
+   "f": 72
+  },
+  "tappet_4_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -76.2,
+   "x1": -58.2,
+   "f": 72
+  },
+  "tappet_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -43.9,
+   "x1": -25.8,
+   "f": 72
+  },
+  "tappet_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -73.8,
+   "x1": -55.8,
+   "f": 72
+  },
+  "tappet_4_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": -46.2,
+   "x1": -28.2,
+   "f": 72
+  },
+  "tappet_5_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 25.8,
+   "x1": 43.9,
+   "f": 72
+  },
+  "tappet_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 58.2,
+   "x1": 76.2,
+   "f": 72
+  },
+  "tappet_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 28.2,
+   "x1": 46.2,
+   "f": 72
+  },
+  "tappet_5_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 55.8,
+   "x1": 73.8,
+   "f": 72
+  },
+  "tappet_6_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 25.8,
+   "x1": 43.9,
+   "f": 72
+  },
+  "tappet_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 58.2,
+   "x1": 76.2,
+   "f": 72
+  },
+  "tappet_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 28.2,
+   "x1": 46.2,
+   "f": 72
+  },
+  "tappet_6_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 55.8,
+   "x1": 73.8,
+   "f": 72
+  },
+  "tappet_7_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 127.8,
+   "x1": 145.9,
+   "f": 72
+  },
+  "tappet_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 160.2,
+   "x1": 178.1,
+   "f": 72
+  },
+  "tappet_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 130.2,
+   "x1": 148.2,
+   "f": 72
+  },
+  "tappet_7_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 157.8,
+   "x1": 175.8,
+   "f": 72
+  },
+  "tappet_8_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 127.8,
+   "x1": 145.9,
+   "f": 72
+  },
+  "tappet_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 160.2,
+   "x1": 178.1,
+   "f": 72
+  },
+  "tappet_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 130.2,
+   "x1": 148.2,
+   "f": 72
+  },
+  "tappet_8_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "steel_nitrided",
+   "x0": 157.8,
+   "x1": 175.8,
+   "f": 72
   },
   "timing_cover": {
    "g": "07 Drive and Ancillaries",
@@ -1336,12 +2414,229 @@
    "x1": 164.0,
    "f": 728
   },
-  "valve_springs": {
+  "valve_spring_1_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -179.7,
+   "x1": -158.6,
+   "f": 338
+  },
+  "valve_spring_1_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -147.4,
+   "x1": -126.3,
+   "f": 338
+  },
+  "valve_spring_1_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -177.3,
+   "x1": -156.2,
+   "f": 338
+  },
+  "valve_spring_1_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -149.8,
+   "x1": -128.6,
+   "f": 338
+  },
+  "valve_spring_2_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -179.7,
+   "x1": -158.6,
+   "f": 338
+  },
+  "valve_spring_2_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -147.4,
+   "x1": -126.3,
+   "f": 338
+  },
+  "valve_spring_2_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -177.3,
+   "x1": -156.2,
+   "f": 338
+  },
+  "valve_spring_2_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -149.8,
+   "x1": -128.6,
+   "f": 338
+  },
+  "valve_spring_3_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -77.7,
+   "x1": -56.6,
+   "f": 338
+  },
+  "valve_spring_3_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -45.4,
+   "x1": -24.3,
+   "f": 338
+  },
+  "valve_spring_3_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -75.3,
+   "x1": -54.2,
+   "f": 338
+  },
+  "valve_spring_3_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -47.8,
+   "x1": -26.6,
+   "f": 338
+  },
+  "valve_spring_4_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -77.7,
+   "x1": -56.6,
+   "f": 338
+  },
+  "valve_spring_4_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -45.4,
+   "x1": -24.3,
+   "f": 338
+  },
+  "valve_spring_4_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -75.3,
+   "x1": -54.2,
+   "f": 338
+  },
+  "valve_spring_4_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": -47.8,
+   "x1": -26.6,
+   "f": 338
+  },
+  "valve_spring_5_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 24.3,
+   "x1": 45.4,
+   "f": 338
+  },
+  "valve_spring_5_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 56.6,
+   "x1": 77.7,
+   "f": 338
+  },
+  "valve_spring_5_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 26.7,
+   "x1": 47.8,
+   "f": 338
+  },
+  "valve_spring_5_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 54.2,
+   "x1": 75.4,
+   "f": 338
+  },
+  "valve_spring_6_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 24.3,
+   "x1": 45.4,
+   "f": 338
+  },
+  "valve_spring_6_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 56.6,
+   "x1": 77.7,
+   "f": 338
+  },
+  "valve_spring_6_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 26.7,
+   "x1": 47.8,
+   "f": 338
+  },
+  "valve_spring_6_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 54.2,
+   "x1": 75.4,
+   "f": 338
+  },
+  "valve_spring_7_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 126.3,
+   "x1": 147.4,
+   "f": 338
+  },
+  "valve_spring_7_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 158.6,
    "x1": 179.7,
-   "f": 10816
+   "f": 338
+  },
+  "valve_spring_7_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 128.7,
+   "x1": 149.8,
+   "f": 338
+  },
+  "valve_spring_7_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 156.2,
+   "x1": 177.4,
+   "f": 338
+  },
+  "valve_spring_8_0": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 126.3,
+   "x1": 147.4,
+   "f": 338
+  },
+  "valve_spring_8_1": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 158.6,
+   "x1": 179.7,
+   "f": 338
+  },
+  "valve_spring_8_2": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 128.7,
+   "x1": 149.8,
+   "f": 338
+  },
+  "valve_spring_8_3": {
+   "g": "03 Heads and Valvetrain",
+   "mat": "spring_steel",
+   "x0": 156.2,
+   "x1": 177.4,
+   "f": 338
   }
  },
  "kinematics": {

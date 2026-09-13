@@ -63,20 +63,26 @@ def _valve_gear():
                    px * math.sin(tilt) + py * math.cos(tilt), pz)
                   for (px, py, pz) in sv]
             sv = common.along_bank(sv, xo, spec.DECK_HEIGHT + 26.0, bank)
-            springs.append((sv, sf))
+            springs.append((f"{n}_{k}", (sv, sf)))
 
             rv, rf = mesh.tube(-3.0, 3.0, 3.2, 12.5, 16)
             rv = [(pz, py, px) for (px, py, pz) in rv]
             rv = common.along_bank(rv, xo, spec.DECK_HEIGHT + 62.0, bank)
-            retainers.append((rv, rf))
+            retainers.append((f"{n}_{k}", (rv, rf)))
 
             bv, bf = mesh.tube(-9.0, 9.0, 11.0, 14.0, 18)
             bv = [(pz, py, px) for (px, py, pz) in bv]
             bv = common.along_bank(bv, xo, spec.DECK_HEIGHT + 74.0, bank)
-            buckets.append((bv, bf))
-    return {"valve_springs": mesh.join(*springs),
-            "spring_retainers": mesh.join(*retainers),
-            "bucket_tappets": mesh.join(*buckets)}
+            buckets.append((f"{n}_{k}", (bv, bf)))
+    out = {}
+    # one object per valve: a spring is a service item, not a texture
+    for (tag, m) in springs:
+        out[f"valve_spring_{tag}"] = m
+    for (tag, m) in retainers:
+        out[f"retainer_{tag}"] = m
+    for (tag, m) in buckets:
+        out[f"tappet_{tag}"] = m
+    return out
 
 
 def _timing():

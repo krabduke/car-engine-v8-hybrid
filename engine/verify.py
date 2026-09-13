@@ -101,21 +101,29 @@ def main():
                f"crown max z {pz:.1f} mm, deck {spec.DECK_HEIGHT:.1f} along bore")
 
     print("\nCOMPLETENESS")
-    # one piston, ring pack, pin, rod and cap per cylinder
+    # every per-cylinder and per-valve part, counted. These are the checks
+    # that keep the valvetrain honest as it is split up or rebuilt.
+    n_valves = spec.N_CYL * spec.VALVE["n_per_cyl"]
+    for stem, want_n in (("valve_in", n_valves // 2), ("valve_ex", n_valves // 2),
+                         ("camlobe", n_valves), ("valve_spring", n_valves),
+                         ("retainer", n_valves), ("tappet", n_valves),
+                         ("injector", spec.N_CYL), ("coil", spec.N_CYL),
+                         ("sparkplug", spec.N_CYL)):
+        have = [k for k in by if k.startswith(stem + "_")]
+        c.true(f"{stem} count", len(have) == want_n,
+               f"{len(have)} of {want_n}")
+
     for stem in ("piston", "rings", "gudgeon_pin", "conrod", "rod_cap"):
         have = [k for k in by if k.startswith(stem + "_")]
         c.true(f"{stem} per cylinder", len(have) == spec.N_CYL,
                f"{len(have)} of {spec.N_CYL}")
-    want = ["block_bank_l", "block_bank_r", "block_liners", "block_crankcase",
-            "bedplate", "sump", "crankshaft",
-            "head_l", "head_r", "camshafts", "valves", "injectors", "coils",
-            "valve_springs", "spring_retainers", "bucket_tappets",
-            "timing_gears", "timing_cover", "head_studs", "sump_bolts",
-            "turbo_wheels", "sensors", "heat_shields", "oil_pickup",
-            "coolant_plumbing", "dry_sump_lines",
-            "plenum", "trumpets", "throttle", "turbos", "exhaust_manifolds",
-            "tailpipes", "mguk", "mguh", "inverter", "battery", "ecu",
-            "flywheel", "clutch", "bellhousing"]
+    want = ["block_crankcase", "bedplate", "sump", "crankshaft",
+            "head_l", "head_r", "camshaft_l_in", "camshaft_r_ex",
+            "valve_in_1_1", "valve_ex_8_2", "camlobe_l_in_1_1",
+            "injector_1", "coil_8", "sparkplug_4",
+            "valve_spring_1_0", "retainer_8_3", "tappet_5_2",
+            "plenum", "throttle", "turbos", "flywheel", "clutch",
+            "mguk", "mguh", "ecu", "pump_oil", "pump_water"]
     missing = [w for w in want if w not in by]
     c.true("key components present", not missing, f"{len(want)} checked")
     for m in missing:
