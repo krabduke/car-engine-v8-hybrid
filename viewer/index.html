@@ -253,9 +253,17 @@ import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 const MM = 0.001;
 const $ = s => document.querySelector(s);
 
+// Anything inside named(...) or matching(...) is a claim that these are
+// parts or groups in viewer/parts.json, and tools/validate_viewer.mjs
+// checks the claim: a renamed part must not be able to go on quietly
+// not matching.
+const named = (...n) => n;
+const matching = (...n) => n;
+
+
 // Hiding the skin is how you look inside. No clipping planes: discarding
 // fragments turned out to be far more trouble than toggling visibility.
-const SKIN = ['block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners',
+const SKIN = named('block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners',
               'head_l', 'head_r',
               'camcover_l', 'camcover_r', 'sump', 'bellhousing',
               'plenum_l', 'plenum_r',
@@ -263,7 +271,7 @@ const SKIN = ['block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners',
               // reason it is on the engine, and they are the one thing you
               // can never see on a real one
               'turbine_housing_1', 'turbine_housing_2',
-              'compressor_housing_1', 'compressor_housing_2'];
+              'compressor_housing_1', 'compressor_housing_2');
 
 let keyLight = null;   // cast shadows, and sized to the model in ready()
 let scene, camera, renderer, controls, root, raycaster, clock;
