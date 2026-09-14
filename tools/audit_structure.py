@@ -56,7 +56,8 @@ CFG = {
         "sump": (("sump",), 1),
         "oil pump": (("pump_oil",), 1),
         "water pump": (("pump_water",), 1),
-        "plenum": (("plenum",), 1),
+        # one plenum per bank: a hot vee feeds its ports from outboard
+        "plenum": (("plenum_l", "plenum_r"), 2),
         "crank trigger": (("crank_trigger",), 1),
         "piston": (("piston_*",), 8),
         "conrod": (("conrod_*",), 8),

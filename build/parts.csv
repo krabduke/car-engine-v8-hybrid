@@ -4,12 +4,12 @@ block_bank_l,01 Block,alu_cast,,,,,,,,,,6040,6018,-241.1,222.1,-126.2,133.5,-24.
 block_bank_r,01 Block,alu_cast,,,,,,,,,,6040,6018,-222.1,241.1,-122.2,126.2,-12.9,133.5
 block_crankcase,01 Block,alu_cast,,,,,,,,,,1100,948,-231.6,231.6,-101.1,101.1,-96.0,28.0
 block_liners,01 Block,alu_cast,,,,,,,,,,21536,21536,-210.0,210.0,-123.7,123.7,10.3,123.7
-gallery_plugs,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,1032,1260,-201.3,201.3,-109.5,109.5,-42.0,-37.0
-mount_bosses,07 Drive and Ancillaries,alu_cast,,,,,,,,,,792,936,-184.9,184.9,-114.5,114.5,-30.0,72.0
+gallery_plugs,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,1032,1260,-201.3,201.3,-130.0,130.0,-42.0,-37.0
+mount_bosses,07 Drive and Ancillaries,alu_cast,,,,,,,,,,792,936,-184.9,184.9,-135.0,135.0,-30.0,72.0
 sump,01 Block,magnesium,,,,,,,,,,840,802,-196.0,196.0,-92.1,92.1,-179.8,-118.0
 sump_baffles,01 Block,alu_forged,,,,,,,,,,784,680,-149.5,149.5,-67.7,67.7,-161.1,-127.0
 sump_drain,01 Block,steel_nitrided,,,,,,,,,,372,444,57.6,83.5,-13.0,13.0,-190.5,-177.5
-water_outlets,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2976,3552,-190.5,190.5,-118.0,118.0,22.0,40.0
+water_outlets,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2976,3552,-190.5,190.5,-138.5,138.5,22.0,40.0
 windage_tray,01 Block,steel_nitrided,,,,,,,,,,3378,3518,-152.0,152.0,-74.0,74.0,-102.0,-64.5
 conrod_1,02 Bottom End,titanium,-162.5,-53.25,53.25,1.0,0.0,0.0,1.0,rod,1,1620,1596,-172.0,-153.0,-54.2,51.6,-21.8,54.2
 conrod_2,02 Bottom End,titanium,-143.5,75.43,75.43,1.0,0.0,0.0,1.0,rod,2,1620,1596,-153.0,-134.0,-10.4,76.3,-21.8,76.3
@@ -71,158 +71,158 @@ rod_cap_5,02 Bottom End,titanium,41.5,-64.68,64.68,1.0,0.0,0.0,1.0,rod,5,1340,14
 rod_cap_6,02 Bottom End,titanium,60.5,45.66,45.66,1.0,0.0,0.0,1.0,rod,6,1340,1474,51.0,70.0,-51.6,10.4,-40.2,21.8
 rod_cap_7,02 Bottom End,titanium,143.5,-53.25,53.25,1.0,0.0,0.0,1.0,rod,7,1340,1474,134.0,153.0,-10.4,51.6,-21.8,40.2
 rod_cap_8,02 Bottom End,titanium,162.5,75.43,75.43,1.0,0.0,0.0,1.0,rod,8,1340,1474,153.0,172.0,-10.4,51.6,-21.8,40.2
-cam_journals_l_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-188.9,124.8,-112.9,-82.9,138.1,168.1
-cam_journals_l_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-188.9,124.8,-168.1,-138.1,82.9,112.9
-cam_journals_r_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-169.9,143.8,82.9,112.9,138.1,168.1
-cam_journals_r_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-169.9,143.8,138.1,168.1,82.9,112.9
-camcover_bolts_l,03 Heads and Valvetrain,titanium,,,,,,,,,,2904,3432,-214.2,214.2,103.1,194.2,91.8,182.9
-camcover_bolts_r,03 Heads and Valvetrain,titanium,,,,,,,,,,2904,3432,-214.2,214.2,-182.9,-91.8,103.1,194.2
-camcover_l,03 Heads and Valvetrain,magnesium,,,,,,,,,,1836,1586,-221.0,221.0,107.8,211.2,96.5,199.9
-camcover_r,03 Heads and Valvetrain,magnesium,,,,,,,,,,1836,1586,-221.0,221.0,-199.9,-96.5,107.8,211.2
-camlobe_l_ex_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-198.5,-162.2,-110.4,-81.2,140.7,169.8
-camlobe_l_ex_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-172.1,-135.8,-110.4,-81.2,140.7,169.8
-camlobe_l_ex_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-87.2,-54.4,-110.4,-78.8,140.7,172.2
-camlobe_l_ex_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-60.8,-28.0,-110.4,-78.8,140.7,172.2
-camlobe_l_ex_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,14.8,41.8,-119.1,-85.5,132.0,165.5
-camlobe_l_ex_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,41.2,68.2,-119.1,-85.5,132.0,165.5
-camlobe_l_ex_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,104.5,143.8,-110.5,-85.5,140.5,165.5
-camlobe_l_ex_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,130.9,170.2,-110.5,-85.5,140.5,165.5
-camlobe_l_in_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-189.2,-153.1,-165.5,-136.0,85.5,115.0
-camlobe_l_in_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-162.8,-126.7,-165.5,-136.0,85.5,115.0
-camlobe_l_in_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-87.2,-53.8,-172.0,-140.7,79.0,110.4
-camlobe_l_in_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-60.8,-27.4,-172.0,-140.7,79.0,110.4
-camlobe_l_in_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,2.4,41.8,-165.5,-140.6,85.5,110.4
-camlobe_l_in_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,28.8,68.2,-165.5,-140.6,85.5,110.4
-camlobe_l_in_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,116.8,143.8,-165.5,-131.9,85.5,119.1
-camlobe_l_in_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,143.2,170.2,-165.5,-131.9,85.5,119.1
-camlobe_r_ex_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-176.0,-143.2,78.8,110.4,140.7,172.2
-camlobe_r_ex_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-149.6,-116.8,78.8,110.4,140.7,172.2
-camlobe_r_ex_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-68.2,-31.9,81.2,110.4,140.7,169.8
-camlobe_r_ex_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-41.8,-5.5,81.2,110.4,140.7,169.8
-camlobe_r_ex_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,33.8,73.1,85.5,110.5,140.5,165.5
-camlobe_r_ex_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,60.2,99.5,85.5,110.5,140.5,165.5
-camlobe_r_ex_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,135.8,162.8,85.5,119.1,132.0,165.5
-camlobe_r_ex_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,162.2,189.2,85.5,119.1,132.0,165.5
-camlobe_r_in_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-176.6,-143.2,140.7,172.0,79.0,110.4
-camlobe_r_in_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-150.2,-116.8,140.7,172.0,79.0,110.4
-camlobe_r_in_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-77.3,-41.2,136.0,165.5,85.5,115.0
-camlobe_r_in_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-50.9,-14.8,136.0,165.5,85.5,115.0
-camlobe_r_in_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,33.8,60.8,131.9,165.5,85.5,119.1
-camlobe_r_in_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,60.2,87.2,131.9,165.5,85.5,119.1
-camlobe_r_in_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,135.8,175.2,140.6,165.5,85.5,110.4
-camlobe_r_in_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,162.2,201.6,140.6,165.5,85.5,110.4
-camshaft_l_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,-112.3,-83.5,138.7,167.5
-camshaft_l_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,-167.5,-138.7,83.5,112.3
-camshaft_r_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,83.5,112.3,138.7,167.5
-camshaft_r_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,138.7,167.5,83.5,112.3
-coil_1,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-162.5,-88.5,-108.2,-86.2,86.2,108.2
-coil_2,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-143.5,-69.5,86.2,108.2,86.2,108.2
-coil_3,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-60.5,13.5,-108.2,-86.2,86.2,108.2
-coil_4,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-41.5,32.5,86.2,108.2,86.2,108.2
-coil_5,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,41.5,115.5,-108.2,-86.2,86.2,108.2
-coil_6,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,60.5,134.5,86.2,108.2,86.2,108.2
-coil_7,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,143.5,217.5,-108.2,-86.2,86.2,108.2
-coil_8,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,162.5,236.5,86.2,108.2,86.2,108.2
-collets_ex_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-176.3,-170.3,-28.6,-16.0,37.6,49.9
-collets_ex_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-148.7,-142.7,-28.6,-16.0,37.6,49.9
-collets_ex_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-157.3,-151.3,37.6,49.9,16.0,28.6
-collets_ex_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-129.7,-123.7,37.6,49.9,16.0,28.6
-collets_ex_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-74.3,-68.3,-28.6,-16.0,37.6,49.9
-collets_ex_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-46.7,-40.7,-28.6,-16.0,37.6,49.9
-collets_ex_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-55.3,-49.3,37.6,49.9,16.0,28.6
-collets_ex_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-27.7,-21.7,37.6,49.9,16.0,28.6
-collets_ex_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,27.7,33.7,-28.6,-16.0,37.6,49.9
-collets_ex_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,55.3,61.3,-28.6,-16.0,37.6,49.9
-collets_ex_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,46.7,52.7,37.6,49.9,16.0,28.6
-collets_ex_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,74.3,80.3,37.6,49.9,16.0,28.6
-collets_ex_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,129.7,135.7,-28.6,-16.0,37.6,49.9
-collets_ex_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,157.3,163.3,-28.6,-16.0,37.6,49.9
-collets_ex_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,148.7,154.7,37.6,49.9,16.0,28.6
-collets_ex_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,176.3,182.3,37.6,49.9,16.0,28.6
-collets_in_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-178.7,-172.7,-49.7,-37.2,16.3,28.7
-collets_in_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-146.3,-140.4,-49.7,-37.2,16.3,28.7
-collets_in_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-159.6,-153.7,16.3,28.7,37.2,49.7
-collets_in_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-127.4,-121.4,16.3,28.7,37.2,49.7
-collets_in_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-76.7,-70.7,-49.7,-37.2,16.3,28.7
-collets_in_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-44.3,-38.4,-49.7,-37.2,16.3,28.7
-collets_in_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-57.6,-51.7,16.3,28.7,37.2,49.7
-collets_in_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-25.4,-19.4,16.3,28.7,37.2,49.7
-collets_in_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,25.4,31.3,-49.7,-37.2,16.3,28.7
-collets_in_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,57.6,63.6,-49.7,-37.2,16.3,28.7
-collets_in_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,44.3,50.3,16.3,28.7,37.2,49.7
-collets_in_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,76.7,82.6,16.3,28.7,37.2,49.7
-collets_in_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,127.4,133.3,-49.7,-37.2,16.3,28.7
-collets_in_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,159.6,165.6,-49.7,-37.2,16.3,28.7
-collets_in_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,146.3,152.3,16.3,28.7,37.2,49.7
-collets_in_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,178.7,184.6,16.3,28.7,37.2,49.7
+cam_journals_l_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-188.9,124.8,-153.9,-123.9,179.1,209.1
+cam_journals_l_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-188.9,124.8,-209.1,-179.1,123.9,153.9
+cam_journals_r_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-169.9,143.8,123.9,153.9,179.1,209.1
+cam_journals_r_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-169.9,143.8,179.1,209.1,123.9,153.9
+camcover_bolts_l,03 Heads and Valvetrain,titanium,,,,,,,,,,2904,3432,-214.2,214.2,145.4,234.0,134.1,222.7
+camcover_bolts_r,03 Heads and Valvetrain,titanium,,,,,,,,,,2904,3432,-214.2,214.2,-222.7,-134.1,145.4,234.0
+camcover_l,03 Heads and Valvetrain,magnesium,,,,,,,,,,1836,1586,-221.0,221.0,149.9,251.2,138.6,239.9
+camcover_r,03 Heads and Valvetrain,magnesium,,,,,,,,,,1836,1586,-221.0,221.0,-239.9,-138.6,149.9,251.2
+camlobe_l_ex_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-181.2,-170.2,-152.4,-113.2,180.6,207.6
+camlobe_l_ex_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-154.8,-143.8,-152.4,-113.2,180.6,207.6
+camlobe_l_ex_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-79.2,-68.2,-152.4,-125.4,180.6,219.9
+camlobe_l_ex_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-52.8,-41.8,-152.4,-125.4,180.6,219.9
+camlobe_l_ex_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,22.8,33.8,-161.8,-125.4,174.8,207.6
+camlobe_l_ex_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,49.2,60.2,-161.8,-125.4,174.8,207.6
+camlobe_l_ex_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,124.8,135.8,-152.4,-119.6,171.3,207.6
+camlobe_l_ex_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,151.2,162.2,-152.4,-119.6,171.3,207.6
+camlobe_l_in_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-181.2,-170.2,-207.6,-180.6,125.4,164.8
+camlobe_l_in_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-154.8,-143.8,-207.6,-180.6,125.4,164.8
+camlobe_l_in_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-79.2,-68.2,-220.0,-180.6,125.4,152.4
+camlobe_l_in_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-52.8,-41.8,-220.0,-180.6,125.4,152.4
+camlobe_l_in_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,22.8,33.8,-207.6,-171.5,119.1,152.4
+camlobe_l_in_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,49.2,60.2,-207.6,-171.5,119.1,152.4
+camlobe_l_in_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,124.8,135.8,-207.6,-174.2,125.4,161.5
+camlobe_l_in_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,151.2,162.2,-207.6,-174.2,125.4,161.5
+camlobe_r_ex_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-162.2,-151.2,125.4,152.4,168.3,207.6
+camlobe_r_ex_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-135.8,-124.8,125.4,152.4,168.3,207.6
+camlobe_r_ex_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-60.2,-49.2,125.4,164.7,180.6,207.6
+camlobe_r_ex_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-33.8,-22.8,125.4,164.7,180.6,207.6
+camlobe_r_ex_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,41.8,52.8,125.5,158.3,180.6,216.9
+camlobe_r_ex_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,68.2,79.2,125.5,158.3,180.6,216.9
+camlobe_r_ex_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,143.8,154.8,116.1,152.4,180.6,213.4
+camlobe_r_ex_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,170.2,181.2,116.1,152.4,180.6,213.4
+camlobe_r_in_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-162.2,-151.2,168.2,207.6,125.4,152.4
+camlobe_r_in_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-135.8,-124.8,168.2,207.6,125.4,152.4
+camlobe_r_in_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-60.2,-49.2,180.6,207.6,113.1,152.4
+camlobe_r_in_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-33.8,-22.8,180.6,207.6,113.1,152.4
+camlobe_r_in_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,41.8,52.8,180.6,214.0,116.4,152.4
+camlobe_r_in_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,68.2,79.2,180.6,214.0,116.4,152.4
+camlobe_r_in_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,143.8,154.8,180.6,216.7,125.4,158.8
+camlobe_r_in_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,170.2,181.2,180.6,216.7,125.4,158.8
+camshaft_l_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,-153.3,-124.5,179.7,208.5
+camshaft_l_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,-208.5,-179.7,124.5,153.3
+camshaft_r_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,124.5,153.3,179.7,208.5
+camshaft_r_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1628,1628,-254.0,228.0,179.7,208.5,124.5,153.3
+coil_1,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-173.5,-151.5,-195.5,-131.5,131.5,195.5
+coil_2,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-154.5,-132.5,131.5,195.5,131.5,195.5
+coil_3,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-71.5,-49.5,-195.5,-131.5,131.5,195.5
+coil_4,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,-52.5,-30.5,131.5,195.5,131.5,195.5
+coil_5,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,30.5,52.5,-195.5,-131.5,131.5,195.5
+coil_6,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,49.5,71.5,131.5,195.5,131.5,195.5
+coil_7,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,132.5,154.5,-195.5,-131.5,131.5,195.5
+coil_8,03 Heads and Valvetrain,rubber_blk,,,,,,,,,,520,592,151.5,173.5,131.5,195.5,131.5,195.5
+collets_ex_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-177.3,-171.3,-133.9,-121.7,166.0,178.6
+collets_ex_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-147.7,-141.7,-133.9,-121.7,166.0,178.6
+collets_ex_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-158.3,-152.3,121.7,133.9,166.0,178.6
+collets_ex_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-128.7,-122.7,121.7,133.9,166.0,178.6
+collets_ex_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-75.3,-69.3,-133.9,-121.7,166.0,178.6
+collets_ex_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-45.7,-39.7,-133.9,-121.7,166.0,178.6
+collets_ex_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-56.3,-50.3,121.7,133.9,166.0,178.6
+collets_ex_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-26.7,-20.7,121.7,133.9,166.0,178.6
+collets_ex_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,26.7,32.7,-133.9,-121.7,166.0,178.6
+collets_ex_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,56.3,62.3,-133.9,-121.7,166.0,178.6
+collets_ex_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,45.7,51.7,121.7,133.9,166.0,178.6
+collets_ex_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,75.3,81.3,121.7,133.9,166.0,178.6
+collets_ex_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,128.7,134.7,-133.9,-121.7,166.0,178.6
+collets_ex_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,158.3,164.3,-133.9,-121.7,166.0,178.6
+collets_ex_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,147.7,153.7,121.7,133.9,166.0,178.6
+collets_ex_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,177.3,183.3,121.7,133.9,166.0,178.6
+collets_in_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-179.8,-173.8,-180.1,-167.6,120.1,132.6
+collets_in_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-145.2,-139.2,-180.1,-167.6,120.1,132.6
+collets_in_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-160.8,-154.8,167.6,180.1,120.1,132.6
+collets_in_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-126.2,-120.2,167.6,180.1,120.1,132.6
+collets_in_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-77.8,-71.8,-180.1,-167.6,120.1,132.6
+collets_in_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-43.2,-37.2,-180.1,-167.6,120.1,132.6
+collets_in_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-58.8,-52.8,167.6,180.1,120.1,132.6
+collets_in_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,-24.2,-18.2,167.6,180.1,120.1,132.6
+collets_in_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,24.2,30.2,-180.1,-167.6,120.1,132.6
+collets_in_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,58.8,64.8,-180.1,-167.6,120.1,132.6
+collets_in_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,43.2,49.2,167.6,180.1,120.1,132.6
+collets_in_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,77.8,83.8,167.6,180.1,120.1,132.6
+collets_in_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,126.2,132.2,-180.1,-167.6,120.1,132.6
+collets_in_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,160.8,166.8,-180.1,-167.6,120.1,132.6
+collets_in_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,145.2,151.2,167.6,180.1,120.1,132.6
+collets_in_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,179.8,185.8,167.6,180.1,120.1,132.6
 head_gasket_l,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,4152,4096,-230.5,211.5,-141.1,-40.3,40.3,141.1
 head_gasket_r,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,4152,4096,-211.5,230.5,40.3,141.1,40.3,141.1
-head_l,03 Heads and Valvetrain,alu_cast,,,,,,,,,,8736,9866,-237.3,218.3,-174.4,-46.0,55.6,185.7
-head_r,03 Heads and Valvetrain,alu_cast,,,,,,,,,,8736,9866,-218.3,237.3,46.0,174.4,55.6,185.7
-injector_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-162.5,-100.5,-80.1,-61.1,108.7,127.7
-injector_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-143.5,-81.5,61.1,80.1,108.7,127.7
-injector_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-60.5,1.5,-80.1,-61.1,108.7,127.7
-injector_4,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-41.5,20.5,61.1,80.1,108.7,127.7
-injector_5,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,41.5,103.5,-80.1,-61.1,108.7,127.7
-injector_6,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,60.5,122.5,61.1,80.1,108.7,127.7
-injector_7,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,143.5,205.5,-80.1,-61.1,108.7,127.7
-injector_8,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,162.5,224.5,61.1,80.1,108.7,127.7
-oil_filler_l,03 Heads and Valvetrain,anodised,,,,,,,,,,372,444,-205.0,-159.0,152.4,193.4,141.1,182.1
-oil_filler_r,03 Heads and Valvetrain,anodised,,,,,,,,,,372,444,-205.0,-159.0,-182.1,-141.1,152.4,193.4
-sparkplug_1,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-162.5,-136.5,-88.1,-72.5,72.5,88.1
-sparkplug_2,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-143.5,-117.5,72.5,88.1,72.5,88.1
-sparkplug_3,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-60.5,-34.5,-88.1,-72.5,72.5,88.1
-sparkplug_4,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-41.5,-15.5,72.5,88.1,72.5,88.1
-sparkplug_5,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,41.5,67.5,-88.1,-72.5,72.5,88.1
-sparkplug_6,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,60.5,86.5,72.5,88.1,72.5,88.1
-sparkplug_7,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,143.5,169.5,-88.1,-72.5,72.5,88.1
-sparkplug_8,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,162.5,188.5,72.5,88.1,72.5,88.1
-valve_ex_1_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-190.8,-161.8,-97.0,-17.1,39.7,101.0
-valve_ex_1_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-163.2,-134.2,-97.0,-17.1,39.7,101.0
-valve_ex_2_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-171.8,-142.8,39.7,101.0,17.1,97.0
-valve_ex_2_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-144.2,-115.2,39.7,101.0,17.1,97.0
-valve_ex_3_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-88.8,-59.8,-97.0,-17.1,39.7,101.0
-valve_ex_3_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-61.2,-32.2,-97.0,-17.1,39.7,101.0
-valve_ex_4_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-69.8,-40.8,39.7,101.0,17.1,97.0
-valve_ex_4_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-42.2,-13.2,39.7,101.0,17.1,97.0
-valve_ex_5_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,13.2,42.2,-97.0,-17.1,39.7,101.0
-valve_ex_5_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,40.8,69.8,-97.0,-17.1,39.7,101.0
-valve_ex_6_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,32.2,61.2,39.7,101.0,17.1,97.0
-valve_ex_6_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,59.8,88.8,39.7,101.0,17.1,97.0
-valve_ex_7_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,115.2,144.2,-97.0,-17.1,39.7,101.0
-valve_ex_7_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,142.8,171.8,-97.0,-17.1,39.7,101.0
-valve_ex_8_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,134.2,163.2,39.7,101.0,17.1,97.0
-valve_ex_8_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,161.8,190.8,39.7,101.0,17.1,97.0
-valve_in_1_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-195.6,-161.7,-103.0,-39.7,17.1,98.4
-valve_in_1_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-163.3,-129.4,-103.0,-39.7,17.1,98.4
-valve_in_2_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-176.6,-142.7,17.1,98.4,39.7,103.0
-valve_in_2_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-144.3,-110.4,17.1,98.4,39.7,103.0
-valve_in_3_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-93.6,-59.7,-103.0,-39.7,17.1,98.4
-valve_in_3_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-61.3,-27.4,-103.0,-39.7,17.1,98.4
-valve_in_4_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-74.6,-40.7,17.1,98.4,39.7,103.0
-valve_in_4_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-42.3,-8.4,17.1,98.4,39.7,103.0
-valve_in_5_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,8.4,42.3,-103.0,-39.7,17.1,98.4
-valve_in_5_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,40.7,74.6,-103.0,-39.7,17.1,98.4
-valve_in_6_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,27.4,61.3,17.1,98.4,39.7,103.0
-valve_in_6_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,59.7,93.6,17.1,98.4,39.7,103.0
-valve_in_7_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,110.4,144.3,-103.0,-39.7,17.1,98.4
-valve_in_7_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,142.7,176.6,-103.0,-39.7,17.1,98.4
-valve_in_8_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,129.4,163.3,17.1,98.4,39.7,103.0
-valve_in_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,161.7,195.6,17.1,98.4,39.7,103.0
-accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,800,784,-259.0,-245.0,-140.5,132.8,-69.0,137.0
-accessory_pulleys,07 Drive and Ancillaries,alu_forged,,,,,,,,,,848,848,-259.0,-237.0,-127.9,122.0,-62.0,130.0
-alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-317.5,-242.5,-135.5,-56.5,12.0,97.0
-breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,300,-228.9,-148.4,-178.6,178.6,161.3,247.0
-cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,3136,2720,-195.1,149.9,-185.7,185.7,85.2,185.7
-catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,65480,65364,-196.0,-38.0,-19.7,104.2,170.0,282.2
-collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1145,1270,-204.0,-116.0,-40.0,40.0,190.0,270.0
-collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1145,1270,32.0,120.0,-40.0,40.0,190.0,270.0
+head_l,03 Heads and Valvetrain,alu_cast,,,,,,,,,,8736,9866,-237.3,218.3,-215.1,-47.4,58.7,224.4
+head_r,03 Heads and Valvetrain,alu_cast,,,,,,,,,,8736,9866,-218.3,237.3,47.4,215.1,58.7,224.4
+injector_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-162.5,-100.5,-142.1,-123.1,66.5,85.5
+injector_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-143.5,-81.5,123.1,142.1,66.5,85.5
+injector_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-60.5,1.5,-142.1,-123.1,66.5,85.5
+injector_4,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-41.5,20.5,123.1,142.1,66.5,85.5
+injector_5,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,41.5,103.5,-142.1,-123.1,66.5,85.5
+injector_6,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,60.5,122.5,123.1,142.1,66.5,85.5
+injector_7,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,143.5,205.5,-142.1,-123.1,66.5,85.5
+injector_8,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,162.5,224.5,123.1,142.1,66.5,85.5
+oil_filler_l,03 Heads and Valvetrain,anodised,,,,,,,,,,372,444,-205.0,-159.0,193.4,234.4,182.1,223.1
+oil_filler_r,03 Heads and Valvetrain,anodised,,,,,,,,,,372,444,-205.0,-159.0,-223.1,-182.1,193.4,234.4
+sparkplug_1,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-168.9,-156.1,-136.3,-112.5,112.5,136.3
+sparkplug_2,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-149.9,-137.1,112.5,136.3,112.5,136.3
+sparkplug_3,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-66.9,-54.1,-136.3,-112.5,112.5,136.3
+sparkplug_4,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,-47.9,-35.1,112.5,136.3,112.5,136.3
+sparkplug_5,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,35.1,47.9,-136.3,-112.5,112.5,136.3
+sparkplug_6,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,54.1,66.9,112.5,136.3,112.5,136.3
+sparkplug_7,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,137.1,149.9,-136.3,-112.5,112.5,136.3
+sparkplug_8,03 Heads and Valvetrain,anodised,,,,,,,,,,594,666,156.1,168.9,112.5,136.3,112.5,136.3
+valve_ex_1_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-191.8,-162.8,-131.9,-67.3,92.5,177.4
+valve_ex_1_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-162.2,-133.2,-131.9,-67.3,92.5,177.4
+valve_ex_2_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-172.8,-143.8,67.3,131.9,92.5,177.4
+valve_ex_2_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-143.2,-114.2,67.3,131.9,92.5,177.4
+valve_ex_3_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-89.8,-60.8,-131.9,-67.3,92.5,177.4
+valve_ex_3_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-60.2,-31.2,-131.9,-67.3,92.5,177.4
+valve_ex_4_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-70.8,-41.8,67.3,131.9,92.5,177.4
+valve_ex_4_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,-41.2,-12.2,67.3,131.9,92.5,177.4
+valve_ex_5_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,12.2,41.2,-131.9,-67.3,92.5,177.4
+valve_ex_5_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,41.8,70.8,-131.9,-67.3,92.5,177.4
+valve_ex_6_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,31.2,60.2,67.3,131.9,92.5,177.4
+valve_ex_6_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,60.8,89.8,67.3,131.9,92.5,177.4
+valve_ex_7_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,114.2,143.2,-131.9,-67.3,92.5,177.4
+valve_ex_7_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,143.8,172.8,-131.9,-67.3,92.5,177.4
+valve_ex_8_1,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,133.2,162.2,67.3,131.9,92.5,177.4
+valve_ex_8_2,03 Heads and Valvetrain,inconel,,,,,,,,,,7368,7620,162.8,191.8,67.3,131.9,92.5,177.4
+valve_in_1_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-196.8,-162.8,-179.3,-93.0,63.4,130.1
+valve_in_1_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-162.2,-128.2,-179.3,-93.0,63.4,130.1
+valve_in_2_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-177.8,-143.8,93.0,179.3,63.4,130.1
+valve_in_2_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-143.2,-109.2,93.0,179.3,63.4,130.1
+valve_in_3_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-94.8,-60.8,-179.3,-93.0,63.4,130.1
+valve_in_3_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-60.2,-26.2,-179.3,-93.0,63.4,130.1
+valve_in_4_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-75.8,-41.8,93.0,179.3,63.4,130.1
+valve_in_4_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,-41.2,-7.2,93.0,179.3,63.4,130.1
+valve_in_5_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,7.2,41.2,-179.3,-93.0,63.4,130.1
+valve_in_5_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,41.8,75.8,-179.3,-93.0,63.4,130.1
+valve_in_6_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,26.2,60.2,93.0,179.3,63.4,130.1
+valve_in_6_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,60.8,94.8,93.0,179.3,63.4,130.1
+valve_in_7_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,109.2,143.2,-179.3,-93.0,63.4,130.1
+valve_in_7_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,143.8,177.8,-179.3,-93.0,63.4,130.1
+valve_in_8_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,128.2,162.2,93.0,179.3,63.4,130.1
+valve_in_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,162.8,196.8,93.0,179.3,63.4,130.1
+accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,800,784,-313.0,-299.0,-140.5,132.8,-69.0,137.0
+accessory_pulleys,07 Drive and Ancillaries,alu_forged,,,,,,,,,,848,848,-313.0,-291.0,-181.9,122.0,-62.0,130.0
+alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-371.5,-296.5,-189.5,-110.5,46.0,131.0
+breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,300,-228.9,-148.4,-217.4,217.4,200.9,247.0
+cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,3136,2720,-195.1,149.9,-226.7,226.7,126.2,226.7
+catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,65480,65364,-196.0,-38.0,-239.7,-115.8,-206.0,-93.8
+collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1145,1270,-204.0,-116.0,-40.0,40.0,231.0,311.0
+collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1145,1270,32.0,120.0,-40.0,40.0,231.0,311.0
 dipstick,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,32,18,168.0,196.0,116.0,134.0,-160.4,60.4
-fuel_feeds_l,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-167.0,148.0,-88.7,-66.2,117.3,173.9
-fuel_feeds_r,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-148.0,167.0,66.2,88.7,117.3,173.9
-fuel_rail_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-248.0,248.0,-103.5,-65.5,153.2,191.2
-fuel_rail_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-248.0,248.0,65.5,103.5,153.2,191.2
-hp_fuel_pump,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1372,1190,-237.7,-166.3,61.3,122.7,59.5,148.5
+fuel_feeds_l,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-167.0,148.0,-158.5,-128.4,40.3,77.8
+fuel_feeds_r,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-148.0,167.0,128.4,158.5,40.3,77.8
+fuel_rail_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-212.0,224.0,-176.9,-138.9,25.8,63.8
+fuel_rail_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-212.0,224.0,138.9,176.9,25.8,63.8
+hp_fuel_pump,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1372,1190,198.3,269.7,184.3,245.7,63.0,152.0
 main_cap_1,02 Bottom End,alu_forged,,,,,,,,,,1572,1538,-219.0,-193.0,-50.0,50.0,-76.0,0.0
 main_cap_2,02 Bottom End,alu_forged,,,,,,,,,,1572,1538,-116.0,-90.0,-50.0,50.0,-76.0,0.0
 main_cap_3,02 Bottom End,alu_forged,,,,,,,,,,1572,1538,-13.0,13.0,-50.0,50.0,-76.0,0.0
@@ -238,14 +238,14 @@ main_shell_4_lower,02 Bottom End,copper_wound,,,,,,,,,,428,404,96.9,109.1,-30.4,
 main_shell_4_upper,02 Bottom End,copper_wound,,,,,,,,,,592,564,96.9,109.1,-30.4,32.1,0.0,30.4
 main_shell_5_lower,02 Bottom End,copper_wound,,,,,,,,,,428,404,199.9,212.1,-30.4,32.1,-30.4,0.0
 main_shell_5_upper,02 Bottom End,copper_wound,,,,,,,,,,592,564,199.9,212.1,-30.4,32.1,0.0,30.4
-primary_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-178.4,-122.8,-109.1,10.0,119.3,266.1
-primary_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-173.2,-115.3,-10.5,109.1,119.3,266.4
-primary_3,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-170.0,-45.0,-109.1,11.7,119.3,268.3
-primary_4,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-169.5,-26.6,-11.8,109.1,119.3,268.6
-primary_5,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,26.6,99.7,-109.1,9.0,119.3,266.1
-primary_6,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,45.0,107.8,-9.6,109.1,119.3,266.0
-primary_7,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,65.0,159.8,-109.1,11.4,119.3,267.7
-primary_8,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,65.6,178.4,-11.6,109.1,119.3,268.1
+primary_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-178.4,-130.7,-110.6,2.4,140.6,328.1
+primary_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-162.1,-119.4,-4.3,110.6,140.6,328.1
+primary_3,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-158.0,-45.0,-110.6,9.9,140.6,328.2
+primary_4,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-157.2,-26.6,-10.4,110.6,140.6,328.2
+primary_5,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,26.6,97.9,-110.6,3.7,140.6,328.1
+primary_6,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,45.0,98.3,-2.1,110.6,140.6,328.1
+primary_7,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,76.5,159.8,-110.6,8.5,140.6,328.2
+primary_8,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,77.4,178.4,-9.4,110.6,140.6,328.2
 rod_bolts,02 Bottom End,titanium,,,,,,,,,,2992,3552,-169.1,169.1,-25.6,25.6,-33.0,-24.0
 rod_shell_1_lower,02 Bottom End,copper_wound,,,,,,,,,,396,372,-171.0,-154.0,-27.0,28.7,-27.0,0.0
 rod_shell_1_upper,02 Bottom End,copper_wound,,,,,,,,,,396,372,-171.0,-154.0,-27.0,28.7,0.0,27.0
@@ -263,157 +263,158 @@ rod_shell_7_lower,02 Bottom End,copper_wound,,,,,,,,,,396,372,135.0,152.0,-27.0,
 rod_shell_7_upper,02 Bottom End,copper_wound,,,,,,,,,,396,372,135.0,152.0,-27.0,28.7,0.0,27.0
 rod_shell_8_lower,02 Bottom End,copper_wound,,,,,,,,,,396,372,154.0,171.0,-27.0,28.7,-27.0,0.0
 rod_shell_8_upper,02 Bottom End,copper_wound,,,,,,,,,,396,372,154.0,171.0,-27.0,28.7,0.0,27.0
-runner_1,04 Induction,alu_forged,,,,,,,,,,1464,1485,-187.5,-137.5,-170.7,-15.8,52.0,287.5
-runner_2,04 Induction,alu_forged,,,,,,,,,,1464,1485,-168.5,-118.5,15.8,170.7,52.0,287.5
-runner_3,04 Induction,alu_forged,,,,,,,,,,1464,1485,-85.5,-35.5,-170.7,-15.8,52.0,287.5
-runner_4,04 Induction,alu_forged,,,,,,,,,,1464,1485,-66.5,-16.5,15.8,170.7,52.0,287.5
-runner_5,04 Induction,alu_forged,,,,,,,,,,1464,1485,16.5,66.5,-170.7,-15.8,52.0,287.5
-runner_6,04 Induction,alu_forged,,,,,,,,,,1464,1485,35.5,85.5,15.8,170.7,52.0,287.5
-runner_7,04 Induction,alu_forged,,,,,,,,,,1464,1485,118.5,168.5,-170.7,-15.8,52.0,287.5
-runner_8,04 Induction,alu_forged,,,,,,,,,,1464,1485,137.5,187.5,15.8,170.7,52.0,287.5
+runner_1,04 Induction,alu_forged,,,,,,,,,,1464,1485,-187.5,-137.5,-242.6,-138.9,27.6,116.1
+runner_2,04 Induction,alu_forged,,,,,,,,,,1464,1485,-168.5,-118.5,138.9,242.6,27.6,116.1
+runner_3,04 Induction,alu_forged,,,,,,,,,,1464,1485,-85.5,-35.5,-242.6,-138.9,27.6,116.1
+runner_4,04 Induction,alu_forged,,,,,,,,,,1464,1485,-66.5,-16.5,138.9,242.6,27.6,116.1
+runner_5,04 Induction,alu_forged,,,,,,,,,,1464,1485,16.5,66.5,-242.6,-138.9,27.6,116.1
+runner_6,04 Induction,alu_forged,,,,,,,,,,1464,1485,35.5,85.5,138.9,242.6,27.6,116.1
+runner_7,04 Induction,alu_forged,,,,,,,,,,1464,1485,118.5,168.5,-242.6,-138.9,27.6,116.1
+runner_8,04 Induction,alu_forged,,,,,,,,,,1464,1485,137.5,187.5,138.9,242.6,27.6,116.1
 starter,07 Drive and Ancillaries,alu_cast,,,,,,,,,,372,444,82.0,194.0,64.0,144.0,-86.0,-6.0
-plenum,04 Induction,carbon,,,,,,,,,,2692,2692,-186.0,186.0,-62.0,62.0,230.0,354.0
-throttle,04 Induction,alu_forged,,,,,,,,,,900,900,-248.0,-186.0,-46.0,46.0,246.0,338.0
-trumpets,04 Induction,carbon,,,,,,,,,,3312,3312,-162.5,258.5,-198.5,198.5,95.0,161.0
-exhaust_manifolds,05 Turbo and Exhaust,inconel,,,,,,,,,,1272,864,-177.6,177.6,-101.6,101.6,111.3,197.5
-tailpipes,05 Turbo and Exhaust,inconel,,,,,,,,,,318,216,-187.9,304.5,-79.0,78.9,188.5,281.0
-turbos,05 Turbo and Exhaust,inconel,,,,,,,,,,3868,4118,-168.6,182.0,-64.0,70.2,150.0,278.0
-battery,06 Hybrid,anodised,,,,,,,,,,5880,5100,-195.8,195.8,-187.8,187.8,-165.0,-104.0
-battery_modules,06 Hybrid,anodised,,,,,,,,,,2548,2210,-189.1,189.1,-188.0,188.0,-152.2,-111.8
-battery_terminals,06 Hybrid,copper_wound,,,,,,,,,,1072,1180,-134.6,139.7,-10.0,10.0,-104.0,-90.0
-ecu,06 Hybrid,anodised,,,,,,,,,,1960,1700,-83.9,83.9,73.1,190.9,154.0,203.0
-ecu_connector,06 Hybrid,rubber_blk,,,,,,,,,,1896,2270,-105.0,-79.7,96.6,167.4,165.0,187.0
-inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,-97.8,97.8,-72.8,72.8,305.0,376.0
-inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,3112,3700,-124.0,128.2,-11.0,11.0,334.2,350.2
-mguh,06 Hybrid,copper_wound,,,,,,,,,,1568,1568,-154.0,154.0,-40.0,40.0,174.0,254.0
+plenum_l,04 Induction,carbon,,,,,,,,,,2692,2692,-186.0,186.0,-270.0,-194.0,32.0,108.0
+plenum_r,04 Induction,carbon,,,,,,,,,,2692,2692,-186.0,186.0,194.0,270.0,32.0,108.0
+throttle_l,04 Induction,alu_forged,,,,,,,,,,900,900,-248.0,-186.0,-278.0,-186.0,24.0,116.0
+throttle_r,04 Induction,alu_forged,,,,,,,,,,900,900,-248.0,-186.0,186.0,278.0,24.0,116.0
+trumpets,04 Induction,carbon,,,,,,,,,,3312,3312,-195.5,195.5,-254.8,254.8,37.0,103.0
+tailpipes,05 Turbo and Exhaust,inconel,,,,,,,,,,318,216,-187.9,304.5,-79.0,78.9,229.5,322.0
+turbos,05 Turbo and Exhaust,inconel,,,,,,,,,,3868,4118,-168.6,182.0,-64.0,70.2,191.0,319.0
+battery,06 Hybrid,anodised,,,,,,,,,,5880,5100,-195.8,195.8,-187.8,187.8,-333.0,-272.0
+battery_modules,06 Hybrid,anodised,,,,,,,,,,2548,2210,-189.1,189.1,-188.0,188.0,-320.2,-279.8
+battery_terminals,06 Hybrid,copper_wound,,,,,,,,,,1072,1180,-134.6,139.7,-124.0,124.0,-272.0,-258.0
+ecu,06 Hybrid,anodised,,,,,,,,,,1960,1700,-83.9,83.9,162.1,249.9,-97.0,-58.0
+ecu_connector,06 Hybrid,rubber_blk,,,,,,,,,,1896,2270,-105.0,-79.7,179.6,232.4,-88.5,-71.5
+inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,226.2,325.8,-78.8,78.8,153.0,236.0
+inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,3112,3700,200.0,356.2,-11.0,11.0,189.4,205.4
+mguh,06 Hybrid,copper_wound,,,,,,,,,,1568,1568,-154.0,154.0,-40.0,40.0,215.0,295.0
 mguk,06 Hybrid,copper_wound,,,,,,,,,,8180,7452,-340.0,-232.0,-84.5,84.5,-84.5,84.5
 bellhousing,07 Drive and Ancillaries,magnesium,,,,,,,,,,12286,12818,235.5,318.5,-166.0,166.0,-166.0,166.0
 clutch,07 Drive and Ancillaries,alu_cast,,,,,,,,,,15308,15260,254.0,294.0,-82.6,82.6,-82.6,82.6
 flywheel,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,9524,9764,251.0,279.0,-103.5,103.5,-103.5,103.5
-pump_oil,07 Drive and Ancillaries,alu_forged,,,,,,,,,,12480,12775,-242.0,-123.0,-152.7,-79.3,-70.7,2.7
-pump_water,07 Drive and Ancillaries,alu_forged,,,,,,,,,,4068,3984,-288.0,-215.0,63.1,214.2,-93.5,29.9
+pump_oil,07 Drive and Ancillaries,alu_forged,,,,,,,,,,12480,12775,-242.0,-123.0,-228.7,-155.3,-50.7,22.7
+pump_water,07 Drive and Ancillaries,alu_forged,,,,,,,,,,4068,3984,-258.0,-185.0,115.1,266.2,-93.5,29.9
 coolant_plumbing,07 Drive and Ancillaries,alu_forged,,,,,,,,,,838,766,-304.7,-233.1,70.5,174.0,-44.8,194.0
 dry_sump_lines,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,300,-227.0,195.4,-161.0,161.0,-162.5,-0.2
 head_studs,03 Heads and Valvetrain,alu_cast,,,,,,,,,,12576,15680,-162.5,294.5,-127.0,127.0,39.2,127.0
-heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,252,248,-187.0,187.0,-114.0,114.0,256.0,282.2
+heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,252,248,-187.0,187.0,-114.0,114.0,297.0,323.2
 oil_pickup,07 Drive and Ancillaries,alu_forged,,,,,,,,,,418,320,-257.5,11.7,-108.9,-15.3,-153.0,-37.1
-retainer_1_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-182.2,-175.1,-147.2,-120.8,120.8,147.2
-retainer_1_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-149.9,-142.7,-147.2,-120.8,120.8,147.2
-retainer_1_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-179.9,-172.7,-147.2,-120.8,120.8,147.2
-retainer_1_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-152.3,-145.1,-147.2,-120.8,120.8,147.2
-retainer_2_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-163.2,-156.0,120.8,147.2,120.8,147.2
-retainer_2_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-131.0,-123.8,120.8,147.2,120.8,147.2
-retainer_2_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-160.9,-153.7,120.8,147.2,120.8,147.2
-retainer_2_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-133.3,-126.1,120.8,147.2,120.8,147.2
-retainer_3_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-80.3,-73.0,-147.2,-120.8,120.8,147.2
-retainer_3_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-47.9,-40.8,-147.2,-120.8,120.8,147.2
-retainer_3_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-77.9,-70.7,-147.2,-120.8,120.8,147.2
-retainer_3_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-50.3,-43.1,-147.2,-120.8,120.8,147.2
-retainer_4_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-61.3,-54.0,120.8,147.2,120.8,147.2
-retainer_4_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-29.0,-21.7,120.8,147.2,120.8,147.2
-retainer_4_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-58.9,-51.7,120.8,147.2,120.8,147.2
-retainer_4_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-31.3,-24.1,120.8,147.2,120.8,147.2
-retainer_5_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,21.7,29.0,-147.2,-120.8,120.8,147.2
-retainer_5_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,54.0,61.3,-147.2,-120.8,120.8,147.2
-retainer_5_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,24.1,31.3,-147.2,-120.8,120.8,147.2
-retainer_5_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,51.7,58.9,-147.2,-120.8,120.8,147.2
-retainer_6_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,40.8,47.9,120.8,147.2,120.8,147.2
-retainer_6_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,73.0,80.3,120.8,147.2,120.8,147.2
-retainer_6_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,43.1,50.3,120.8,147.2,120.8,147.2
-retainer_6_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,70.7,77.9,120.8,147.2,120.8,147.2
-retainer_7_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,123.8,131.0,-147.2,-120.8,120.8,147.2
-retainer_7_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,156.0,163.2,-147.2,-120.8,120.8,147.2
-retainer_7_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,126.1,133.3,-147.2,-120.8,120.8,147.2
-retainer_7_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,153.7,160.9,-147.2,-120.8,120.8,147.2
-retainer_8_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,142.7,149.9,120.8,147.2,120.8,147.2
-retainer_8_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,175.1,182.2,120.8,147.2,120.8,147.2
-retainer_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,145.1,152.3,120.8,147.2,120.8,147.2
-retainer_8_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,172.7,179.9,120.8,147.2,120.8,147.2
+retainer_1_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-193.0,-166.6,-179.7,-162.9,112.3,135.3
+retainer_1_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-158.4,-132.0,-179.7,-162.9,112.3,135.3
+retainer_1_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-190.5,-164.1,-137.1,-114.2,161.0,177.8
+retainer_1_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-160.9,-134.5,-137.1,-114.2,161.0,177.8
+retainer_2_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-174.0,-147.6,162.9,179.7,112.3,135.3
+retainer_2_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-139.4,-113.0,162.9,179.7,112.3,135.3
+retainer_2_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-171.5,-145.1,114.2,137.1,161.0,177.8
+retainer_2_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-141.9,-115.5,114.2,137.1,161.0,177.8
+retainer_3_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-91.0,-64.6,-179.7,-162.9,112.3,135.3
+retainer_3_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-56.4,-30.0,-179.7,-162.9,112.3,135.3
+retainer_3_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-88.5,-62.1,-137.1,-114.2,161.0,177.8
+retainer_3_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-58.9,-32.5,-137.1,-114.2,161.0,177.8
+retainer_4_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-72.0,-45.6,162.9,179.7,112.3,135.3
+retainer_4_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-37.4,-11.0,162.9,179.7,112.3,135.3
+retainer_4_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-69.5,-43.1,114.2,137.1,161.0,177.8
+retainer_4_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-39.9,-13.5,114.2,137.1,161.0,177.8
+retainer_5_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,11.0,37.4,-179.7,-162.9,112.3,135.3
+retainer_5_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,45.6,72.0,-179.7,-162.9,112.3,135.3
+retainer_5_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,13.5,39.9,-137.1,-114.2,161.0,177.8
+retainer_5_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,43.1,69.5,-137.1,-114.2,161.0,177.8
+retainer_6_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,30.0,56.4,162.9,179.7,112.3,135.3
+retainer_6_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,64.6,91.0,162.9,179.7,112.3,135.3
+retainer_6_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,32.5,58.9,114.2,137.1,161.0,177.8
+retainer_6_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,62.1,88.5,114.2,137.1,161.0,177.8
+retainer_7_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,113.0,139.4,-179.7,-162.9,112.3,135.3
+retainer_7_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,147.6,174.0,-179.7,-162.9,112.3,135.3
+retainer_7_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,115.5,141.9,-137.1,-114.2,161.0,177.8
+retainer_7_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,145.1,171.5,-137.1,-114.2,161.0,177.8
+retainer_8_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,132.0,158.4,162.9,179.7,112.3,135.3
+retainer_8_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,166.6,193.0,162.9,179.7,112.3,135.3
+retainer_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,134.5,160.9,114.2,137.1,161.0,177.8
+retainer_8_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,164.1,190.5,114.2,137.1,161.0,177.8
 sensors,07 Drive and Ancillaries,anodised,,,,,,,,,,4910,5750,-225.0,205.0,-147.6,168.0,-135.0,56.0
 sump_bolts,07 Drive and Ancillaries,magnesium,,,,,,,,,,28296,35280,-200.4,200.4,-98.4,98.4,-132.0,-118.0
-tappet_1_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-187.8,-169.4,-156.5,-128.5,128.5,156.5
-tappet_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-155.6,-137.2,-156.5,-128.5,128.5,156.5
-tappet_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-185.5,-167.1,-156.5,-128.5,128.5,156.5
-tappet_1_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-157.9,-139.5,-156.5,-128.5,128.5,156.5
-tappet_2_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-168.9,-150.5,128.5,156.5,128.5,156.5
-tappet_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-136.5,-118.2,128.5,156.5,128.5,156.5
-tappet_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-166.5,-148.1,128.5,156.5,128.5,156.5
-tappet_2_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-138.9,-120.5,128.5,156.5,128.5,156.5
-tappet_3_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-85.9,-67.5,-156.5,-128.5,128.5,156.5
-tappet_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-53.6,-35.1,-156.5,-128.5,128.5,156.5
-tappet_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-83.5,-65.1,-156.5,-128.5,128.5,156.5
-tappet_3_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-55.9,-37.5,-156.5,-128.5,128.5,156.5
-tappet_4_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-66.8,-48.5,128.5,156.5,128.5,156.5
-tappet_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-34.5,-16.1,128.5,156.5,128.5,156.5
-tappet_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-64.5,-46.1,128.5,156.5,128.5,156.5
-tappet_4_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-36.9,-18.5,128.5,156.5,128.5,156.5
-tappet_5_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,16.1,34.5,-156.5,-128.5,128.5,156.5
-tappet_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,48.5,66.8,-156.5,-128.5,128.5,156.5
-tappet_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,18.5,36.9,-156.5,-128.5,128.5,156.5
-tappet_5_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,46.1,64.5,-156.5,-128.5,128.5,156.5
-tappet_6_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,35.1,53.6,128.5,156.5,128.5,156.5
-tappet_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,67.5,85.9,128.5,156.5,128.5,156.5
-tappet_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,37.5,55.9,128.5,156.5,128.5,156.5
-tappet_6_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,65.1,83.5,128.5,156.5,128.5,156.5
-tappet_7_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,118.2,136.5,-156.5,-128.5,128.5,156.5
-tappet_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,150.5,168.9,-156.5,-128.5,128.5,156.5
-tappet_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,120.5,138.9,-156.5,-128.5,128.5,156.5
-tappet_7_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,148.1,166.5,-156.5,-128.5,128.5,156.5
-tappet_8_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,137.2,155.6,128.5,156.5,128.5,156.5
-tappet_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,169.4,187.8,128.5,156.5,128.5,156.5
-tappet_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,139.5,157.9,128.5,156.5,128.5,156.5
-tappet_8_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,167.1,185.5,128.5,156.5,128.5,156.5
+tappet_1_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-193.8,-165.8,-187.7,-157.9,108.7,141.1
+tappet_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-159.2,-131.2,-187.7,-157.9,108.7,141.1
+tappet_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-191.3,-163.3,-143.0,-110.6,156.0,185.8
+tappet_1_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-161.7,-133.7,-143.0,-110.6,156.0,185.8
+tappet_2_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-174.8,-146.8,157.9,187.7,108.7,141.1
+tappet_2_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-140.2,-112.2,157.9,187.7,108.7,141.1
+tappet_2_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-172.3,-144.3,110.6,143.0,156.0,185.8
+tappet_2_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-142.7,-114.7,110.6,143.0,156.0,185.8
+tappet_3_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-91.8,-63.8,-187.7,-157.9,108.7,141.1
+tappet_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-57.2,-29.2,-187.7,-157.9,108.7,141.1
+tappet_3_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-89.3,-61.3,-143.0,-110.6,156.0,185.8
+tappet_3_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-59.7,-31.7,-143.0,-110.6,156.0,185.8
+tappet_4_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-72.8,-44.8,157.9,187.7,108.7,141.1
+tappet_4_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-38.2,-10.2,157.9,187.7,108.7,141.1
+tappet_4_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-70.3,-42.3,110.6,143.0,156.0,185.8
+tappet_4_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-40.7,-12.7,110.6,143.0,156.0,185.8
+tappet_5_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,10.2,38.2,-187.7,-157.9,108.7,141.1
+tappet_5_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,44.8,72.8,-187.7,-157.9,108.7,141.1
+tappet_5_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,12.7,40.7,-143.0,-110.6,156.0,185.8
+tappet_5_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,42.3,70.3,-143.0,-110.6,156.0,185.8
+tappet_6_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,29.2,57.2,157.9,187.7,108.7,141.1
+tappet_6_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,63.8,91.8,157.9,187.7,108.7,141.1
+tappet_6_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,31.7,59.7,110.6,143.0,156.0,185.8
+tappet_6_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,61.3,89.3,110.6,143.0,156.0,185.8
+tappet_7_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,112.2,140.2,-187.7,-157.9,108.7,141.1
+tappet_7_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,146.8,174.8,-187.7,-157.9,108.7,141.1
+tappet_7_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,114.7,142.7,-143.0,-110.6,156.0,185.8
+tappet_7_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,144.3,172.3,-143.0,-110.6,156.0,185.8
+tappet_8_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,131.2,159.2,157.9,187.7,108.7,141.1
+tappet_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,165.8,193.8,157.9,187.7,108.7,141.1
+tappet_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,133.7,161.7,110.6,143.0,156.0,185.8
+tappet_8_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,163.3,191.3,110.6,143.0,156.0,185.8
 timing_cover,07 Drive and Ancillaries,magnesium,,,,,,,,,,1124,1124,-284.0,-266.0,-152.0,152.0,-152.0,152.0
-timing_gears,07 Drive and Ancillaries,magnesium,,,,,,,,,,53160,47856,-269.0,-255.0,-200.0,200.0,-55.1,200.0
-turbo_wheels,05 Turbo and Exhaust,inconel,,,,,,,,,,9920,9168,-164.0,164.0,-93.3,97.2,117.8,310.2
-valve_spring_1_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-189.9,-167.4,-137.0,-98.8,101.8,143.8
-valve_spring_1_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-157.6,-135.1,-137.0,-98.8,101.8,143.8
-valve_spring_1_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-187.5,-165.0,-143.5,-101.4,99.1,137.3
-valve_spring_1_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-160.0,-137.5,-143.5,-101.4,99.1,137.3
-valve_spring_2_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-170.9,-148.4,101.8,143.8,98.8,137.0
-valve_spring_2_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-138.6,-116.1,101.8,143.8,98.8,137.0
-valve_spring_2_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-168.5,-146.0,99.1,137.3,101.4,143.5
-valve_spring_2_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-141.0,-118.5,99.1,137.3,101.4,143.5
-valve_spring_3_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-87.9,-65.4,-137.0,-98.8,101.8,143.8
-valve_spring_3_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-55.6,-33.1,-137.0,-98.8,101.8,143.8
-valve_spring_3_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-85.5,-63.0,-143.5,-101.4,99.1,137.3
-valve_spring_3_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-58.0,-35.5,-143.5,-101.4,99.1,137.3
-valve_spring_4_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-68.9,-46.4,101.8,143.8,98.8,137.0
-valve_spring_4_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-36.6,-14.1,101.8,143.8,98.8,137.0
-valve_spring_4_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-66.5,-44.0,99.1,137.3,101.4,143.5
-valve_spring_4_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,-39.0,-16.5,99.1,137.3,101.4,143.5
-valve_spring_5_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,14.1,36.6,-137.0,-98.8,101.8,143.8
-valve_spring_5_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,46.4,68.9,-137.0,-98.8,101.8,143.8
-valve_spring_5_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,16.5,39.0,-143.5,-101.4,99.1,137.3
-valve_spring_5_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,44.0,66.5,-143.5,-101.4,99.1,137.3
-valve_spring_6_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,33.1,55.6,101.8,143.8,98.8,137.0
-valve_spring_6_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,65.4,87.9,101.8,143.8,98.8,137.0
-valve_spring_6_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,35.5,58.0,99.1,137.3,101.4,143.5
-valve_spring_6_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,63.0,85.5,99.1,137.3,101.4,143.5
-valve_spring_7_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,116.1,138.6,-137.0,-98.8,101.8,143.8
-valve_spring_7_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,148.4,170.9,-137.0,-98.8,101.8,143.8
-valve_spring_7_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,118.5,141.0,-143.5,-101.4,99.1,137.3
-valve_spring_7_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,146.0,168.5,-143.5,-101.4,99.1,137.3
-valve_spring_8_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,135.1,157.6,101.8,143.8,98.8,137.0
-valve_spring_8_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,167.4,189.9,101.8,143.8,98.8,137.0
-valve_spring_8_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,137.5,160.0,99.1,137.3,101.4,143.5
-valve_spring_8_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,9178,9130,165.0,187.5,99.1,137.3,101.4,143.5
-belt_idler,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,532,532,-232.0,-164.0,56.0,136.0,20.0,100.0
-belt_tensioner,07 Drive and Ancillaries,alu_forged,,,,,,,,,,960,934,-237.0,-184.0,-142.0,-34.0,12.1,112.0
+timing_gears,07 Drive and Ancillaries,magnesium,,,,,,,,,,53160,47856,-269.0,-255.0,-241.0,241.0,-55.1,241.0
+turbo_wheels,05 Turbo and Exhaust,inconel,,,,,,,,,,9920,9168,-164.0,164.0,-41.0,41.0,213.7,296.4
+valve_spring_1_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-191.1,-168.6,-172.6,-109.1,77.3,130.0
+valve_spring_1_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-156.4,-133.9,-172.6,-109.1,77.3,130.0
+valve_spring_1_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-188.6,-166.0,-131.6,-78.9,107.6,171.2
+valve_spring_1_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-159.0,-136.4,-131.6,-78.9,107.6,171.2
+valve_spring_2_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-172.1,-149.6,109.1,172.6,77.3,130.0
+valve_spring_2_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-137.4,-114.9,109.1,172.6,77.3,130.0
+valve_spring_2_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-169.6,-147.0,78.9,131.6,107.6,171.2
+valve_spring_2_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-140.0,-117.4,78.9,131.6,107.6,171.2
+valve_spring_3_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-89.1,-66.6,-172.6,-109.1,77.3,130.0
+valve_spring_3_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-54.4,-31.9,-172.6,-109.1,77.3,130.0
+valve_spring_3_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-86.6,-64.0,-131.6,-78.9,107.6,171.2
+valve_spring_3_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-57.0,-34.4,-131.6,-78.9,107.6,171.2
+valve_spring_4_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-70.1,-47.6,109.1,172.6,77.3,130.0
+valve_spring_4_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-35.4,-12.9,109.1,172.6,77.3,130.0
+valve_spring_4_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-67.6,-45.0,78.9,131.6,107.6,171.2
+valve_spring_4_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-38.0,-15.4,78.9,131.6,107.6,171.2
+valve_spring_5_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,12.9,35.4,-172.6,-109.1,77.3,130.0
+valve_spring_5_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,47.6,70.1,-172.6,-109.1,77.3,130.0
+valve_spring_5_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,15.4,38.0,-131.6,-78.9,107.6,171.2
+valve_spring_5_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,45.0,67.6,-131.6,-78.9,107.6,171.2
+valve_spring_6_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,31.9,54.4,109.1,172.6,77.3,130.0
+valve_spring_6_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,66.6,89.1,109.1,172.6,77.3,130.0
+valve_spring_6_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,34.4,57.0,78.9,131.6,107.6,171.2
+valve_spring_6_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,64.0,86.6,78.9,131.6,107.6,171.2
+valve_spring_7_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,114.9,137.4,-172.6,-109.1,77.3,130.0
+valve_spring_7_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,149.6,172.1,-172.6,-109.1,77.3,130.0
+valve_spring_7_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,117.4,140.0,-131.6,-78.9,107.6,171.2
+valve_spring_7_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,147.0,169.6,-131.6,-78.9,107.6,171.2
+valve_spring_8_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,133.9,156.4,109.1,172.6,77.3,130.0
+valve_spring_8_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,168.6,191.1,109.1,172.6,77.3,130.0
+valve_spring_8_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,136.4,159.0,78.9,131.6,107.6,171.2
+valve_spring_8_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,166.0,188.6,78.9,131.6,107.6,171.2
+belt_idler,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,532,532,-280.0,-212.0,128.0,208.0,-80.0,0.0
+belt_tensioner,07 Drive and Ancillaries,alu_forged,,,,,,,,,,960,934,-334.0,-246.0,-172.0,-66.0,36.0,151.9
 blowoff,04 Induction,rubber_blk,,,,,,,,,,572,572,86.0,154.0,-164.0,-86.0,300.0,370.0
-cam_sensor_l,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,-140.6,-79.3,134.9,211.9
-cam_sensor_r,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,79.4,140.7,134.9,211.9
-charge_pipes,04 Induction,rubber_blk,,,,,,,,,,2112,1928,-192.0,192.0,-180.3,183.7,156.0,356.0
-engine_mount_l,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1656,1604,-193.9,193.9,-210.0,-114.0,-14.0,74.0
-engine_mount_r,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1656,1604,-193.9,193.9,114.0,210.0,-14.0,74.0
-exhaust_flange_l,05 Turbo and Exhaust,inconel,,,,,,,,,,3008,3440,-193.5,174.5,-68.7,-8.1,128.3,188.9
-exhaust_flange_r,05 Turbo and Exhaust,inconel,,,,,,,,,,3008,3440,-174.5,193.5,8.1,68.7,128.3,188.9
-exhaust_gasket_l,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,848,848,-192.5,173.5,-66.0,-21.9,131.1,175.2
-exhaust_gasket_r,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,848,848,-173.5,192.5,21.9,66.0,131.1,175.2
-intercooler_l,04 Induction,anodised,,,,,,,,,,2820,2496,-136.0,156.0,-203.9,-96.0,195.4,328.0
-intercooler_r,04 Induction,anodised,,,,,,,,,,2820,2496,-136.0,156.0,96.1,204.0,195.4,328.0
+cam_sensor_l,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,-140.6,-79.3,170.9,247.8
+cam_sensor_r,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,79.4,140.7,170.9,247.8
+charge_pipes,04 Induction,rubber_blk,,,,,,,,,,2208,2024,-360.0,213.2,-364.0,364.0,30.0,360.5
+engine_mount_l,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1656,1604,-193.9,193.9,-210.0,-114.0,-74.0,21.0
+engine_mount_r,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1656,1604,-193.9,193.9,114.0,210.0,-74.0,21.0
+exhaust_flange_l,05 Turbo and Exhaust,inconel,,,,,,,,,,3008,3440,-193.5,174.5,-76.7,-16.1,133.5,194.1
+exhaust_flange_r,05 Turbo and Exhaust,inconel,,,,,,,,,,3008,3440,-174.5,193.5,16.1,76.7,133.5,194.1
+exhaust_gasket_l,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,848,848,-192.5,173.5,-74.0,-29.9,136.2,180.3
+exhaust_gasket_r,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,848,848,-173.5,192.5,29.9,74.0,136.2,180.3
+intercooler_l,04 Induction,anodised,,,,,,,,,,2820,2496,-136.0,156.0,-203.9,-96.0,265.4,398.0
+intercooler_r,04 Induction,anodised,,,,,,,,,,2820,2496,-136.0,156.0,96.1,204.0,265.4,398.0
 knock_sensor_l,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0,-163.5,-116.0,-10.0,33.9
 knock_sensor_r,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0,116.0,163.5,-9.9,34.0
-oil_cooler,07 Drive and Ancillaries,anodised,,,,,,,,,,2240,1926,-111.0,91.0,-211.2,-112.0,-118.2,-29.8
-oil_filter,07 Drive and Ancillaries,anodised,,,,,,,,,,3804,4418,-33.4,85.4,-282.0,-18.0,-65.4,53.4
-thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2500,2824,-298.0,-196.0,-53.0,53.0,52.0,156.0
+oil_cooler,07 Drive and Ancillaries,anodised,,,,,,,,,,2240,1926,-111.0,91.0,-293.2,-194.0,-118.2,-29.8
+oil_filter,07 Drive and Ancillaries,anodised,,,,,,,,,,3804,4418,-33.4,85.4,-298.0,-112.0,-129.4,-10.6
+thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2500,2824,-298.0,-196.0,-53.0,53.0,52.0,236.6

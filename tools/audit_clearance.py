@@ -33,7 +33,10 @@ PAIRS = [
     ("battery", "crankshaft", 6.0, "the pack must clear the rotating assembly"),
     ("turbos", "camcover_l", 5.0, "the turbos live in the vee, not in a head"),
     ("turbos", "camcover_r", 5.0, "the turbos live in the vee, not in a head"),
-    ("plenum", "camcover_l", 3.0, "the plenum sits above the cam covers"),
+    # one plenum per bank, outboard of its own cam cover: this is a hot
+    # vee, so the induction cannot be in the vee with the turbochargers
+    ("plenum_l", "camcover_l", 3.0, "the plenum sits outboard of the cover"),
+    ("plenum_r", "camcover_r", 3.0, "the plenum sits outboard of the cover"),
     ("flywheel", "bedplate", 3.0, "the flywheel has to turn"),
     ("flywheel", "sump", 3.0, "the flywheel has to turn"),
 ]

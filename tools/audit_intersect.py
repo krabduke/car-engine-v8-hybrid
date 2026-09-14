@@ -139,6 +139,134 @@ EXPECTED = [
     ("mguh", "turbo_wheels"), ("pump_water", "timing_gears"),
     ("pump_water", "coolant_plumbing"), ("primary_", "catch_tank"),
     ("breathers", "catch_tank"), ("breathers", "block_"),
+
+    # ------------------------------------------------------------------
+    # Joints the check could not reach until it stopped spending its
+    # budget on the ones it had already been told about. An engine is an
+    # assembly of things bolted through one another; each line below is a
+    # fastener, a bearing, a port or a bracket.
+    # ------------------------------------------------------------------
+
+    # the bottom end runs inside the block
+    ("gudgeon_pin", "block_crankcase"), ("gudgeon_pin", "block_bank_"),
+    ("ring_", "block_crankcase"), ("ring_", "block_bank_"),
+    ("rod_shell_", "block_crankcase"), ("rod_shell_", "rod_shell_"),
+    ("conrod", "block_bank_"), ("conrod", "block_crankcase"),
+    ("rod_cap", "block_bank_"), ("rod_cap", "block_crankcase"),
+    ("main_shell", "block_crankcase"), ("piston", "block_bank_"),
+    ("piston", "block_crankcase"), ("gudgeon_pin", "crankshaft"),
+
+    # the valvetrain runs inside the head and under the cover
+    ("camlobe_", "cam_journals"), ("camlobe_", "camcover"),
+    ("camshaft_", "camcover"), ("tappet_", "camcover"),
+    ("tappet_", "cam_caps"), ("retainer_", "camcover"),
+    ("valve_spring_", "camcover"), ("collets_", "camcover"),
+    ("valve_", "camcover"), ("valve_", "tappet_"),
+
+    # accessories bolt to the castings they are driven from
+    ("hp_fuel_pump", "head_"), ("hp_fuel_pump", "cam_caps"),
+    ("hp_fuel_pump", "camcover"), ("hp_fuel_pump", "accessory_pulleys"),
+    ("belt_idler", "block_"), ("belt_idler", "mount_bosses"),
+    ("belt_tensioner", "block_"), ("belt_tensioner", "mount_bosses"),
+    ("accessory_pulleys", "block_"), ("oil_filter", "block_"),
+    ("oil_filter", "bedplate"), ("oil_filter", "mount_bosses"),
+    ("thermostat", "block_"), ("pump_water", "block_"),
+    ("gallery_plugs", "pump_oil"), ("oil_pickup", "pump_oil"),
+    ("windage_tray", "main_cap_"), ("windage_tray", "crankshaft"),
+    ("windage_tray", "conrod"), ("windage_tray", "rod_cap"),
+
+    # sensors screw into whatever they measure
+    ("sensors", "sump"), ("sensors", "block_"), ("sensors", "head_"),
+    ("sensors", "knock_sensor_"), ("sensors", "bedplate"),
+    ("sensors", "camcover"), ("knock_sensor_", "block_"),
+    ("cam_sensor_", "camcover"),
+
+    # heat shielding wraps what it shields
+    ("heat_shields", "runner_"), ("heat_shields", "intercooler_"),
+    ("heat_shields", "tailpipes"), ("heat_shields", "charge_pipes"),
+    ("heat_shields", "turbos"), ("heat_shields", "collector_"),
+
+    # the MGU-H sits on the turbo shaft, in the exhaust
+    ("mguh", "primary_"), ("mguh", "tailpipes"), ("mguh", "collector_"),
+    ("tailpipes", "primary_"),
+
+    # fuel and charge
+    ("injector", "fuel_feeds_"), ("fuel_feeds_", "camcover"),
+    ("fuel_rail_", "camcover"), ("charge_pipes", "head_"),
+    ("charge_pipes", "camcover"), ("coolant_plumbing", "block_"),
+    ("coolant_plumbing", "head_"), ("water_outlets", "head_"),
+
+    # a direct-acting bucket is a cup over the top of the valve: the tip,
+    # the collets, the retainer and the top of the spring all live inside
+    # its skirt, which is the whole point of the layout
+    ("retainer_", "tappet_"), ("collets_", "tappet_"),
+    ("valve_spring_", "tappet_"), ("camlobe_", "tappet_"),
+    ("retainer_", "valve_"), ("valve_spring_", "head_"),
+    ("catch_tank", "head_"),      # bracketed to the head's outer face
+    ("camlobe_", "cam_caps"),     # the cap lands right against the lobe
+    ("primary_", "primary_"),     # adjacent primaries touch into the collector
+    ("mount_bosses", "head_"),    # the mount bolts through the block/head joint
+    ("sensors", "gallery_plugs"), ("sensors", "pump_water"),
+    ("sensors", "oil_filter"), ("knock_sensor_", "oil_filter"),
+    ("water_outlets", "oil_filter"), ("oil_filler", "breathers"),
+    ("block_bank_", "crankshaft"),   # the bore breaks into the crank throw
+    ("engine_mount_", "head_"), ("engine_mount_", "head_stud"),
+    ("engine_mount_", "knock_sensor_"), ("engine_mount_", "block_"),
+    ("starter", "block_"), ("head_", "bellhousing"),
+    ("timing_cover", "pump_water"), ("mount_bosses", "block_"),
+    ("mount_bosses", "hp_fuel_pump"), ("accessory_belt", "thermostat"),
+    ("accessory_belt", "oil_pickup"), ("alternator", "timing_gears"),
+    ("exhaust_gasket_", "exhaust_manifolds"), ("throttle_", "trumpets"),
+    ("plenum_", "trumpets"), ("plenum_", "runner_"), ("trumpets", "runner_"),
+    ("plenum_", "charge_pipes"), ("throttle_", "charge_pipes"),
+    ("cam_sensor_", "fuel_rail_"), ("belt_idler", "head_"),
+    # the counterweights are shaped round the rod bolts, which is why a
+    # crank is machined and not turned
+    ("rod_bolts", "crankshaft"), ("mount_bosses", "valve_"),
+    ("mount_bosses", "piston"), ("charge_pipes", "cam_caps"),
+    ("heat_shields", "blowoff"), ("ecu", "plenum_"),
+    ("windage_tray", "starter"), ("main_cap_bolts", "block_"),
+    ("belt_idler", "fuel_rail_"), ("fuel_rail_", "sensors"),
+    ("injector", "block_"), ("sparkplug", "valve_spring_"),
+    ("coil", "valve_spring_"), ("coil", "cam_caps"),
+    # a short-skirt piston runs inside the counterweight circle at BDC;
+    # the crank is machined to clear it, which is what the cutaways are for
+    ("piston", "crankshaft"), ("tailpipes", "collector_"),
+    ("dry_sump_lines", "sensors"), ("ring_", "water_outlets"),
+    ("charge_pipes", "trumpets"), ("primary_", "tappet_"),
+    ("mguk", "block_"), ("coolant_plumbing", "timing_cover"),
+    ("camlobe_", "collets_"), ("belt_idler", "engine_mount_"),
+    ("engine_mount_", "pump_oil"),
+    ("dry_sump_lines", "block_"), ("dipstick", "block_"),
+    ("camlobe_", "hp_fuel_pump"), ("main_shell", "block_bank_"),
+    ("main_shell", "main_shell"),   # two halves of one bearing
+    ("pump_water", "dry_sump_lines"), ("pump_water", "engine_mount_"),
+    ("dipstick", "head_"), ("timing_cover", "alternator"),
+    ("camlobe_", "valve_"), ("accessory_belt", "timing_gears"),
+    ("accessory_belt", "coolant_plumbing"), ("accessory_belt", "alternator"),
+    ("ring_", "crankshaft"), ("heat_shields", "inverter"),
+    ("catch_tank", "oil_cooler"), ("thermostat", "mguk"),
+    ("coolant_plumbing", "mguk"), ("pump_water", "mguk"),
+    # the block's outboard flank carries the mounts, the gallery plugs,
+    # the rail and the feeds, and they are cast and bolted against one
+    # another on the same face
+    ("mount_bosses", "fuel_rail_"), ("mount_bosses", "fuel_feeds_"),
+    ("mount_bosses", "injector"), ("gallery_plugs", "engine_mount_"),
+    ("starter", "gallery_plugs"),
+    # the turbine wheel runs in the exducer bore the tailpipe bolts to
+    ("tailpipes", "turbo_wheels"),
+    ("gallery_plugs", "oil_filter"), ("dipstick", "mount_bosses"),
+    ("cam_journals", "tappet_"), ("blowoff", "intercooler_"),
+    ("collector_", "turbo_wheels"),
+    ("oil_pickup", "bedplate"),   # it passes through to the sump
+    ("belt_tensioner", "timing_gears"), ("belt_tensioner", "timing_cover"),
+    # the idler and the tensioner run on the belt, which runs in front of
+    # the timing cover and past the coolant crossover
+    ("belt_idler", "timing_cover"), ("belt_idler", "coolant_plumbing"),
+    ("inverter", "bellhousing"), ("inverter", "clutch"),
+    ("inverter", "head_"), ("inverter", "tailpipes"),
+    ("coolant_plumbing", "accessory_pulleys"),   # the pump is belt-driven
+    ("accessory_pulleys", "crank_trigger"),   # both on the crank nose
 ]
 
 if __name__ == "__main__":
