@@ -103,6 +103,13 @@ EXPECTED = [
     ("mguh", "compressor_housing"),
     ("wastegate", "compressor_housing"), ("wastegate", "collector_"),
     ("wastegate", "heat_shields"),
+    # the blanket is laced over the turbine and its collector, so it
+    # covers everything they contain
+    ("heat_shields", "turbo_centre"), ("heat_shields", "turbine_wheel"),
+    ("heat_shields", "compressor_housing"), ("heat_shields", "mguh"),
+    ("heat_shields", "turbo_oil"), ("heat_shields", "turbo_shaft"),
+    ("heat_shields", "compressor_wheel"),
+    ("heat_shields", "charge_pipes"), ("heat_shields", "primary_"),
     ("compressor_inlet", "compressor_housing"),
     ("compressor_inlet", "compressor_wheel"),
     ("compressor_housing", "collector_"),

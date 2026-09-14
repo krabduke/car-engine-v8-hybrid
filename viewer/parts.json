@@ -172,7 +172,7 @@
    "label": "Turbo",
    "color": "#A8663C",
    "parts": 34,
-   "faces": 67598
+   "faces": 88214
   },
   {
    "key": "06 Hybrid",
@@ -2825,9 +2825,9 @@
   "heat_shields": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
-   "x0": -187.0,
-   "x1": 187.0,
-   "f": 248
+   "x0": -162.7,
+   "x1": 186.1,
+   "f": 20864
   },
   "oil_pickup": {
    "g": "07 Drive and Ancillaries",
