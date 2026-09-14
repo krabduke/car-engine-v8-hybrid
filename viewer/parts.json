@@ -436,21 +436,21 @@
   "crank_damper": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -298.0,
-   "x1": -260.0,
+   "x0": -350.0,
+   "x1": -312.0,
    "f": 3141
   },
   "crank_trigger": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -293.0,
-   "x1": -267.0,
+   "x0": -313.0,
+   "x1": -287.0,
    "f": 2996
   },
   "crankshaft": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -286.0,
+   "x0": -340.0,
    "x1": 229.0,
    "f": 51148,
    "pivot": {
@@ -3439,15 +3439,15 @@
   "belt_idler": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
-   "x0": -256.0,
-   "x1": -188.0,
+   "x0": -232.0,
+   "x1": -164.0,
    "f": 532
   },
   "belt_tensioner": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -261.0,
-   "x1": -208.0,
+   "x0": -237.0,
+   "x1": -184.0,
    "f": 934
   },
   "blowoff": {
@@ -3558,8 +3558,8 @@
   "oil_filter": {
    "g": "07 Drive and Ancillaries",
    "mat": "anodised",
-   "x0": -155.4,
-   "x1": -36.6,
+   "x0": -33.4,
+   "x1": 85.4,
    "f": 4418
   },
   "thermostat": {
