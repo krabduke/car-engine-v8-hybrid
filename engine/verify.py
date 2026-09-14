@@ -127,7 +127,11 @@ def main():
             "collets_in_1_1", "main_shell_3_upper", "rod_shell_5_lower",
             "main_cap_2", "cam_caps", "rod_bolts", "fuel_rail_l",
             "collector_1", "alternator", "starter", "catch_tank",
-            "plenum_l", "plenum_r", "throttle_l", "turbos",
+            "plenum_l", "plenum_r", "throttle_l",
+            "turbine_housing_1", "turbine_housing_2",
+            "compressor_housing_1", "compressor_housing_2",
+            "turbo_centre_1", "turbine_wheel_1", "compressor_wheel_1",
+            "wastegate_1", "wastegate_2", "compressor_inlet_1",
             "flywheel", "clutch",
             "mguk", "mguh", "ecu", "pump_oil", "pump_water",
             # without this the engine cannot be timed or started

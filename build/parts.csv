@@ -215,8 +215,8 @@ alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-371.5,-296.5,-1
 breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,300,-228.9,-148.4,-217.4,217.4,200.9,247.0
 cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,3136,2720,-195.1,149.9,-226.7,226.7,126.2,226.7
 catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,65480,65364,-196.0,-38.0,-239.7,-115.8,-206.0,-93.8
-collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1145,1270,-204.0,-116.0,-40.0,40.0,231.0,311.0
-collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1145,1270,32.0,120.0,-40.0,40.0,231.0,311.0
+collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1921,2014,-158.9,-79.2,-35.0,35.0,284.6,380.0
+collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1921,2014,79.2,158.9,-35.0,35.0,284.6,380.0
 dipstick,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,32,18,168.0,196.0,116.0,134.0,-160.4,60.4
 fuel_feeds_l,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-167.0,148.0,-158.5,-128.4,40.3,77.8
 fuel_feeds_r,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-148.0,167.0,128.4,158.5,40.3,77.8
@@ -238,14 +238,14 @@ main_shell_4_lower,02 Bottom End,copper_wound,,,,,,,,,,428,404,96.9,109.1,-30.4,
 main_shell_4_upper,02 Bottom End,copper_wound,,,,,,,,,,592,564,96.9,109.1,-30.4,32.1,0.0,30.4
 main_shell_5_lower,02 Bottom End,copper_wound,,,,,,,,,,428,404,199.9,212.1,-30.4,32.1,-30.4,0.0
 main_shell_5_upper,02 Bottom End,copper_wound,,,,,,,,,,592,564,199.9,212.1,-30.4,32.1,0.0,30.4
-primary_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-178.4,-130.7,-110.6,2.4,140.6,328.1
-primary_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-162.1,-119.4,-4.3,110.6,140.6,328.1
-primary_3,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-158.0,-45.0,-110.6,9.9,140.6,328.2
-primary_4,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-157.2,-26.6,-10.4,110.6,140.6,328.2
-primary_5,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,26.6,97.9,-110.6,3.7,140.6,328.1
-primary_6,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,45.0,98.3,-2.1,110.6,140.6,328.1
-primary_7,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,76.5,159.8,-110.6,8.5,140.6,328.2
-primary_8,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,77.4,178.4,-9.4,110.6,140.6,328.2
+primary_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-185.9,-90.8,-110.6,-9.0,140.6,367.9
+primary_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-163.5,-90.3,10.1,110.6,140.6,367.9
+primary_3,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-114.4,-44.1,-110.6,-12.0,140.6,363.8
+primary_4,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,-114.2,-25.1,11.1,110.6,140.6,363.9
+primary_5,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,25.1,114.2,-110.6,-11.1,140.6,363.9
+primary_6,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,44.0,114.4,12.0,110.6,140.6,363.7
+primary_7,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,90.3,163.5,-110.6,-10.0,140.6,367.9
+primary_8,05 Turbo and Exhaust,inconel,,,,,,,,,,1464,1485,90.8,185.8,9.0,110.6,140.6,367.9
 rod_bolts,02 Bottom End,titanium,,,,,,,,,,2992,3552,-169.1,169.1,-25.6,25.6,-33.0,-24.0
 rod_shell_1_lower,02 Bottom End,copper_wound,,,,,,,,,,396,372,-171.0,-154.0,-27.0,28.7,-27.0,0.0
 rod_shell_1_upper,02 Bottom End,copper_wound,,,,,,,,,,396,372,-171.0,-154.0,-27.0,28.7,0.0,27.0
@@ -277,8 +277,19 @@ plenum_r,04 Induction,carbon,,,,,,,,,,3048,3048,-212.0,212.0,192.5,271.5,30.5,10
 throttle_l,04 Induction,alu_forged,,,,,,,,,,3434,3530,-56.0,56.0,-320.7,-264.7,14.0,126.0
 throttle_r,04 Induction,alu_forged,,,,,,,,,,3434,3530,-56.0,56.0,264.7,320.7,14.0,126.0
 trumpets,04 Induction,carbon,,,,,,,,,,3312,3312,-195.5,195.5,-254.8,254.8,37.0,103.0
-tailpipes,05 Turbo and Exhaust,inconel,,,,,,,,,,318,216,-187.9,304.5,-79.0,78.9,229.5,322.0
-turbos,05 Turbo and Exhaust,inconel,,,,,,,,,,3868,4118,-168.6,182.0,-64.0,70.2,191.0,319.0
+compressor_housing_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2056,2112,-116.9,-47.4,-56.8,56.8,191.3,318.6
+compressor_housing_2,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2056,2112,47.4,116.9,-56.8,56.8,191.3,318.6
+compressor_inlet_1,05 Turbo and Exhaust,rubber_blk,,,,,,,,,,1146,1167,-80.1,2.0,-71.7,25.2,244.8,380.2
+compressor_inlet_2,05 Turbo and Exhaust,rubber_blk,,,,,,,,,,1146,1167,-2.0,80.1,-25.2,71.7,244.8,380.2
+tailpipes,05 Turbo and Exhaust,inconel,,,,,,,,,,2292,2334,-295.8,295.8,-115.3,115.3,228.6,321.9
+turbine_housing_1,05 Turbo and Exhaust,inconel,,,,,,,,,,2056,2112,-188.6,-113.6,-62.7,62.7,187.8,338.4
+turbine_housing_2,05 Turbo and Exhaust,inconel,,,,,,,,,,2056,2112,113.6,188.6,-62.7,62.7,187.8,338.4
+turbo_centre_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,7416,7776,-147.2,-87.5,-38.7,38.7,201.4,293.7
+turbo_centre_2,05 Turbo and Exhaust,alu_cast,,,,,,,,,,7416,7776,88.8,148.5,-38.7,38.7,201.4,293.7
+turbo_oil_1,05 Turbo and Exhaust,braided,,,,,,,,,,900,798,-142.9,-86.3,-18.6,18.7,150.0,207.4
+turbo_oil_2,05 Turbo and Exhaust,braided,,,,,,,,,,900,798,93.1,149.7,-18.6,18.7,150.0,207.4
+wastegate_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1612,1807,-158.6,-60.4,8.0,68.0,268.1,325.0
+wastegate_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1612,1807,60.4,158.6,-68.0,-8.0,268.1,325.0
 battery,06 Hybrid,anodised,,,,,,,,,,5880,5100,-195.8,195.8,-187.8,187.8,-277.0,-216.0
 battery_modules,06 Hybrid,anodised,,,,,,,,,,2548,2210,-189.1,189.1,-188.0,188.0,-264.2,-223.8
 battery_terminals,06 Hybrid,copper_wound,,,,,,,,,,1072,1180,-134.6,139.7,-124.0,124.0,-216.0,-202.0
@@ -286,13 +297,15 @@ ecu,06 Hybrid,anodised,,,,,,,,,,1960,1700,-83.9,83.9,162.1,249.9,-97.0,-58.0
 ecu_connector,06 Hybrid,rubber_blk,,,,,,,,,,1896,2270,-105.0,-79.7,179.6,232.4,-88.5,-71.5
 inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,226.2,325.8,-78.8,78.8,153.0,236.0
 inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,3112,3700,200.0,356.2,-11.0,11.0,189.4,205.4
-mguh,06 Hybrid,copper_wound,,,,,,,,,,1568,1568,-154.0,154.0,-40.0,40.0,215.0,295.0
+mguh,06 Hybrid,copper_wound,,,,,,,,,,1568,1568,-140.0,140.0,-32.0,32.0,223.0,287.0
 mguk,06 Hybrid,copper_wound,,,,,,,,,,8180,7452,-340.0,-232.0,-84.5,84.5,-84.5,84.5
 bellhousing,07 Drive and Ancillaries,magnesium,,,,,,,,,,12286,12818,235.5,318.5,-166.0,166.0,-166.0,166.0
 clutch,07 Drive and Ancillaries,alu_cast,,,,,,,,,,15308,15260,254.0,294.0,-82.6,82.6,-82.6,82.6
 flywheel,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,9524,9764,251.0,279.0,-103.5,103.5,-103.5,103.5
 pump_oil,07 Drive and Ancillaries,alu_forged,,,,,,,,,,12480,12775,-242.0,-123.0,-228.7,-155.3,-50.7,22.7
 pump_water,07 Drive and Ancillaries,alu_forged,,,,,,,,,,4068,3984,-258.0,-185.0,115.1,266.2,-93.5,29.9
+compressor_wheel_1,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,-90.4,-53.7,-38.3,38.3,217.0,292.8
+compressor_wheel_2,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,53.7,90.4,-38.3,38.3,217.0,292.8
 coolant_plumbing,07 Drive and Ancillaries,alu_forged,,,,,,,,,,838,766,-304.7,-233.1,70.5,174.0,-44.8,194.0
 dry_sump_lines,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,300,-227.0,195.4,-161.0,161.0,-162.5,-0.2
 head_studs,03 Heads and Valvetrain,alu_cast,,,,,,,,,,12576,15680,-162.5,294.5,-127.0,127.0,39.2,127.0
@@ -366,7 +379,10 @@ tappet_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,133.7,161.7
 tappet_8_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,163.3,191.3,110.6,143.0,156.0,185.8
 timing_cover,07 Drive and Ancillaries,magnesium,,,,,,,,,,1124,1124,-284.0,-266.0,-152.0,152.0,-152.0,152.0
 timing_gears,07 Drive and Ancillaries,magnesium,,,,,,,,,,53160,47856,-269.0,-255.0,-241.0,241.0,-55.1,241.0
-turbo_wheels,05 Turbo and Exhaust,inconel,,,,,,,,,,9920,9168,-164.0,164.0,-41.0,41.0,213.7,296.4
+turbine_wheel_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1906,1802,-183.7,-145.6,-39.1,39.7,215.3,294.6
+turbine_wheel_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1906,1802,145.6,183.7,-39.1,39.7,215.3,294.6
+turbo_shaft_1,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,560,560,-153.6,-82.4,-9.0,9.0,246.0,264.0
+turbo_shaft_2,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,560,560,82.4,153.6,-9.0,9.0,246.0,264.0
 valve_spring_1_0,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-191.1,-168.6,-172.6,-109.1,77.3,130.0
 valve_spring_1_1,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-156.4,-133.9,-172.6,-109.1,77.3,130.0
 valve_spring_1_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,-188.6,-166.0,-131.6,-78.9,107.6,171.2
@@ -401,10 +417,10 @@ valve_spring_8_2,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,136.4
 valve_spring_8_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,13572,13524,166.0,188.6,78.9,131.6,107.6,171.2
 belt_idler,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,532,532,-280.0,-212.0,128.0,208.0,-80.0,0.0
 belt_tensioner,07 Drive and Ancillaries,alu_forged,,,,,,,,,,960,934,-334.0,-246.0,-172.0,-66.0,36.0,151.9
-blowoff,04 Induction,rubber_blk,,,,,,,,,,572,572,86.0,154.0,-164.0,-86.0,300.0,370.0
+blowoff,04 Induction,rubber_blk,,,,,,,,,,572,572,-154.4,-86.4,-305.9,-198.0,158.0,228.0
 cam_sensor_l,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,-140.6,-79.3,170.9,247.8
 cam_sensor_r,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,79.4,140.7,170.9,247.8
-charge_pipes,04 Induction,rubber_blk,,,,,,,,,,1960,1664,-124.2,208.2,-380.8,381.8,35.0,330.7
+charge_pipes,04 Induction,rubber_blk,,,,,,,,,,2536,2240,-150.4,150.4,-381.3,381.3,36.5,295.6
 engine_mount_l,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1656,1604,-193.9,193.9,-210.0,-114.0,-74.0,21.0
 engine_mount_r,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1656,1604,-193.9,193.9,114.0,210.0,-74.0,21.0
 exhaust_flange_l,05 Turbo and Exhaust,inconel,,,,,,,,,,3008,3440,-193.5,174.5,-76.7,-16.1,133.5,194.1
@@ -417,4 +433,4 @@ knock_sensor_l,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0
 knock_sensor_r,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0,116.0,163.5,-9.9,34.0
 oil_cooler,07 Drive and Ancillaries,anodised,,,,,,,,,,2240,1926,-111.0,91.0,-293.2,-194.0,-118.2,-29.8
 oil_filter,07 Drive and Ancillaries,anodised,,,,,,,,,,3804,4418,-33.4,85.4,-298.0,-112.0,-129.4,-10.6
-thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2500,2824,-298.0,-196.0,-53.0,53.0,52.0,236.6
+thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2500,2824,-298.0,-196.0,-52.0,52.0,52.0,231.4

@@ -46,8 +46,8 @@ def collection_for(n):
     if n.startswith(("plenum", "trumpet", "throttle", "runner_",
                      "intercooler", "charge_pipe", "blowoff")):
         return "04 Induction"
-    if n.startswith(("turbo", "exhaust", "tailpipe", "wastegate",
-                     "primary_", "collector_")):
+    if n.startswith(("turbo", "turbine_", "compressor_", "exhaust",
+                     "tailpipe", "wastegate", "primary_", "collector_")):
         return "05 Turbo and Exhaust"
     if n.startswith(("mgu", "inverter", "battery", "ecu")):
         return "06 Hybrid"

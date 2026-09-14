@@ -258,7 +258,12 @@ const $ = s => document.querySelector(s);
 const SKIN = ['block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners',
               'head_l', 'head_r',
               'camcover_l', 'camcover_r', 'sump', 'bellhousing',
-              'plenum_l', 'plenum_r'];
+              'plenum_l', 'plenum_r',
+              // the volutes come off too: a turbocharger's wheels are the
+              // reason it is on the engine, and they are the one thing you
+              // can never see on a real one
+              'turbine_housing_1', 'turbine_housing_2',
+              'compressor_housing_1', 'compressor_housing_2'];
 
 let keyLight = null;   // cast shadows, and sized to the model in ready()
 let scene, camera, renderer, controls, root, raycaster, clock;
@@ -670,7 +675,8 @@ function buildRail(){
     }
     $('#note').textContent = showing
       ? 'Click an assembly to hide it. Drag to orbit.'
-      : 'Castings off — crank, rods, pistons, cams, valves and turbos visible.';
+      : 'Castings and volutes off — crank, rods, pistons, cams, valves, '
+        + 'and both turbine and compressor wheels on their shafts.';
   });
 
   /* Showing the air means seeing through the metal.

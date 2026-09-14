@@ -75,21 +75,44 @@ EXPECTED = [
     ("plenum", "trumpets"), ("plenum", "throttle"), ("plenum", "runner_"),
     ("plenum", "charge_pipes"), ("trumpets", "runner_"),
     ("throttle", "charge_pipes"), ("charge_pipes", "intercooler_"),
-    ("charge_pipes", "turbos"), ("charge_pipes", "blowoff"),
+    ("charge_pipes", "compressor_housing"), ("charge_pipes", "blowoff"),
     ("intercooler_", "charge_pipes"),
 
     # exhaust and turbos
-    ("primary_", "collector_"), ("primary_", "turbos"),
-    ("primary_", "exhaust_manifolds"), ("primary_", "exhaust_flange_"),
+    ("primary_", "collector_"), ("primary_", "turbine_housing"),
+    ("primary_", "exhaust_flange_"),
     ("primary_", "exhaust_gasket_"), ("primary_", "heat_shields"),
-    ("collector_", "turbos"), ("collector_", "exhaust_manifolds"),
-    ("turbos", "turbo_wheels"), ("turbos", "tailpipes"), ("turbos", "mguh"),
-    ("turbos", "wastegate"), ("turbos", "heat_shields"),
-    ("turbos", "catch_tank"), ("turbos", "exhaust_manifolds"),
-    ("exhaust_manifolds", "heat_shields"),
+    ("collector_", "turbine_housing"),
+    # ------------------------------------------------------------------
+    # A turbocharger is one machine, and its parts are bolted through each
+    # other by design. The bearing housing is clamped between the two volutes
+    # by a V-band at each joint, so all three share the clamp; both wheels are
+    # pressed onto the one shaft; the MGU-H rotor rides on that shaft inside
+    # the bearing housing's waist; the oil feed and drain screw into bosses on
+    # it; the wastegate canister is mounted on the compressor housing with its
+    # rod reaching across to a crank arm on the turbine housing; and the
+    # collector bolts to the turbine inlet flange and passes over the bearing
+    # housing to get there. Every one of those overlaps IS the joint.
+    ("turbo_centre", "compressor_housing"), ("turbo_centre", "turbine_housing"),
+    ("turbo_centre", "turbine_wheel"), ("turbo_centre", "compressor_wheel"),
+    ("turbo_centre", "turbo_oil"), ("turbo_centre", "turbo_shaft"),
+    ("turbo_centre", "mguh"), ("turbo_centre", "wastegate"),
+    ("turbo_centre", "collector_"), ("turbo_centre", "charge_pipes"),
+    ("turbo_shaft", "turbine_wheel"), ("turbo_shaft", "compressor_wheel"),
+    ("turbo_oil", "turbine_housing"), ("turbo_oil", "compressor_housing"),
+    ("mguh", "compressor_housing"),
+    ("wastegate", "compressor_housing"), ("wastegate", "collector_"),
+    ("wastegate", "heat_shields"),
+    ("compressor_inlet", "compressor_housing"),
+    ("compressor_inlet", "compressor_wheel"),
+    ("compressor_housing", "collector_"),
+    ("charge_pipes", "compressor_wheel"), ("charge_pipes", "turbine_housing"),
+    ("turbine_housing", "turbine_wheel"), ("turbine_housing", "tailpipes"),
+    ("turbine_housing", "wastegate"), ("turbine_housing", "heat_shields"),
+    ("compressor_housing", "catch_tank"),
     # hot-vee: the port flange, its primary and the turbocharger inlet are
     # one assembly packed into the vee, and primary/turbos is already here
-    ("exhaust_flange_", "exhaust_gasket_"), ("exhaust_flange_", "turbos"),
+    ("exhaust_flange_", "exhaust_gasket_"), ("exhaust_flange_", "turbine_housing"),
 
     # ancillaries, drive and plumbing
     ("timing_cover", "timing_gears"), ("timing_cover", "block_crankcase"),
@@ -115,7 +138,7 @@ EXPECTED = [
     # hybrid
     # the MGU-K rotor runs on the crank nose, concentric with the pulley
     # stack and the damper that are also on it
-    ("mguk", "bellhousing"), ("mguk", "crankshaft"), ("mguh", "turbos"),
+    ("mguk", "bellhousing"), ("mguk", "crankshaft"), ("mguh", "turbine_housing"),
     ("mguk", "accessory_pulleys"), ("mguk", "accessory_belt"),
     ("mguk", "crank_damper"), ("mguk", "crank_trigger"),
     ("mguk", "timing_gears"), ("mguk", "timing_cover"),
@@ -131,12 +154,10 @@ EXPECTED = [
     ("water_outlets", "block_liners"), ("water_outlets", "block_bank_"),
     ("coolant_plumbing", "block_liners"), ("coolant_plumbing", "timing_gears"),
     ("coolant_plumbing", "block_bank_"), ("coolant_plumbing", "head_"),
-    ("exhaust_manifolds", "head_"), ("exhaust_manifolds", "mguh"),
-    ("exhaust_manifolds", "exhaust_flange_"), ("exhaust_manifolds", "turbos"),
     ("camcover", "trumpets"), ("cam_caps", "trumpets"),
     ("cam_caps", "camcover"), ("cam_caps", "camshaft_"),
     ("head_gasket_", "block_liners"), ("head_gasket_", "block_bank_"),
-    ("mguh", "turbo_wheels"), ("pump_water", "timing_gears"),
+    ("mguh", "turbine_wheel"), ("pump_water", "timing_gears"),
     ("pump_water", "coolant_plumbing"), ("primary_", "catch_tank"),
     ("breathers", "catch_tank"), ("breathers", "block_"),
 
@@ -184,7 +205,7 @@ EXPECTED = [
     # heat shielding wraps what it shields
     ("heat_shields", "runner_"), ("heat_shields", "intercooler_"),
     ("heat_shields", "tailpipes"), ("heat_shields", "charge_pipes"),
-    ("heat_shields", "turbos"), ("heat_shields", "collector_"),
+    ("heat_shields", "turbine_housing"), ("heat_shields", "collector_"),
 
     # the MGU-H sits on the turbo shaft, in the exhaust
     ("mguh", "primary_"), ("mguh", "tailpipes"), ("mguh", "collector_"),
@@ -216,7 +237,7 @@ EXPECTED = [
     ("timing_cover", "pump_water"), ("mount_bosses", "block_"),
     ("mount_bosses", "hp_fuel_pump"), ("accessory_belt", "thermostat"),
     ("accessory_belt", "oil_pickup"), ("alternator", "timing_gears"),
-    ("exhaust_gasket_", "exhaust_manifolds"), ("throttle_", "trumpets"),
+    ("throttle_", "trumpets"),
     ("plenum_", "trumpets"), ("plenum_", "runner_"), ("trumpets", "runner_"),
     ("plenum_", "charge_pipes"), ("throttle_", "charge_pipes"),
     ("cam_sensor_", "fuel_rail_"), ("belt_idler", "head_"),
@@ -254,10 +275,10 @@ EXPECTED = [
     ("mount_bosses", "injector"), ("gallery_plugs", "engine_mount_"),
     ("starter", "gallery_plugs"),
     # the turbine wheel runs in the exducer bore the tailpipe bolts to
-    ("tailpipes", "turbo_wheels"),
+    ("tailpipes", "turbine_wheel"),
     ("gallery_plugs", "oil_filter"), ("dipstick", "mount_bosses"),
     ("cam_journals", "tappet_"), ("blowoff", "intercooler_"),
-    ("collector_", "turbo_wheels"),
+    ("collector_", "turbine_wheel"),
     ("oil_pickup", "bedplate"),   # it passes through to the sump
     ("belt_tensioner", "timing_gears"), ("belt_tensioner", "timing_cover"),
     # the idler and the tensioner run on the belt, which runs in front of
