@@ -125,6 +125,18 @@ export class GasFlow {
       this._run(c.exhaust, 7.5, '#FF7A34', '#B8331C',
                 {kind: 'exhaust', phase: c.phase, speed: 0.95, density: 2.0});
     }
+    // Through the turbocharger. The exhaust used to stop at the turbine inlet
+    // and the boost used to start at the compressor outlet, so the gas
+    // arrived at the turbo, vanished, and came out the other side -- with the
+    // energy recovery that is the whole point of it happening off screen.
+    for (const p of g.turbine || []) {
+      this._run(p, 9.0, '#FF6A2A', '#A83C24',
+                {kind: 'boost', speed: 1.15, density: 2.8, opacity: 0.9});
+    }
+    for (const p of g.compressor || []) {
+      this._run(p, 10.0, '#8FC8E4', '#E6A257',
+                {kind: 'boost', speed: 1.0, density: 2.4, opacity: 0.85});
+    }
     // the boost loop runs continuously -- it is not gated by any one valve
     for (const p of g.boost) {
       this._run(p, 11.0, '#E8A860', '#7FBEDD',
