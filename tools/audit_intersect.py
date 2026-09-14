@@ -267,6 +267,13 @@ EXPECTED = [
     ("inverter", "head_"), ("inverter", "tailpipes"),
     ("coolant_plumbing", "accessory_pulleys"),   # the pump is belt-driven
     ("accessory_pulleys", "crank_trigger"),   # both on the crank nose
+    ("camlobe_", "retainer_"),   # both live inside the bucket envelope
+    # the charge cooler core sits IN the plenum, with the velocity stacks
+    # and the runner mouths around it -- that is what a water-to-air
+    # intercooler on a hot vee is
+    ("intercooler_", "plenum_"), ("intercooler_", "trumpets"),
+    ("intercooler_", "runner_"), ("intercooler_", "throttle_"),
+    ("hp_fuel_pump", "cam_journals"),   # it is driven off that cam
 ]
 
 if __name__ == "__main__":
