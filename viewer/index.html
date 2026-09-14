@@ -43,10 +43,7 @@
 
   /* balance is the number that decides whether an aeroplane flies, so it gets
      its own readout rather than being buried in a list */
-  #bal{
-    position:fixed; left:22px; bottom:calc(var(--rail-h) + 18px); z-index:5;
-    pointer-events:none; width:238px;
-  }
+  #bal{pointer-events:none}
   #bal .cap{font-size:11px; color:#9AA6A1; margin-bottom:6px}
   #fire{display:flex; gap:4px}
   #fire span{flex:1; text-align:center; padding:5px 0; font-size:11.5px;
@@ -118,7 +115,7 @@
     :root{--rail-h:168px}
     #title h1{font-size:17px}
     #spec div:nth-child(n+3){display:none}
-    #bal{display:none}
+    #lowleft{display:none}
     #probe{left:16px; right:16px; max-width:none}
   }
   @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms !important}}
@@ -140,15 +137,36 @@
   #rpmval{font-size:11px; color:#DCE6EB; font-variant-numeric:tabular-nums;
           min-width:64px; text-align:right}
 
+  /* The bottom-left corner carries two things: the firing-order strip, which
+     belongs to the rail control that runs the engine, and the standing
+     explainer. Each positioned itself against the viewport, both anchored
+     near the bottom, so the explainer sat on top of the strip and ran thirty
+     pixels under the rail -- slicing its own last line through the middle of
+     the glyphs. Stack them in one bottom-anchored column instead: strip
+     nearest the rail it answers to, explainer above it, and the explainer
+     folds away once it has been read. */
+  #lowleft{
+    position:fixed; left:22px; bottom:calc(var(--rail-h) + 18px);
+    z-index:5; width:300px; display:flex; flex-direction:column;
+    align-items:stretch; gap:14px;
+  }
   #about{
-    position:absolute; left:16px; bottom:96px; max-width:320px; z-index:5;
     font-size:11px; line-height:1.55; color:#8A969D;
     background:rgba(16,22,25,.82); border:1px solid #2C383E; border-radius:3px;
-    padding:10px 12px;
+    padding:10px 12px; overflow:hidden;
   }
-  #about b{color:#C6D2D8; font-weight:600; display:block; margin-bottom:4px;
-           font-size:11.5px}
-  @media (max-width:900px){ #about{display:none} }
+  #about summary{color:#C6D2D8; font-weight:600; font-size:11.5px;
+                 cursor:pointer; list-style:none;
+                 display:flex; justify-content:space-between; gap:8px}
+  #about summary::-webkit-details-marker{display:none}
+  #about summary::after{content:'Hide'; color:#77848B; font-weight:400}
+  #about:not([open]) summary::after{content:'Read'}
+  #about summary:focus-visible{outline:1px solid #7E8A93; outline-offset:3px}
+  /* short window: the prose scrolls rather than pushing the column
+     up into the title */
+  #about p{margin:6px 0 0; overflow-y:auto;
+           max-height:max(72px, calc(100vh - var(--rail-h) - 210px))}
+  @media (max-width:900px){ #lowleft{display:none} }
 </style>
 </head>
 <body>
@@ -166,12 +184,6 @@
   <div><b id="s-rpm">—</b> rpm redline</div>
   <div><b id="s-bore">—</b> bore × stroke</div>
   <div><b id="s-mass">—</b> kg</div>
-</div>
-
-<div id="bal">
-  <div class="cap">Firing order — even 90° intervals, flat-plane crank</div>
-  <div id="fire"></div>
-  <div class="lbl"><span id="f-note">—</span><span class="val" id="f-int">—</span></div>
 </div>
 
 <div id="probe" aria-live="polite">
@@ -203,8 +215,17 @@
   </div>
 </div>
 
-
-<div id="about"><b>What this is</b>A 2.0-litre flat-plane V8 turning 16,000 rpm, built to power the VX-1. Flat-plane means all four crankpins lie in one plane, which gives an even firing interval on a 90-degree V and lets the engine rev; the penalty is secondary imbalance, which a light reciprocating assembly keeps tolerable. Run it and the crank, rods and pistons move on a real slider-crank solved live — the piston travel is the stroke to three figures because it is the same kinematics the geometry was built from.</div>
+<div id="lowleft">
+  <details id="about" open>
+    <summary>What this is</summary>
+    <p>A 2.0-litre flat-plane V8 turning 16,000 rpm, built to power the VX-1. Flat-plane means all four crankpins lie in one plane, which gives an even firing interval on a 90-degree V and lets the engine rev; the penalty is secondary imbalance, which a light reciprocating assembly keeps tolerable. Run it and the crank, rods and pistons move on a real slider-crank solved live — the piston travel is the stroke to three figures because it is the same kinematics the geometry was built from.</p>
+  </details>
+  <div id="bal">
+    <div class="cap">Firing order — even 90° intervals, flat-plane crank</div>
+    <div id="fire"></div>
+    <div class="lbl"><span id="f-note">—</span><span class="val" id="f-int">—</span></div>
+  </div>
+</div>
 
 <div id="load">
   <p id="loadtxt">Loading engine…</p>
@@ -236,7 +257,8 @@ const $ = s => document.querySelector(s);
 // fragments turned out to be far more trouble than toggling visibility.
 const SKIN = ['block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners',
               'head_l', 'head_r',
-              'camcover_l', 'camcover_r', 'sump', 'plenum', 'bellhousing'];
+              'camcover_l', 'camcover_r', 'sump', 'bellhousing',
+              'plenum_l', 'plenum_r'];
 
 let keyLight = null;   // cast shadows, and sized to the model in ready()
 let scene, camera, renderer, controls, root, raycaster, clock;
@@ -418,7 +440,6 @@ function ready(model){
   scene.add(root);
 
   const size = box.getSize(new THREE.Vector3());
-
 
   /* Shadows, and something for them to land on. A transparent catcher takes
 
