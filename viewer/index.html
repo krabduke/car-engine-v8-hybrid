@@ -214,6 +214,7 @@
 <script type="importmap">
 {"imports":{
   "three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "animejs":"https://cdn.jsdelivr.net/npm/animejs@4.0.2/+esm",
   "three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
 }}
 </script>
@@ -221,6 +222,8 @@
 <script type="module">
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {tweenNumber, fadeObject, flyCamera, revealPanel, revealRows,
+        reducedMotion} from './anim.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 
@@ -229,9 +232,11 @@ const $ = s => document.querySelector(s);
 
 // Hiding the skin is how you look inside. No clipping planes: discarding
 // fragments turned out to be far more trouble than toggling visibility.
-const SKIN = ['block_bank_l', 'block_bank_r', 'head_l', 'head_r',
+const SKIN = ['block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners',
+              'head_l', 'head_r',
               'camcover_l', 'camcover_r', 'sump', 'plenum', 'bellhousing'];
 
+let keyLight = null;   // cast shadows, and sized to the model in ready()
 let scene, camera, renderer, controls, root, raycaster, clock;
 let data, byGroup = new Map(), info = new Map(), pickable = [];
 let hidden = new Set(), hovered = null, corners = [], viewDir, spinning = false;
@@ -247,8 +252,13 @@ async function init(){
   renderer = new THREE.WebGLRenderer({antialias:true, powerPreference:'high-performance'});
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
   renderer.setSize(stage.clientWidth, stage.clientHeight);
-  renderer.toneMapping = THREE.LinearToneMapping;
-  renderer.toneMappingExposure = 1.05;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.2;
+  // Self-shadowing. Without it every recess is exactly as bright as the
+  // surface beside it, which is the difference between an object and a
+  // lit diagram.
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   stage.appendChild(renderer.domElement);
   clock = new THREE.Clock();
 
@@ -257,18 +267,18 @@ async function init(){
 
   const pmrem = new THREE.PMREMGenerator(renderer);
   scene.environment = pmrem.fromEquirectangular(studioEnv()).texture;
-  scene.environmentIntensity = 1.0;
+  scene.environmentIntensity = 1.05;
 
   camera = new THREE.PerspectiveCamera(30, stage.clientWidth/stage.clientHeight, 0.02, 60);
 
   // Lit from several directions on purpose: a single key leaves the underside
   // of a fuselage black, and there is nothing to see in a black fuselage.
   scene.add(
-    dir(0xFFF4E8, 1.45, -2.2, 3.4, 2.6),
+    keyLight = dir(0xFFF4E8, 1.45, -2.2, 3.4, 2.6),
     dir(0xC9DCE6, 0.85,  2.6,-1.8,-2.0),
     dir(0xFFFFFF, 0.70,  2.0, 1.6,-2.8),
-    new THREE.HemisphereLight(0xE4EDF0, 0x97A0A6, 1.15),
-    new THREE.AmbientLight(0xC4CED4, 0.40),
+    new THREE.HemisphereLight(0xE4EDF0, 0x97A0A6, 0.34),
+    new THREE.AmbientLight(0xC4CED4, 0.10),
   );
 
   controls = new OrbitControls(camera, renderer.domElement);
@@ -279,7 +289,7 @@ async function init(){
   raycaster = new THREE.Raycaster();
 
   try{
-    data = await (await fetch('parts.json')).json();
+    data = await (await fetch('parts.json?nocache=' + Date.now())).json();
   }catch(e){
     return fail('Could not read <code>parts.json</code>. Serve this folder over HTTP: '
               + 'run <code>make viewer</code> from the project root.');
@@ -289,7 +299,7 @@ async function init(){
 
   const draco = new DRACOLoader().setDecoderPath(
     'https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/libs/draco/gltf/');
-  new GLTFLoader().setDRACOLoader(draco).load('../build/engine.glb',
+  new GLTFLoader().setDRACOLoader(draco).load('../build/engine.glb?nocache=' + Date.now(),
     g => ready(g.scene),
     ev => {
       if(!ev.total) return;
@@ -297,7 +307,22 @@ async function init(){
       $('#bar i').style.width = p + '%';
       $('#loadtxt').textContent = `Loading engine… ${p}%`;
     },
-    () => fail('Could not load <code>build/engine.glb</code>. Run <code>make export</code>.'));
+    (e) => {
+      /* Say what actually went wrong.
+       *
+       * GLTFLoader routes an exception thrown inside its own onLoad callback
+       * to onError as well, so a runtime bug anywhere in ready() used to be
+       * reported as a missing file -- "Could not load ... run make export" while the
+       * file sat there being served with a 200. Two different faults, one
+       * message, and the message named the wrong one. */
+      const msg = e && (e.message || e.type) ? String(e.message || e.type) : 'unknown error';
+      const missing = /404|not found|fetch|network/i.test(msg);
+      fail(missing
+        ? 'Could not load <code>build/engine.glb</code>. Run <code>make export</code> to generate it.'
+        : 'The model loaded but the viewer failed to start: <code>' +
+          msg.replace(/[<>&]/g, '') + '</code>');
+      console.error(e);
+    });
 }
 
 function dir(colour, intensity, x, y, z){
@@ -307,20 +332,29 @@ function dir(colour, intensity, x, y, z){
 }
 
 function studioEnv(){
+  // A metal only looks like metal when its reflection has CONTRAST: bright
+  // sky above, dark floor below, and a couple of distinct softboxes that
+  // streak across the surface as it turns. A uniform grey gradient reflects
+  // as a uniform grey surface -- which is why the old lightbox read as clay.
   const w = 1024, h = 512;
   const cv = document.createElement('canvas');
   cv.width = w; cv.height = h;
   const g = cv.getContext('2d');
   const grad = g.createLinearGradient(0, 0, 0, h);
-  grad.addColorStop(0.00, '#E8EEF1');
-  grad.addColorStop(0.42, '#C2CBD1');
-  grad.addColorStop(0.58, '#A6AFB5');
-  grad.addColorStop(1.00, '#8E969C');
+  grad.addColorStop(0.00, '#FDFEFF');
+  grad.addColorStop(0.30, '#DDE5EA');
+  grad.addColorStop(0.49, '#9AA6AE');
+  grad.addColorStop(0.55, '#2A2F33');
+  grad.addColorStop(1.00, '#0B0D0E');
   g.fillStyle = grad; g.fillRect(0, 0, w, h);
-  const key = g.createRadialGradient(w*0.3, h*0.24, 0, w*0.3, h*0.24, w*0.2);
-  key.addColorStop(0, 'rgba(255,251,244,0.45)');
-  key.addColorStop(1, 'rgba(255,251,244,0)');
-  g.fillStyle = key; g.fillRect(0, 0, w, h);
+  // two overhead softboxes and one low bounce strip: sharp specular streaks
+  for(const [cx, cw, ci] of [[0.22, 0.10, 1.0], [0.62, 0.14, 0.85], [0.88, 0.06, 0.5]]){
+    const p = g.createLinearGradient(0, h * 0.03, 0, h * 0.40);
+    p.addColorStop(0, `rgba(255,252,246,${0.95 * ci})`);
+    p.addColorStop(1, 'rgba(255,252,246,0)');
+    g.fillStyle = p;
+    g.fillRect(w * (cx - cw / 2), h * 0.03, w * cw, h * 0.37);
+  }
   const t = new THREE.CanvasTexture(cv);
   t.mapping = THREE.EquirectangularReflectionMapping;
   t.colorSpace = THREE.SRGBColorSpace;
@@ -381,6 +415,51 @@ function ready(model){
   scene.add(root);
 
   const size = box.getSize(new THREE.Vector3());
+
+
+  /* Shadows, and something for them to land on. A transparent catcher takes
+
+     the ground shadow without putting a visible floor slab in the picture. */
+
+  if(keyLight){
+
+    keyLight.castShadow = true;
+
+    keyLight.shadow.mapSize.set(2048, 2048);
+
+    keyLight.shadow.bias = -0.0006;
+
+    keyLight.shadow.normalBias = 0.012;
+
+    const span = Math.max(size.x, size.y, size.z);
+
+    const sc = keyLight.shadow.camera;
+
+    sc.left = -span * 0.62; sc.right = span * 0.62;
+
+    sc.top = span * 0.62; sc.bottom = -span * 0.62;
+
+    sc.near = 0.05; sc.far = span * 6.0;
+
+    sc.updateProjectionMatrix();
+
+    root.traverse(o => { if(o.isMesh){ o.castShadow = true; o.receiveShadow = true; } });
+
+    const catcher = new THREE.Mesh(
+
+      new THREE.PlaneGeometry(span * 4, span * 4),
+
+      new THREE.ShadowMaterial({opacity: 0.32}));
+
+    catcher.rotation.x = -Math.PI / 2;
+
+    catcher.position.y = -size.y * 0.60;
+
+    catcher.receiveShadow = true;
+
+    scene.add(catcher);
+
+  }
   corners = [];
   for(const sx of [-.5,.5]) for(const sy of [-.5,.5]) for(const sz of [-.5,.5])
     corners.push(new THREE.Vector3(size.x*sx, size.y*sy, size.z*sz));
@@ -390,7 +469,7 @@ function ready(model){
   addEventListener('resize', onResize);
   renderer.domElement.addEventListener('pointermove', onMove);
   renderer.domElement.addEventListener('pointerleave', () => setProbe(null));
-  window.__dbg = {scene, camera, renderer, root, moving, setCrank, byGroup};
+  window.__dbg = {scene, camera, renderer, root, moving, setCrank, byGroup, controls};
   kin = data.kinematics || null;
   $('#load').classList.add('done');
   renderer.setAnimationLoop(tick);
