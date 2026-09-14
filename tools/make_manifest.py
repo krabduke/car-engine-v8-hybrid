@@ -5,7 +5,8 @@ import csv, json, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "engine"))
 import spec
-from parts import bottomend  # noqa: E402
+from parts import bottomend
+import gaspath  # noqa: E402
 
 GROUPS = [
     ("01 Block",                   "Block",       "#6E7478"),
@@ -70,6 +71,9 @@ def main():
                     for k, v in spec.PALETTE.items()},
         "groups": groups, "parts": parts,
         "kinematics": bottomend.kinematics(),
+        # the centrelines the induction and exhaust are actually built along,
+        # plus the valve windows, so the viewer can run the gas through them
+        "gas_path": gaspath.build(),
     }
     p = os.path.join(ROOT, "viewer", "parts.json")
     json.dump(out, open(p, "w"), indent=1)

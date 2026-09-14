@@ -197,6 +197,7 @@
       <span id="rpmval">3,200</span>
     </div>
     <button class="btn" id="skin" type="button" aria-pressed="false">Show internals</button>
+    <button class="btn" id="air" type="button" aria-pressed="false">Show airflow</button>
     <button class="btn" id="spin" type="button" aria-pressed="false">Spin</button>
     <button class="btn" id="reset" type="button">Reset view</button>
   </div>
@@ -224,6 +225,7 @@ import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {tweenNumber, fadeObject, flyCamera, revealPanel, revealRows,
         reducedMotion} from './anim.js';
+import {GasFlow} from './gasflow.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {DRACOLoader} from 'three/addons/loaders/DRACOLoader.js';
 
@@ -239,6 +241,7 @@ const SKIN = ['block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners',
 let keyLight = null;   // cast shadows, and sized to the model in ready()
 let scene, camera, renderer, controls, root, raycaster, clock;
 let data, byGroup = new Map(), info = new Map(), pickable = [];
+let gas = null, gasOn = false, cyclePhase = 0, ghosted = null;
 let hidden = new Set(), hovered = null, corners = [], viewDir, spinning = false;
 // The engine runs from a real slider-crank, solved per frame. `moving` holds
 // each part with the cylinder it belongs to and how it moves; `kin` is the
@@ -469,7 +472,8 @@ function ready(model){
   addEventListener('resize', onResize);
   renderer.domElement.addEventListener('pointermove', onMove);
   renderer.domElement.addEventListener('pointerleave', () => setProbe(null));
-  window.__dbg = {scene, camera, renderer, root, moving, setCrank, byGroup, controls};
+  if(data.gas_path) gas = new GasFlow(THREE, root, data.gas_path);
+  window.__dbg = {scene, camera, renderer, root, moving, setCrank, byGroup, controls, gas};
   kin = data.kinematics || null;
   $('#load').classList.add('done');
   renderer.setAnimationLoop(tick);
@@ -552,7 +556,16 @@ function tick(){
   if(running){
     // 16,000 rpm is 96,000 deg/s. Shown at a fixed 1/40 so the motion is
     // legible; the kinematics are untouched, only the clock.
-    setCrank((crankDeg + dt * rpmVal * 6.0 / 40.0) % 360);
+    const step = dt * rpmVal * 6.0 / 40.0;
+    setCrank((crankDeg + step) % 360);
+    cyclePhase = (cyclePhase + step) % 720;     // four-stroke: two turns
+  }
+  if(gasOn && gas){
+    // keep the gas moving even with the engine stopped, or the layer is a
+    // still picture of some coloured pipes
+    if(!running) cyclePhase = (cyclePhase + dt * 190.0) % 720;
+    gas.setPhase(cyclePhase);
+    gas.tick(dt);
   }
   if(spinning && root) root.rotation.y += dt * 0.35;
   controls.update();
@@ -637,6 +650,43 @@ function buildRail(){
     $('#note').textContent = showing
       ? 'Click an assembly to hide it. Drag to orbit.'
       : 'Castings off — crank, rods, pistons, cams, valves and turbos visible.';
+  });
+
+  /* Showing the air means seeing through the metal.
+   *
+   * The ducts are opaque castings, so drawing the gas inside them and leaving
+   * it at that shows nothing at all. The engine ghosts back to a sixteenth of
+   * its opacity while the flow is up -- enough to keep the shape and the
+   * context, little enough to read the gas through it. */
+  $('#air').addEventListener('click', () => {
+    const b = $('#air');
+    gasOn = !gasOn;
+    b.setAttribute('aria-pressed', String(gasOn));
+    b.textContent = gasOn ? 'Hide airflow' : 'Show airflow';
+    if(gas) gas.setVisible(gasOn);
+    if(gasOn){
+      // keep the real material and swap in a ghost clone, so restoring is
+      // putting the original back rather than trying to undo edits to it
+      ghosted = [];
+      for(const o of pickable){
+        ghosted.push([o, o.material]);
+        const gm = o.material.clone();
+        gm.transparent = true;
+        gm.opacity = 0.16;
+        gm.depthWrite = false;
+        o.material = gm;
+      }
+    } else if(ghosted){
+      for(const [o, original] of ghosted){
+        o.material.dispose();
+        o.material = original;
+      }
+      ghosted = null;
+    }
+    $('#note').textContent = gasOn
+      ? 'Induction blue, exhaust hot. Each cylinder breathes only while its own '
+        + 'valves are open, so the flow travels in firing order: 1, 8, 3, 6, 4, 5, 2, 7.'
+      : 'Click an assembly to hide it. Drag to orbit.';
   });
 
   $('#spin').addEventListener('click', () => {
