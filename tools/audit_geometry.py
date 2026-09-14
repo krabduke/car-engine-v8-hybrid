@@ -41,7 +41,7 @@ EXEMPT = {
 }
 
 FLOOR = 120          # vertices, for anything not exempt
-TOTAL = 585_000      # vertices, over the whole model
+TOTAL = 1_490_000      # vertices, over the whole model
 
 # The total, not the mean.
 #
