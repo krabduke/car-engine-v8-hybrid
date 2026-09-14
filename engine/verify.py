@@ -128,13 +128,24 @@ def main():
             "main_cap_2", "cam_caps", "rod_bolts", "fuel_rail_l",
             "collector_1", "alternator", "starter", "catch_tank",
             "plenum", "throttle", "turbos", "flywheel", "clutch",
-            "mguk", "mguh", "ecu", "pump_oil", "pump_water"]
+            "mguk", "mguh", "ecu", "pump_oil", "pump_water",
+            # without this the engine cannot be timed or started
+            "crank_trigger"]
     missing = [w for w in want if w not in by]
     c.true("key components present", not missing, f"{len(want)} checked")
     for m in missing:
         c.fails.append(f"missing component: {m}")
     c.true("every object has a material", all(r["material"] for r in rows),
            f"{len(rows)} objects")
+    # A name in MATERIAL_MAP that is not in PALETTE silently falls back to the
+    # default, so a part comes out the wrong material and nothing says so.
+    # Caught exactly that on the turbofan: six parts were assigned a
+    # "steel_polished" that does not exist -- the palette calls it "steel".
+    unknown = sorted({v for v in spec.MATERIAL_MAP.values()
+                      if v not in spec.PALETTE})
+    c.true("every material name is real", not unknown,
+           f"{len(spec.PALETTE)} in palette"
+           + (f", unknown: {', '.join(unknown)}" if unknown else ""))
     c.true("no empty meshes", all(int(r["verts"]) > 0 for r in rows), "all non-empty")
 
     print("\n" + "=" * 66)
