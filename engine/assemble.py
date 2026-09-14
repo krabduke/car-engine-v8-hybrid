@@ -11,13 +11,14 @@ import spec              # noqa: E402
 import mesh as meshlib   # noqa: E402
 import materials         # noqa: E402
 from parts import (block, bottomend, heads, plumbing, induction,   # noqa: E402
-                   turbo, hybrid, drive, detail)
+                   turbo, hybrid, drive, detail, ancillaries)
 
 MM = 0.001
 MODULES = [("block", block), ("bottom end", bottomend), ("heads", heads),
            ("plumbing", plumbing),
            ("induction", induction), ("turbo", turbo), ("hybrid", hybrid),
-           ("drive", drive), ("detail", detail)]
+           ("drive", drive), ("detail", detail),
+           ("ancillaries", ancillaries)]
 COLLECTIONS = ["01 Block", "02 Bottom End", "03 Heads and Valvetrain",
                "04 Induction", "05 Turbo and Exhaust", "06 Hybrid",
                "07 Drive and Ancillaries"]
@@ -30,7 +31,9 @@ def collection_for(n):
                      "camcover", "oil_filler", "collets_", "cam_caps")):
         return "03 Heads and Valvetrain"
     if n.startswith(("timing_", "oil_", "coolant_", "sump_bolt", "dry_sump",
-                     "sensor", "water_outlet", "gallery_plug", "mount_boss")):
+                     "sensor", "water_outlet", "gallery_plug", "mount_boss",
+                     "scavenge", "thermostat", "belt_", "engine_mount",
+                     "knock_")):
         return "07 Drive and Ancillaries"
     if n.startswith(("turbo_wheel", "heat_shield")):
         return "05 Turbo and Exhaust"
@@ -40,7 +43,8 @@ def collection_for(n):
         return "02 Bottom End"
     if n.startswith(("head", "cam", "valve", "injector", "coil")):
         return "03 Heads and Valvetrain"
-    if n.startswith(("plenum", "trumpet", "throttle", "runner_")):
+    if n.startswith(("plenum", "trumpet", "throttle", "runner_",
+                     "intercooler", "charge_pipe", "blowoff")):
         return "04 Induction"
     if n.startswith(("turbo", "exhaust", "tailpipe", "wastegate",
                      "primary_", "collector_")):
