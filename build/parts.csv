@@ -406,10 +406,10 @@ cam_sensor_r,03 Heads and Valvetrain,anodised,,,,,,,,,,772,744,222.0,265.7,79.3,
 charge_pipes,04 Induction,rubber_blk,,,,,,,,,,792,728,-191.4,191.4,-180.2,183.6,156.0,356.0
 engine_mount_l,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,872,820,-193.6,193.6,-210.0,-114.0,-18.0,102.0
 engine_mount_r,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,872,820,-193.6,193.6,114.0,210.0,-18.0,102.0
-exhaust_flange_l,05 Turbo and Exhaust,inconel,,,,,,,,,,1104,1000,-193.5,174.5,-78.3,-49.3,135.4,209.4
-exhaust_flange_r,05 Turbo and Exhaust,inconel,,,,,,,,,,1104,1000,-174.5,193.5,60.3,89.3,135.4,209.4
-exhaust_gasket_l,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,320,320,-192.5,173.5,-63.9,-61.5,142.4,202.4
-exhaust_gasket_r,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,320,320,-173.5,192.5,61.5,63.9,142.4,202.4
+exhaust_flange_l,05 Turbo and Exhaust,inconel,,,,,,,,,,1120,1080,-193.5,174.5,-88.1,-27.6,139.3,199.8
+exhaust_flange_r,05 Turbo and Exhaust,inconel,,,,,,,,,,1120,1080,-174.5,193.5,27.6,88.1,139.3,199.8
+exhaust_gasket_l,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,320,320,-192.5,173.5,-85.4,-41.3,142.0,186.1
+exhaust_gasket_r,05 Turbo and Exhaust,steel_nitrided,,,,,,,,,,320,320,-173.5,192.5,41.3,85.4,142.0,186.1
 intercooler_l,04 Induction,anodised,,,,,,,,,,2184,1860,-136.0,156.0,-204.0,-96.0,195.4,328.0
 intercooler_r,04 Induction,anodised,,,,,,,,,,2184,1860,-136.0,156.0,96.0,204.0,195.4,328.0
 knock_sensor_l,07 Drive and Ancillaries,anodised,,,,,,,,,,1080,1026,-123.4,123.4,-163.5,-116.0,-10.0,34.0

@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import spec
 import mesh
 import shapes
+from parts import common
 
 B = spec.BLOCK
 T = spec.TURBO
@@ -287,28 +288,44 @@ def _exhaust_joints():
     """Port flanges and gaskets between head and manifold.
 
     The primaries were growing straight out of the head casting.
+
+    Placed with common.bank_point, whose lateral axis runs across the bore and
+    is positive inboard -- which on this engine is the exhaust side, because
+    the turbochargers sit in the vee. The first attempt mixed a world y taken
+    from the bank normal with a world z taken from the deck height, which is
+    not a frame at all: the flanges came out 100 per cent inside the heads.
     """
     out = {}
+    H = spec.HEAD
     for bank, tag in ((0, "l"), (1, "r")):
-        s = -1.0 if bank == 0 else 1.0
-        a = spec.bank_angle_rad(bank)
-        ny, nz = s * math.cos(a), -s * math.sin(a)
+        along = spec.DECK_HEIGHT + H["height"] * 0.45
+        lat_face = H["half_width"] + 9.0        # just clear of the casting
         flanges, gaskets = [], []
-        for i in range(4):
+        for i in range(spec.N_CYL // 2):
             x = spec.cylinder_x(i, bank)
-            r = B["bank_half_width"] + 34.0
-            cy = ny * r
-            cz = spec.DECK_HEIGHT + spec.HEAD["height"] * 0.42 - nz * r * 0.2
-            # the flange plate, with its two bolt holes and the port through it
-            fv, ff = shapes.rounded_box(x, cy, cz, 62.0, 18.0, 74.0, 5.0)
+            c = common.bank_point(x, along, lat_face + 9.0, bank)
+            n = common.bank_lat(bank)
+            d = common.bank_dir(bank)
+            # the flange plate, its two bolt bosses and the port through it
+            fv, ff = shapes.rounded_box(0.0, 0.0, 0.0, 62.0, 18.0, 74.0, 5.0)
+            fv = [(px + c[0],
+                   c[1] + n[1] * py + d[1] * pz,
+                   c[2] + n[2] * py + d[2] * pz) for (px, py, pz) in fv]
             flanges.append((fv, ff))
             for dz in (-26.0, 26.0):
-                flanges.append(_lathe(
-                    [(0.0, 0.0), (20.0, 0.0), (20.0, 10.0), (0.0, 10.0)],
-                    x, cy, cz + dz, axis="y", seg=10))
-            gaskets.append(_lathe(
-                [(0.0, 22.0), (2.4, 22.0), (2.4, 30.0), (0.0, 30.0)],
-                x, cy - ny * 11.0, cz, axis="y", seg=20, flip=s < 0))
+                b = common.bank_point(x, along + dz, lat_face + 9.0, bank)
+                bv, bf = mesh.cylinder(0.0, 20.0, 10.0, 10)
+                bv = [(px + b[0], b[1] + n[1] * py + d[1] * pz,
+                       b[2] + n[2] * py + d[2] * pz) for (px, py, pz) in bv]
+                flanges.append((bv, bf))
+            # the gasket, in the joint face itself
+            g = common.bank_point(x, along, lat_face, bank)
+            gv, gf = mesh.revolve_closed(
+                [(0.0, 22.0), (2.4, 22.0), (2.4, 30.0), (0.0, 30.0)], 20)
+            gv = [(py + g[0] if False else g[0] + pz,
+                   g[1] + n[1] * px + d[1] * py,
+                   g[2] + n[2] * px + d[2] * py) for (px, py, pz) in gv]
+            gaskets.append((gv, gf))
         out[f"exhaust_flange_{tag}"] = mesh.join(*flanges)
         out[f"exhaust_gasket_{tag}"] = mesh.join(*gaskets)
     return out

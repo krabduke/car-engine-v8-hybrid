@@ -163,7 +163,7 @@
    "label": "Turbo",
    "color": "#A8663C",
    "parts": 19,
-   "faces": 17136
+   "faces": 17296
   },
   {
    "key": "06 Hybrid",
@@ -3497,14 +3497,14 @@
    "mat": "inconel",
    "x0": -193.5,
    "x1": 174.5,
-   "f": 1000
+   "f": 1080
   },
   "exhaust_flange_r": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -174.5,
    "x1": 193.5,
-   "f": 1000
+   "f": 1080
   },
   "exhaust_gasket_l": {
    "g": "05 Turbo and Exhaust",
