@@ -95,12 +95,20 @@ def collect_corners():
             w = o.matrix_world @ V(c)
             xs.append(w.x); ys.append(w.y); zs.append(w.z)
     cen = V(((min(xs)+max(xs))/2, (min(ys)+max(ys))/2, (min(zs)+max(zs))/2))
-    size = V((max(xs)-min(xs), max(ys)-min(ys), max(zs)-min(zs)))
+    # Every part's own box, not one box round the whole engine.
+    #
+    # The framing is fitted to these corners, so what they enclose is what
+    # ends up filling the frame. One global box round a V8 is very nearly a
+    # cube, and seen from the three-quarter angle the hero shot uses, four of
+    # its eight corners are empty air a long way outside the engine's actual
+    # outline -- so the camera backed off far enough to keep that air in shot
+    # and the engine came out a third of the width of the picture. The union
+    # of the parts' own boxes still contains every vertex, and hugs the shape
+    # instead of the air around it.
     CORNERS.clear()
-    for sx in (-.5, .5):
-        for sy in (-.5, .5):
-            for sz in (-.5, .5):
-                CORNERS.append(V((size.x*sx, size.y*sy, size.z*sz)))
+    for o in meshes():
+        for c in o.bound_box:
+            CORNERS.append((o.matrix_world @ V(c)) - cen)
     return cen
 
 

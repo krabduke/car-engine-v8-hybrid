@@ -158,21 +158,21 @@
    "label": "Heads",
    "color": "#7E8A93",
    "parts": 238,
-   "faces": 1129408
+   "faces": 1126488
   },
   {
    "key": "04 Induction",
    "label": "Induction",
    "color": "#5A6B74",
    "parts": 17,
-   "faces": 36152
+   "faces": 35560
   },
   {
    "key": "05 Turbo and Exhaust",
    "label": "Turbo",
    "color": "#A8663C",
    "parts": 34,
-   "faces": 88214
+   "faces": 106582
   },
   {
    "key": "06 Hybrid",
@@ -186,7 +186,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 36,
-   "faces": 247323
+   "faces": 247167
   }
  ],
  "parts": {
@@ -237,7 +237,7 @@
    "mat": "alu_cast",
    "x0": -184.9,
    "x1": 184.9,
-   "f": 936
+   "f": 780
   },
   "sump": {
    "g": "01 Block",
@@ -1189,14 +1189,14 @@
    "mat": "titanium",
    "x0": -214.2,
    "x1": 214.2,
-   "f": 3432
+   "f": 2860
   },
   "camcover_bolts_r": {
    "g": "03 Heads and Valvetrain",
    "mat": "titanium",
    "x0": -214.2,
    "x1": 214.2,
-   "f": 3432
+   "f": 2860
   },
   "camcover_l": {
    "g": "03 Heads and Valvetrain",
@@ -1763,14 +1763,14 @@
    "mat": "alu_cast",
    "x0": -237.3,
    "x1": 218.3,
-   "f": 9866
+   "f": 8978
   },
   "head_r": {
    "g": "03 Heads and Valvetrain",
    "mat": "alu_cast",
    "x0": -218.3,
    "x1": 237.3,
-   "f": 9866
+   "f": 8978
   },
   "injector_1": {
    "g": "03 Heads and Valvetrain",
@@ -2169,14 +2169,14 @@
    "mat": "inconel",
    "x0": -158.9,
    "x1": -79.2,
-   "f": 2014
+   "f": 1866
   },
   "collector_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 79.2,
    "x1": 158.9,
-   "f": 2014
+   "f": 1866
   },
   "dipstick": {
    "g": "07 Drive and Ancillaries",
@@ -2330,56 +2330,56 @@
    "mat": "inconel",
    "x0": -185.9,
    "x1": -90.8,
-   "f": 1485
+   "f": 1411
   },
   "primary_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -163.5,
    "x1": -90.3,
-   "f": 1485
+   "f": 1411
   },
   "primary_3": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -114.4,
    "x1": -44.1,
-   "f": 1485
+   "f": 1411
   },
   "primary_4": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -114.2,
    "x1": -25.1,
-   "f": 1485
+   "f": 1411
   },
   "primary_5": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 25.1,
    "x1": 114.2,
-   "f": 1485
+   "f": 1411
   },
   "primary_6": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 44.0,
    "x1": 114.4,
-   "f": 1485
+   "f": 1411
   },
   "primary_7": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 90.3,
    "x1": 163.5,
-   "f": 1485
+   "f": 1411
   },
   "primary_8": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 90.8,
    "x1": 185.8,
-   "f": 1485
+   "f": 1411
   },
   "rod_bolts": {
    "g": "02 Bottom End",
@@ -2505,56 +2505,56 @@
    "mat": "alu_forged",
    "x0": -187.5,
    "x1": -137.5,
-   "f": 1485
+   "f": 1411
   },
   "runner_2": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -168.5,
    "x1": -118.5,
-   "f": 1485
+   "f": 1411
   },
   "runner_3": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -85.5,
    "x1": -35.5,
-   "f": 1485
+   "f": 1411
   },
   "runner_4": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -66.5,
    "x1": -16.5,
-   "f": 1485
+   "f": 1411
   },
   "runner_5": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 16.5,
    "x1": 66.5,
-   "f": 1485
+   "f": 1411
   },
   "runner_6": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 35.5,
    "x1": 85.5,
-   "f": 1485
+   "f": 1411
   },
   "runner_7": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 118.5,
    "x1": 168.5,
-   "f": 1485
+   "f": 1411
   },
   "runner_8": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 137.5,
    "x1": 187.5,
-   "f": 1485
+   "f": 1411
   },
   "starter": {
    "g": "07 Drive and Ancillaries",
@@ -2603,63 +2603,63 @@
    "mat": "alu_cast",
    "x0": -116.9,
    "x1": -47.4,
-   "f": 2112
+   "f": 2038
   },
   "compressor_housing_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "alu_cast",
    "x0": 47.4,
    "x1": 116.9,
-   "f": 2112
+   "f": 2038
   },
   "compressor_inlet_1": {
    "g": "05 Turbo and Exhaust",
    "mat": "rubber_blk",
    "x0": -80.1,
    "x1": 2.0,
-   "f": 1167
+   "f": 10488
   },
   "compressor_inlet_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "rubber_blk",
    "x0": -2.0,
    "x1": 80.1,
-   "f": 1167
+   "f": 10488
   },
   "tailpipes": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -295.8,
    "x1": 295.8,
-   "f": 2334
+   "f": 3984
   },
   "turbine_housing_1": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -188.6,
    "x1": -113.6,
-   "f": 2112
+   "f": 2038
   },
   "turbine_housing_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 113.6,
    "x1": 188.6,
-   "f": 2112
+   "f": 2038
   },
   "turbo_centre_1": {
    "g": "05 Turbo and Exhaust",
    "mat": "alu_cast",
    "x0": -147.2,
    "x1": -87.5,
-   "f": 7776
+   "f": 7406
   },
   "turbo_centre_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "alu_cast",
    "x0": 88.8,
    "x1": 148.5,
-   "f": 7776
+   "f": 7406
   },
   "turbo_oil_1": {
    "g": "05 Turbo and Exhaust",
