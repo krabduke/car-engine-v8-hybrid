@@ -277,8 +277,8 @@ plenum_r,04 Induction,carbon,,,,,,,,,,3048,3048,-212.0,212.0,192.5,271.5,30.5,10
 throttle_l,04 Induction,alu_forged,,,,,,,,,,3434,3530,-56.0,56.0,-320.7,-264.7,14.0,126.0
 throttle_r,04 Induction,alu_forged,,,,,,,,,,3434,3530,-56.0,56.0,264.7,320.7,14.0,126.0
 trumpets,04 Induction,carbon,,,,,,,,,,3312,3312,-195.5,195.5,-254.8,254.8,37.0,103.0
-compressor_housing_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2054,2038,-116.9,-47.4,-56.8,56.8,191.3,318.6
-compressor_housing_2,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2054,2038,47.4,116.9,-56.8,56.8,191.3,318.6
+compressor_housing_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2054,2038,-116.9,-14.4,-57.6,56.8,190.8,320.5
+compressor_housing_2,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2054,2038,14.4,116.9,-56.8,57.6,190.8,320.5
 compressor_inlet_1,05 Turbo and Exhaust,rubber_blk,,,,,,,,,,9824,10488,-80.1,2.0,-71.7,25.2,244.8,384.6
 compressor_inlet_2,05 Turbo and Exhaust,rubber_blk,,,,,,,,,,9824,10488,-2.0,80.1,-25.2,71.7,244.8,384.6
 tailpipes,05 Turbo and Exhaust,inconel,,,,,,,,,,3984,3984,-295.8,295.8,-115.3,115.3,228.6,321.9
@@ -288,8 +288,8 @@ turbo_centre_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,7406,7406,-147.2,-87.5,-38
 turbo_centre_2,05 Turbo and Exhaust,alu_cast,,,,,,,,,,7406,7406,88.8,148.5,-38.7,38.7,201.4,293.7
 turbo_oil_1,05 Turbo and Exhaust,braided,,,,,,,,,,900,798,-142.9,-86.3,-18.6,18.7,150.0,207.4
 turbo_oil_2,05 Turbo and Exhaust,braided,,,,,,,,,,900,798,93.1,149.7,-18.6,18.7,150.0,207.4
-wastegate_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1612,1807,-158.6,-60.4,8.0,68.0,268.1,325.0
-wastegate_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1612,1807,60.4,158.6,-68.0,-8.0,268.1,325.0
+wastegate_1,05 Turbo and Exhaust,inconel,,,,,,,,,,1612,1807,-158.6,-60.4,14.0,83.0,284.0,324.0
+wastegate_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1612,1807,60.4,158.6,-83.0,-14.0,284.0,324.0
 battery,06 Hybrid,anodised,,,,,,,,,,5880,5100,-195.8,195.8,-187.8,187.8,-277.0,-216.0
 battery_modules,06 Hybrid,anodised,,,,,,,,,,2548,2210,-189.1,189.1,-188.0,188.0,-264.2,-223.8
 battery_terminals,06 Hybrid,copper_wound,,,,,,,,,,1072,1180,-134.6,139.7,-124.0,124.0,-216.0,-202.0
@@ -297,7 +297,7 @@ ecu,06 Hybrid,anodised,,,,,,,,,,1960,1700,-83.9,83.9,162.1,249.9,-97.0,-58.0
 ecu_connector,06 Hybrid,rubber_blk,,,,,,,,,,1896,2270,-105.0,-79.7,179.6,232.4,-88.5,-71.5
 inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,226.2,325.8,-78.8,78.8,153.0,236.0
 inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,3112,3700,200.0,356.2,-11.0,11.0,189.4,205.4
-mguh,06 Hybrid,copper_wound,,,,,,,,,,1568,1568,-140.0,140.0,-32.0,32.0,223.0,287.0
+mguh,06 Hybrid,copper_wound,,,,,,,,,,1568,1568,-140.0,140.0,-24.0,24.0,231.0,279.0
 mguk,06 Hybrid,copper_wound,,,,,,,,,,8180,7452,-340.0,-232.0,-84.5,84.5,-84.5,84.5
 bellhousing,07 Drive and Ancillaries,magnesium,,,,,,,,,,12286,12818,235.5,318.5,-166.0,166.0,-166.0,166.0
 clutch,07 Drive and Ancillaries,alu_cast,,,,,,,,,,15308,15260,254.0,294.0,-82.6,82.6,-82.6,82.6
