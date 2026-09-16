@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 9,
-   "faces": 44362
+   "faces": 44370
   },
   {
    "key": "02 Bottom End",
@@ -186,7 +186,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 36,
-   "faces": 247167
+   "faces": 247169
   }
  ],
  "parts": {
@@ -272,7 +272,7 @@
    "mat": "steel_nitrided",
    "x0": -152.0,
    "x1": 152.0,
-   "f": 3518
+   "f": 3526
   },
   "conrod_1": {
    "g": "02 Bottom End",
@@ -2127,7 +2127,7 @@
    "mat": "rubber_blk",
    "x0": -313.0,
    "x1": -299.0,
-   "f": 784
+   "f": 786
   },
   "accessory_pulleys": {
    "g": "07 Drive and Ancillaries",

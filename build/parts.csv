@@ -10,7 +10,7 @@ sump,01 Block,magnesium,,,,,,,,,,840,802,-196.0,196.0,-92.1,92.1,-179.8,-118.0
 sump_baffles,01 Block,alu_forged,,,,,,,,,,784,680,-149.5,149.5,-67.7,67.7,-161.1,-127.0
 sump_drain,01 Block,steel_nitrided,,,,,,,,,,372,444,57.6,83.5,-13.0,13.0,-190.5,-177.5
 water_outlets,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2976,3552,-190.5,190.5,-138.5,138.5,22.0,40.0
-windage_tray,01 Block,steel_nitrided,,,,,,,,,,3378,3518,-152.0,152.0,-74.0,74.0,-102.0,-64.5
+windage_tray,01 Block,steel_nitrided,,,,,,,,,,3378,3526,-152.0,152.0,-74.0,74.0,-102.0,-64.5
 conrod_1,02 Bottom End,titanium,-162.5,-53.25,53.25,1.0,0.0,0.0,1.0,rod,1,1620,1596,-172.0,-153.0,-54.2,51.6,-21.8,54.2
 conrod_2,02 Bottom End,titanium,-143.5,75.43,75.43,1.0,0.0,0.0,1.0,rod,2,1620,1596,-153.0,-134.0,-10.4,76.3,-21.8,76.3
 conrod_3,02 Bottom End,titanium,-60.5,-64.68,64.68,1.0,0.0,0.0,1.0,rod,3,1620,1596,-70.0,-51.0,-65.6,10.4,-40.2,65.6
@@ -209,7 +209,7 @@ valve_in_7_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,109.2,143.2,-17
 valve_in_7_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,143.8,177.8,-179.3,-93.0,63.4,130.1
 valve_in_8_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,128.2,162.2,93.0,179.3,63.4,130.1
 valve_in_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,162.8,196.8,93.0,179.3,63.4,130.1
-accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,800,784,-313.0,-299.0,-140.5,132.8,-69.0,137.0
+accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,800,786,-313.0,-299.0,-140.5,132.8,-69.0,137.0
 accessory_pulleys,07 Drive and Ancillaries,alu_forged,,,,,,,,,,848,848,-313.0,-291.0,-181.9,122.0,-62.0,130.0
 alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-371.5,-296.5,-189.5,-110.5,46.0,131.0
 breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,300,-228.9,-148.4,-217.4,217.4,200.9,247.0
