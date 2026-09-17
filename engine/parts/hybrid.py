@@ -1,5 +1,9 @@
-"""Hybrid system: MGU-K on the crank nose, MGU-H on the turbo shaft,
-inverter over the vee, and the battery under the engine."""
+"""Crank and turbo machine envelopes, inverter and split sidepod store.
+
+Finned cases and machine envelopes illustrate packaging, not validated cooling
+or electromagnetic internals. The HV loom illustrates connections only; it is
+not an electrically certified routing, insulation or thermal design.
+"""
 
 import math
 import sys, os
@@ -21,12 +25,60 @@ def build():
     out.update(_mguk())
     out.update(_mguh())
     out.update(_electronics())
+    out.update(_hv_loom())
+    return out
+
+
+def _hv_loom():
+    ix, iy, iz = Y["inverter_pos"]
+    iw, _, ih = Y["inverter"]
+    bx, by, bz = Y["battery_pos"]
+    bw, bd, bh = Y["battery"]
+    rear = ix + iw / 2 + 38.0
+    side = max(spec.INTAKE["plenum_y"] + spec.INTAKE["plenum_r"] + 24.0,
+               abs(by) + bd / 2 + 24.0)
+    low = bz + bh / 2 + 35.0
+    out = {}
+    out["inverter_connectors"] = mesh.join(*[
+        shapes.connector(ix + sgn * (iw / 2 + 12.0), iy, iz + ih * 0.1,
+                         28.0, 22.0, 16.0, 8)
+        for sgn in (-1.0, 1.0)])
+    out["battery_terminals"] = mesh.join(*[
+        shapes.connector(bx - sgn * bw * 0.3, by + sgn * bd * 0.38,
+                         bz + bh / 2 + 7.0, 34.0, 20.0, 14.0, 2)
+        for sgn in (1.0, -1.0)])
+    for sgn, tag in ((-1.0, "l"), (1.0, "r")):
+        source = (ix + sgn * (iw / 2 + 12.0), iy, iz + ih * 0.1)
+        terminal = (bx - sgn * bw * 0.3, by + sgn * bd * 0.38,
+                    bz + bh / 2 + 7.0)
+        path = [source, (source[0], sgn * side, source[2]),
+                (rear, sgn * side, source[2]), (rear, sgn * side, low),
+                (terminal[0], sgn * side, low),
+                (terminal[0], terminal[1], low), terminal]
+        out[f"hv_store_{tag}"] = mesh.pipe(path, 5.0, SM)
+    motor = (Y["mguk_x"], -Y["mguk_r"], 0.0)
+    source = (ix - iw / 2 - 12.0, iy, iz + ih * 0.1)
+    path = [source, (source[0], -side, source[2]),
+            (rear, -side, source[2]), (rear, -side, low + 16.0),
+            (motor[0], -side, low + 16.0), (motor[0], -side, 0.0), motor]
+    out["hv_motor_k"] = mesh.pipe(path, 6.0, SM)
+    out["hv_motor_k_connector"] = shapes.connector(*motor, 24.0, 20.0, 18.0, 3)
+    for index, x in enumerate(spec.TURBO["x"]):
+        sgn = -1.0 if index % 2 == 0 else 1.0
+        terminal = (x, sgn * Y["mguh_r"], spec.TURBO["z"])
+        source = (ix + sgn * (iw / 2 + 12.0), iy, iz + ih * 0.1)
+        high = spec.TURBO["z"] + Y["mguh_r"] + 100.0
+        path = [source, (source[0], sgn * side, source[2]),
+                (source[0], sgn * side, high), (x, sgn * side, high),
+                (x, terminal[1], high), terminal]
+        out[f"hv_motor_h_{index}"] = mesh.pipe(path, 4.0, SM)
+        out[f"hv_motor_h_connector_{index}"] = shapes.connector(
+            *terminal, 18.0, 16.0, 14.0, 3)
     return out
 
 
 def _mguk():
-    """Motor-generator on the crankshaft. 200 kW both ways, so it is also the
-    engine's starter and a large part of its braking recovery."""
+    """Crankshaft motor-generator packaging envelope."""
     v, f = mesh.tube(Y["mguk_x"] - Y["mguk_len"] / 2, Y["mguk_x"] + Y["mguk_len"] / 2,
                      spec.CRANK["nose_r"] + 4.0, Y["mguk_r"], SEG)
     fins = []
@@ -39,8 +91,7 @@ def _mguk():
 
 
 def _mguh():
-    """Motor-generator on the turbo shaft: harvests exhaust energy and spins
-    the compressor to kill lag."""
+    """Turbo-shaft motor-generator packaging envelopes."""
     parts = []
     for x in spec.TURBO["x"]:
         v, f = mesh.tube(x - Y["mguh_len"] / 2, x + Y["mguh_len"] / 2,
@@ -51,13 +102,7 @@ def _mguh():
 
 
 def _electronics():
-    """Inverter, battery and ECU.
-
-    All three were plain boxes. None of them is: the inverter and the battery
-    both have to reject a lot of heat and so carry fin stacks, everything has
-    a connector because something plugs into it, and a cast case has radiused
-    edges and draft rather than knife corners.
-    """
+    """Finned inverter, split energy-store and ECU packaging with connectors."""
     out = {}
     ix, iy, iz = Y["inverter_pos"]
     sx, sy, sz = Y["inverter"]

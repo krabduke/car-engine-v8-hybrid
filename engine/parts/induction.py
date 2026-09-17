@@ -1,4 +1,9 @@
-"""Intake plenum, velocity stacks, throttle."""
+"""Twin plenums, bank throttles, eight velocity stacks and port injectors.
+
+Injectors, feeds and bank rails illustrate packaging, not calibrated fueling.
+Stack lengths illustrate packaging rather than validated acoustic tuning.
+Each plenum inlet has one butterfly shared by its bank's four cylinders.
+"""
 
 import math
 import sys, os
@@ -8,6 +13,8 @@ import spec
 import mesh
 
 SM = spec.RES["small_revolve"]
+import shapes
+import gaspath
 from parts import common
 
 I = spec.INTAKE
@@ -18,6 +25,48 @@ def build():
     out = {}
     out.update(_plenum())
     out.update(_trumpets())
+    out.update(_injection())
+    return out
+
+
+def _injection():
+    out = {}
+    rail_points = {0: [], 1: []}
+    for n, pair, bank, x, a in spec.cylinders():
+        port = gaspath.intake_port(bank, x)
+        runner = gaspath.runner_path(bank, x)[-2]
+        d, lat = common.bank_dir(bank), common.bank_lat(bank)
+        tip = tuple((port[k] + runner[k]) / 2 for k in range(3))
+        profile = [(0.0, 0.0), (0.0, 3.0), (12.0, 3.0),
+                   (14.0, 7.0), (38.0, 7.0), (40.0, 9.0),
+                   (46.0, 9.0), (48.0, 4.0), (48.0, 0.0)]
+        verts, faces = mesh.revolve_closed(profile, SM)
+        verts = [(tip[0] + py,
+                  tip[1] - lat[1] * px + d[1] * pz,
+                  tip[2] - lat[2] * px + d[2] * pz)
+                 for px, py, pz in verts]
+        if lat[1] * d[2] - lat[2] * d[1] < 0.0:
+            faces = [tuple(reversed(face)) for face in faces]
+        out[f"injector_{n}"] = (verts, faces)
+        plug = (tip[0] + 10.0, tip[1] - lat[1] * 28.0,
+                tip[2] - lat[2] * 28.0)
+        out[f"injector_connector_{n}"] = shapes.connector(*plug, 14.0, 12.0, 10.0, 2)
+        inlet = tuple(tip[k] - lat[k] * 48.0 for k in range(3))
+        rail = tuple(tip[k] - lat[k] * 68.0 for k in range(3))
+        rail_points[bank].append(rail)
+        out[f"injector_feed_{n}"] = mesh.pipe([inlet, rail], 3.5, SM)
+    ends = []
+    for bank, tag in ((0, "l"), (1, "r")):
+        points = sorted(rail_points[bank])
+        start = (points[0][0] - 18.0, *points[0][1:])
+        end = (points[-1][0] + 18.0, *points[-1][1:])
+        out[f"fuel_rail_{tag}"] = mesh.pipe([start, *points, end], 7.0, SM)
+        ends.append(end)
+        out[f"fuel_rail_union_{tag}"] = mesh.pipe(
+            [(end[0] - 6.0, *end[1:]), (end[0] + 6.0, *end[1:])], 10.0, 6)
+    rear = max(p[0] for p in ends) + 36.0
+    out["fuel_rail_crossover"] = mesh.pipe(
+        [ends[0], (rear, *ends[0][1:]), (rear, *ends[1][1:]), ends[1]], 4.0, SM)
     return out
 
 
