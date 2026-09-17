@@ -132,7 +132,7 @@ def _bellhousing():
     bv, bf = mesh.revolve_open(
         [(0.0, 0.0), (0.0, 30.0), (16.0, 27.0), (16.0, 0.0)], SM,
         cap_start=True, cap_end=True)
-    parts.append(([(pz + x + 26.0, py + cy * 1.06, px * 0.0 + cz * 1.06)
+    parts.append(([(px + x + 10.0, py + cy, pz + cz)
                    for (px, py, pz) in bv], bf))
     return {"bellhousing": mesh.join(*parts)}
 

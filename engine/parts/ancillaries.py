@@ -123,7 +123,7 @@ def _cooling():
     parts = []
     parts.append(_lathe(
         [(0.0, 0.0), (0.0, 46.0), (12.0, 52.0), (44.0, 52.0),
-         (52.0, 44.0), (52.0, 0.0)], x, 0.0, 104.0, axis="x", seg=24))
+         (52.0, 44.0), (52.0, 0.0)], x, 0.0, 190.0, axis="x", seg=24))
     # the outlet stub the top hose clamps onto, with its bead
     parts.append(_lathe(
         [(0.0, 0.0), (0.0, 27.0), (34.0, 27.0), (38.0, 31.0),
