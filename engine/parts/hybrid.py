@@ -80,7 +80,13 @@ def _hv_loom():
                 (rear, sgn * side, source[2]), (rear, sgn * side, low),
                 (terminal[0], sgn * side, low),
                 (terminal[0], terminal[1], low), terminal]
-        out[f"hv_store_{tag}"] = mesh.pipe(path, 5.0, SM)
+        # Numbered, not sided. These two run to the MGU-H on each
+        # turbocharger, and the turbos are fore and aft of each other on the
+        # centreline -- so _l / _r claims a mirror in y that does not exist,
+        # and the structure audit checks exactly that claim. It was 235 mm
+        # from being true. turbo.py already carries the same note about
+        # turbine_housing_1 and _2 for the same reason.
+        out[f"hv_store_{'12'[0 if tag == 'l' else 1]}"] = mesh.pipe(path, 5.0, SM)
     motor = (Y["mguk_x"], -Y["mguk_r"], 0.0)
     source = (ix - iw / 2 - 12.0, iy, iz + ih * 0.1)
     path = [source, (source[0], -side, source[2]),
@@ -200,7 +206,11 @@ def _electronics():
     # bolted to nothing: the ECU and its connector were a two-part island beside
     # the engine, which no audit here could see because not touching was
     # what every one of them was looking for.
-    ex, ey, ez = 130.0, 206.0, -50.0
+    # y 196 and x 124, not 206 and 130. The hypercar that carries this engine
+    # closes its bodywork 2 mm inside the box's aft outboard corner, so the
+    # ECU stood 2.3 mm proud of the car -- a part that fits the engine on its
+    # own and not the thing the engine goes in.
+    ex, ey, ez = 124.0, 196.0, -50.0
     out["ecu"] = shapes.finned_case(ex, ey, ez, sx, sy, sz,
                                     n_fins=9, fin_h=5.0, fin_t=2.6, r=5.0)
     out["ecu_connector"] = shapes.connector(ex - sx * 0.5 - 10.0, ey, ez,

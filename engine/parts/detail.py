@@ -590,27 +590,35 @@ def _dry_sump():
     cannot miss a boss that has moved.
     """
     parts = []
-    z_run = spec.OIL["tank_z"] - spec.OIL["tank_r"] - 26.0   # under the tank
+    # The car this engine goes in closes its floor up under the pan: below
+    # z -170 nothing may be wider than about 196 mm of half width, which is
+    # what the dry-sump tank itself measures. Above -120 there is room out to
+    # 293, which is where the oil cooler sits. So the run stays narrow while
+    # it is low and only goes outboard once it has climbed -- a first pass
+    # took the scavenge lines out to y 280 at z -206 and put 60 mm of
+    # pipework through the hypercar's floor.
+    z_low = -spec.BLOCK["skirt_depth"] - 54.0
     pan_y = -spec.ANCILLARY["sump_w"] / 2.0 - 4.0
-    z_pan = -spec.BLOCK["skirt_depth"] - 64.0
+    y_low = -150.0
 
     # scavenge 1 comes off the pickup itself, forward of the block where
     # there is nothing in the way but the timing gears at x -269
     p1 = spec.oil_pump_port(1)
     parts.append(mesh.pipe(
         [(spec.BLOCK["x_front"] - 16.0, -86.0, -46.0),
-         (spec.BLOCK["x_front"] - 18.0, -150.0, -60.0),
-         (spec.BLOCK["x_front"] - 18.0, -267.0, -60.0),
-         (p1[0], -267.0, p1[2] - 4.0), p1], 9.0, SM, subdiv=3)) 
+         (spec.BLOCK["x_front"] - 18.0, y_low, -90.0),
+         (spec.BLOCK["x_front"] - 18.0, p1[1] - 20.0, p1[2] - 30.0), p1],
+        9.0, SM, subdiv=3))
 
-    # and three more out of the pan, staggered so they do not share a route,
-    # running aft of the tank and then forward underneath it
-    for k, (sx, off) in enumerate(((110.0, -248.0), (50.0, -220.0),
-                                   (-10.0, -232.0)), start=2):
+    # and three more out of the pan, staggered so they do not share a route:
+    # aft along the flank at y 150, then up and outboard onto the ports
+    for k, (sx, drop) in enumerate(((110.0, -18.0), (50.0, -30.0),
+                                    (-10.0, -42.0)), start=2):
         port = spec.oil_pump_port(k)
         parts.append(mesh.pipe(
-            [(sx, pan_y, z_pan), (sx, off, z_run),
-             (port[0], off, z_run), (port[0], off, port[2] - 6.0), port],
+            [(sx, pan_y, z_low), (sx, y_low, z_low + drop),
+             (port[0] + 40.0, y_low, z_low + drop),
+             (port[0], port[1] * 0.72, port[2] - 24.0), port],
             9.0, SM, subdiv=3))
 
     # the stack discharges into the top of the tank. Forward of the oil
@@ -619,8 +627,8 @@ def _dry_sump():
     ret = spec.oil_pump_union("return")
     tin = spec.oil_tank_union("scavenge")
     parts.append(mesh.pipe(
-        [ret, (ret[0], -240.0, -20.0), (ret[0], -240.0, z_run + 10.0),
-         (tin[0] - 12.0, tin[1] - 10.0, tin[2] - 12.0), tin], 11.0, SM,
+        [ret, (ret[0], -240.0, -30.0), (ret[0], -196.0, -110.0),
+         (tin[0] - 12.0, tin[1] + 6.0, tin[2] + 8.0), tin], 11.0, SM,
         subdiv=3))
 
     # the tank feeds the pressure stage from its lowest point, round the
@@ -628,7 +636,8 @@ def _dry_sump():
     feed = spec.oil_tank_union("feed")
     pin = spec.oil_pump_union("feed")
     parts.append(mesh.pipe(
-        [feed, (-230.0, -200.0, feed[2]), (pin[0] - 8.0, -200.0, feed[2]),
+        [feed, (-214.0, -180.0, feed[2] + 10.0),
+         (pin[0] - 8.0, -180.0, -140.0),
          (pin[0] - 8.0, -200.0, -60.0), pin], 12.0, SM, subdiv=3))
 
     # and the pressure stage feeds the cooler, which hands on to the filter

@@ -73,8 +73,11 @@ def _injection():
         end = (points[-1][0] + 18.0, *points[-1][1:])
         out[f"fuel_rail_pfi_{tag}"] = mesh.pipe([start, *points, end], 7.0, SM)
         ends.append(end)
+        # 24 segments, not 6. At 6 this was a 32-vertex hexagonal stub, well
+        # under the 120-vertex floor the geometry audit sets -- invisible
+        # until the build was current enough for the audit to see it.
         out[f"fuel_rail_pfi_union_{tag}"] = mesh.pipe(
-            [(end[0] - 6.0, *end[1:]), (end[0] + 6.0, *end[1:])], 10.0, 6)
+            [(end[0] - 6.0, *end[1:]), (end[0] + 6.0, *end[1:])], 10.0, 24)
     # Behind the block, not through it.
     #
     # This ran straight across the engine at the rails' own height, z 49,

@@ -143,8 +143,8 @@
    "key": "01 Block",
    "label": "Block",
    "color": "#6E7478",
-   "parts": 9,
-   "faces": 44370
+   "parts": 18,
+   "faces": 49742
   },
   {
    "key": "02 Bottom End",
@@ -164,8 +164,8 @@
    "key": "04 Induction",
    "label": "Induction",
    "color": "#5A6B74",
-   "parts": 17,
-   "faces": 35560
+   "parts": 41,
+   "faces": 46216
   },
   {
    "key": "05 Turbo and Exhaust",
@@ -185,8 +185,8 @@
    "key": "07 Drive and Ancillaries",
    "label": "Drive",
    "color": "#77706A",
-   "parts": 36,
-   "faces": 247169
+   "parts": 42,
+   "faces": 259199
   }
  ],
  "parts": {
@@ -237,7 +237,7 @@
    "mat": "alu_cast",
    "x0": -184.9,
    "x1": 184.9,
-   "f": 780
+   "f": 1040
   },
   "sump": {
    "g": "01 Block",
@@ -1772,56 +1772,56 @@
    "x1": 237.3,
    "f": 8978
   },
-  "injector_1": {
+  "injector_di_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": -162.5,
    "x1": -100.5,
    "f": 740
   },
-  "injector_2": {
+  "injector_di_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": -143.5,
    "x1": -81.5,
    "f": 740
   },
-  "injector_3": {
+  "injector_di_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": -60.5,
    "x1": 1.5,
    "f": 740
   },
-  "injector_4": {
+  "injector_di_4": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": -41.5,
    "x1": 20.5,
    "f": 740
   },
-  "injector_5": {
+  "injector_di_5": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": 41.5,
    "x1": 103.5,
    "f": 740
   },
-  "injector_6": {
+  "injector_di_6": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": 60.5,
    "x1": 122.5,
    "f": 740
   },
-  "injector_7": {
+  "injector_di_7": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": 143.5,
    "x1": 205.5,
    "f": 740
   },
-  "injector_8": {
+  "injector_di_8": {
    "g": "03 Heads and Valvetrain",
    "mat": "steel_nitrided",
    "x0": 162.5,
@@ -2146,9 +2146,9 @@
   "breathers": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -228.9,
+   "x0": -260.0,
    "x1": -148.4,
-   "f": 300
+   "f": 1412
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
@@ -2162,7 +2162,7 @@
    "mat": "alu_forged",
    "x0": -196.0,
    "x1": -38.0,
-   "f": 65364
+   "f": 66030
   },
   "collector_1": {
    "g": "05 Turbo and Exhaust",
@@ -2185,28 +2185,42 @@
    "x1": 196.0,
    "f": 18
   },
-  "fuel_feeds_l": {
+  "fuel_feeds_di_l": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
    "x0": -167.0,
    "x1": 148.0,
    "f": 600
   },
-  "fuel_feeds_r": {
+  "fuel_feeds_di_r": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
    "x0": -148.0,
    "x1": 167.0,
    "f": 600
   },
-  "fuel_rail_l": {
+  "fuel_hp_line": {
+   "g": "01 Block",
+   "mat": "alu_cast",
+   "x0": 22.9,
+   "x1": 229.0,
+   "f": 890
+  },
+  "fuel_rail_di_crossover": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": 206.0,
+   "x1": 228.0,
+   "f": 1112
+  },
+  "fuel_rail_di_l": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": -212.0,
    "x1": 224.0,
    "f": 2286
   },
-  "fuel_rail_r": {
+  "fuel_rail_di_r": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": -212.0,
@@ -2563,6 +2577,209 @@
    "x1": 194.0,
    "f": 444
   },
+  "fuel_rail_pfi_crossover": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": 161.5,
+   "x1": 230.0,
+   "f": 1112
+  },
+  "fuel_rail_pfi_l": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -180.5,
+   "x1": 161.5,
+   "f": 372
+  },
+  "fuel_rail_pfi_r": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": -161.5,
+   "x1": 180.5,
+   "f": 372
+  },
+  "fuel_rail_pfi_union_l": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": 155.5,
+   "x1": 167.5,
+   "f": 66
+  },
+  "fuel_rail_pfi_union_r": {
+   "g": "07 Drive and Ancillaries",
+   "mat": "alu_forged",
+   "x0": 174.5,
+   "x1": 186.5,
+   "f": 66
+  },
+  "pfi_feed_1": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -166.0,
+   "x1": -159.0,
+   "f": 76
+  },
+  "pfi_feed_2": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -147.0,
+   "x1": -140.0,
+   "f": 76
+  },
+  "pfi_feed_3": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -64.0,
+   "x1": -57.0,
+   "f": 76
+  },
+  "pfi_feed_4": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -45.0,
+   "x1": -38.0,
+   "f": 76
+  },
+  "pfi_feed_5": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 38.0,
+   "x1": 45.0,
+   "f": 76
+  },
+  "pfi_feed_6": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 57.0,
+   "x1": 64.0,
+   "f": 76
+  },
+  "pfi_feed_7": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 140.0,
+   "x1": 147.0,
+   "f": 76
+  },
+  "pfi_feed_8": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 159.0,
+   "x1": 166.0,
+   "f": 76
+  },
+  "pfi_injector_1": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -171.5,
+   "x1": -153.5,
+   "f": 666
+  },
+  "pfi_injector_2": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -152.5,
+   "x1": -134.5,
+   "f": 666
+  },
+  "pfi_injector_3": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -69.5,
+   "x1": -51.5,
+   "f": 666
+  },
+  "pfi_injector_4": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": -50.5,
+   "x1": -32.5,
+   "f": 666
+  },
+  "pfi_injector_5": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 32.5,
+   "x1": 50.5,
+   "f": 666
+  },
+  "pfi_injector_6": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 51.5,
+   "x1": 69.5,
+   "f": 666
+  },
+  "pfi_injector_7": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 134.5,
+   "x1": 152.5,
+   "f": 666
+  },
+  "pfi_injector_8": {
+   "g": "04 Induction",
+   "mat": "steel_nitrided",
+   "x0": 153.5,
+   "x1": 171.5,
+   "f": 666
+  },
+  "pfi_plug_1": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": -159.5,
+   "x1": -143.4,
+   "f": 590
+  },
+  "pfi_plug_2": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": -140.5,
+   "x1": -124.4,
+   "f": 590
+  },
+  "pfi_plug_3": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": -57.5,
+   "x1": -41.4,
+   "f": 590
+  },
+  "pfi_plug_4": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": -38.5,
+   "x1": -22.4,
+   "f": 590
+  },
+  "pfi_plug_5": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": 44.5,
+   "x1": 60.6,
+   "f": 590
+  },
+  "pfi_plug_6": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": 63.5,
+   "x1": 79.6,
+   "f": 590
+  },
+  "pfi_plug_7": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": 146.5,
+   "x1": 162.6,
+   "f": 590
+  },
+  "pfi_plug_8": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": 165.5,
+   "x1": 181.6,
+   "f": 590
+  },
   "plenum_l": {
    "g": "04 Induction",
    "mat": "carbon",
@@ -2713,16 +2930,72 @@
   "ecu": {
    "g": "06 Hybrid",
    "mat": "anodised",
-   "x0": -83.9,
-   "x1": 83.9,
+   "x0": 40.1,
+   "x1": 207.9,
    "f": 1700
   },
   "ecu_connector": {
    "g": "06 Hybrid",
    "mat": "rubber_blk",
-   "x0": -105.0,
-   "x1": -79.7,
+   "x0": 19.0,
+   "x1": 44.3,
    "f": 2270
+  },
+  "hv_motor_h_0": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": -122.0,
+   "x1": 218.0,
+   "f": 372
+  },
+  "hv_motor_h_1": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": 114.0,
+   "x1": 342.0,
+   "f": 372
+  },
+  "hv_motor_h_connector_0": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": -127.0,
+   "x1": -106.3,
+   "f": 800
+  },
+  "hv_motor_h_connector_1": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": 109.0,
+   "x1": 129.7,
+   "f": 800
+  },
+  "hv_motor_k": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": -292.0,
+   "x1": 369.5,
+   "f": 446
+  },
+  "hv_motor_k_connector": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": -298.0,
+   "x1": -270.4,
+   "f": 800
+  },
+  "hv_store_1": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": 112.6,
+   "x1": 368.6,
+   "f": 446
+  },
+  "hv_store_2": {
+   "g": "01 Block",
+   "mat": "hv_orange",
+   "x0": -122.6,
+   "x1": 369.0,
+   "f": 446
   },
   "inverter": {
    "g": "06 Hybrid",
@@ -2740,14 +3013,14 @@
   },
   "mguh": {
    "g": "06 Hybrid",
-   "mat": "copper_wound",
+   "mat": "alu_forged",
    "x0": -140.0,
    "x1": 140.0,
    "f": 1568
   },
   "mguk": {
    "g": "06 Hybrid",
-   "mat": "copper_wound",
+   "mat": "alu_forged",
    "x0": -340.0,
    "x1": -232.0,
    "f": 7452
@@ -2755,37 +3028,37 @@
   "bellhousing": {
    "g": "07 Drive and Ancillaries",
    "mat": "magnesium",
-   "x0": 235.5,
+   "x0": 230.0,
    "x1": 318.5,
-   "f": 12818
+   "f": 13834
   },
   "clutch": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_cast",
-   "x0": 254.0,
-   "x1": 294.0,
+   "x0": 228.0,
+   "x1": 268.0,
    "f": 15260
   },
   "flywheel": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
-   "x0": 251.0,
-   "x1": 279.0,
+   "x0": 225.0,
+   "x1": 253.0,
    "f": 9764
   },
   "pump_oil": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -242.0,
-   "x1": -123.0,
-   "f": 12775
+   "x0": -244.0,
+   "x1": -121.4,
+   "f": 13811
   },
   "pump_water": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -258.0,
+   "x0": -298.0,
    "x1": -185.0,
-   "f": 3984
+   "f": 6292
   },
   "compressor_wheel_1": {
    "g": "05 Turbo and Exhaust",
@@ -2804,16 +3077,16 @@
   "coolant_plumbing": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -304.7,
-   "x1": -233.1,
-   "f": 766
+   "x0": -282.0,
+   "x1": -181.6,
+   "f": 4400
   },
   "dry_sump_lines": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -227.0,
-   "x1": 195.4,
-   "f": 300
+   "x0": -264.0,
+   "x1": 119.0,
+   "f": 5786
   },
   "head_studs": {
    "g": "03 Heads and Valvetrain",
@@ -3309,8 +3582,8 @@
    "g": "07 Drive and Ancillaries",
    "mat": "magnesium",
    "x0": -269.0,
-   "x1": -255.0,
-   "f": 47856
+   "x1": -250.0,
+   "f": 41268
   },
   "turbine_wheel_1": {
    "g": "05 Turbo and Exhaust",

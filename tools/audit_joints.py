@@ -130,7 +130,7 @@ CIRCUITS = [
      ["turbo_shaft_1", "mguh"]),
 
     ("high voltage: pack to the machines",
-     ["battery", "battery_terminals", "hv_store_l"]),
+     ["battery", "battery_terminals", "hv_store_1"]),
     ("engine management is bolted to the engine",
      ["block_bank_r", "mount_bosses", "engine_mount_r", "ecu",
       "ecu_connector"]),

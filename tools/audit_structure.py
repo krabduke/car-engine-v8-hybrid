@@ -29,6 +29,7 @@ CFG = {
         "oil_filler": "on its cam cover, which is offset",
         "collector": "the two collectors merge into one pipe, asymmetrically",
         "fuel_feeds": "run to the injectors, which are on the offset banks",
+        "fuel_rail_pfi": "built from the cylinder stations, which are offset",
         "exhaust_flange": "bolts to the head, which is offset",
         "exhaust_gasket": "between head and manifold, both offset",
     },
