@@ -1,8 +1,8 @@
-"""Crank and turbo machine envelopes, inverter and split sidepod store.
+"""Sectionable hybrid machines, liquid-cooled inverter and split energy store.
 
-Finned cases and machine envelopes illustrate packaging, not validated cooling
-or electromagnetic internals. The HV loom illustrates connections only; it is
-not an electrically certified routing, insulation or thermal design.
+Separate shells, windings, busbars and cells expose the architecture when
+isolated. Power figures are design targets, not validated electromagnetic,
+thermal or electrical safety ratings.
 """
 
 import math
@@ -18,6 +18,31 @@ from parts import common
 
 Y = spec.HYBRID
 SEG = spec.RES["revolve"]
+spec.PALETTE.setdefault("hv_orange", ((0.95, 0.19, 0.015), 0.0, 0.42))
+spec.MATERIAL_MAP.update({
+    "hv_": "hv_orange", "shield_hv": "braided",
+    "mguk": "alu_forged", "mguk_rotor": "steel_nitrided",
+    "mguk_stator": "steel_nitrided", "mguk_winding": "copper_wound",
+    "mguh": "alu_forged", "mguh_rotor": "steel_nitrided",
+    "mguh_stator": "steel_nitrided", "mguh_winding": "copper_wound",
+    "inverter_busbar": "copper_wound", "inverter_cold": "alu_forged",
+    "battery_busbar": "copper_wound", "battery_cooling": "alu_forged",
+    "battery_cell": "alu_forged", "battery_service": "hv_orange",
+})
+
+
+def _shift(part, x=0.0, y=0.0, z=0.0):
+    v, f = part
+    return mesh.translate(v, x, y, z), f
+
+
+def _tray(cx, cy, cz, sx, sy, sz, wall=3.0):
+    return mesh.join(
+        mesh.box(cx, cy, cz - sz / 2 + wall / 2, sx, sy, wall),
+        *[mesh.box(cx + s * (sx - wall) / 2, cy, cz + wall / 2,
+                   wall, sy, sz - wall) for s in (-1, 1)],
+        *[mesh.box(cx, cy + s * (sy - wall) / 2, cz + wall / 2,
+                   sx - 2 * wall, wall, sz - wall) for s in (-1, 1)])
 
 
 def build():

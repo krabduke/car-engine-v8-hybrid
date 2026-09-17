@@ -1,8 +1,7 @@
-"""Twin plenums, bank throttles, eight velocity stacks and port injectors.
+"""Twin airboxes, eight individual throttles and secondary port injection.
 
-Injectors, feeds and bank rails illustrate packaging, not calibrated fueling.
-Stack lengths illustrate packaging rather than validated acoustic tuning.
-Each plenum inlet has one butterfly shared by its bank's four cylinders.
+The direct injectors belong to heads.py; port injectors use distinct names
+so assembly cannot silently replace the direct-injection meshes.
 """
 
 import math
