@@ -44,7 +44,7 @@ def collection_for(n):
     if n.startswith(("head", "cam", "valve", "injector", "coil")):
         return "03 Heads and Valvetrain"
     if n.startswith(("plenum", "trumpet", "throttle", "runner_",
-                     "intercooler", "charge_pipe", "blowoff")):
+                     "intercooler", "charge_pipe", "blowoff", "pfi_")):
         return "04 Induction"
     if n.startswith(("turbo", "turbine_", "compressor_", "exhaust",
                      "tailpipe", "wastegate", "primary_", "collector_")):

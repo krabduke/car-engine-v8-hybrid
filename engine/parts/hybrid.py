@@ -119,8 +119,12 @@ def _mguh():
     """Turbo-shaft motor-generator packaging envelopes."""
     parts = []
     for x in spec.TURBO["x"]:
+        # bored to the shaft, not to 2.5 times it. An MGU-H rotor is pressed
+        # onto the turbo shaft -- that is the whole machine. At a 22.5 mm bore
+        # on a 9 mm shaft it was a sleeve hanging in the bearing housing with
+        # a 13 mm annulus between it and the thing it is supposed to drive.
         v, f = mesh.tube(x - Y["mguh_len"] / 2, x + Y["mguh_len"] / 2,
-                         spec.TURBO["shaft_r"] * 2.5, Y["mguh_r"], SM)
+                         spec.TURBO["shaft_r"] * 0.86, Y["mguh_r"], SM)
         v = [(px, py, pz + spec.TURBO["z"]) for (px, py, pz) in v]
         parts.append((v, f))
     return {"mguh": mesh.join(*parts)}
@@ -185,9 +189,20 @@ def _electronics():
     # Low on the block's right flank, below the plenum and outboard of
     # the engine mounts. On top of the plenum it was inside the cam cover;
     # directly under it, it was in the intake runners.
-    ey, ez = 206.0, -80.0
-    out["ecu"] = shapes.finned_case(0.0, ey, ez, sx, sy, sz,
+    # Inboard to 150 from 206, and forward, so it lands on the right engine
+    # mount. At 206 it was bolted to nothing: the ECU and its connector were
+    # a two-part island 66 mm off the side of the engine, which no audit here
+    # could see because not touching was what all of them were looking for.
+    # On the rear right engine mount, at x 150, z -50. The mounts are two
+    # brackets per bank and nothing else, so a box centred on x 0 had no
+    # bracket anywhere near it whatever height it sat at. At (0, 206, -80)
+    # the ECU and its connector were a two-part island beside the engine,
+    # bolted to nothing: the ECU and its connector were a two-part island beside
+    # the engine, which no audit here could see because not touching was
+    # what every one of them was looking for.
+    ex, ey, ez = 130.0, 206.0, -50.0
+    out["ecu"] = shapes.finned_case(ex, ey, ez, sx, sy, sz,
                                     n_fins=9, fin_h=5.0, fin_t=2.6, r=5.0)
-    out["ecu_connector"] = shapes.connector(-sx * 0.5 - 10.0, ey, ez,
+    out["ecu_connector"] = shapes.connector(ex - sx * 0.5 - 10.0, ey, ez,
                                             22.0, sy * 0.6, sz * 0.5, 10)
     return out

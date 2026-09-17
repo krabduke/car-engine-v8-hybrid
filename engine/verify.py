@@ -107,7 +107,8 @@ def main():
     for stem, want_n in (("valve_in", n_valves // 2), ("valve_ex", n_valves // 2),
                          ("camlobe", n_valves), ("valve_spring", n_valves),
                          ("retainer", n_valves), ("tappet", n_valves),
-                         ("injector", spec.N_CYL), ("coil", spec.N_CYL),
+                         ("injector_di", spec.N_CYL),
+                         ("pfi_injector", spec.N_CYL), ("coil", spec.N_CYL),
                          ("sparkplug", spec.N_CYL)):
         have = [k for k in by if k.startswith(stem + "_")]
         c.true(f"{stem} count", len(have) == want_n,
@@ -122,10 +123,10 @@ def main():
     want = ["block_crankcase", "bedplate", "sump", "crankshaft",
             "head_l", "head_r", "camshaft_l_in", "camshaft_r_ex",
             "valve_in_1_1", "valve_ex_8_2", "camlobe_l_in_1_1",
-            "injector_1", "coil_8", "sparkplug_4",
+            "injector_di_1", "coil_8", "sparkplug_4",
             "valve_spring_1_0", "retainer_8_3", "tappet_5_2",
             "collets_in_1_1", "main_shell_3_upper", "rod_shell_5_lower",
-            "main_cap_2", "cam_caps", "rod_bolts", "fuel_rail_l",
+            "main_cap_2", "cam_caps", "rod_bolts", "fuel_rail_di_l",
             "collector_1", "alternator", "starter", "catch_tank",
             "plenum_l", "plenum_r", "throttle_l",
             "turbine_housing_1", "turbine_housing_2",

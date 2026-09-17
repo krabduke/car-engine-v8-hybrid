@@ -29,6 +29,18 @@ def build():
 
 
 def _injection():
+    """Port injection: one injector into each runner, on its own low-pressure
+    rail.
+
+    `_pfi_`, because heads.py already has a direct injector in every chamber
+    and both were called `injector_n`. Two systems is deliberate -- direct
+    injection alone cannot keep a 350 bar chamber clean of intake-valve
+    deposits, and port injection alone cannot cool the charge in the cylinder,
+    so a high-output engine that has to idle and to pull 16,000 rpm carries
+    both and crosses over between them with load. What was not deliberate was
+    giving them the same names, which left assembly building two objects per
+    injector and the high-pressure feeds pointing at the low-pressure rail.
+    """
     out = {}
     rail_points = {0: [], 1: []}
     for n, pair, bank, x, a in spec.cylinders():
@@ -46,26 +58,40 @@ def _injection():
                  for px, py, pz in verts]
         if lat[1] * d[2] - lat[2] * d[1] < 0.0:
             faces = [tuple(reversed(face)) for face in faces]
-        out[f"injector_{n}"] = (verts, faces)
+        out[f"pfi_injector_{n}"] = (verts, faces)
         plug = (tip[0] + 10.0, tip[1] - lat[1] * 28.0,
                 tip[2] - lat[2] * 28.0)
-        out[f"injector_connector_{n}"] = shapes.connector(*plug, 14.0, 12.0, 10.0, 2)
+        out[f"pfi_plug_{n}"] = shapes.connector(*plug, 14.0, 12.0, 10.0, 2)
         inlet = tuple(tip[k] - lat[k] * 48.0 for k in range(3))
         rail = tuple(tip[k] - lat[k] * 68.0 for k in range(3))
         rail_points[bank].append(rail)
-        out[f"injector_feed_{n}"] = mesh.pipe([inlet, rail], 3.5, SM)
+        out[f"pfi_feed_{n}"] = mesh.pipe([inlet, rail], 3.5, SM)
     ends = []
     for bank, tag in ((0, "l"), (1, "r")):
         points = sorted(rail_points[bank])
         start = (points[0][0] - 18.0, *points[0][1:])
         end = (points[-1][0] + 18.0, *points[-1][1:])
-        out[f"fuel_rail_{tag}"] = mesh.pipe([start, *points, end], 7.0, SM)
+        out[f"fuel_rail_pfi_{tag}"] = mesh.pipe([start, *points, end], 7.0, SM)
         ends.append(end)
-        out[f"fuel_rail_union_{tag}"] = mesh.pipe(
+        out[f"fuel_rail_pfi_union_{tag}"] = mesh.pipe(
             [(end[0] - 6.0, *end[1:]), (end[0] + 6.0, *end[1:])], 10.0, 6)
-    rear = max(p[0] for p in ends) + 36.0
-    out["fuel_rail_crossover"] = mesh.pipe(
-        [ends[0], (rear, *ends[0][1:]), (rear, *ends[1][1:]), ends[1]], 4.0, SM)
+    # Behind the block, not through it.
+    #
+    # This ran straight across the engine at the rails' own height, z 49,
+    # which at y = 0 is inside the crankshaft's counterweight circle: a fuel
+    # line through the crank, with block_bank_l and block_bank_r on the way.
+    # `audit_intersect` allowed it, because ("fuel_rail_", "block_") and the
+    # crank are both on its list of overlaps that are meant to be there.
+    #
+    # x 226 is aft of the block banks (222), the heads (218) and the water
+    # outlets, and forward of the bellhousing flange (235). 110 mm up clears
+    # the crankcase, which stops at z 28, and stays under the inverter at 153.
+    rear = spec.BLOCK["x_rear"] - 6.0
+    over = 110.0
+    out["fuel_rail_pfi_crossover"] = mesh.pipe(
+        [ends[0], (rear, *ends[0][1:]), (rear, ends[0][1], over),
+         (rear, ends[1][1], over), (rear, *ends[1][1:]), ends[1]], 4.0, SM,
+        subdiv=3)
     return out
 
 
