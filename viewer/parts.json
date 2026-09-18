@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 18,
-   "faces": 58918
+   "faces": 97842
   },
   {
    "key": "02 Bottom End",
@@ -2944,16 +2944,16 @@
   "hv_motor_h_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -231.7,
-   "x1": 289.9,
-   "f": 2074
+   "x0": -204.6,
+   "x1": 276.4,
+   "f": 9326
   },
   "hv_motor_h_1": {
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": 114.0,
    "x1": 341.5,
-   "f": 2074
+   "f": 9326
   },
   "hv_motor_h_connector_0": {
    "g": "01 Block",
@@ -2972,9 +2972,9 @@
   "hv_motor_k": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -305.0,
-   "x1": 340.0,
-   "f": 2962
+   "x0": -306.0,
+   "x1": 338.5,
+   "f": 12878
   },
   "hv_motor_k_connector": {
    "g": "01 Block",
@@ -2986,16 +2986,16 @@
   "hv_store_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 72.8,
-   "x1": 345.0,
-   "f": 2074
+   "x0": 86.0,
+   "x1": 344.0,
+   "f": 9326
   },
   "hv_store_2": {
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": -121.3,
-   "x1": 345.0,
-   "f": 2074
+   "x1": 344.0,
+   "f": 9326
   },
   "inverter": {
    "g": "06 Hybrid",
