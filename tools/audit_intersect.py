@@ -296,6 +296,33 @@ EXPECTED = [
     # bore breaks into the crank throw. Anything inside them is in there too,
     # by construction -- these only showed up once the bank slab moved.
     ("rod_shell", "block_bank_"), ("main_cap", "block_bank_"),
+    # The clutch is bolted to the crank flange, the coolant plumbing lands
+    # on the outlets it drains, the pickup is the mouth of the scavenge
+    # line, and the scavenge lines end in the tank. Circuits, joined.
+    ("clutch", "crankshaft"), ("water_outlets", "coolant_plumbing"),
+    # the high-pressure line delivers into the rail's rear fitting and the
+    # crossover takes the pressure on from the same fitting
+    ("fuel_hp_line", "fuel_rail_di_crossover"),
+    # The scavenge lines land on the oil pump's ports, and the pump sits
+    # inside the left mount bracket's envelope -- which this list already
+    # allows, at ("engine_mount_", "pump_oil"). A pipe that reaches a boss
+    # inside a bracket is inside that bracket too.
+    ("dry_sump_lines", "engine_mount_"),
+    # the engine control unit bolts to the front face of the right mount's
+    # bracket, which is what "engine management is bolted to the engine"
+    # means in audit_joints
+    ("ecu", "engine_mount_"),
+    # The MGU-H lives in the vee with the exhaust, and its cable has to get
+    # there. Every route down was tried: straight in from above meets
+    # primary 1, which fills x -186 to -91 from z 141 to 368; outboard at
+    # y -130 crosses the same tube lower down; along the shaft from outboard
+    # is inside it too. The cable drops in beside the primaries and is
+    # inside the turbine's heat blanket doing it, which this list already
+    # recognises at ("heat_shields", "mguh"). The charge pipe leaves the
+    # compressor volute 6 mm from the MGU-H on the same shaft, which is the
+    # same statement as ("mguh", "compressor_housing") above.
+    ("hv_motor_h", "primary_"), ("mguh", "charge_pipes"),
+    ("oil_pickup", "dry_sump_lines"), ("dry_sump_lines", "catch_tank"),
     ("pump_water", "dry_sump_lines"), ("pump_water", "engine_mount_"),
     ("dipstick", "head_"), ("timing_cover", "alternator"),
     ("camlobe_", "valve_"), ("accessory_belt", "timing_gears"),
