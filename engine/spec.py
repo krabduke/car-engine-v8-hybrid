@@ -191,7 +191,16 @@ INTAKE = {
 
 TURBO = {
     "n": 2,
-    "x": [-118.0, 118.0],
+    # +/-150, not +/-118.
+    #
+    # The two compressors breathe from the middle of the vee, so their eyes
+    # face each other along the shaft axis -- a compressor's eye is axial by
+    # definition and cannot be clocked away. At 118 the two snout mouths were
+    # 29 mm apart, so each inlet duct had to turn upward within a couple of
+    # centimetres of its own eye and overhung the wheel's inducer doing it.
+    # At 150 they are 93 mm apart and each duct has its own side of the vee
+    # to run down before it climbs.
+    "x": [-150.0, 150.0],
     # In the vee, above the heads' inner faces. The head is 58 mm taller
     # than it was, so the floor of the vee rose 41 mm with it.
     "z": 255.0,
