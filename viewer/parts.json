@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 18,
-   "faces": 49742
+   "faces": 58918
   },
   {
    "key": "02 Bottom End",
@@ -186,7 +186,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 42,
-   "faces": 259199
+   "faces": 261789
   }
  ],
  "parts": {
@@ -2146,9 +2146,9 @@
   "breathers": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -260.0,
-   "x1": -148.4,
-   "f": 1412
+   "x0": -302.0,
+   "x1": 138.0,
+   "f": 4002
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
@@ -2944,16 +2944,16 @@
   "hv_motor_h_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -122.0,
-   "x1": 218.0,
-   "f": 372
+   "x0": -231.7,
+   "x1": 289.9,
+   "f": 2074
   },
   "hv_motor_h_1": {
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": 114.0,
-   "x1": 342.0,
-   "f": 372
+   "x1": 341.5,
+   "f": 2074
   },
   "hv_motor_h_connector_0": {
    "g": "01 Block",
@@ -2972,30 +2972,30 @@
   "hv_motor_k": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -292.0,
-   "x1": 369.5,
-   "f": 446
+   "x0": -305.0,
+   "x1": 340.0,
+   "f": 2962
   },
   "hv_motor_k_connector": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -298.0,
-   "x1": -270.4,
+   "x0": -312.0,
+   "x1": -284.4,
    "f": 800
   },
   "hv_store_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 112.6,
-   "x1": 368.6,
-   "f": 446
+   "x0": 72.8,
+   "x1": 345.0,
+   "f": 2074
   },
   "hv_store_2": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -122.6,
-   "x1": 369.0,
-   "f": 446
+   "x0": -121.3,
+   "x1": 345.0,
+   "f": 2074
   },
   "inverter": {
    "g": "06 Hybrid",

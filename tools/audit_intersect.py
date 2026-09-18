@@ -302,6 +302,16 @@ EXPECTED = [
     ("intercooler_", "plenum_"), ("intercooler_", "trumpets"),
     ("intercooler_", "runner_"), ("intercooler_", "throttle_"),
     ("hp_fuel_pump", "cam_journals"),   # it is driven off that cam
+    # The high-voltage cables leave the inverter through the same pair of
+    # connectors and share the same conduit down the back of the engine, so
+    # they lie against each other -- which is what a loom is. They also end
+    # inside the machines they feed, because that is where the terminal is.
+    ("hv_", "hv_"), ("hv_", "inverter"), ("hv_", "battery_terminals"),
+    ("hv_motor_h_", "turbo_centre"), ("hv_motor_k", "mguk"),
+    ("hv_motor_h_connector_", "mguh"),
+    # the MGU-H cable enters the turbo's heat blanket through a grommet,
+    # which is the only way into a vee this full
+    ("heat_shields", "hv_"),
 ]
 
 if __name__ == "__main__":
