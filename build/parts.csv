@@ -220,7 +220,7 @@ collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,1917,1866,79.2,158.9,-35.0,35.
 dipstick,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,32,18,168.0,196.0,116.0,134.0,-160.4,60.4
 fuel_feeds_di_l,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-167.0,148.0,-158.5,-128.4,40.3,77.8
 fuel_feeds_di_r,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,888,600,-148.0,167.0,128.4,158.5,40.3,77.8
-fuel_hp_line,01 Block,alu_cast,,,,,,,,,,962,890,22.3,229.0,154.4,257.0,40.8,185.0
+fuel_hp_line,01 Block,alu_cast,,,,,,,,,,962,890,22.9,227.5,155.4,252.5,42.0,183.5
 fuel_rail_di_crossover,07 Drive and Ancillaries,alu_forged,,,,,,,,,,1184,1112,206.0,228.0,-161.9,161.9,40.8,136.0
 fuel_rail_di_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-212.0,224.0,-176.9,-138.9,25.8,63.8
 fuel_rail_di_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-212.0,224.0,138.9,176.9,25.8,63.8

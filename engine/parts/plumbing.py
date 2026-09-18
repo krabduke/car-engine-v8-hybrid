@@ -250,13 +250,19 @@ def _fuel():
     # At y 226 the line ran along the top of the cover in the middle of the
     # bolt row, which spans y 145 to 234 and z 134 to 223: 48 of its
     # vertices inside them. At 243 it is in the port fuel rail instead,
-    # which runs the length of this flank at y 238-252. The band that is
-    # actually free is outboard of the cover's own edge at y 245 and above
-    # the port rail's crown at 143, and the line runs down the middle of it.
+    # which runs the length of this flank at y 238-252. Outboard of the
+    # cover's own edge at 245 there is a band, and it is 8 mm wide: the
+    # hypercar's bodywork closes to 253 at this height, and a 10 mm pipe put
+    # 4.3 mm of itself through the car. Going over the cover instead is not
+    # available -- its crown is at z 242 and the pump sits against its
+    # flank, so a line leaving the pump is inside the cover until it climbs
+    # out, and it meets the breather gallery, the intake camshaft's tail and
+    # the charge pipes doing it. A direct-injection supply line is a 7 mm
+    # pipe on a real engine, which is what fits.
     out["fuel_hp_line"] = mesh.pipe(
-        [(24.0, 218.0, 180.0), (120.0, 252.0, 178.0),
-         (x_back, 252.0, 150.0), (x_back, 190.0, 72.0),
-         (p1r[0] + 12.0, p1r[1], p1r[2])], 5.0, SM, subdiv=3)
+        [(24.0, 218.0, 180.0), (120.0, 249.0, 176.0),
+         (x_back, 249.0, 150.0), (x_back, 190.0, 72.0),
+         (p1r[0] + 12.0, p1r[1], p1r[2])], 3.5, SM, subdiv=3)
 
     # and the same station, 22 mm higher, carries the pressure across to the
     # other bank. Above the crankcase, which stops at z 28, and below the

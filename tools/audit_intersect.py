@@ -303,6 +303,7 @@ EXPECTED = [
     # the high-pressure line delivers into the rail's rear fitting and the
     # crossover takes the pressure on from the same fitting
     ("fuel_hp_line", "fuel_rail_di_crossover"),
+    ("fuel_hp_line", "fuel_rail_di_"),   # it delivers into the rail's fitting
     # The scavenge lines land on the oil pump's ports, and the pump sits
     # inside the left mount bracket's envelope -- which this list already
     # allows, at ("engine_mount_", "pump_oil"). A pipe that reaches a boss
