@@ -506,10 +506,10 @@ def _inlets():
         # ...and then back outboard as it climbs, so the two ducts diverge
         # instead of meeting over the middle of the vee
         path = [(eye[0] + ib * 2.0, 0.0, T["z"]),
-                (eye[0] + ib * 24.0, 0.0, T["z"] + 6.0),
-                (eye[0] + ib * 20.0, sgn * 16.0, T["z"] + 44.0),
-                (eye[0] + ib * 6.0, sgn * 28.0, T["z"] + 80.0),
-                (eye[0] - ib * 6.0, sgn * 32.0, T["z"] + 106.0)]
+                (eye[0] + ib * 22.0, sgn * 20.0, T["z"] + 10.0),
+                (eye[0] + ib * 16.0, sgn * 36.0, T["z"] + 48.0),
+                (eye[0] + ib * 2.0, sgn * 38.0, T["z"] + 82.0),
+                (eye[0] - ib * 10.0, sgn * 34.0, T["z"] + 106.0)]
         # A duct with a bore, not a capped rod.
         #
         # mesh.pipe caps both ends, so this finished in a flat disc 60 mm
@@ -519,7 +519,10 @@ def _inlets():
         # compressor end and by the flange at the other, so the part is still
         # watertight and you can see down it.
         wall = 4.0
-        r_out = [r_eye + 4.0, r_eye + 2.0, 30.0, 29.0, 30.0]
+        # ...and it necks down from the eye's own bore to the duct's within
+        # the first two stations, because the two ducts leave eyes that are
+        # 81 mm apart and each is 88 mm across at the eye
+        r_out = [r_eye + 4.0, 34.0, 30.0, 29.0, 30.0]
         parts = [_bored_duct(path, r_out, wall, spec.RES["pipe"], 5)]
         r_in = [r - wall for r in r_out]
         end = (path[-1][0] + (path[-1][0] - path[-2][0]),

@@ -198,9 +198,16 @@ TURBO = {
     # definition and cannot be clocked away. At 118 the two snout mouths were
     # 29 mm apart, so each inlet duct had to turn upward within a couple of
     # centimetres of its own eye and overhung the wheel's inducer doing it.
-    # At 150 they are 93 mm apart and each duct has its own side of the vee
+    # At 144 they are 81 mm apart and each duct has its own side of the vee
     # to run down before it climbs.
-    "x": [-150.0, 150.0],
+    #
+    # Not 150. The collector's mouth is 16 mm inboard of its turbo and 92 mm
+    # above the shaft, and 92 is a floor as well as a ceiling -- lower and
+    # the two inboard primaries come down onto the compressor housing they
+    # pass over. At 150 the mouth sat where the hypercar's engine cover is
+    # low enough that the collector's crown came 0.3 mm through it, and
+    # there was nothing to give in height.
+    "x": [-144.0, 144.0],
     # In the vee, above the heads' inner faces. The head is 58 mm taller
     # than it was, so the floor of the vee rose 41 mm with it.
     "z": 255.0,
