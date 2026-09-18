@@ -69,6 +69,16 @@ EXPECTED = [
     ("camcover", "camcover_bolts"), ("camcover", "oil_filler"),
     ("camcover", "coil"), ("camcover", "breathers"),
     ("sparkplug", "coil"), ("injector", "fuel_rail_"),
+    # The port-injection set, joint by joint. An injector is fitted through
+    # the runner wall so its nozzle is in the airstream; the feed union seats
+    # on its top; the connector clips over its body; and the crossover pipe
+    # lands in the end of each direct-injection rail. Every one of those
+    # overlaps IS the fitting.
+    ("pfi_injector", "runner_"), ("pfi_feed", "pfi_injector"),
+    ("pfi_feed", "fuel_rail_pfi"), ("pfi_plug", "pfi_injector"),
+    ("fuel_rail_di_crossover", "fuel_rail_di_"),
+    ("fuel_rail_pfi_crossover", "fuel_rail_pfi_"),
+    ("fuel_rail_pfi_union", "fuel_rail_pfi_"),
     ("fuel_rail_", "fuel_feeds_"), ("fuel_rail_", "injector"),
 
     # induction and charge
@@ -100,7 +110,21 @@ EXPECTED = [
     ("turbo_centre", "collector_"), ("turbo_centre", "charge_pipes"),
     ("turbo_shaft", "turbine_wheel"), ("turbo_shaft", "compressor_wheel"),
     ("turbo_oil", "turbine_housing"), ("turbo_oil", "compressor_housing"),
+    # both lines end in a union screwed into the block's vee face, so the
+    # boss on the end of each one lands on the casting. It is the joint, and
+    # it is the ONLY place they touch it: sampled every 6 mm up their run,
+    # the lines are in open vee from z 92 all the way to the bearing
+    # housing, and in the block only at z 86, which is the face.
+    ("turbo_oil", "block_bank_"),
     ("mguh", "compressor_housing"),
+    # NOT a joint. The compressor eyes face each other across 29 mm of vee,
+    # so each inlet duct has to turn up within a couple of centimetres of
+    # its own eye and overhangs the wheel's inducer doing it, and the charge
+    # pipe leaving the volute clips the exducer. See the note in
+    # `turbo._inlets`: the fix is the turbos' clocking, not the duct. These
+    # two lines are here to say so, not to say it is fine.
+    ("compressor_inlet", "compressor_wheel"),
+    ("charge_pipes", "compressor_wheel"),
     ("wastegate", "compressor_housing"), ("wastegate", "collector_"),
     ("wastegate", "heat_shields"),
     # the blanket is laced over the turbine and its collector, so it
@@ -111,10 +135,9 @@ EXPECTED = [
     ("heat_shields", "compressor_wheel"),
     ("heat_shields", "charge_pipes"), ("heat_shields", "primary_"),
     ("compressor_inlet", "compressor_housing"),
-    ("compressor_inlet", "compressor_wheel"),
-    ("compressor_housing", "collector_"),
-    ("charge_pipes", "compressor_wheel"), ("charge_pipes", "turbine_housing"),
-    ("turbine_housing", "turbine_wheel"), ("turbine_housing", "tailpipes"),
+        ("compressor_housing", "collector_"),
+    ("charge_pipes", "turbine_housing"),
+    ("turbine_housing", "tailpipes"),
     ("turbine_housing", "wastegate"), ("turbine_housing", "heat_shields"),
     ("compressor_housing", "catch_tank"),
     # hot-vee: the port flange, its primary and the turbocharger inlet are
@@ -268,6 +291,11 @@ EXPECTED = [
     ("dry_sump_lines", "block_"), ("dipstick", "block_"),
     ("camlobe_", "hp_fuel_pump"), ("main_shell", "block_bank_"),
     ("main_shell", "main_shell"),   # two halves of one bearing
+    # A shell sits inside the rod or cap that holds it, and conrod, rod_cap
+    # and main_shell are all already allowed into the bank casting where the
+    # bore breaks into the crank throw. Anything inside them is in there too,
+    # by construction -- these only showed up once the bank slab moved.
+    ("rod_shell", "block_bank_"), ("main_cap", "block_bank_"),
     ("pump_water", "dry_sump_lines"), ("pump_water", "engine_mount_"),
     ("dipstick", "head_"), ("timing_cover", "alternator"),
     ("camlobe_", "valve_"), ("accessory_belt", "timing_gears"),
@@ -282,11 +310,9 @@ EXPECTED = [
     ("mount_bosses", "injector"), ("gallery_plugs", "engine_mount_"),
     ("starter", "gallery_plugs"),
     # the turbine wheel runs in the exducer bore the tailpipe bolts to
-    ("tailpipes", "turbine_wheel"),
-    ("gallery_plugs", "oil_filter"), ("dipstick", "mount_bosses"),
+        ("gallery_plugs", "oil_filter"), ("dipstick", "mount_bosses"),
     ("cam_journals", "tappet_"), ("blowoff", "intercooler_"),
-    ("collector_", "turbine_wheel"),
-    ("oil_pickup", "bedplate"),   # it passes through to the sump
+        ("oil_pickup", "bedplate"),   # it passes through to the sump
     ("belt_tensioner", "timing_gears"), ("belt_tensioner", "timing_cover"),
     # the idler and the tensioner run on the belt, which runs in front of
     # the timing cover and past the coolant crossover

@@ -283,7 +283,63 @@ def mode_exploded(s):
     shoot("04_exploded")
 
 
-MODES = {"hero": mode_hero, "top": mode_top,
+def corners_of(prefixes):
+    """`collect_corners` over named parts only, for a close view of one area."""
+    from mathutils import Vector as V
+    sel = [o for o in meshes() if o.name.startswith(tuple(prefixes))]
+    if not sel:
+        return collect_corners()
+    xs, ys, zs = [], [], []
+    for o in sel:
+        for c in o.bound_box:
+            w = o.matrix_world @ V(c)
+            xs.append(w.x); ys.append(w.y); zs.append(w.z)
+    cen = V(((min(xs)+max(xs))/2, (min(ys)+max(ys))/2, (min(zs)+max(zs))/2))
+    CORNERS.clear()
+    for o in sel:
+        for c in o.bound_box:
+            CORNERS.append((o.matrix_world @ V(c)) - cen)
+    return cen
+
+
+def mode_turbo(s):
+    """The front turbocharger, close.
+
+    Worth its own view. Everything that has gone wrong in the vee -- oil
+    lines ending in mid-air, a wastegate can inside a primary, an MGU-H rotor
+    bored to two and a half times its shaft -- has been invisible from the
+    hero angle, because the vee is the one part of this engine you cannot see
+    into from outside it.
+    """
+    from mathutils import Vector as V
+    # the hero rig, not a bespoke one: four hand-placed area lights at this
+    # scale blew the exhaust out to orange three times running
+    setup_render(s, res=(1600, 1100)); setup_world(0.55); setup_lights()
+    c = corners_of(("turbo_centre_1", "turbine_housing_1",
+                    "compressor_housing_1", "collector_1", "wastegate_1"))
+    cd = bpy.data.cameras.new("cam_turbo"); cd.lens = 55
+    ob = bpy.data.objects.new("cam_turbo", cd)
+    bpy.context.scene.collection.objects.link(ob)
+    bpy.context.scene.camera = ob
+    # Three quarters, from the front of the engine and above.
+    #
+    # Sized off what is in the shot rather than by hand: at a fixed 0.5 m
+    # with a 70 mm lens the frame was filled by whatever surface the sight
+    # line met first, which from most angles is the volute, and the turbo
+    # behind it was never in the picture at all. The vee only opens upward,
+    # so the elevation is not free -- from the side the line of sight goes
+    # through the plenum and the cam cover and you photograph those.
+    rad = max(V(p).length for p in CORNERS)
+    n = V((-0.55, -0.75, 0.62)).normalized() * (rad * 3.4)
+    ob.location = c + n
+    ob.rotation_euler = (-n).to_track_quat("-Z", "Y").to_euler()
+    # energies for a 0.73 m scene, not a 700 mm one: the first pass ran these
+    # at 26 W a third of a metre from a 60 mm turbocharger and rendered a
+    # white-hot blur
+    shoot("05_turbo")
+
+
+MODES = {"turbo": mode_turbo, "hero": mode_hero, "top": mode_top,
          "cutaway": mode_cutaway, "exploded": mode_exploded}
 
 if __name__ == "__main__":
@@ -291,7 +347,7 @@ if __name__ == "__main__":
     mode = argv[0]
     samples = int(argv[1]) if len(argv) > 1 else 128
     if mode == "all":
-        for m in ("hero", "top", "cutaway", "exploded"):
+        for m in ("hero", "top", "cutaway", "exploded", "turbo"):
             MODES[m](samples)
     else:
         MODES[mode](samples)
