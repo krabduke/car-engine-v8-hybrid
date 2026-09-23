@@ -11,7 +11,8 @@ rails standing in for thick-walled forgings and a 12-vertex dipstick.
 
 The mean is not directly comparable across the two -- a turbofan is a hundred
 big parts and a V8 is four hundred parts of which many are fasteners -- so the
-honest number is the total: the F110 is 855k vertices, this engine is 554k.
+honest number is the total: when this was written the F110 was 855k
+vertices and this engine 554k; they are 1.9M and 3.0M now.
 The gate below is a ratchet. Raise it when the model gets better; never lower
 it to make a build pass.
 
@@ -41,7 +42,7 @@ EXEMPT = {
 }
 
 FLOOR = 120          # vertices, for anything not exempt
-TOTAL = 1_490_000      # vertices, over the whole model
+TOTAL = 2_820_000      # vertices, over the whole model
 
 # The total, not the mean.
 #
