@@ -232,8 +232,8 @@ alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-371.5,-296.5,-1
 breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,26862,26646,-302.0,138.0,-262.0,239.6,-95.6,250.4
 cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,1152,1152,-188.9,143.8,-228.7,228.7,122.7,228.7
 catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,66590,66474,-196.0,-38.0,-239.7,-115.8,-206.0,-78.0
-collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,8299,8248,-203.6,-123.0,-30.0,94.7,308.0,370.0
-collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,8299,8248,123.0,203.6,-30.0,94.7,308.0,370.0
+collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,6391,6340,-203.6,-123.0,-30.0,94.7,308.0,370.0
+collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,6391,6340,123.0,203.6,-30.0,94.7,308.0,370.0
 dipstick,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3612,3593,-82.0,-28.0,-168.0,-156.0,-146.0,-134.0
 fuel_feeds_di_l,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3256,2968,-167.0,148.0,-158.5,-128.4,40.3,77.8
 fuel_feeds_di_r,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3256,2968,-148.0,167.0,128.4,158.5,40.3,77.8
@@ -348,7 +348,7 @@ compressor_wheel_2,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,79.7,116.4,-
 coolant_plumbing,07 Drive and Ancillaries,alu_forged,,,,,,,,,,20374,20014,-282.0,247.5,-191.8,215.0,-49.0,151.8
 dry_sump_lines,07 Drive and Ancillaries,alu_forged,,,,,,,,,,48248,47744,-264.0,119.0,-279.8,-80.9,-217.7,17.3
 head_studs,03 Heads and Valvetrain,alu_cast,,,,,,,,,,12576,15680,-162.5,294.5,-127.0,127.0,39.2,127.0
-heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,48648,48648,-197.1,197.1,-18.0,75.1,308.0,377.2
+heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,48648,48648,-197.2,197.2,-18.0,71.3,308.3,377.2
 oil_pickup,07 Drive and Ancillaries,alu_forged,,,,,,,,,,862,764,-257.5,11.7,-108.4,-15.3,-153.0,-37.1
 retainer_1_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-193.0,-166.6,-179.7,-162.9,112.3,135.3
 retainer_1_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-158.4,-132.0,-179.7,-162.9,112.3,135.3

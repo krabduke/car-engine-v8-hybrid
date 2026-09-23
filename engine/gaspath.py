@@ -93,7 +93,7 @@ def collector_path(bank_pair):
     # the tallest thing here.
     #
     # From the drum the leg drops onto the volute's inlet, which faces up,
-    # and ends on the inlet flange: straight down the last 40 mm, square to
+    # and ends on the inlet flange: straight down the last 28 mm, square to
     # it, so the two flanges meet face to face.
     # 4 mm outboard of the turbo, not 16 inboard: inboard, the drum was in
     # the compressor inlet ducts, which cross the vee at this height
@@ -104,7 +104,7 @@ def collector_path(bank_pair):
     return [drum,
             (drum[0] + (inlet[0] - drum[0]) * 0.6, inlet[1] * 0.55,
              drum[2] - 8.0),
-            (inlet[0], inlet[1], end[2] + 40.0),
+            (inlet[0], inlet[1], end[2] + 28.0),
             end]
 
 
