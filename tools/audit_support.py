@@ -27,16 +27,11 @@ TOL = 0.3            # mm, full size: further off than this is not touching
 DETACHED = {
     "alternator": 4,
     "battery": 2,
-    "camcover_bolts_r": 5,
     "clutch": 1,
-    "engine_mount_l": 3,
-    "engine_mount_r": 1,
     "fuel_rail_di_l": 1,
     "fuel_rail_di_r": 1,
-    "gallery_plugs": 3,
     "inverter": 1,
     "oil_cooler": 1,
-    "oil_filter": 1,
     "sump_bolts": 30,
 }
 # --- end DETACHED ---

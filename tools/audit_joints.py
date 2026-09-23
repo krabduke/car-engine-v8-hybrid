@@ -123,7 +123,7 @@ CIRCUITS = [
     ("accessory drive: crank to belt to the water pump",
      ["crank_damper", "accessory_pulleys", "accessory_belt", "pump_water"]),
     ("the engine hangs on its mounts",
-     ["block_bank_l", "mount_bosses", "engine_mount_l"]),
+     ["block_crankcase", "mount_bosses", "engine_mount_l"]),
     ("the MGU-K rides on the crank nose",
      ["crankshaft", "mguk"]),
     ("the MGU-H rides on the turbo shafts",
@@ -132,7 +132,7 @@ CIRCUITS = [
     ("high voltage: pack to the machines",
      ["battery", "battery_terminals", "hv_store_1"]),
     ("engine management is bolted to the engine",
-     ["block_bank_r", "mount_bosses", "engine_mount_r", "ecu",
+     ["block_crankcase", "mount_bosses", "engine_mount_r", "ecu",
       "ecu_connector"]),
 ]
 

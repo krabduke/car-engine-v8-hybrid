@@ -75,6 +75,32 @@ def clear_scene():
     sc.unit_settings.length_unit = "MILLIMETERS"
 
 
+def apply_cutter(ob, verts, faces):
+    """Take a cutter's solid out of `ob` with an exact boolean difference.
+
+    The cutter is authored in world millimetres like everything else and made
+    as an object with no transform, so it lines up with `ob` wherever `ob`'s
+    origin has been moved to. Returns 1 if the cut went through."""
+    cutter = make_object(ob.name + "__cut", verts, faces,
+                         bpy.context.scene.collection)
+    m = ob.modifiers.new("cut", "BOOLEAN")
+    m.operation = "DIFFERENCE"
+    m.solver = "EXACT"
+    # a cutter is often several solids joined, overlapping one another
+    m.use_self = True
+    m.object = cutter
+    bpy.context.view_layer.objects.active = ob
+    try:
+        bpy.ops.object.modifier_apply(modifier=m.name)
+        ok = 1
+    except RuntimeError as exc:
+        print(f"    ! cut failed on {ob.name}: {exc}")
+        ob.modifiers.remove(m)
+        ok = 0
+    bpy.data.objects.remove(cutter, do_unlink=True)
+    return ok
+
+
 def make_object(name, verts, faces, coll, pivot=None):
     """Build one object. `pivot` (in mm) becomes the object's origin.
 
@@ -145,15 +171,30 @@ def main():
         cols[c] = col
 
     rows, n_sharp = [], 0
+    # A module may hand back "cut:<part>" entries: solids to take out of a
+    # part another module (or the same one) builds -- the bores out of the
+    # block, the valve reliefs out of a piston. They are pooled across every
+    # module first so a cutter reaches its target wherever that is built.
+    built_all, cutters = [], {}
     for label, module in MODULES:
-        t1 = time.time()
         built = module.build()
+        for key, geom in built.items():
+            if key.startswith("cut:"):
+                cutters.setdefault(key[4:], []).append(geom)
+        built_all.append((label, module, built))
+    n_cut = n_cut_ok = 0
+    for label, module, built in built_all:
+        t1 = time.time()
         piv = module.pivots() if hasattr(module, "pivots") else {}
-        for name, (v, f) in sorted(built.items()):
+        objects = {k: v for k, v in built.items() if not k.startswith("cut:")}
+        for name, (v, f) in sorted(objects.items()):
             cname = collection_for(name)
             spec_p = piv.get(name)
             ob = make_object(name, v, f, cols[cname],
                              pivot=spec_p[0] if spec_p else None)
+            for cv, cf in cutters.get(name, ()):
+                n_cut += 1
+                n_cut_ok += apply_cutter(ob, cv, cf)
             recalc_normals(ob)
             mname = material_for(name)
             ob.data.materials.append(mats[mname])
@@ -178,7 +219,7 @@ def main():
                 "y_min_mm": round(bb[1]/MM, 1), "y_max_mm": round(bb[4]/MM, 1),
                 "z_min_mm": round(bb[2]/MM, 1), "z_max_mm": round(bb[5]/MM, 1),
             })
-        print(f"  [{label}] {len(built)} objects in {time.time()-t1:.1f}s")
+        print(f"  [{label}] {len(objects)} objects in {time.time()-t1:.1f}s")
 
     os.makedirs(os.path.join(ROOT, "build"), exist_ok=True)
     p = os.path.join(ROOT, "build", "parts.csv")
@@ -186,7 +227,12 @@ def main():
         w = csv.DictWriter(fh, fieldnames=list(rows[0].keys()))
         w.writeheader(); w.writerows(rows)
     tv = sum(r["verts"] for r in rows); tf = sum(r["faces"] for r in rows)
-    print(f"\n{len(rows)} objects | {tv:,} verts | {tf:,} faces | sharp {n_sharp:,}")
+    print(f"\n{len(rows)} objects | {tv:,} verts | {tf:,} faces | sharp {n_sharp:,}"
+          f" | cuts {n_cut_ok}/{n_cut}")
+    if n_cut_ok < n_cut:
+        # a cut that did not go through leaves the material it was meant to
+        # remove, and nothing downstream can tell
+        raise SystemExit(f"{n_cut - n_cut_ok} cuts failed")
     blend = os.path.join(ROOT, "build", "engine.blend")
     bpy.ops.wm.save_as_mainfile(filepath=blend)
     print(f"blend -> {blend}\ntotal {time.time()-t0:.1f}s")

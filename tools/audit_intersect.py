@@ -37,22 +37,36 @@ EXPECTED = [
     ("block_liners", "block_crankcase"),
     ("block_crankcase", "bedplate"), ("block_crankcase", "main_cap_"),
     ("block_crankcase", "windage_tray"), ("block_crankcase", "main_cap_bolts"),
-    ("block_crankcase", "crankshaft"), ("block_crankcase", "oil_pickup"),
+    ("block_crankcase", "oil_pickup"),
     ("bedplate", "main_cap_"), ("bedplate", "main_shell"),
     ("bedplate", "crankshaft"),
     ("bedplate", "main_cap_bolts"), ("bedplate", "windage_tray"),
     ("main_cap_", "main_shell"), ("main_cap_", "main_cap_bolts"),
-    ("main_cap_", "crankshaft"),
+
     ("sump", "sump_baffles"), ("sump", "sump_bolt"), ("sump", "sump_drain"),
     ("sump", "oil_pickup"),
 
     # rotating assembly
-    ("crankshaft", "conrod"), ("crankshaft", "rod_shell"),
-    ("crankshaft", "flywheel"), ("crankshaft", "crank_damper"),
+    ("crankshaft", "conrod"),
+    ("crankshaft", "crank_damper"),
     ("crankshaft", "timing_gears"),
-    ("conrod", "rod_cap"), ("conrod", "rod_shell"),
+    ("conrod", "rod_shell"),
     ("conrod", "gudgeon_pin"),
     ("rod_cap", "rod_shell"),
+    # a rod bolt passes through the cap's ear and screws into the rod: the
+    # two holes it runs in are the overlap
+    ("rod_bolts", "conrod"), ("rod_bolts", "rod_cap"),
+    # each head's water outlet runs into the end of its rail
+    ("water_outlets", "coolant_plumbing"),
+    # the dipstick runs down through the tank's filler cap into the oil
+    ("dipstick", "catch_tank"),
+    # gallery plugs and sensors are screwed into the crankcase wall, and the
+    # engine mounts' feet are bolted to the bosses cast on it
+    ("gallery_plugs", "block_crankcase"), ("sensors", "block_crankcase"),
+    # the filter's pedestal is cast onto the crankcase, over the gallery
+    # plug it feeds
+    ("oil_filter", "block_crankcase"), ("oil_filter", "gallery_plugs"),
+    ("engine_mount_", "mount_bosses"),
     ("piston", "ring_"),
     ("flywheel", "clutch"),
     ("bellhousing", "block_crankcase"),
@@ -69,7 +83,7 @@ EXPECTED = [
     ("head_", "coolant_plumbing"),
     ("head_", "cam_sensor_"), ("head_", "camlobe_"),
     ("camshaft_", "camlobe_"), ("camshaft_", "cam_journals"),
-    ("camshaft_", "cam_caps"),
+
     ("camlobe_", "tappet_"),
     ("tappet_", "valve_"), ("valve_", "valve_spring_"), ("valve_", "collets_"),
     ("collets_", "retainer_"),
@@ -173,10 +187,10 @@ EXPECTED = [
     # the banks meet in the vee and the coolant passages run past the liners;
     # the manifolds bolt to the heads; the trumpets stand over the cam covers.
     ("block_bank_", "block_bank_"),
-    ("water_outlets", "block_liners"), ("water_outlets", "block_bank_"),
-    ("coolant_plumbing", "block_liners"), ("coolant_plumbing", "timing_gears"),
+
+    ("coolant_plumbing", "timing_gears"),
     ("coolant_plumbing", "block_bank_"), ("coolant_plumbing", "head_"),
-    ("cam_caps", "camcover"), ("cam_caps", "camshaft_"),
+    ("cam_caps", "camcover"),
     ("pump_water", "coolant_plumbing"),
     ("breathers", "catch_tank"),
 
@@ -187,14 +201,10 @@ EXPECTED = [
     # fastener, a bearing, a port or a bracket.
     # ------------------------------------------------------------------
 
-    # the bottom end runs inside the block
-    ("gudgeon_pin", "block_crankcase"), ("gudgeon_pin", "block_bank_"),
-    ("ring_", "block_crankcase"), ("ring_", "block_bank_"),
-    ("rod_shell_", "block_crankcase"),
-    ("conrod", "block_bank_"), ("conrod", "block_crankcase"),
-    ("rod_cap", "block_bank_"), ("rod_cap", "block_crankcase"),
-    ("main_shell", "block_crankcase"), ("piston", "block_bank_"),
-    ("piston", "block_crankcase"), ("gudgeon_pin", "crankshaft"),
+    ("ring_", "block_crankcase"),
+
+    ("main_shell", "block_crankcase"),
+    ("piston", "block_crankcase"),
 
     # the valvetrain runs inside the head and under the cover
     ("camlobe_", "camcover"),
@@ -208,8 +218,8 @@ EXPECTED = [
     ("windage_tray", "main_cap_"),
 
     # sensors screw into whatever they measure
-    ("sensors", "sump"), ("sensors", "block_"), ("sensors", "head_"),
-    ("sensors", "knock_sensor_"), ("sensors", "bedplate"),
+    ("sensors", "sump"), ("sensors", "block_"),
+    ("sensors", "knock_sensor_"),
 
     # heat shielding wraps what it shields
     ("heat_shields", "charge_pipes"),
@@ -218,7 +228,7 @@ EXPECTED = [
     # fuel and charge
     ("injector", "fuel_feeds_"),
     ("charge_pipes", "camcover"), ("coolant_plumbing", "block_"),
-    ("coolant_plumbing", "head_"), ("water_outlets", "head_"),
+    ("coolant_plumbing", "head_"),
 
     # a direct-acting bucket is a cup over the top of the valve: the tip,
     # the collets, the retainer and the top of the spring all live inside
@@ -226,51 +236,25 @@ EXPECTED = [
     ("retainer_", "tappet_"), ("collets_", "tappet_"),
     ("valve_spring_", "tappet_"), ("camlobe_", "tappet_"),
     ("valve_spring_", "head_"),
-    ("camlobe_", "cam_caps"),     # the cap lands right against the lobe
+        # the cap lands right against the lobe
     ("primary_", "primary_"),     # adjacent primaries touch into the collector
-    ("mount_bosses", "head_"),    # the mount bolts through the block/head joint
+       # the mount bolts through the block/head joint
     ("sensors", "gallery_plugs"), ("sensors", "pump_water"),
-    ("block_bank_", "crankshaft"),   # the bore breaks into the crank throw
-    ("engine_mount_", "knock_sensor_"),
+
     ("starter", "block_"), ("head_", "bellhousing"),
-    ("mount_bosses", "block_"),
+
     ("plenum_", "trumpets"), ("plenum_", "runner_"), ("trumpets", "runner_"),
     ("throttle_", "charge_pipes"),
-    # the counterweights are shaped round the rod bolts, which is why a
-    # crank is machined and not turned
-    ("rod_bolts", "crankshaft"),
     ("windage_tray", "starter"), ("main_cap_bolts", "block_"),
-    ("fuel_rail_", "sensors"),
-    # a short-skirt piston runs inside the counterweight circle at BDC;
-    # the crank is machined to clear it, which is what the cutaways are for
-    ("piston", "crankshaft"),
+
     ("coolant_plumbing", "timing_cover"),
     ("camlobe_", "collets_"),
-    ("engine_mount_", "pump_oil"),
-    ("dipstick", "block_"),
-    ("main_shell", "block_bank_"),
-    # A shell sits inside the rod or cap that holds it, and conrod, rod_cap
-    # and main_shell are all already allowed into the bank casting where the
-    # bore breaks into the crank throw. Anything inside them is in there too,
-    # by construction -- these only showed up once the bank slab moved.
-    ("rod_shell", "block_bank_"), ("main_cap", "block_bank_"),
-    # The clutch is bolted to the crank flange, the coolant plumbing lands
-    # on the outlets it drains, the pickup is the mouth of the scavenge
-    # line, and the scavenge lines end in the tank. Circuits, joined.
-    ("clutch", "crankshaft"),
+
     # the high-pressure line delivers into the rail's rear fitting and the
     # crossover takes the pressure on from the same fitting
     ("fuel_hp_line", "fuel_rail_di_crossover"),
     ("fuel_hp_line", "fuel_rail_di_"),   # it delivers into the rail's fitting
-    # The scavenge lines land on the oil pump's ports, and the pump sits
-    # inside the left mount bracket's envelope -- which this list already
-    # allows, at ("engine_mount_", "pump_oil"). A pipe that reaches a boss
-    # inside a bracket is inside that bracket too.
-    ("dry_sump_lines", "engine_mount_"),
-    # the engine control unit bolts to the front face of the right mount's
-    # bracket, which is what "engine management is bolted to the engine"
-    # means in audit_joints
-    ("ecu", "engine_mount_"),
+
     # The MGU-H lives in the vee with the exhaust, and its cable has to get
     # there. Every route down was tried: straight in from above meets
     # primary 1, which fills x -186 to -91 from z 141 to 368; outboard at
@@ -278,19 +262,14 @@ EXPECTED = [
     # is inside it too. The cable drops in beside the primaries.
     ("hv_motor_h", "primary_"),
     ("oil_pickup", "dry_sump_lines"), ("dry_sump_lines", "catch_tank"),
-    ("pump_water", "engine_mount_"),
-    ("dipstick", "head_"),
+
     ("camlobe_", "valve_"),
     ("accessory_belt", "alternator"),
-    ("ring_", "crankshaft"),
+
     ("thermostat", "mguk"),
-    # the block's outboard flank carries the mounts, the gallery plugs,
-    # the rail and the feeds, and they are cast and bolted against one
-    # another on the same face
-    ("gallery_plugs", "engine_mount_"),
+
     ("starter", "gallery_plugs"),
-    # the turbine wheel runs in the exducer bore the tailpipe bolts to
-        ("oil_pickup", "bedplate"),   # it passes through to the sump
+    ("oil_pickup", "bedplate"),   # it passes through to the sump
     ("belt_tensioner", "timing_gears"), ("belt_tensioner", "timing_cover"),
     # the idler and the tensioner run on the belt, which runs in front of
     # the timing cover and past the coolant crossover
@@ -325,32 +304,18 @@ TOL = 0.3            # mm, full size: deeper than this is sharing material
 # through a part that nobody meant. Fix them and --shrink; never add to it.
 # --- KNOWN: rewritten by --shrink, never by hand to add ---
 KNOWN = {
-    ("block_crankcase", "rod_bolts"): 42.5,   # at (-155.9, 19.3, -31.0)
     ("blowoff", "camcover_l"): 32.3,   # at (-132.2, -198.0, 185.7)
-    ("dipstick", "engine_mount_r"): 31.8,   # at (184.2, 128.3, -49.7)
-    ("engine_mount_r", "starter"): 29.5,   # at (120.0, 114.0, -43.0)
     ("camcover_r", "fuel_hp_line"): 24.5,   # at (25.0, 214.8, 178.8)
     ("thermostat", "timing_cover"): 14.0,   # at (-263.0, 24.7, 120.9)
     ("fuel_hp_line", "hp_fuel_pump"): 12.5,   # at (22.9, 221.2, 179.1)
-    ("dipstick", "starter"): 12.0,   # at (178.2, 125.8, -50.3)
     ("fuel_hp_line", "fuel_rail_pfi_crossover"): 12.0,   # at (225.4, 216.9, 112.9)
     ("block_bank_l", "fuel_rail_pfi_crossover"): 11.5,   # at (226.9, 16.0, 90.7)
     ("block_bank_r", "fuel_rail_pfi_crossover"): 11.5,   # at (226.9, -16.0, 90.7)
     ("fuel_rail_di_crossover", "fuel_rail_pfi_crossover"): 11.1,   # at (226.1, -155.8, 115.8)
-    ("belt_idler", "sensors"): 9.2,   # at (-229.0, 154.1, -40.0)
-    ("coolant_plumbing", "engine_mount_r"): 7.9,   # at (-186.0, 185.8, -29.2)
     ("fuel_rail_pfi_r", "hp_fuel_pump"): 7.9,   # at (9.5, 243.7, 142.9)
-    ("block_crankcase", "flywheel"): 6.5,   # at (225.0, 52.0, -79.0)
     ("inverter", "turbine_housing_2"): 6.5,   # at (228.9, 0.0, 227.9)
-    ("cam_caps", "cam_journals_l_ex"): 6.2,   # at (-188.9, -136.3, 208.9)
-    ("cam_caps", "cam_journals_l_in"): 6.2,   # at (-188.9, -191.5, 153.7)
-    ("cam_caps", "cam_journals_r_ex"): 6.2,   # at (-169.9, 136.3, 208.9)
-    ("cam_caps", "cam_journals_r_in"): 6.2,   # at (-169.9, 191.5, 153.7)
     ("cam_journals_l_ex", "camcover_l"): 5.9,   # at (22.8, -153.3, 198.6)
     ("cam_journals_r_in", "camcover_r"): 5.9,   # at (-162.2, 198.6, 153.3)
-    ("dipstick", "water_outlets"): 5.4,   # at (185.8, 124.2, -49.7)
-    ("engine_mount_l", "sensors"): 4.9,   # at (183.2, -115.7, -28.5)
-    ("bedplate", "flywheel"): 4.8,   # at (224.6, 0.0, -97.6)
     ("blowoff", "breathers"): 4.5,   # at (-124.7, -218.0, 214.4)
     ("breathers", "dry_sump_lines"): 4.0,   # at (-246.6, -244.3, -84.3)
     ("cam_journals_l_in", "camcover_l"): 4.0,   # at (22.8, -198.6, 153.3)
@@ -366,32 +331,13 @@ KNOWN = {
     ("head_r", "pfi_injector_6"): 3.4,   # at (68.5, 184.7, 102.6)
     ("head_r", "pfi_injector_8"): 3.4,   # at (170.5, 184.7, 102.6)
     ("bedplate", "bellhousing"): 3.3,   # at (230.3, 0.0, -110.9)
-    ("crankshaft", "rod_cap_1"): 3.2,   # at (-153.0, 43.6, 16.1)
-    ("crankshaft", "rod_cap_2"): 3.2,   # at (-153.0, 43.6, 16.1)
-    ("crankshaft", "rod_cap_3"): 3.2,   # at (-51.0, 2.4, -16.1)
-    ("crankshaft", "rod_cap_4"): 3.2,   # at (-51.0, 2.4, -16.1)
-    ("crankshaft", "rod_cap_5"): 3.2,   # at (51.0, 2.4, -16.1)
-    ("crankshaft", "rod_cap_6"): 3.2,   # at (51.0, 2.4, -16.1)
-    ("crankshaft", "rod_cap_7"): 3.2,   # at (153.0, 43.6, 16.1)
-    ("crankshaft", "rod_cap_8"): 3.2,   # at (153.0, 43.6, 16.1)
-    ("block_bank_l", "flywheel"): 3.1,   # at (228.2, 18.9, 87.8)
-    ("block_bank_r", "flywheel"): 3.1,   # at (228.2, -18.9, 87.8)
-    ("fuel_feeds_di_l", "water_outlets"): 2.7,   # at (-59.0, -135.3, 59.0)
-    ("fuel_feeds_di_r", "water_outlets"): 2.7,   # at (59.0, 135.3, 59.0)
+    ("belt_idler", "sensors"): 2.5,   # at (-229.0, 154.8, -35.4)
     ("battery", "dry_sump_lines"): 1.7,   # at (0.0, -146.0, -216.0)
-    ("block_bank_l", "clutch"): 1.4,   # at (229.7, 21.6, 21.6)
-    ("block_bank_r", "clutch"): 1.4,   # at (229.7, -21.6, 21.6)
     ("mguh", "turbo_shaft_1"): 1.3,   # at (-122.0, -12.2, 244.9)
     ("mguh", "turbo_shaft_2"): 1.3,   # at (122.0, 3.8, 239.6)
     ("accessory_belt", "hv_motor_k"): 1.2,   # at (-300.3, -140.2, -49.6)
-    ("valve_in_1_1", "water_outlets"): 0.6,   # at (-179.8, -112.2, 63.4)
-    ("valve_in_4_1", "water_outlets"): 0.6,   # at (-58.8, 112.2, 63.4)
-    ("valve_in_5_2", "water_outlets"): 0.6,   # at (58.8, -112.2, 63.4)
-    ("valve_in_8_2", "water_outlets"): 0.6,   # at (179.8, 112.2, 63.4)
     ("cam_sensor_r", "hv_motor_h_1"): 0.5,   # at (262.8, 126.4, 229.5)
     ("cam_sensor_l", "hv_motor_h_0"): 0.4,   # at (262.8, -121.7, 229.5)
-    ("valve_in_2_1", "water_outlets"): 0.3,   # at (-164.3, 111.6, 63.7)
-    ("valve_in_7_2", "water_outlets"): 0.3,   # at (164.3, -111.6, 63.7)
 }
 # --- end KNOWN ---
 
