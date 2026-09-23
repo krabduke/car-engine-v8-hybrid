@@ -177,7 +177,6 @@ EXPECTED = [
     ("mguk", "accessory_pulleys"), ("mguk", "accessory_belt"),
     ("mguk", "crank_damper"), ("mguk", "crank_trigger"),
     ("mguk", "timing_gears"), ("mguk", "timing_cover"),
-    ("inverter", "inverter_connectors"),
     ("ecu", "ecu_connector"),
     ("battery", "battery_modules"),
 
