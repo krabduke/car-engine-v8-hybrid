@@ -88,7 +88,6 @@ EXPECTED = [
     ("tappet_", "valve_"), ("valve_", "valve_spring_"), ("valve_", "collets_"),
     ("collets_", "retainer_"),
     ("camcover", "camcover_bolts"), ("camcover", "oil_filler"),
-    ("camcover", "coil"),
     # The port-injection set, joint by joint. An injector is fitted through
     # the runner wall so its nozzle is in the airstream; the feed union seats
     # on its top; the connector clips over its body; and the crossover pipe
@@ -205,7 +204,6 @@ EXPECTED = [
 
     # the valvetrain runs inside the head and under the cover
     ("camlobe_", "camcover"),
-    ("camshaft_", "camcover"),
     ("valve_", "tappet_"),
 
     # accessories bolt to the castings they are driven from
@@ -301,37 +299,33 @@ TOL = 0.3            # mm, full size: deeper than this is sharing material
 # through a part that nobody meant. Fix them and --shrink; never add to it.
 # --- KNOWN: rewritten by --shrink, never by hand to add ---
 KNOWN = {
-    ("blowoff", "camcover_l"): 32.3,   # at (-132.2, -198.0, 185.7)
-    ("camcover_r", "fuel_hp_line"): 24.5,   # at (25.0, 214.8, 178.8)
-    ("thermostat", "timing_cover"): 14.0,   # at (-263.0, 24.7, 120.9)
+    ("blowoff", "camcover_l"): 14.1,   # at (-116.1, -218.4, 214.4)
+    ("thermostat", "timing_cover"): 14.0,   # at (-266.0, 25.2, 119.6)
     ("fuel_hp_line", "hp_fuel_pump"): 12.5,   # at (22.9, 221.2, 179.1)
-    ("fuel_rail_pfi_r", "hp_fuel_pump"): 7.9,   # at (9.5, 243.7, 142.9)
-    ("inverter", "turbine_housing_2"): 6.5,   # at (228.9, 0.0, 227.9)
-    ("cam_journals_l_ex", "camcover_l"): 5.9,   # at (22.8, -153.3, 198.6)
-    ("cam_journals_r_in", "camcover_r"): 5.9,   # at (-162.2, 198.6, 153.3)
-    ("blowoff", "breathers"): 4.3,   # at (-124.7, -218.0, 214.4)
-    ("cam_journals_l_in", "camcover_l"): 4.0,   # at (22.8, -198.6, 153.3)
-    ("cam_journals_r_ex", "camcover_r"): 4.0,   # at (34.1, 146.1, 196.2)
-    ("fuel_hp_line", "fuel_rail_pfi_crossover"): 3.9,   # at (221.5, 239.1, 132.8)
+    ("fuel_rail_pfi_r", "hp_fuel_pump"): 7.9,   # at (-13.0, 243.6, 142.9)
+    ("inverter", "turbine_housing_2"): 6.5,   # at (228.9, 19.7, 228.2)
+    ("camcover_r", "fuel_hp_line"): 5.0,   # at (88.4, 235.2, 178.0)
+    ("blowoff", "breathers"): 4.3,   # at (-123.5, -221.8, 214.7)
+    ("fuel_hp_line", "fuel_rail_pfi_crossover"): 3.9,   # at (221.5, 241.9, 136.6)
     ("hv_motor_h_0", "mguh"): 3.9,   # at (-144.0, -20.1, 255.8)
     ("hv_motor_h_1", "mguh"): 3.9,   # at (144.0, 20.1, 255.8)
-    ("bedplate", "bellhousing"): 3.3,   # at (230.3, 0.0, -110.9)
-    ("head_l", "pfi_injector_1"): 3.2,   # at (-154.5, -183.7, 104.4)
-    ("head_l", "pfi_injector_3"): 3.2,   # at (-52.5, -183.7, 104.4)
-    ("head_l", "pfi_injector_5"): 3.2,   # at (49.5, -183.7, 104.4)
-    ("head_l", "pfi_injector_7"): 3.2,   # at (151.5, -183.7, 104.4)
-    ("head_r", "pfi_injector_2"): 3.2,   # at (-135.5, 183.7, 104.4)
-    ("head_r", "pfi_injector_4"): 3.2,   # at (-33.5, 183.7, 104.4)
-    ("head_r", "pfi_injector_6"): 3.2,   # at (68.5, 183.7, 104.4)
-    ("head_r", "pfi_injector_8"): 3.2,   # at (170.5, 183.7, 104.4)
-    ("belt_idler", "sensors"): 2.5,   # at (-229.0, 154.8, -35.4)
+    ("bedplate", "bellhousing"): 3.3,   # at (231.8, 53.4, -107.2)
+    ("head_l", "pfi_injector_1"): 3.2,   # at (-159.9, -183.5, 105.4)
+    ("head_l", "pfi_injector_3"): 3.2,   # at (-57.9, -183.5, 105.4)
+    ("head_l", "pfi_injector_5"): 3.2,   # at (44.1, -183.5, 105.4)
+    ("head_l", "pfi_injector_7"): 3.2,   # at (146.1, -183.5, 105.4)
+    ("head_r", "pfi_injector_2"): 3.2,   # at (-140.9, 183.5, 105.4)
+    ("head_r", "pfi_injector_4"): 3.2,   # at (-38.9, 183.5, 105.4)
+    ("head_r", "pfi_injector_6"): 3.2,   # at (63.1, 183.5, 105.4)
+    ("head_r", "pfi_injector_8"): 3.2,   # at (165.1, 183.5, 105.4)
+    ("belt_idler", "sensors"): 2.5,   # at (-222.7, 154.5, -36.3)
     ("breathers", "dry_sump_lines"): 2.0,   # at (-252.0, -244.1, -78.6)
-    ("battery", "dry_sump_lines"): 1.7,   # at (0.0, -146.0, -216.0)
+    ("battery", "dry_sump_lines"): 1.7,   # at (-176.1, -162.9, -216.0)
     ("mguh", "turbo_shaft_1"): 1.3,   # at (-122.0, -12.2, 244.9)
     ("mguh", "turbo_shaft_2"): 1.3,   # at (122.0, 3.8, 239.6)
-    ("accessory_belt", "hv_motor_k"): 1.2,   # at (-300.3, -140.2, -49.7)
-    ("cam_sensor_r", "hv_motor_h_1"): 0.5,   # at (262.8, 126.4, 229.5)
-    ("cam_sensor_l", "hv_motor_h_0"): 0.4,   # at (262.8, -126.4, 229.5)
+    ("accessory_belt", "hv_motor_k"): 1.2,   # at (-300.1, -143.4, -47.4)
+    ("cam_sensor_r", "hv_motor_h_1"): 0.5,   # at (262.6, 126.5, 232.5)
+    ("cam_sensor_l", "hv_motor_h_0"): 0.4,   # at (262.6, -126.5, 232.5)
 }
 # --- end KNOWN ---
 

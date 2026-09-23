@@ -158,7 +158,7 @@
    "label": "Heads",
    "color": "#7E8A93",
    "parts": 238,
-   "faces": 1977100
+   "faces": 1977364
   },
   {
    "key": "04 Induction",
@@ -1322,14 +1322,14 @@
    "mat": "magnesium",
    "x0": -221.0,
    "x1": 221.0,
-   "f": 1586
+   "f": 1718
   },
   "camcover_r": {
    "g": "03 Heads and Valvetrain",
    "mat": "magnesium",
    "x0": -221.0,
    "x1": 221.0,
-   "f": 1586
+   "f": 1718
   },
   "camlobe_l_ex_1_1": {
    "g": "03 Heads and Valvetrain",

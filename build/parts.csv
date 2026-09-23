@@ -94,8 +94,8 @@ cam_journals_r_ex,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-169
 cam_journals_r_in,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,3136,3136,-169.9,143.8,179.1,209.1,123.9,153.9
 camcover_bolts_l,03 Heads and Valvetrain,titanium,,,,,,,,,,2340,2340,-214.2,214.2,-226.9,-138.3,141.1,229.7
 camcover_bolts_r,03 Heads and Valvetrain,titanium,,,,,,,,,,2340,2340,-214.2,214.2,141.1,229.7,138.3,226.9
-camcover_l,03 Heads and Valvetrain,magnesium,,,,,,,,,,1836,1586,-221.0,221.0,-242.2,-144.9,147.7,245.0
-camcover_r,03 Heads and Valvetrain,magnesium,,,,,,,,,,1836,1586,-221.0,221.0,147.7,245.0,144.9,242.2
+camcover_l,03 Heads and Valvetrain,magnesium,,,,,,,,,,2146,1718,-221.0,221.0,-242.2,-148.2,151.1,245.0
+camcover_r,03 Heads and Valvetrain,magnesium,,,,,,,,,,2146,1718,-221.0,221.0,151.1,245.0,148.2,242.2
 camlobe_l_ex_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-181.2,-170.2,-152.4,-113.2,180.6,207.6
 camlobe_l_ex_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-154.8,-143.8,-152.4,-113.2,180.6,207.6
 camlobe_l_ex_3_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,440,332,-79.2,-68.2,-152.4,-125.4,180.6,219.9
