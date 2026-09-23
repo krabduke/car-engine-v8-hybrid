@@ -541,7 +541,7 @@ def _heat_shields():
                                   _sleeve(leg, gaspath.COLLECTOR_RADII, 1.0)))
         # tie-downs round the drum, on top of the wrap
         for k in (-1.0, 1.0):
-            lv, lf = mesh.ring_torus(0.0, D["r"] + 6.0, 1.2, SEG, 6)
+            lv, lf = mesh.ring_torus(0.0, D["r"] + 4.0, 1.2, SEG, 6)
             lv = mesh.rot_z(lv, math.pi / 2)
             parts.append((mesh.translate(lv, c[0], c[1] + k * 14.0, c[2]),
                           lf))
