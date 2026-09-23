@@ -58,8 +58,11 @@ make viewer     # serve the interactive viewer
 
 ## Verification
 
-`make verify` runs 38 checks. Some are dimensional, measured out of
-`build/parts.csv`. The interesting ones are design rules:
+`make verify` runs `engine/verify.py`, 40 checks, and then ten audits of the
+build: structure, geometry, closed surfaces, interference between parts,
+joints, supports, running clearances, the viewer's manifest and scripts, and
+the vendored copies. In `engine/verify.py` some checks are dimensional,
+measured out of `build/parts.csv`. The interesting ones are design rules:
 
 - **Deck height against the slider-crank.** The deck must sit at throw + rod
   length + compression height, or the piston either never reaches the deck or
