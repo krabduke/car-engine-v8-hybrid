@@ -126,7 +126,7 @@ EXPECTED = [
     ("turbo_centre", "compressor_housing"), ("turbo_centre", "turbine_housing"),
     ("turbo_centre", "turbine_wheel"),
     ("turbo_centre", "mguh"),
-    ("turbo_centre", "collector_"), ("turbo_centre", "charge_pipes"),
+    ("turbo_centre", "charge_pipes"),
     ("turbo_shaft", "turbine_wheel"), ("turbo_shaft", "compressor_wheel"),
     ("turbo_oil", "turbine_housing"), ("turbo_oil", "compressor_housing"),
     # both lines end in a union screwed into the block's vee face, so the
@@ -147,12 +147,9 @@ EXPECTED = [
     ("wastegate", "heat_shields"),
     # the blanket is laced over the turbine and its collector, so it
     # covers everything they contain
-    ("heat_shields", "turbo_centre"),
     ("heat_shields", "compressor_housing"),
-    ("heat_shields", "turbo_oil"),
-    ("heat_shields", "charge_pipes"), ("heat_shields", "primary_"),
+    ("heat_shields", "primary_"),
     ("compressor_inlet", "compressor_housing"),
-        ("compressor_housing", "collector_"),
     ("turbine_housing", "tailpipes"),
     ("turbine_housing", "wastegate"), ("turbine_housing", "heat_shields"),
     # hot-vee: the port flange, its primary and the turbocharger inlet are
@@ -219,7 +216,6 @@ EXPECTED = [
     ("sensors", "knock_sensor_"),
 
     # heat shielding wraps what it shields
-    ("heat_shields", "charge_pipes"),
     ("heat_shields", "turbine_housing"), ("heat_shields", "collector_"),
 
     # fuel and charge
@@ -290,7 +286,6 @@ EXPECTED = [
     ("hv_motor_h_connector_", "mguh"),
     # the MGU-H cable enters the turbo's heat blanket through a grommet,
     # which is the only way into a vee this full
-    ("heat_shields", "hv_"),
 ]
 
 PKG = "engine/parts"
@@ -310,7 +305,6 @@ KNOWN = {
     ("blowoff", "breathers"): 4.3,   # at (-123.5, -221.8, 214.7)
     ("fuel_hp_line", "fuel_rail_pfi_crossover"): 3.9,   # at (221.5, 241.9, 136.6)
     ("hv_motor_h_0", "mguh"): 3.9,   # at (-144.0, -20.1, 255.8)
-    ("hv_motor_h_1", "mguh"): 3.9,   # at (144.0, 20.1, 255.8)
     ("bedplate", "bellhousing"): 3.3,   # at (231.8, 53.4, -107.2)
     ("head_l", "pfi_injector_1"): 3.2,   # at (-159.9, -183.5, 105.4)
     ("head_l", "pfi_injector_3"): 3.2,   # at (-57.9, -183.5, 105.4)
