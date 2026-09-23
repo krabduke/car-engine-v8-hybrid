@@ -232,8 +232,8 @@ alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-371.5,-296.5,-1
 breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,26862,26646,-302.0,138.0,-262.0,239.6,-95.6,250.4
 cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,1152,1152,-188.9,143.8,-228.7,228.7,122.7,228.7
 catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,66590,66474,-196.0,-38.0,-239.7,-115.8,-206.0,-78.0
-collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,7981,7930,-203.6,-119.0,-30.0,94.7,308.0,376.0
-collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,7981,7930,119.0,203.6,-30.0,94.7,308.0,376.0
+collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,8299,8248,-203.6,-123.0,-30.0,94.7,308.0,370.0
+collector_2,05 Turbo and Exhaust,inconel,,,,,,,,,,8299,8248,123.0,203.6,-30.0,94.7,308.0,370.0
 dipstick,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3612,3593,-82.0,-28.0,-168.0,-156.0,-146.0,-134.0
 fuel_feeds_di_l,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3256,2968,-167.0,148.0,-158.5,-128.4,40.3,77.8
 fuel_feeds_di_r,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3256,2968,-148.0,167.0,128.4,158.5,40.3,77.8
@@ -257,14 +257,14 @@ main_shell_4_lower,02 Bottom End,copper_wound,,,,,,,,,,428,404,96.9,109.1,-30.4,
 main_shell_4_upper,02 Bottom End,copper_wound,,,,,,,,,,592,564,96.9,109.1,-30.4,32.1,0.0,30.4
 main_shell_5_lower,02 Bottom End,copper_wound,,,,,,,,,,428,404,199.9,212.1,-30.4,32.1,-30.4,0.0
 main_shell_5_upper,02 Bottom End,copper_wound,,,,,,,,,,592,564,199.9,212.1,-30.4,32.1,0.0,30.4
-primary_1,05 Turbo and Exhaust,inconel,,,,,,,,,,6656,6605,-181.3,-135.5,-110.6,-12.6,140.6,367.3
-primary_2,05 Turbo and Exhaust,inconel,,,,,,,,,,6285,6234,-160.5,-127.0,12.6,110.6,140.6,367.3
-primary_3,05 Turbo and Exhaust,inconel,,,,,,,,,,7398,7347,-159.0,-44.1,-110.6,-7.4,140.6,362.2
-primary_4,05 Turbo and Exhaust,inconel,,,,,,,,,,7027,6976,-158.5,-25.1,6.5,110.6,140.6,362.6
-primary_5,05 Turbo and Exhaust,inconel,,,,,,,,,,7027,6976,25.1,158.5,-110.6,-6.5,140.6,362.6
-primary_6,05 Turbo and Exhaust,inconel,,,,,,,,,,7398,7347,44.1,159.0,7.4,110.6,140.6,362.2
-primary_7,05 Turbo and Exhaust,inconel,,,,,,,,,,6285,6234,127.0,160.5,-110.6,-12.6,140.6,367.3
-primary_8,05 Turbo and Exhaust,inconel,,,,,,,,,,6656,6605,135.5,181.2,12.6,110.6,140.6,367.3
+primary_1,05 Turbo and Exhaust,inconel,,,,,,,,,,6656,6605,-181.3,-135.5,-110.6,-11.0,140.6,364.7
+primary_2,05 Turbo and Exhaust,inconel,,,,,,,,,,6656,6605,-160.5,-127.0,10.9,110.6,140.6,364.7
+primary_3,05 Turbo and Exhaust,inconel,,,,,,,,,,7398,7347,-159.1,-44.1,-110.6,-5.5,140.6,362.1
+primary_4,05 Turbo and Exhaust,inconel,,,,,,,,,,7027,6976,-158.6,-25.1,4.7,110.6,140.6,362.5
+primary_5,05 Turbo and Exhaust,inconel,,,,,,,,,,7027,6976,25.1,158.5,-110.6,-4.7,140.6,362.5
+primary_6,05 Turbo and Exhaust,inconel,,,,,,,,,,7398,7347,44.1,159.0,5.5,110.6,140.6,362.1
+primary_7,05 Turbo and Exhaust,inconel,,,,,,,,,,6656,6605,127.0,160.5,-110.6,-10.9,140.6,364.8
+primary_8,05 Turbo and Exhaust,inconel,,,,,,,,,,6656,6605,135.5,181.2,11.0,110.6,140.6,364.8
 runner_1,04 Induction,alu_forged,,,,,,,,,,3317,3266,-187.5,-137.5,-221.6,-138.9,45.2,116.1
 runner_2,04 Induction,alu_forged,,,,,,,,,,3317,3266,-168.5,-118.5,138.9,221.6,45.2,116.1
 runner_3,04 Induction,alu_forged,,,,,,,,,,3317,3266,-85.5,-35.5,-221.6,-138.9,45.2,116.1
@@ -348,7 +348,7 @@ compressor_wheel_2,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,79.7,116.4,-
 coolant_plumbing,07 Drive and Ancillaries,alu_forged,,,,,,,,,,20374,20014,-282.0,247.5,-191.8,215.0,-49.0,151.8
 dry_sump_lines,07 Drive and Ancillaries,alu_forged,,,,,,,,,,48248,47744,-264.0,119.0,-279.8,-80.9,-217.7,17.3
 head_studs,03 Heads and Valvetrain,alu_cast,,,,,,,,,,12576,15680,-162.5,294.5,-127.0,127.0,39.2,127.0
-heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,48648,48648,-198.2,198.2,-18.0,74.4,308.0,383.2
+heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,48648,48648,-197.1,197.1,-18.0,75.1,308.0,377.2
 oil_pickup,07 Drive and Ancillaries,alu_forged,,,,,,,,,,862,764,-257.5,11.7,-108.4,-15.3,-153.0,-37.1
 retainer_1_0,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-193.0,-166.6,-179.7,-162.9,112.3,135.3
 retainer_1_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,-158.4,-132.0,-179.7,-162.9,112.3,135.3

@@ -97,7 +97,9 @@ def collector_path(bank_pair):
     # it, so the two flanges meet face to face.
     # 4 mm outboard of the turbo, not 16 inboard: inboard, the drum was in
     # the compressor inlet ducts, which cross the vee at this height
-    drum = (tx - ib * 4.0, 0.0, T["z"] + 92.0)
+    # 90 mm up and 25 in radius: the car's engine cover comes down over the
+    # back of the vee, and at 92 and 29 the drum's wrap was 6.5 mm through it
+    drum = (tx - ib * 4.0, 0.0, T["z"] + 90.0)
     end = (inlet[0], inlet[1], inlet[2] + TURBINE_NECK + 8.0)
     return [drum,
             (drum[0] + (inlet[0] - drum[0]) * 0.6, inlet[1] * 0.55,
@@ -111,12 +113,12 @@ def collector_path(bank_pair):
 # caps; the outlet leg leaves from its middle, down to the turbine. A mouth
 # facing fore and aft, which is what it had, took pipes arriving sideways
 # through its own wall.
-COLLECTOR_DRUM = {"half_len": 30.0, "r": 29.0}
+COLLECTOR_DRUM = {"half_len": 30.0, "r": 25.0}
 
 # Four 25 mm primaries merging: 1,960 mm2, which is a 25 mm radius. The
 # mouth is 30 so the four pipes land on its rim with room between them,
 # and it necks to the turbine inlet from there.
-COLLECTOR_RADII = [28.0, 26.0, 23.0, 21.0]
+COLLECTOR_RADII = [24.0, 24.0, 22.0, 21.0]
 
 
 def primary_path(pair, bank, x):

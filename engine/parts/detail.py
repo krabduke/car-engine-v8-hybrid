@@ -533,7 +533,7 @@ def _heat_shields():
         cp = gaspath.collector_path(pair)
         c = cp[0]
         wv, wf = mesh.tube(-D["half_len"] + 12.0, D["half_len"] - 12.0,
-                           D["r"] + 1.0, D["r"] + 5.0, SEG)
+                           D["r"] + 1.0, D["r"] + 4.0, SEG)
         wv = mesh.rot_z(wv, math.pi / 2)
         parts.append((mesh.translate(wv, *c), wf))
         leg = [cp[0], cp[1], cp[2]]
