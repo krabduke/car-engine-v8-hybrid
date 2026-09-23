@@ -305,7 +305,7 @@ KNOWN = {
     ("thermostat", "timing_cover"): 14.0,   # at (-266.0, 25.2, 119.6)
     ("fuel_hp_line", "hp_fuel_pump"): 12.5,   # at (22.9, 221.2, 179.1)
     ("fuel_rail_pfi_r", "hp_fuel_pump"): 7.9,   # at (-13.0, 243.6, 142.9)
-    ("inverter", "turbine_housing_2"): 6.5,   # at (228.9, 19.7, 228.2)
+    ("inverter", "turbine_housing_2"): 6.5,   # at (241.9, -15.2, 227.4)
     ("camcover_r", "fuel_hp_line"): 5.0,   # at (88.4, 235.2, 178.0)
     ("blowoff", "breathers"): 4.3,   # at (-123.5, -221.8, 214.7)
     ("fuel_hp_line", "fuel_rail_pfi_crossover"): 3.9,   # at (221.5, 241.9, 136.6)
@@ -326,8 +326,6 @@ KNOWN = {
     ("mguh", "turbo_shaft_1"): 1.3,   # at (-122.0, -12.2, 244.9)
     ("mguh", "turbo_shaft_2"): 1.3,   # at (122.0, 3.8, 239.6)
     ("accessory_belt", "hv_motor_k"): 1.2,   # at (-300.1, -143.4, -47.4)
-    ("cam_sensor_r", "hv_motor_h_1"): 0.5,   # at (262.6, 126.5, 232.5)
-    ("cam_sensor_l", "hv_motor_h_0"): 0.4,   # at (262.6, -126.5, 232.5)
 }
 # --- end KNOWN ---
 

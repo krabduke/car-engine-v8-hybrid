@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 18,
-   "faces": 199846
+   "faces": 193334
   },
   {
    "key": "02 Bottom End",
@@ -2944,16 +2944,16 @@
   "hv_motor_h_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -229.8,
-   "x1": 276.4,
-   "f": 25014
+   "x0": -148.0,
+   "x1": 344.2,
+   "f": 23682
   },
   "hv_motor_h_1": {
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": 140.0,
-   "x1": 341.5,
-   "f": 25162
+   "x1": 344.2,
+   "f": 19982
   },
   "hv_motor_h_connector_0": {
    "g": "01 Block",
@@ -2973,7 +2973,7 @@
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": -306.0,
-   "x1": 338.5,
+   "x1": 346.5,
    "f": 34190
   },
   "hv_motor_k_connector": {
@@ -2987,14 +2987,14 @@
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": 86.0,
-   "x1": 344.0,
+   "x1": 345.8,
    "f": 23978
   },
   "hv_store_2": {
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": -121.3,
-   "x1": 344.0,
+   "x1": 345.8,
    "f": 23682
   },
   "inverter": {
@@ -3007,7 +3007,7 @@
   "inverter_connectors": {
    "g": "06 Hybrid",
    "mat": "rubber_blk",
-   "x0": 200.0,
+   "x0": 324.0,
    "x1": 356.2,
    "f": 3700
   },

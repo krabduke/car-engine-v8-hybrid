@@ -122,7 +122,7 @@
 
   /* --- engine run controls --------------------------------------------- */
   #run{display:flex; align-items:center; gap:9px; margin-right:10px}
-  #run label{font-size:11px; color:#96A3AB}
+  #run label{font-size:11px; color:var(--ink-soft)}
   #rpm{
     -webkit-appearance:none; appearance:none; width:118px; height:2px;
     background:#36444B; border-radius:2px; outline:none;
@@ -134,7 +134,7 @@
   #rpm::-moz-range-thumb{width:13px; height:13px; border-radius:50%;
     background:#C99A5E; cursor:grab; border:2px solid #12181B}
   #rpm:focus-visible{outline:2px solid #C99A5E; outline-offset:3px}
-  #rpmval{font-size:11px; color:#DCE6EB; font-variant-numeric:tabular-nums;
+  #rpmval{font-size:11px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums;
           min-width:64px; text-align:right}
 
   /* The bottom-left corner carries two things: the firing-order strip, which
