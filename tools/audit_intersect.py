@@ -201,10 +201,7 @@ EXPECTED = [
     # fastener, a bearing, a port or a bracket.
     # ------------------------------------------------------------------
 
-    ("ring_", "block_crankcase"),
-
     ("main_shell", "block_crankcase"),
-    ("piston", "block_crankcase"),
 
     # the valvetrain runs inside the head and under the cover
     ("camlobe_", "camcover"),
