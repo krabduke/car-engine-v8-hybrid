@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 18,
-   "faces": 200363
+   "faces": 200533
   },
   {
    "key": "02 Bottom End",
@@ -186,7 +186,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 42,
-   "faces": 376728
+   "faces": 377744
   }
  ],
  "parts": {
@@ -242,9 +242,9 @@
   "sump": {
    "g": "01 Block",
    "mat": "magnesium",
-   "x0": -196.0,
-   "x1": 196.0,
-   "f": 802
+   "x0": -200.0,
+   "x1": 200.0,
+   "f": 972
   },
   "sump_baffles": {
    "g": "01 Block",
@@ -2335,15 +2335,15 @@
   "fuel_rail_di_l": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -212.0,
-   "x1": 224.0,
+   "x0": -198.0,
+   "x1": 210.0,
    "f": 2286
   },
   "fuel_rail_di_r": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -212.0,
-   "x1": 224.0,
+   "x0": -198.0,
+   "x1": 210.0,
    "f": 2286
   },
   "hp_fuel_pump": {
@@ -3037,7 +3037,7 @@
    "mat": "alu_cast",
    "x0": 250.0,
    "x1": 290.0,
-   "f": 15260
+   "f": 16276
   },
   "flywheel": {
    "g": "07 Drive and Ancillaries",

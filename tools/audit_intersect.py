@@ -45,6 +45,8 @@ EXPECTED = [
 
     ("sump", "sump_baffles"), ("sump", "sump_bolt"), ("sump", "sump_drain"),
     ("sump", "oil_pickup"),
+    # the sump bolts go up through its flange into the bedplate
+    ("bedplate", "sump_bolt"),
 
     # rotating assembly
     ("crankshaft", "conrod"),

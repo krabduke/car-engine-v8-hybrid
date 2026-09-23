@@ -25,14 +25,6 @@ TOL = 0.3            # mm, full size: further off than this is not touching
 
 # --- DETACHED: rewritten by --shrink, never by hand to add ---
 DETACHED = {
-    "alternator": 4,
-    "battery": 2,
-    "clutch": 1,
-    "fuel_rail_di_l": 1,
-    "fuel_rail_di_r": 1,
-    "inverter": 1,
-    "oil_cooler": 1,
-    "sump_bolts": 30,
 }
 # --- end DETACHED ---
 

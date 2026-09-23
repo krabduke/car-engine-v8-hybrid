@@ -6,7 +6,7 @@ block_crankcase,01 Block,alu_cast,,,,,,,,,,26806,18621,-231.6,231.6,-101.1,101.1
 block_liners,01 Block,alu_cast,,,,,,,,,,21536,21536,-210.0,210.0,-123.7,123.7,10.3,123.7
 gallery_plugs,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3336,4140,-201.3,201.3,-105.5,105.5,-50.0,-34.0
 mount_bosses,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1124,1400,-107.0,-83.0,-134.0,134.0,-42.0,-18.0
-sump,01 Block,magnesium,,,,,,,,,,840,802,-196.0,196.0,-92.1,92.1,-179.8,-118.0
+sump,01 Block,magnesium,,,,,,,,,,1036,972,-200.0,200.0,-94.0,94.0,-179.8,-118.0
 sump_baffles,01 Block,alu_forged,,,,,,,,,,784,680,-149.5,149.5,-67.7,67.7,-161.1,-127.0
 sump_drain,01 Block,steel_nitrided,,,,,,,,,,372,444,57.6,83.5,-13.0,13.0,-190.5,-177.5
 water_outlets,07 Drive and Ancillaries,alu_cast,,,,,,,,,,3256,3112,206.5,254.3,-194.2,194.2,27.5,105.7
@@ -228,7 +228,7 @@ valve_in_8_1,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,128.2,162.2,97.
 valve_in_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,162.8,196.8,97.9,179.2,66.9,130.3
 accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,2576,2562,-313.0,-299.0,-199.3,253.6,-161.4,164.1
 accessory_pulleys,07 Drive and Ancillaries,alu_forged,,,,,,,,,,848,848,-313.0,-291.0,-181.9,122.0,-62.0,130.0
-alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-371.5,-296.5,-189.5,-110.5,46.0,131.0
+alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1960,1700,-371.5,-296.5,-189.5,-110.5,46.0,130.5
 breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,26862,26646,-302.0,138.0,-262.0,239.6,-95.6,250.4
 cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,1152,1152,-188.9,143.8,-228.7,228.7,122.7,228.7
 catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,66590,66474,-196.0,-38.0,-239.7,-115.8,-206.0,-78.0
@@ -239,9 +239,9 @@ fuel_feeds_di_l,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3256,2968,-167.
 fuel_feeds_di_r,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3256,2968,-148.0,167.0,128.4,158.5,40.3,77.8
 fuel_hp_line,01 Block,alu_cast,,,,,,,,,,4958,4886,22.9,227.5,155.4,252.5,42.0,183.5
 fuel_rail_di_crossover,07 Drive and Ancillaries,alu_forged,,,,,,,,,,11840,11768,206.0,228.0,-161.9,161.9,40.8,136.0
-fuel_rail_di_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-212.0,224.0,-176.9,-138.9,25.8,63.8
-fuel_rail_di_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-212.0,224.0,138.9,176.9,25.8,63.8
-hp_fuel_pump,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1372,1190,-21.7,37.7,191.3,244.7,123.0,212.0
+fuel_rail_di_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-198.0,210.0,-176.9,-138.9,25.8,63.8
+fuel_rail_di_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2193,2286,-198.0,210.0,138.9,176.9,25.8,63.8
+hp_fuel_pump,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1372,1190,-21.7,37.7,191.3,244.7,123.0,211.5
 main_cap_1,02 Bottom End,alu_forged,,,,,,,,,,1572,1538,-219.0,-193.0,-50.0,50.0,-76.0,0.0
 main_cap_2,02 Bottom End,alu_forged,,,,,,,,,,1572,1538,-116.0,-90.0,-50.0,50.0,-76.0,0.0
 main_cap_3,02 Bottom End,alu_forged,,,,,,,,,,1572,1538,-13.0,13.0,-50.0,50.0,-76.0,0.0
@@ -321,10 +321,10 @@ turbo_oil_1,05 Turbo and Exhaust,braided,,,,,,,,,,900,798,-168.9,-112.3,-18.6,18
 turbo_oil_2,05 Turbo and Exhaust,braided,,,,,,,,,,900,798,119.1,175.7,-18.6,18.7,86.0,207.4
 wastegate_1,05 Turbo and Exhaust,inconel,,,,,,,,,,2092,2287,-184.6,-86.4,14.0,83.0,284.1,324.0
 wastegate_2,05 Turbo and Exhaust,inconel,,,,,,,,,,2092,2287,86.4,184.6,-83.0,-14.0,284.1,324.0
-battery,06 Hybrid,anodised,,,,,,,,,,5880,5100,-195.8,195.8,-187.8,187.8,-277.0,-216.0
+battery,06 Hybrid,anodised,,,,,,,,,,5880,5100,-195.8,195.8,-187.8,187.8,-276.5,-216.0
 battery_modules,06 Hybrid,anodised,,,,,,,,,,2548,2210,-189.1,189.1,-188.0,188.0,-264.2,-223.8
 battery_terminals,06 Hybrid,copper_wound,,,,,,,,,,1072,1180,-134.6,139.7,-124.0,124.0,-216.0,-202.0
-ecu,06 Hybrid,anodised,,,,,,,,,,1960,1700,-59.4,108.4,152.1,239.9,-67.0,-28.0
+ecu,06 Hybrid,anodised,,,,,,,,,,1960,1700,-59.4,108.4,152.1,239.9,-67.0,-28.5
 ecu_connector,06 Hybrid,rubber_blk,,,,,,,,,,1896,2270,107.5,132.8,169.6,222.4,-58.5,-41.5
 hv_motor_h_0,01 Block,hv_orange,,,,,,,,,,25086,25014,-229.8,276.4,-195.5,2.6,193.5,390.6
 hv_motor_h_1,01 Block,hv_orange,,,,,,,,,,25234,25162,140.0,341.5,-2.2,195.5,193.5,390.6
@@ -334,12 +334,12 @@ hv_motor_k,01 Block,hv_orange,,,,,,,,,,34262,34190,-306.0,338.5,-272.0,4.9,-210.
 hv_motor_k_connector,01 Block,hv_orange,,,,,,,,,,706,800,-312.0,-284.4,-84.0,-64.0,-9.0,9.0
 hv_store_1,01 Block,hv_orange,,,,,,,,,,24050,23978,86.0,344.0,-257.0,4.0,-213.7,202.4
 hv_store_2,01 Block,hv_orange,,,,,,,,,,23754,23682,-121.3,344.0,-1.7,173.0,-213.7,202.4
-inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,226.2,325.8,-78.8,78.8,153.0,236.0
+inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,226.2,325.8,-78.8,78.8,153.0,235.1
 inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,3112,3700,200.0,356.2,-11.0,11.0,189.4,205.4
 mguh,06 Hybrid,alu_forged,,,,,,,,,,1568,1568,-166.0,166.0,-24.0,24.0,231.0,279.0
 mguk,06 Hybrid,alu_forged,,,,,,,,,,8180,7452,-340.0,-232.0,-84.5,84.5,-84.5,84.5
 bellhousing,07 Drive and Ancillaries,magnesium,,,,,,,,,,13302,13834,230.0,318.5,-166.0,166.0,-166.0,166.0
-clutch,07 Drive and Ancillaries,alu_cast,,,,,,,,,,15308,15260,250.0,290.0,-82.6,82.6,-82.6,82.6
+clutch,07 Drive and Ancillaries,alu_cast,,,,,,,,,,16324,16276,250.0,290.0,-82.6,82.6,-82.6,82.6
 flywheel,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,9524,9764,247.0,275.0,-103.5,103.5,-103.5,103.5
 pump_oil,07 Drive and Ancillaries,alu_forged,,,,,,,,,,13372,13811,-244.0,-121.4,-250.5,-155.3,-58.6,22.7
 pump_water,07 Drive and Ancillaries,alu_forged,,,,,,,,,,7264,7180,-298.0,-185.0,115.1,266.2,-93.5,29.9
@@ -383,7 +383,7 @@ retainer_8_1,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,166.6,193.0,162
 retainer_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,134.5,160.9,114.2,137.1,161.0,177.8
 retainer_8_3,03 Heads and Valvetrain,titanium,,,,,,,,,,4064,4064,164.1,190.5,114.2,137.1,161.0,177.8
 sensors,07 Drive and Ancillaries,anodised,,,,,,,,,,4910,5750,-225.0,205.0,-155.5,155.5,-234.0,31.0
-sump_bolts,07 Drive and Ancillaries,magnesium,,,,,,,,,,28296,35280,-200.4,200.4,-98.4,98.4,-132.0,-118.0
+sump_bolts,07 Drive and Ancillaries,magnesium,,,,,,,,,,28296,35280,-200.4,200.4,-91.4,91.4,-132.0,-102.0
 tappet_1_0,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-193.8,-165.8,-187.7,-157.9,108.7,141.1
 tappet_1_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-159.2,-131.2,-187.7,-157.9,108.7,141.1
 tappet_1_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,5588,5588,-191.3,-163.3,-143.0,-110.6,156.0,185.8
@@ -470,6 +470,6 @@ intercooler_l,04 Induction,anodised,,,,,,,,,,2820,2496,-164.0,180.0,-262.3,-201.
 intercooler_r,04 Induction,anodised,,,,,,,,,,2820,2496,-164.0,180.0,201.7,262.4,39.6,115.6
 knock_sensor_l,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0,-163.5,-116.0,-10.0,33.9
 knock_sensor_r,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0,116.0,163.5,-9.9,34.0
-oil_cooler,07 Drive and Ancillaries,anodised,,,,,,,,,,2240,1926,-111.0,91.0,-293.2,-194.0,-118.2,-29.8
+oil_cooler,07 Drive and Ancillaries,anodised,,,,,,,,,,2240,1926,-111.0,91.0,-293.2,-199.0,-118.2,-29.8
 oil_filter,07 Drive and Ancillaries,anodised,,,,,,,,,,3804,4418,-33.4,85.4,-286.5,-100.5,-129.4,-10.6
 thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2500,2824,-280.0,-196.0,-52.0,52.0,58.0,162.0
