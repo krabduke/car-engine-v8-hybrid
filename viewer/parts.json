@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 18,
-   "faces": 114523
+   "faces": 200363
   },
   {
    "key": "02 Bottom End",
@@ -158,21 +158,21 @@
    "label": "Heads",
    "color": "#7E8A93",
    "parts": 238,
-   "faces": 1111820
+   "faces": 1977100
   },
   {
    "key": "04 Induction",
    "label": "Induction",
    "color": "#5A6B74",
    "parts": 41,
-   "faces": 46216
+   "faces": 71136
   },
   {
    "key": "05 Turbo and Exhaust",
    "label": "Turbo",
    "color": "#A8663C",
    "parts": 34,
-   "faces": 110182
+   "faces": 178006
   },
   {
    "key": "06 Hybrid",
@@ -186,7 +186,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 42,
-   "faces": 266912
+   "faces": 376728
   }
  ],
  "parts": {
@@ -265,7 +265,7 @@
    "mat": "alu_cast",
    "x0": 206.5,
    "x1": 254.3,
-   "f": 1632
+   "f": 3112
   },
   "windage_tray": {
    "g": "01 Block",
@@ -2246,7 +2246,7 @@
    "mat": "rubber_blk",
    "x0": -313.0,
    "x1": -299.0,
-   "f": 786
+   "f": 2562
   },
   "accessory_pulleys": {
    "g": "07 Drive and Ancillaries",
@@ -2267,7 +2267,7 @@
    "mat": "alu_forged",
    "x0": -302.0,
    "x1": 138.0,
-   "f": 4224
+   "f": 26646
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
@@ -2281,21 +2281,21 @@
    "mat": "alu_forged",
    "x0": -196.0,
    "x1": -38.0,
-   "f": 66030
+   "f": 66474
   },
   "collector_1": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -184.9,
-   "x1": -105.2,
-   "f": 1866
+   "x1": -108.0,
+   "f": 2502
   },
   "collector_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
-   "x0": 105.2,
+   "x0": 108.0,
    "x1": 184.9,
-   "f": 1866
+   "f": 2502
   },
   "dipstick": {
    "g": "07 Drive and Ancillaries",
@@ -2309,28 +2309,28 @@
    "mat": "steel_nitrided",
    "x0": -167.0,
    "x1": 148.0,
-   "f": 600
+   "f": 2968
   },
   "fuel_feeds_di_r": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
    "x0": -148.0,
    "x1": 167.0,
-   "f": 600
+   "f": 2968
   },
   "fuel_hp_line": {
    "g": "01 Block",
    "mat": "alu_cast",
    "x0": 22.9,
    "x1": 227.5,
-   "f": 890
+   "f": 4886
   },
   "fuel_rail_di_crossover": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": 206.0,
    "x1": 228.0,
-   "f": 1112
+   "f": 11768
   },
   "fuel_rail_di_l": {
    "g": "07 Drive and Ancillaries",
@@ -2463,112 +2463,112 @@
    "mat": "inconel",
    "x0": -181.3,
    "x1": -116.2,
-   "f": 1411
+   "f": 6605
   },
   "primary_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -160.0,
    "x1": -115.8,
-   "f": 1411
+   "f": 6234
   },
   "primary_3": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -140.1,
    "x1": -44.1,
-   "f": 1411
+   "f": 7718
   },
   "primary_4": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -139.7,
    "x1": -25.1,
-   "f": 1411
+   "f": 7347
   },
   "primary_5": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 25.1,
    "x1": 139.7,
-   "f": 1411
+   "f": 7347
   },
   "primary_6": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 44.1,
    "x1": 140.1,
-   "f": 1411
+   "f": 7718
   },
   "primary_7": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 115.8,
    "x1": 160.0,
-   "f": 1411
+   "f": 6234
   },
   "primary_8": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 116.2,
-   "x1": 181.3,
-   "f": 1411
+   "x1": 181.2,
+   "f": 6605
   },
   "runner_1": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -187.5,
    "x1": -137.5,
-   "f": 1411
+   "f": 3266
   },
   "runner_2": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -168.5,
    "x1": -118.5,
-   "f": 1411
+   "f": 3266
   },
   "runner_3": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -85.5,
    "x1": -35.5,
-   "f": 1411
+   "f": 3266
   },
   "runner_4": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -66.5,
    "x1": -16.5,
-   "f": 1411
+   "f": 3266
   },
   "runner_5": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 16.5,
    "x1": 66.5,
-   "f": 1411
+   "f": 3266
   },
   "runner_6": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 35.5,
    "x1": 85.5,
-   "f": 1411
+   "f": 3266
   },
   "runner_7": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 118.5,
    "x1": 168.5,
-   "f": 1411
+   "f": 3266
   },
   "runner_8": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": 137.5,
    "x1": 187.5,
-   "f": 1411
+   "f": 3266
   },
   "starter": {
    "g": "07 Drive and Ancillaries",
@@ -2581,8 +2581,8 @@
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": 161.5,
-   "x1": 230.0,
-   "f": 1112
+   "x1": 234.5,
+   "f": 11768
   },
   "fuel_rail_pfi_l": {
    "g": "07 Drive and Ancillaries",
@@ -2833,22 +2833,22 @@
    "g": "05 Turbo and Exhaust",
    "mat": "rubber_blk",
    "x0": -106.7,
-   "x1": -1.3,
-   "f": 11018
+   "x1": -3.0,
+   "f": 18968
   },
   "compressor_inlet_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "rubber_blk",
-   "x0": 1.3,
+   "x0": 3.0,
    "x1": 106.7,
-   "f": 11018
+   "f": 18968
   },
   "tailpipes": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -357.9,
    "x1": 357.9,
-   "f": 3984
+   "f": 9284
   },
   "turbine_housing_1": {
    "g": "05 Turbo and Exhaust",
@@ -2897,14 +2897,14 @@
    "mat": "inconel",
    "x0": -184.6,
    "x1": -86.4,
-   "f": 1807
+   "f": 2287
   },
   "wastegate_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 86.4,
    "x1": 184.6,
-   "f": 1807
+   "f": 2287
   },
   "battery": {
    "g": "06 Hybrid",
@@ -2944,16 +2944,16 @@
   "hv_motor_h_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -230.1,
+   "x0": -229.8,
    "x1": 276.4,
-   "f": 9326
+   "f": 25014
   },
   "hv_motor_h_1": {
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": 140.0,
    "x1": 341.5,
-   "f": 9326
+   "f": 25162
   },
   "hv_motor_h_connector_0": {
    "g": "01 Block",
@@ -2974,7 +2974,7 @@
    "mat": "hv_orange",
    "x0": -306.0,
    "x1": 338.5,
-   "f": 12878
+   "f": 34190
   },
   "hv_motor_k_connector": {
    "g": "01 Block",
@@ -2988,14 +2988,14 @@
    "mat": "hv_orange",
    "x0": 86.0,
    "x1": 344.0,
-   "f": 9326
+   "f": 23978
   },
   "hv_store_2": {
    "g": "01 Block",
    "mat": "hv_orange",
    "x0": -121.3,
    "x1": 344.0,
-   "f": 9326
+   "f": 23682
   },
   "inverter": {
    "g": "06 Hybrid",
@@ -3058,7 +3058,7 @@
    "mat": "alu_forged",
    "x0": -298.0,
    "x1": -185.0,
-   "f": 6292
+   "f": 7180
   },
   "compressor_wheel_1": {
    "g": "05 Turbo and Exhaust",
@@ -3079,14 +3079,14 @@
    "mat": "alu_forged",
    "x0": -282.0,
    "x1": 247.5,
-   "f": 5436
+   "f": 20014
   },
   "dry_sump_lines": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": -264.0,
    "x1": 119.0,
-   "f": 6008
+   "f": 47744
   },
   "head_studs": {
    "g": "03 Heads and Valvetrain",
@@ -3100,14 +3100,14 @@
    "mat": "inconel",
    "x0": -201.6,
    "x1": 201.6,
-   "f": 20864
+   "f": 20736
   },
   "oil_pickup": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": -257.5,
    "x1": 11.7,
-   "f": 320
+   "f": 764
   },
   "retainer_1_0": {
    "g": "03 Heads and Valvetrain",
@@ -3618,224 +3618,224 @@
    "mat": "spring_steel",
    "x0": -191.1,
    "x1": -168.6,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_1_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -156.4,
    "x1": -133.9,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_1_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -188.6,
    "x1": -166.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_1_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -159.0,
    "x1": -136.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_2_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -172.1,
    "x1": -149.6,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_2_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -137.4,
    "x1": -114.9,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_2_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -169.6,
    "x1": -147.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_2_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -140.0,
    "x1": -117.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_3_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -89.1,
    "x1": -66.6,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_3_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -54.4,
    "x1": -31.9,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_3_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -86.6,
    "x1": -64.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_3_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -57.0,
    "x1": -34.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_4_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -70.1,
    "x1": -47.6,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_4_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -35.4,
    "x1": -12.9,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_4_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -67.6,
    "x1": -45.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_4_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": -38.0,
    "x1": -15.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_5_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 12.9,
    "x1": 35.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_5_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 47.6,
    "x1": 70.1,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_5_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 15.4,
    "x1": 38.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_5_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 45.0,
    "x1": 67.6,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_6_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 31.9,
    "x1": 54.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_6_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 66.6,
    "x1": 89.1,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_6_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 34.4,
    "x1": 57.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_6_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 64.0,
    "x1": 86.6,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_7_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 114.9,
    "x1": 137.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_7_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 149.6,
    "x1": 172.1,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_7_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 117.4,
    "x1": 140.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_7_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 147.0,
    "x1": 169.6,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_8_0": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 133.9,
    "x1": 156.4,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_8_1": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 168.6,
    "x1": 191.1,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_8_2": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 136.4,
    "x1": 159.0,
-   "f": 13524
+   "f": 40564
   },
   "valve_spring_8_3": {
    "g": "03 Heads and Valvetrain",
    "mat": "spring_steel",
    "x0": 166.0,
    "x1": 188.6,
-   "f": 13524
+   "f": 40564
   },
   "belt_idler": {
    "g": "07 Drive and Ancillaries",
@@ -3877,7 +3877,7 @@
    "mat": "rubber_blk",
    "x0": -150.0,
    "x1": 150.0,
-   "f": 2240
+   "f": 12320
   },
   "engine_mount_l": {
    "g": "07 Drive and Ancillaries",
@@ -4104,13 +4104,13 @@
      ],
      [
       -162.5,
-      -209.7634706731619,
-      40.0
+      -199.70987518046903,
+      72.21360135886071
      ],
      [
       -162.5,
-      -187.98068043899403,
-      102.13601358860717
+      -179.60268419508333,
+      82.17480747373395
      ],
      [
       -162.5,
@@ -4180,13 +4180,13 @@
      ],
      [
       -143.5,
-      209.7634706731619,
-      40.0
+      199.70987518046903,
+      72.21360135886071
      ],
      [
       -143.5,
-      187.98068043899403,
-      102.13601358860717
+      179.60268419508333,
+      82.17480747373395
      ],
      [
       -143.5,
@@ -4256,13 +4256,13 @@
      ],
      [
       -60.5,
-      -209.7634706731619,
-      40.0
+      -199.70987518046903,
+      72.21360135886071
      ],
      [
       -60.5,
-      -187.98068043899403,
-      102.13601358860717
+      -179.60268419508333,
+      82.17480747373395
      ],
      [
       -60.5,
@@ -4332,13 +4332,13 @@
      ],
      [
       -41.5,
-      209.7634706731619,
-      40.0
+      199.70987518046903,
+      72.21360135886071
      ],
      [
       -41.5,
-      187.98068043899403,
-      102.13601358860717
+      179.60268419508333,
+      82.17480747373395
      ],
      [
       -41.5,
@@ -4408,13 +4408,13 @@
      ],
      [
       41.5,
-      -209.7634706731619,
-      40.0
+      -199.70987518046903,
+      72.21360135886071
      ],
      [
       41.5,
-      -187.98068043899403,
-      102.13601358860717
+      -179.60268419508333,
+      82.17480747373395
      ],
      [
       41.5,
@@ -4484,13 +4484,13 @@
      ],
      [
       60.5,
-      209.7634706731619,
-      40.0
+      199.70987518046903,
+      72.21360135886071
      ],
      [
       60.5,
-      187.98068043899403,
-      102.13601358860717
+      179.60268419508333,
+      82.17480747373395
      ],
      [
       60.5,
@@ -4560,13 +4560,13 @@
      ],
      [
       143.5,
-      -209.7634706731619,
-      40.0
+      -199.70987518046903,
+      72.21360135886071
      ],
      [
       143.5,
-      -187.98068043899403,
-      102.13601358860717
+      -179.60268419508333,
+      82.17480747373395
      ],
      [
       143.5,
@@ -4636,13 +4636,13 @@
      ],
      [
       162.5,
-      209.7634706731619,
-      40.0
+      199.70987518046903,
+      72.21360135886071
      ],
      [
       162.5,
-      187.98068043899403,
-      102.13601358860717
+      179.60268419508333,
+      82.17480747373395
      ],
      [
       162.5,
