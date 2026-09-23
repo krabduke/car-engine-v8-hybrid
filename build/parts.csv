@@ -1,8 +1,8 @@
 name,collection,material,pivot_x_mm,pivot_y_mm,pivot_z_mm,axis_x,axis_y,axis_z,spin,role,cyl,verts,faces,x_min_mm,x_max_mm,y_min_mm,y_max_mm,z_min_mm,z_max_mm
 bedplate,01 Block,alu_cast,,,,,,,,,,3880,4398,-231.8,231.8,-94.2,94.2,-118.0,-9.6
-block_bank_l,01 Block,alu_cast,,,,,,,,,,5531,2702,-231.1,231.1,-24.2,122.2,-24.2,122.2
-block_bank_r,01 Block,alu_cast,,,,,,,,,,12268,8342,-231.1,231.1,-122.2,126.2,-24.2,126.2
-block_crankcase,01 Block,alu_cast,,,,,,,,,,26806,18621,-231.6,231.6,-101.1,101.1,-96.0,28.0
+block_bank_l,01 Block,alu_cast,,,,,,,,,,10596,7748,-231.1,231.1,-126.2,122.2,-24.2,126.2
+block_bank_r,01 Block,alu_cast,,,,,,,,,,10588,7744,-231.1,231.1,-122.2,126.2,-24.2,126.2
+block_crankcase,01 Block,alu_cast,,,,,,,,,,19555,13486,-231.6,231.6,-101.1,101.1,-96.0,28.0
 block_liners,01 Block,alu_cast,,,,,,,,,,21536,21536,-210.0,210.0,-123.7,123.7,10.3,123.7
 gallery_plugs,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3336,4140,-201.3,201.3,-105.5,105.5,-50.0,-34.0
 mount_bosses,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1124,1400,-107.0,-83.0,-134.0,134.0,-42.0,-18.0
@@ -174,8 +174,8 @@ collets_in_8_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,145.2,1
 collets_in_8_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,1152,1145,179.8,185.8,167.6,180.1,120.3,132.8
 head_gasket_l,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,4152,4096,-230.5,211.5,-141.1,-40.3,40.3,141.1
 head_gasket_r,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,4152,4096,-211.5,230.5,40.3,141.1,40.3,141.1
-head_l,03 Heads and Valvetrain,alu_cast,,,,,,,,,,3338,3136,-237.3,218.3,-215.1,-47.4,58.7,224.4
-head_r,03 Heads and Valvetrain,alu_cast,,,,,,,,,,3142,2760,-218.3,237.3,47.4,215.1,58.7,224.4
+head_l,03 Heads and Valvetrain,alu_cast,,,,,,,,,,2154,1952,-237.3,218.3,-215.1,-47.4,58.7,224.4
+head_r,03 Heads and Valvetrain,alu_cast,,,,,,,,,,2154,1952,-218.3,237.3,47.4,215.1,58.7,224.4
 injector_di_1,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-162.5,-100.5,-142.1,-123.1,66.5,85.5
 injector_di_2,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-143.5,-81.5,123.1,142.1,66.5,85.5
 injector_di_3,03 Heads and Valvetrain,steel_nitrided,,,,,,,,,,668,740,-60.5,1.5,-142.1,-123.1,66.5,85.5

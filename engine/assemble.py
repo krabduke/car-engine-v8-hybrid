@@ -83,6 +83,9 @@ def apply_cutter(ob, verts, faces):
     origin has been moved to. Returns 1 if the cut went through."""
     cutter = make_object(ob.name + "__cut", verts, faces,
                          bpy.context.scene.collection)
+    # an exact boolean reads inside from outside off the normals, and a
+    # cutter is joined from pieces authored in whatever winding they came in
+    recalc_normals(cutter)
     m = ob.modifiers.new("cut", "BOOLEAN")
     m.operation = "DIFFERENCE"
     m.solver = "EXACT"
@@ -192,6 +195,11 @@ def main():
             spec_p = piv.get(name)
             ob = make_object(name, v, f, cols[cname],
                              pivot=spec_p[0] if spec_p else None)
+            # outward before cutting, not only after: the boolean takes the
+            # part's inside from its normals too, and 187 parts here have
+            # pieces authored inside out
+            if name in cutters:
+                recalc_normals(ob)
             for cv, cf in cutters.get(name, ()):
                 n_cut += 1
                 n_cut_ok += apply_cutter(ob, cv, cf)
