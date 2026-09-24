@@ -143,7 +143,7 @@ def _hv_loom():
 
     # and forward under the sump to the MGU-K on the crank nose, coming in
     # to its connector from outboard, round the underside of the timing case
-    motor = (Y["mguk_x"] - 14.0, -Y["mguk_r"], 0.0)
+    motor = (Y["mguk_x"] - 4.0, -Y["mguk_r"], 0.0)
     src = plug(-1.0)
     path = [src,
             (drop_x - 4.0, -120.0, iz - ih * 0.55),

@@ -445,21 +445,21 @@
   "crank_damper": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -380.0,
-   "x1": -342.0,
+   "x0": -368.0,
+   "x1": -330.0,
    "f": 3141
   },
   "crank_trigger": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -344.0,
-   "x1": -334.0,
+   "x0": -332.0,
+   "x1": -322.0,
    "f": 2996
   },
   "crankshaft": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -378.0,
+   "x0": -366.0,
    "x1": 248.0,
    "f": 53840,
    "pivot": {
@@ -2244,21 +2244,21 @@
   "accessory_belt": {
    "g": "07 Drive and Ancillaries",
    "mat": "rubber_blk",
-   "x0": -371.7,
-   "x1": -351.7,
+   "x0": -359.7,
+   "x1": -339.7,
    "f": 388
   },
   "accessory_pulleys": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -372.7,
-   "x1": -347.2,
+   "x0": -360.7,
+   "x1": -335.2,
    "f": 1338
   },
   "alternator": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_cast",
-   "x0": -347.2,
+   "x0": -335.2,
    "x1": -290.5,
    "f": 1360
   },
@@ -2965,15 +2965,15 @@
   "hv_motor_k": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -332.0,
+   "x0": -316.0,
    "x1": 286.0,
    "f": 34190
   },
   "hv_motor_k_connector": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -338.0,
-   "x1": -310.4,
+   "x0": -322.0,
+   "x1": -294.4,
    "f": 800
   },
   "hv_store_1": {
@@ -3014,7 +3014,7 @@
   "mguk": {
    "g": "06 Hybrid",
    "mat": "alu_forged",
-   "x0": -334.0,
+   "x0": -322.0,
    "x1": -290.0,
    "f": 7452
   },
@@ -3049,7 +3049,7 @@
   "pump_water": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -372.7,
+   "x0": -360.7,
    "x1": -247.0,
    "f": 6282
   },
@@ -3833,14 +3833,14 @@
   "belt_idler": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
-   "x0": -372.7,
+   "x0": -360.7,
    "x1": -290.0,
    "f": 2398
   },
   "belt_tensioner": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -372.7,
+   "x0": -360.7,
    "x1": -290.0,
    "f": 3113
   },

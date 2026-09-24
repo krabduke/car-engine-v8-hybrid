@@ -86,7 +86,7 @@ CRANK = {
                      #        needs little counterweight, and the skirts have to clear it
     "web_t": 13.0,
     "n_mains": 5,
-    "nose_len": 166.0,           # through the case, MGU-K and trigger to
+    "nose_len": 154.0,           # through the case, MGU-K and trigger to
                                  # the front of the damper hub
     "nose_r": 20.0,
     "flange_r": 62.0,
@@ -282,8 +282,8 @@ HYBRID = {
     # On the crank nose between the trigger wheel and the timing case, and
     # bolted to the case's front face. At 108 mm long it ran from x -340 to
     # -232, through the case, the crank gear and the belt.
-    "mguk_len": 44.0,
-    "mguk_x": -312.0,
+    "mguk_len": 32.0,
+    "mguk_x": -306.0,
     # The rotor rides on the turbo shaft, so it lives inside the bearing
     # housing's waist -- 72 mm long at 40 mm radius put it through both
     # wheels and out of both ends of the housing it is supposed to be in.
@@ -725,9 +725,9 @@ def cylinders():
 # never met each other or the cam gears, so the camshafts were not driven.
 #
 # One axial stack, front to back:
-#     damper, whose grooved inertia ring is the crank pulley   -380 .. -342
-#     crank trigger wheel                                      -341 .. -335
-#     MGU-K, on the nose and bolted to the case                -334 .. -290
+#     damper, whose grooved inertia ring is the crank pulley   -368 .. -330
+#     crank trigger wheel                                      -330 .. -324
+#     MGU-K, on the nose and bolted to the case                -322 .. -290
 #     timing case front plate                                  -290 .. -284
 #     gear train                                               -269 .. -250
 #     block front face                                         -231
@@ -737,10 +737,13 @@ FRONT = {
     "case_plate": 6.0,
     "case_wall": 4.0,
     "case_margin": 10.0,         # outline clearance round the gear tips
-    "mguk_front": -334.0,
-    "trigger_x": -339.0,
-    "damper_x0": -382.0,         # the damper spans x0 + 2 .. x0 + 40
-    "belt_x": -361.7,            # on the damper's five grooves
+    "mguk_front": -322.0,
+    "trigger_x": -327.0,
+    # The damper spans x0 + 2 .. x0 + 40. Its face is the front of the
+    # engine, and in the hypercar the tub's engine bulkhead is 11 mm ahead
+    # of it: the stack was 12 mm longer and the damper touched it.
+    "damper_x0": -370.0,
+    "belt_x": -349.7,            # on the damper's five grooves
     "belt_w": 20.0,
     "belt_t": 4.5,
     "pulley_w": 22.0,
