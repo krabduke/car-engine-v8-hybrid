@@ -195,7 +195,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 41,
-   "faces": 385553
+   "faces": 385997
   }
  ],
  "parts": {
@@ -2275,8 +2275,8 @@
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": -306.0,
-   "x1": 161.2,
-   "f": 32640
+   "x1": -130.8,
+   "f": 33084
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
