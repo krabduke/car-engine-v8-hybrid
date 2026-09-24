@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 18,
-   "faces": 208874
+   "faces": 212130
   },
   {
    "key": "02 Bottom End",
@@ -179,14 +179,14 @@
    "label": "Hybrid",
    "color": "#C06A30",
    "parts": 9,
-   "faces": 27220
+   "faces": 29478
   },
   {
    "key": "07 Drive and Ancillaries",
    "label": "Drive",
    "color": "#77706A",
    "parts": 41,
-   "faces": 381263
+   "faces": 380819
   }
  ],
  "parts": {
@@ -2265,9 +2265,9 @@
   "breathers": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -317.0,
+   "x0": -306.0,
    "x1": 138.0,
-   "f": 29532
+   "f": 29088
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
@@ -2937,15 +2937,15 @@
   "hv_motor_h_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -142.3,
-   "x1": 294.7,
-   "f": 31082
+   "x0": -141.5,
+   "x1": 297.6,
+   "f": 34338
   },
   "hv_motor_h_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 153.7,
-   "x1": 294.7,
+   "x0": 155.2,
+   "x1": 297.6,
    "f": 23534
   },
   "hv_motor_h_connector_0": {
@@ -3000,9 +3000,9 @@
   "inverter_connectors": {
    "g": "06 Hybrid",
    "mat": "rubber_blk",
-   "x0": 266.0,
+   "x0": 265.0,
    "x1": 298.2,
-   "f": 3700
+   "f": 5130
   },
   "mguh": {
    "g": "06 Hybrid",
@@ -3016,7 +3016,7 @@
    "mat": "alu_forged",
    "x0": -322.0,
    "x1": -290.0,
-   "f": 7452
+   "f": 8280
   },
   "bellhousing": {
    "g": "07 Drive and Ancillaries",

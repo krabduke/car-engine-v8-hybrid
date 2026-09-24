@@ -229,7 +229,7 @@ valve_in_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,162.8,196.8,97.
 accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,388,388,-359.7,-339.7,-198.5,265.5,-110.5,186.5
 accessory_pulleys,07 Drive and Ancillaries,alu_forged,,,,,,,,,,1242,1338,-360.7,-335.2,-197.0,-123.0,3.0,77.0
 alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1568,1360,-335.2,-290.5,-199.5,-120.5,0.0,84.5
-breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,29748,29532,-317.0,138.0,-268.0,239.6,-95.6,250.4
+breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,29304,29088,-306.0,138.0,-265.0,232.9,-92.8,246.6
 cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,1152,1152,-188.9,143.8,-228.7,228.7,122.7,228.7
 catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,66590,66474,-196.0,-38.0,-239.7,-115.8,-206.0,-78.0
 collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,6391,6340,-203.6,-123.0,-30.0,94.7,308.0,370.0
@@ -325,8 +325,8 @@ battery_modules,06 Hybrid,anodised,,,,,,,,,,2548,2210,-189.1,189.1,-188.0,188.0,
 battery_terminals,06 Hybrid,copper_wound,,,,,,,,,,1072,1180,-134.6,139.7,-124.0,124.0,-218.0,-204.0
 ecu,06 Hybrid,anodised,,,,,,,,,,1960,1700,-59.4,108.4,152.1,239.9,-67.0,-28.5
 ecu_connector,06 Hybrid,rubber_blk,,,,,,,,,,1896,2270,107.5,132.8,169.6,222.4,-58.5,-41.5
-hv_motor_h_0,01 Block,hv_orange,,,,,,,,,,31154,31082,-142.3,294.7,-115.9,2.3,187.8,385.7
-hv_motor_h_1,01 Block,hv_orange,,,,,,,,,,23606,23534,153.7,294.7,-117.1,2.3,179.8,385.6
+hv_motor_h_0,01 Block,hv_orange,,,,,,,,,,34410,34338,-141.5,297.6,-47.6,3.2,220.8,403.6
+hv_motor_h_1,01 Block,hv_orange,,,,,,,,,,23606,23534,155.2,297.6,-31.6,3.1,220.8,391.5
 hv_motor_h_connector_0,01 Block,hv_orange,,,,,,,,,,706,800,-157.0,-136.3,-8.0,8.0,374.0,388.0
 hv_motor_h_connector_1,01 Block,hv_orange,,,,,,,,,,706,800,139.0,159.7,-8.0,8.0,374.0,388.0
 hv_motor_k,01 Block,hv_orange,,,,,,,,,,34262,34190,-316.0,286.0,-184.6,-54.0,-205.0,191.5
@@ -334,9 +334,9 @@ hv_motor_k_connector,01 Block,hv_orange,,,,,,,,,,706,800,-322.0,-294.4,-84.0,-64
 hv_store_1,01 Block,hv_orange,,,,,,,,,,27306,27234,104.6,285.0,-173.6,-85.5,-215.6,191.2
 hv_store_2,01 Block,hv_orange,,,,,,,,,,23754,23682,-119.5,285.0,85.5,173.6,-215.6,191.2
 inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,251.2,300.8,-78.8,78.8,154.0,216.3
-inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,3112,3700,266.0,298.2,-100.0,100.0,179.6,195.6
+inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,4328,5130,265.0,298.2,-100.0,100.0,179.6,227.6
 mguh,06 Hybrid,alu_forged,,,,,,,,,,1568,1568,-166.0,166.0,-24.0,24.0,231.0,279.0
-mguk,06 Hybrid,alu_forged,,,,,,,,,,8180,7452,-322.0,-290.0,-84.5,84.5,-84.5,84.5
+mguk,06 Hybrid,alu_forged,,,,,,,,,,8280,8280,-322.0,-290.0,-81.0,81.0,-81.0,81.0
 bellhousing,07 Drive and Ancillaries,magnesium,,,,,,,,,,13004,13464,232.0,318.5,-166.0,166.0,-166.0,166.0
 clutch,07 Drive and Ancillaries,alu_cast,,,,,,,,,,16324,16276,250.0,290.0,-82.6,82.6,-82.6,82.6
 flywheel,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,5780,6020,248.0,275.0,-96.0,96.0,-96.0,96.0
