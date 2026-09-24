@@ -144,7 +144,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 18,
-   "faces": 176610
+   "faces": 208874
   },
   {
    "key": "02 Bottom End",
@@ -172,7 +172,7 @@
    "label": "Turbo",
    "color": "#A8663C",
    "parts": 34,
-   "faces": 212952
+   "faces": 220372
   },
   {
    "key": "06 Hybrid",
@@ -185,8 +185,8 @@
    "key": "07 Drive and Ancillaries",
    "label": "Drive",
    "color": "#77706A",
-   "parts": 42,
-   "faces": 377744
+   "parts": 41,
+   "faces": 381263
   }
  ],
  "parts": {
@@ -445,21 +445,21 @@
   "crank_damper": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -350.0,
-   "x1": -312.0,
+   "x0": -380.0,
+   "x1": -342.0,
    "f": 3141
   },
   "crank_trigger": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -313.0,
-   "x1": -287.0,
+   "x0": -344.0,
+   "x1": -334.0,
    "f": 2996
   },
   "crankshaft": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -340.0,
+   "x0": -378.0,
    "x1": 248.0,
    "f": 53840,
    "pivot": {
@@ -2244,30 +2244,30 @@
   "accessory_belt": {
    "g": "07 Drive and Ancillaries",
    "mat": "rubber_blk",
-   "x0": -313.0,
-   "x1": -299.0,
-   "f": 2562
+   "x0": -371.7,
+   "x1": -351.7,
+   "f": 388
   },
   "accessory_pulleys": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -313.0,
-   "x1": -291.0,
-   "f": 848
+   "x0": -372.7,
+   "x1": -347.2,
+   "f": 1338
   },
   "alternator": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_cast",
-   "x0": -371.5,
-   "x1": -296.5,
-   "f": 1700
+   "x0": -347.2,
+   "x1": -290.5,
+   "f": 1360
   },
   "breathers": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -302.0,
+   "x0": -317.0,
    "x1": 138.0,
-   "f": 26646
+   "f": 29532
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
@@ -2321,9 +2321,9 @@
   "fuel_hp_line": {
    "g": "01 Block",
    "mat": "alu_cast",
-   "x0": 22.9,
-   "x1": 227.5,
-   "f": 4886
+   "x0": -319.5,
+   "x1": -191.4,
+   "f": 6218
   },
   "fuel_rail_di_crossover": {
    "g": "07 Drive and Ancillaries",
@@ -2349,9 +2349,9 @@
   "hp_fuel_pump": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_cast",
-   "x0": -21.7,
-   "x1": 37.7,
-   "f": 1190
+   "x0": -334.0,
+   "x1": -269.0,
+   "f": 5836
   },
   "main_cap_1": {
    "g": "02 Bottom End",
@@ -2461,16 +2461,16 @@
   "primary_1": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
-   "x0": -181.3,
+   "x0": -181.0,
    "x1": -135.5,
-   "f": 6605
+   "f": 8460
   },
   "primary_2": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": -160.5,
    "x1": -127.0,
-   "f": 6605
+   "f": 8460
   },
   "primary_3": {
    "g": "05 Turbo and Exhaust",
@@ -2505,14 +2505,14 @@
    "mat": "inconel",
    "x0": 127.0,
    "x1": 160.5,
-   "f": 6605
+   "f": 8460
   },
   "primary_8": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
    "x0": 135.5,
-   "x1": 181.2,
-   "f": 6605
+   "x1": 181.0,
+   "f": 8460
   },
   "runner_1": {
    "g": "04 Induction",
@@ -2569,13 +2569,6 @@
    "x0": 137.5,
    "x1": 187.5,
    "f": 3266
-  },
-  "starter": {
-   "g": "07 Drive and Ancillaries",
-   "mat": "alu_cast",
-   "x0": 82.0,
-   "x1": 194.0,
-   "f": 444
   },
   "fuel_rail_pfi_crossover": {
    "g": "07 Drive and Ancillaries",
@@ -2944,71 +2937,71 @@
   "hv_motor_h_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -148.0,
-   "x1": 303.4,
-   "f": 20130
+   "x0": -142.3,
+   "x1": 294.7,
+   "f": 31082
   },
   "hv_motor_h_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 140.0,
-   "x1": 303.9,
-   "f": 17466
+   "x0": 153.7,
+   "x1": 294.7,
+   "f": 23534
   },
   "hv_motor_h_connector_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -153.0,
-   "x1": -132.3,
+   "x0": -157.0,
+   "x1": -136.3,
    "f": 800
   },
   "hv_motor_h_connector_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 135.0,
-   "x1": 155.7,
+   "x0": 139.0,
+   "x1": 159.7,
    "f": 800
   },
   "hv_motor_k": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -306.0,
-   "x1": 306.0,
-   "f": 30638
+   "x0": -332.0,
+   "x1": 286.0,
+   "f": 34190
   },
   "hv_motor_k_connector": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -312.0,
-   "x1": -284.4,
+   "x0": -338.0,
+   "x1": -310.4,
    "f": 800
   },
   "hv_store_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 86.0,
-   "x1": 305.0,
-   "f": 20426
+   "x0": 104.6,
+   "x1": 285.0,
+   "f": 27234
   },
   "hv_store_2": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -121.3,
-   "x1": 305.0,
-   "f": 20130
+   "x0": -119.5,
+   "x1": 285.0,
+   "f": 23682
   },
   "inverter": {
    "g": "06 Hybrid",
    "mat": "anodised",
-   "x0": 226.2,
-   "x1": 325.8,
+   "x0": 251.2,
+   "x1": 300.8,
    "f": 2040
   },
   "inverter_connectors": {
    "g": "06 Hybrid",
    "mat": "rubber_blk",
-   "x0": 286.0,
-   "x1": 318.2,
+   "x0": 266.0,
+   "x1": 298.2,
    "f": 3700
   },
   "mguh": {
@@ -3021,16 +3014,16 @@
   "mguk": {
    "g": "06 Hybrid",
    "mat": "alu_forged",
-   "x0": -340.0,
-   "x1": -232.0,
+   "x0": -334.0,
+   "x1": -290.0,
    "f": 7452
   },
   "bellhousing": {
    "g": "07 Drive and Ancillaries",
    "mat": "magnesium",
-   "x0": 230.0,
+   "x0": 232.0,
    "x1": 318.5,
-   "f": 13834
+   "f": 13464
   },
   "clutch": {
    "g": "07 Drive and Ancillaries",
@@ -3042,9 +3035,9 @@
   "flywheel": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
-   "x0": 247.0,
+   "x0": 248.0,
    "x1": 275.0,
-   "f": 9764
+   "f": 6020
   },
   "pump_oil": {
    "g": "07 Drive and Ancillaries",
@@ -3056,9 +3049,9 @@
   "pump_water": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -298.0,
-   "x1": -185.0,
-   "f": 7180
+   "x0": -372.7,
+   "x1": -247.0,
+   "f": 6282
   },
   "compressor_wheel_1": {
    "g": "05 Turbo and Exhaust",
@@ -3077,9 +3070,9 @@
   "coolant_plumbing": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -282.0,
+   "x0": -324.0,
    "x1": 247.5,
-   "f": 20014
+   "f": 20382
   },
   "dry_sump_lines": {
    "g": "07 Drive and Ancillaries",
@@ -3574,16 +3567,16 @@
   "timing_cover": {
    "g": "07 Drive and Ancillaries",
    "mat": "magnesium",
-   "x0": -284.0,
-   "x1": -266.0,
-   "f": 1124
+   "x0": -290.0,
+   "x1": -231.9,
+   "f": 2020
   },
   "timing_gears": {
    "g": "07 Drive and Ancillaries",
    "mat": "magnesium",
-   "x0": -269.0,
+   "x0": -284.0,
    "x1": -250.0,
-   "f": 41268
+   "f": 40258
   },
   "turbine_wheel_1": {
    "g": "05 Turbo and Exhaust",
@@ -3840,16 +3833,16 @@
   "belt_idler": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
-   "x0": -280.0,
-   "x1": -212.0,
-   "f": 532
+   "x0": -372.7,
+   "x1": -290.0,
+   "f": 2398
   },
   "belt_tensioner": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -334.0,
-   "x1": -246.0,
-   "f": 934
+   "x0": -372.7,
+   "x1": -290.0,
+   "f": 3113
   },
   "blowoff": {
    "g": "04 Induction",
@@ -3953,8 +3946,8 @@
    "g": "07 Drive and Ancillaries",
    "mat": "anodised",
    "x0": -111.0,
-   "x1": 91.0,
-   "f": 1926
+   "x1": 88.8,
+   "f": 1704
   },
   "oil_filter": {
    "g": "07 Drive and Ancillaries",
@@ -3966,9 +3959,9 @@
   "thermostat": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_cast",
-   "x0": -280.0,
-   "x1": -196.0,
-   "f": 2824
+   "x0": -324.0,
+   "x1": -290.0,
+   "f": 2214
   }
  },
  "kinematics": {
@@ -4152,14 +4145,24 @@
       166.63678405442178
      ],
      [
+      -164.498,
+      -106.61162077034565,
+      233.0
+     ],
+     [
       -165.83,
-      -90.53526525735703,
+      -115.9189844883917,
       301.0
+     ],
+     [
+      -164.165,
+      -113.38061256528823,
+      341.0
      ],
      [
       -151.77,
       -84.61239743678226,
-      351.0
+      357.0
      ],
      [
       -148.0,
@@ -4228,14 +4231,24 @@
       166.63678405442178
      ],
      [
+      -143.542,
+      106.61162077034565,
+      233.0
+     ],
+     [
       -143.57,
-      90.53526525735703,
+      115.9189844883917,
       301.0
+     ],
+     [
+      -143.535,
+      113.38061256528823,
+      341.0
      ],
      [
       -143.79,
       84.61239743678226,
-      351.0
+      357.0
      ],
      [
       -148.0,
@@ -4608,14 +4621,24 @@
       166.63678405442178
      ],
      [
+      143.542,
+      -106.61162077034565,
+      233.0
+     ],
+     [
       143.57,
-      -90.53526525735703,
+      -115.9189844883917,
       301.0
+     ],
+     [
+      143.535,
+      -113.38061256528823,
+      341.0
      ],
      [
       143.79,
       -84.61239743678226,
-      351.0
+      357.0
      ],
      [
       148.0,
@@ -4684,14 +4707,24 @@
       166.63678405442178
      ],
      [
+      164.498,
+      106.61162077034565,
+      233.0
+     ],
+     [
       165.83,
-      90.53526525735703,
+      115.9189844883917,
       301.0
+     ],
+     [
+      164.165,
+      113.38061256528823,
+      341.0
      ],
      [
       151.77,
       84.61239743678226,
-      351.0
+      357.0
      ],
      [
       148.0,

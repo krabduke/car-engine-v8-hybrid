@@ -127,7 +127,7 @@ def main():
             "valve_spring_1_0", "retainer_8_3", "tappet_5_2",
             "collets_in_1_1", "main_shell_3_upper", "rod_shell_5_lower",
             "main_cap_2", "cam_caps", "rod_bolts", "fuel_rail_di_l",
-            "collector_1", "alternator", "starter", "catch_tank",
+            "collector_1", "alternator", "catch_tank",
             "plenum_l", "plenum_r", "throttle_l",
             "turbine_housing_1", "turbine_housing_2",
             "compressor_housing_1", "compressor_housing_2",
