@@ -131,13 +131,11 @@ EXPECTED = [
     # the lines are in open vee from z 92 all the way to the bearing
     # housing, and in the block only at z 86, which is the face.
     ("turbo_oil", "block_bank_"),
-    # NOT a joint. The compressor eyes face each other across 29 mm of vee,
-    # so each inlet duct has to turn up within a couple of centimetres of
-    # its own eye and overhangs the wheel's inducer doing it, and the charge
-    # pipe leaving the volute clips the exducer. See the note in
-    # `turbo._inlets`: the fix is the turbos' clocking, not the duct. These
-    # two lines are here to say so, not to say it is fine.
-    ("compressor_inlet", "compressor_wheel"),
+    # NOT a joint. The charge pipe leaving the volute clips the exducer;
+    # the fix is the turbos' clocking, not the pipe. This line is here to
+    # say so, not to say it is fine. (The inlet used to overhang the
+    # inducer too, turning up inside its own eye; the shared T-piece meets
+    # both eyes square and clear of the wheels.)
     ("charge_pipes", "compressor_wheel"),
     ("wastegate", "compressor_housing"), ("wastegate", "collector_"),
     ("wastegate", "heat_shields"),
@@ -146,7 +144,6 @@ EXPECTED = [
     ("heat_shields", "compressor_housing"),
     ("heat_shields", "primary_"),
     ("compressor_inlet", "compressor_housing"),
-    ("turbine_housing", "tailpipes"),
     ("turbine_housing", "wastegate"), ("turbine_housing", "heat_shields"),
     # hot-vee: the port flange, its primary and the turbocharger inlet are
     # one assembly packed into the vee, and primary/turbos is already here
@@ -157,6 +154,11 @@ EXPECTED = [
     ("pump_water", "coolant_plumbing"),
     # the pump's discharge goes into the crankcase's sloping front face
     ("coolant_plumbing", "block_crankcase"),
+    # the scavenge lines are let into the pan's flank, the breather
+    # galleries into their unions in the cam covers' crowns, and the
+    # shipping covers are bolted through the intake flanges
+    ("dry_sump_lines", "sump"), ("breathers", "camcover"),
+    ("port_covers", "compressor_inlet"),
     ("oil_filter", "oil_cooler"),
     ("thermostat", "coolant_plumbing"),
     ("catch_tank", "breathers"),

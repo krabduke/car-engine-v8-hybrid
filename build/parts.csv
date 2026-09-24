@@ -229,7 +229,7 @@ valve_in_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,162.8,196.8,97.
 accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,388,388,-359.7,-339.7,-198.5,265.5,-110.5,186.5
 accessory_pulleys,07 Drive and Ancillaries,alu_forged,,,,,,,,,,1242,1338,-360.7,-335.2,-197.0,-123.0,3.0,77.0
 alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1568,1360,-335.2,-290.5,-199.5,-120.5,0.0,84.5
-breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,29304,29088,-306.0,138.0,-265.0,232.9,-92.8,246.6
+breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,32856,32640,-306.0,161.2,-265.0,232.9,-92.8,246.6
 cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,1152,1152,-188.9,143.8,-228.7,228.7,122.7,228.7
 catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,66590,66474,-196.0,-38.0,-239.7,-115.8,-206.0,-78.0
 collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,6391,6340,-203.6,-123.0,-30.0,94.7,308.0,370.0
@@ -276,8 +276,8 @@ runner_8,04 Induction,alu_forged,,,,,,,,,,3317,3266,137.5,187.5,138.9,221.6,45.2
 fuel_rail_pfi_crossover,07 Drive and Ancillaries,alu_forged,,,,,,,,,,11840,11768,161.5,234.5,-247.9,247.9,133.0,148.0
 fuel_rail_pfi_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,372,-180.5,161.5,-251.9,-237.9,129.0,143.0
 fuel_rail_pfi_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,444,372,-161.5,180.5,237.9,251.9,129.0,143.0
-fuel_rail_pfi_union_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,128,66,155.5,167.5,-254.9,-234.9,126.0,146.0
-fuel_rail_pfi_union_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,128,66,174.5,186.5,234.9,254.9,126.0,146.0
+fuel_rail_pfi_union_l,07 Drive and Ancillaries,alu_forged,,,,,,,,,,362,187,-202.5,167.5,-254.9,-234.9,126.0,146.0
+fuel_rail_pfi_union_r,07 Drive and Ancillaries,alu_forged,,,,,,,,,,362,187,-183.5,186.5,234.9,254.9,126.0,146.0
 pfi_feed_1,04 Induction,steel_nitrided,,,,,,,,,,148,76,-166.0,-159.0,-246.5,-234.4,128.2,139.1
 pfi_feed_2,04 Induction,steel_nitrided,,,,,,,,,,148,76,-147.0,-140.0,234.4,246.5,128.2,139.1
 pfi_feed_3,04 Induction,steel_nitrided,,,,,,,,,,148,76,-64.0,-57.0,-246.5,-234.4,128.2,139.1
@@ -309,9 +309,9 @@ throttle_r,04 Induction,alu_forged,,,,,,,,,,3434,3530,-56.0,56.0,264.7,320.7,14.
 trumpets,04 Induction,carbon,,,,,,,,,,3312,3312,-195.5,195.5,-254.8,254.8,37.0,103.0
 compressor_housing_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2562,2546,-142.9,-40.4,-72.9,72.9,182.1,327.9
 compressor_housing_2,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2562,2546,40.4,142.9,-72.9,72.9,182.1,327.9
-compressor_inlet_1,05 Turbo and Exhaust,rubber_blk,,,,,,,,,,18304,18968,-106.7,-3.0,-74.5,32.7,213.6,391.0
-compressor_inlet_2,05 Turbo and Exhaust,rubber_blk,,,,,,,,,,18304,18968,3.0,106.7,-32.7,74.5,213.6,391.0
-tailpipes,05 Turbo and Exhaust,inconel,,,,,,,,,,9284,9284,-357.9,357.9,-115.3,115.3,228.6,321.9
+compressor_inlet,05 Turbo and Exhaust,alu_cast,,,,,,,,,,20303,18602,-52.0,52.0,-52.0,52.0,206.0,376.0
+port_covers,01 Block,cover_red,,,,,,,,,,1578,1572,-359.4,359.4,-119.4,119.4,245.0,393.0
+tailpipes,05 Turbo and Exhaust,inconel,,,,,,,,,,26896,26896,-358.3,358.3,-113.8,113.8,221.6,321.9
 turbine_housing_1,05 Turbo and Exhaust,inconel,,,,,,,,,,2912,2850,-258.7,-139.6,-83.7,94.7,171.3,338.7
 turbine_housing_2,05 Turbo and Exhaust,inconel,,,,,,,,,,2912,2850,139.6,258.7,-83.7,94.7,171.3,338.7
 turbo_centre_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,7406,7406,-173.2,-113.5,-38.7,38.7,201.4,293.7
@@ -337,7 +337,7 @@ inverter,06 Hybrid,anodised,,,,,,,,,,2352,2040,251.2,300.8,-78.8,78.8,154.0,216.
 inverter_connectors,06 Hybrid,rubber_blk,,,,,,,,,,4328,5130,265.0,298.2,-100.0,100.0,179.6,227.6
 mguh,06 Hybrid,alu_forged,,,,,,,,,,1568,1568,-166.0,166.0,-24.0,24.0,231.0,279.0
 mguk,06 Hybrid,alu_forged,,,,,,,,,,8280,8280,-322.0,-290.0,-81.0,81.0,-81.0,81.0
-bellhousing,07 Drive and Ancillaries,magnesium,,,,,,,,,,13004,13464,232.0,318.5,-166.0,166.0,-166.0,166.0
+bellhousing,07 Drive and Ancillaries,magnesium,,,,,,,,,,12808,13294,232.0,318.5,-166.0,166.0,-166.0,166.0
 clutch,07 Drive and Ancillaries,alu_cast,,,,,,,,,,16324,16276,250.0,290.0,-82.6,82.6,-82.6,82.6
 flywheel,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,5780,6020,248.0,275.0,-96.0,96.0,-96.0,96.0
 pump_oil,07 Drive and Ancillaries,alu_forged,,,,,,,,,,13372,13811,-244.0,-121.4,-250.5,-155.3,-58.6,22.7
@@ -345,7 +345,7 @@ pump_water,07 Drive and Ancillaries,alu_forged,,,,,,,,,,6366,6282,-360.7,-247.0,
 compressor_wheel_1,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,-116.4,-79.7,-38.3,38.3,217.0,292.8
 compressor_wheel_2,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,79.7,116.4,-38.3,38.3,217.0,292.8
 coolant_plumbing,07 Drive and Ancillaries,alu_forged,,,,,,,,,,20670,20382,-324.0,247.5,-191.8,253.0,-86.5,210.0
-dry_sump_lines,07 Drive and Ancillaries,alu_forged,,,,,,,,,,48248,47744,-264.0,119.0,-279.8,-80.9,-217.7,17.3
+dry_sump_lines,07 Drive and Ancillaries,alu_forged,,,,,,,,,,49358,48854,-264.0,119.0,-279.7,-68.7,-217.7,17.3
 head_studs,03 Heads and Valvetrain,alu_cast,,,,,,,,,,12576,15680,-162.5,294.5,-127.0,127.0,39.2,127.0
 heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,48648,48648,-197.2,197.2,-18.0,71.3,308.3,375.2
 oil_pickup,07 Drive and Ancillaries,alu_forged,,,,,,,,,,862,764,-257.5,11.7,-108.4,-15.3,-153.0,-37.1
@@ -458,7 +458,7 @@ belt_tensioner,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2726,3113,-360.7,-29
 blowoff,04 Induction,rubber_blk,,,,,,,,,,572,572,-154.4,-86.4,-313.9,-246.0,136.0,228.0
 cam_sensor_l,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,-140.6,-79.3,170.9,247.8
 cam_sensor_r,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,265.7,79.4,140.7,170.9,247.8
-charge_pipes,04 Induction,rubber_blk,,,,,,,,,,12616,12320,-150.0,150.0,-381.0,381.2,36.5,296.2
+charge_pipes,04 Induction,rubber_blk,,,,,,,,,,12616,12320,-150.0,150.0,-381.0,381.0,36.5,296.2
 engine_mount_l,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1004,978,-131.0,-59.0,-185.0,-125.0,-52.0,-8.0
 engine_mount_r,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1004,978,-131.0,-59.0,125.0,185.0,-52.0,-8.0
 exhaust_flange_l,05 Turbo and Exhaust,inconel,,,,,,,,,,3008,3440,-193.5,174.5,-76.7,-16.1,133.5,194.1

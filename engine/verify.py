@@ -132,7 +132,7 @@ def main():
             "turbine_housing_1", "turbine_housing_2",
             "compressor_housing_1", "compressor_housing_2",
             "turbo_centre_1", "turbine_wheel_1", "compressor_wheel_1",
-            "wastegate_1", "wastegate_2", "compressor_inlet_1",
+            "wastegate_1", "wastegate_2", "compressor_inlet",
             "flywheel", "clutch",
             "mguk", "mguh", "ecu", "pump_oil", "pump_water",
             # without this the engine cannot be timed or started

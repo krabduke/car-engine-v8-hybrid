@@ -29,6 +29,15 @@
  "boost": 3.4,
  "compression": 14.2,
  "palette": {
+  "cover_red": {
+   "rgb": [
+    0.56,
+    0.05,
+    0.04
+   ],
+   "metal": 0.0,
+   "rough": 0.48
+  },
   "alu_cast": {
    "rgb": [
     0.318,
@@ -143,8 +152,8 @@
    "key": "01 Block",
    "label": "Block",
    "color": "#6E7478",
-   "parts": 18,
-   "faces": 212130
+   "parts": 19,
+   "faces": 213702
   },
   {
    "key": "02 Bottom End",
@@ -171,8 +180,8 @@
    "key": "05 Turbo and Exhaust",
    "label": "Turbo",
    "color": "#A8663C",
-   "parts": 34,
-   "faces": 220372
+   "parts": 33,
+   "faces": 218650
   },
   {
    "key": "06 Hybrid",
@@ -186,7 +195,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 41,
-   "faces": 380819
+   "faces": 385553
   }
  ],
  "parts": {
@@ -2266,8 +2275,8 @@
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
    "x0": -306.0,
-   "x1": 138.0,
-   "f": 29088
+   "x1": 161.2,
+   "f": 32640
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
@@ -2594,16 +2603,16 @@
   "fuel_rail_pfi_union_l": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": 155.5,
+   "x0": -202.5,
    "x1": 167.5,
-   "f": 66
+   "f": 187
   },
   "fuel_rail_pfi_union_r": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": 174.5,
+   "x0": -183.5,
    "x1": 186.5,
-   "f": 66
+   "f": 187
   },
   "pfi_feed_1": {
    "g": "04 Induction",
@@ -2822,26 +2831,26 @@
    "x1": 142.9,
    "f": 2546
   },
-  "compressor_inlet_1": {
+  "compressor_inlet": {
    "g": "05 Turbo and Exhaust",
-   "mat": "rubber_blk",
-   "x0": -106.7,
-   "x1": -3.0,
-   "f": 18968
+   "mat": "alu_cast",
+   "x0": -52.0,
+   "x1": 52.0,
+   "f": 18602
   },
-  "compressor_inlet_2": {
-   "g": "05 Turbo and Exhaust",
-   "mat": "rubber_blk",
-   "x0": 3.0,
-   "x1": 106.7,
-   "f": 18968
+  "port_covers": {
+   "g": "01 Block",
+   "mat": "cover_red",
+   "x0": -359.4,
+   "x1": 359.4,
+   "f": 1572
   },
   "tailpipes": {
    "g": "05 Turbo and Exhaust",
    "mat": "inconel",
-   "x0": -357.9,
-   "x1": 357.9,
-   "f": 9284
+   "x0": -358.3,
+   "x1": 358.3,
+   "f": 26896
   },
   "turbine_housing_1": {
    "g": "05 Turbo and Exhaust",
@@ -3023,7 +3032,7 @@
    "mat": "magnesium",
    "x0": 232.0,
    "x1": 318.5,
-   "f": 13464
+   "f": 13294
   },
   "clutch": {
    "g": "07 Drive and Ancillaries",
@@ -3079,7 +3088,7 @@
    "mat": "alu_forged",
    "x0": -264.0,
    "x1": 119.0,
-   "f": 47744
+   "f": 48854
   },
   "head_studs": {
    "g": "03 Heads and Valvetrain",

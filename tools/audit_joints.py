@@ -48,10 +48,10 @@ ROOT_PART = "block_crankcase"
 # off a cross-plane crank.
 CIRCUITS = [
     ("charge, front turbo to the left bank",
-     ["compressor_inlet_1", "compressor_housing_1", "charge_pipes",
+     ["compressor_inlet", "compressor_housing_1", "charge_pipes",
       "throttle_l", "plenum_l", "runner_1", "head_l"]),
     ("charge, rear turbo to the right bank",
-     ["compressor_inlet_2", "compressor_housing_2", "charge_pipes",
+     ["compressor_inlet", "compressor_housing_2", "charge_pipes",
       "throttle_r", "plenum_r", "runner_2", "head_r"]),
     ("charge cooling: the core stands in the plenum it cools",
      ["plenum_l", "intercooler_l"]),
