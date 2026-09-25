@@ -188,7 +188,7 @@
    "label": "Hybrid",
    "color": "#C06A30",
    "parts": 10,
-   "faces": 53432
+   "faces": 60184
   },
   {
    "key": "07 Drive and Ancillaries",
@@ -3977,7 +3977,7 @@
    "mat": "rubber_blk",
    "x0": -201.5,
    "x1": 260.9,
-   "f": 23954
+   "f": 30706
   }
  },
  "kinematics": {

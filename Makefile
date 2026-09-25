@@ -18,6 +18,7 @@ verify:
 	python3 tools/audit_intersect.py
 	python3 tools/audit_joints.py
 	python3 tools/audit_support.py
+	python3 tools/audit_ports.py
 	python3 tools/audit_clearance.py
 	python3 tools/audit_manifest.py
 	python3 tools/check_vendor.py
