@@ -139,6 +139,26 @@ CIRCUITS = [
     ("engine management is bolted to the engine",
      ["block_crankcase", "mount_bosses", "engine_mount_r", "ecu",
       "ecu_connector"]),
+    # ---- the wiring: every device on the engine plugged into the loom, and
+    # the loom into the ECU
+    ("the harness reaches the ECU", ["ecu", "ecu_connector", "harness"]),
+    ("every coil is wired", ["harness", "coil_1"]), ("", ["harness", "coil_2"]),
+    ("", ["harness", "coil_3"]), ("", ["harness", "coil_4"]),
+    ("", ["harness", "coil_5"]), ("", ["harness", "coil_6"]),
+    ("", ["harness", "coil_7"]), ("", ["harness", "coil_8"]),
+    ("every direct injector is wired", ["harness", "injector_di_1"]),
+    ("", ["harness", "injector_di_2"]), ("", ["harness", "injector_di_3"]),
+    ("", ["harness", "injector_di_4"]), ("", ["harness", "injector_di_5"]),
+    ("", ["harness", "injector_di_6"]), ("", ["harness", "injector_di_7"]),
+    ("", ["harness", "injector_di_8"]),
+    ("every port injector is wired", ["harness", "pfi_plug_1"]),
+    ("", ["harness", "pfi_plug_2"]), ("", ["harness", "pfi_plug_3"]),
+    ("", ["harness", "pfi_plug_4"]), ("", ["harness", "pfi_plug_5"]),
+    ("", ["harness", "pfi_plug_6"]), ("", ["harness", "pfi_plug_7"]),
+    ("", ["harness", "pfi_plug_8"]),
+    ("the knock and cam sensors are wired", ["harness", "knock_sensor_l"]),
+    ("", ["harness", "knock_sensor_r"]), ("", ["harness", "cam_sensor_l"]),
+    ("", ["harness", "cam_sensor_r"]),
 ]
 
 

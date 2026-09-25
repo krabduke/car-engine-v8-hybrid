@@ -76,7 +76,7 @@ EXPECTED = [
     ("head_", "camcover"), ("head_", "camcover_bolts"), ("head_", "sparkplug"),
     ("head_", "injector"), ("head_", "coil"), ("head_", "collets_"),
     ("head_", "retainer_"), ("head_", "valve_spring_"), ("head_", "tappet_"),
-    ("head_", "fuel_rail_"), ("head_", "fuel_feeds_"),
+    ("head_", "fuel_rail_"),
     ("head_", "runner_"), ("head_", "primary_"),
     ("head_", "exhaust_flange_"), ("head_", "exhaust_gasket_"),
     ("head_", "cam_sensor_"), ("head_", "camlobe_"),
@@ -196,7 +196,6 @@ EXPECTED = [
 
     # sensors screw into whatever they measure
     ("sensors", "sump"), ("sensors", "block_"),
-    ("sensors", "knock_sensor_"),
 
     # heat shielding wraps what it shields
     ("heat_shields", "turbine_housing"), ("heat_shields", "collector_"),
@@ -230,6 +229,13 @@ EXPECTED = [
     # the high-pressure line delivers into the rail's rear fitting and the
     # crossover takes the pressure on from the same fitting
     ("fuel_hp_line", "fuel_rail_di_"),   # it delivers into the rail's fitting
+    # the harness: every branch ends in a mating plug pushed onto its
+    # device's connector
+    ("harness", "coil_"), ("harness", "injector_di_"), ("harness", "pfi_"),
+    ("harness", "knock_sensor_"), ("harness", "cam_sensor_"),
+    ("harness", "ecu_connector"),
+    # each direct injector's end sits in its cup on the rail
+    ("fuel_rail_di_", "injector_di_"), ("fuel_feeds_di_", "injector_di_"),
 
     # The MGU-H lives in the vee with the exhaust, and its cable has to get
     # there. Every route down was tried: straight in from above meets
