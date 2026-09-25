@@ -174,7 +174,7 @@
    "label": "Induction",
    "color": "#5A6B74",
    "parts": 41,
-   "faces": 72384
+   "faces": 69754
   },
   {
    "key": "05 Turbo and Exhaust",
@@ -195,7 +195,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 41,
-   "faces": 389717
+   "faces": 389905
   }
  ],
  "parts": {
@@ -2276,7 +2276,7 @@
    "mat": "alu_forged",
    "x0": -306.0,
    "x1": -174.9,
-   "f": 31308
+   "f": 31496
   },
   "cam_caps": {
    "g": "03 Heads and Valvetrain",
@@ -2801,14 +2801,14 @@
    "mat": "alu_forged",
    "x0": -56.0,
    "x1": 56.0,
-   "f": 3530
+   "f": 2105
   },
   "throttle_r": {
    "g": "04 Induction",
    "mat": "alu_forged",
    "x0": -56.0,
    "x1": 56.0,
-   "f": 3530
+   "f": 2105
   },
   "trumpets": {
    "g": "04 Induction",
@@ -3879,7 +3879,7 @@
    "mat": "rubber_blk",
    "x0": -150.0,
    "x1": 150.0,
-   "f": 12320
+   "f": 12540
   },
   "engine_mount_l": {
    "g": "07 Drive and Ancillaries",

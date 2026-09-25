@@ -229,7 +229,7 @@ valve_in_8_2,03 Heads and Valvetrain,titanium,,,,,,,,,,7368,7620,162.8,196.8,97.
 accessory_belt,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,388,388,-359.7,-339.7,-198.5,265.5,-110.5,186.5
 accessory_pulleys,07 Drive and Ancillaries,alu_forged,,,,,,,,,,2770,3000,-369.2,-335.2,-197.0,-123.0,3.0,77.0
 alternator,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1568,1360,-335.2,-290.5,-199.5,-120.5,0.0,84.5
-breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,31524,31308,-306.0,-174.9,-265.0,231.7,-92.8,246.6
+breathers,07 Drive and Ancillaries,alu_forged,,,,,,,,,,31884,31496,-306.0,-174.9,-265.0,231.7,-92.8,246.6
 cam_caps,03 Heads and Valvetrain,alu_forged,,,,,,,,,,1152,1152,-188.9,143.8,-228.7,228.7,122.7,228.7
 catch_tank,07 Drive and Ancillaries,alu_forged,,,,,,,,,,66590,66474,-196.0,-38.0,-239.7,-115.8,-206.0,-78.0
 collector_1,05 Turbo and Exhaust,inconel,,,,,,,,,,6391,6340,-203.6,-123.0,-30.0,94.7,308.0,370.0
@@ -304,8 +304,8 @@ pfi_plug_7,04 Induction,rubber_blk,,,,,,,,,,536,590,124.4,140.5,-227.8,-215.8,11
 pfi_plug_8,04 Induction,rubber_blk,,,,,,,,,,536,590,143.4,159.5,215.8,227.8,118.8,128.8
 plenum_l,04 Induction,carbon,,,,,,,,,,3048,3048,-212.0,212.0,-271.5,-192.5,30.5,109.5
 plenum_r,04 Induction,carbon,,,,,,,,,,3048,3048,-212.0,212.0,192.5,271.5,30.5,109.5
-throttle_l,04 Induction,alu_forged,,,,,,,,,,3434,3530,-56.0,56.0,-320.7,-264.7,14.0,126.0
-throttle_r,04 Induction,alu_forged,,,,,,,,,,3434,3530,-56.0,56.0,264.7,320.7,14.0,126.0
+throttle_l,04 Induction,alu_forged,,,,,,,,,,2009,2105,-56.0,56.0,-326.7,-264.7,14.0,126.0
+throttle_r,04 Induction,alu_forged,,,,,,,,,,2009,2105,-56.0,56.0,264.7,326.7,14.0,126.0
 trumpets,04 Induction,carbon,,,,,,,,,,3312,3312,-195.5,195.5,-254.8,254.8,37.0,103.0
 compressor_housing_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2562,2546,-142.9,-40.4,-72.9,72.9,182.1,327.9
 compressor_housing_2,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2562,2546,40.4,142.9,-72.9,72.9,182.1,327.9
@@ -458,7 +458,7 @@ belt_tensioner,07 Drive and Ancillaries,alu_forged,,,,,,,,,,4254,4775,-369.2,-29
 blowoff,04 Induction,rubber_blk,,,,,,,,,,572,572,-154.4,-86.4,-313.9,-246.0,136.0,228.0
 cam_sensor_l,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,261.0,-140.6,-79.3,170.9,247.8
 cam_sensor_r,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,261.0,79.4,140.7,170.9,247.8
-charge_pipes,04 Induction,rubber_blk,,,,,,,,,,12616,12320,-150.0,150.0,-381.0,381.0,36.5,296.2
+charge_pipes,04 Induction,rubber_blk,,,,,,,,,,13040,12540,-150.0,150.0,-381.2,381.2,32.0,296.2
 engine_mount_l,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1004,978,-131.0,-59.0,-185.0,-125.0,-52.0,-8.0
 engine_mount_r,07 Drive and Ancillaries,rubber_blk,,,,,,,,,,1004,978,-131.0,-59.0,125.0,185.0,-52.0,-8.0
 exhaust_flange_l,05 Turbo and Exhaust,inconel,,,,,,,,,,3008,3440,-193.5,174.5,-76.7,-16.1,133.5,194.1
