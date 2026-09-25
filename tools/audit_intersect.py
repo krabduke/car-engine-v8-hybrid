@@ -31,6 +31,9 @@ import _intersect
 # heads on the wrong banks, the harmonic damper buried in the timing cover,
 # and the trigger wheel inside the damper.
 EXPECTED = [
+    # each MGU-H's connector is on a boss let into its bearing housing, its
+    # pins in the machine's stator
+    ("hv_motor_h_connector_", "turbo_centre_"), ("hv_motor_h_connector_", "mguh"),
     # block, bedplate and the bottom end bolted through them
     ("block_bank_", "block_crankcase"), ("block_bank_", "head_"),
     ("block_bank_", "block_liners"),

@@ -153,7 +153,7 @@
    "label": "Block",
    "color": "#6E7478",
    "parts": 19,
-   "faces": 213924
+   "faces": 162234
   },
   {
    "key": "02 Bottom End",
@@ -2946,30 +2946,30 @@
   "hv_motor_h_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -141.5,
-   "x1": 297.6,
-   "f": 34338
+   "x0": -147.6,
+   "x1": 279.6,
+   "f": 3480
   },
   "hv_motor_h_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 155.2,
-   "x1": 297.6,
-   "f": 23534
+   "x0": 140.4,
+   "x1": 279.6,
+   "f": 3258
   },
   "hv_motor_h_connector_0": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": -157.0,
-   "x1": -136.3,
-   "f": 800
+   "x0": -151.5,
+   "x1": -136.5,
+   "f": 522
   },
   "hv_motor_h_connector_1": {
    "g": "01 Block",
    "mat": "hv_orange",
-   "x0": 139.0,
-   "x1": 159.7,
-   "f": 800
+   "x0": 136.5,
+   "x1": 151.5,
+   "f": 522
   },
   "hv_motor_k": {
    "g": "01 Block",
