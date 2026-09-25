@@ -152,7 +152,7 @@ def _cooling():
         [(0.0, 0.0), (0.0, 30.0), (4.0, 34.0), (x1 - x0 - 6.0, 34.0),
          (x1 - x0 - 6.0, 42.0), (x1 - x0, 42.0), (x1 - x0, 0.0)],
         x0, 0.0, zc, axis="x", seg=28))
-    xm = x0 + 11.0
+    xm = x0 + spec.STAT_STUB_X
     # the two radiator hose stubs, with their beads, under the axis
     zs = zc - spec.STAT_STUB_DROP
     for flip in (True, False):

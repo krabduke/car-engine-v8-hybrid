@@ -422,7 +422,7 @@ def coolant_node(which):
     # return stub's end on the pump's inlet tee: where a vehicle's hoses go
     if which in ("stat_hose_l", "stat_hose_r"):
         s = -1.0 if which.endswith("l") else 1.0
-        return (C["stat_x"] + 11.0, C["stat_y"] + s * 80.0,
+        return (C["stat_x"] + STAT_STUB_X, C["stat_y"] + s * 80.0,
                 C["stat_z"] - STAT_STUB_DROP)
     if which == "pump_return":
         return (C["pump_x"] + 52.0, C["pump_y"] + 75.0, C["pump_z"])
@@ -433,6 +433,9 @@ def coolant_node(which):
 # it, each pointed straight at the post of the belt idler (left) or the
 # tensioner (right), 28 mm away, and no hose could have been pushed on.
 STAT_STUB_DROP = 24.0
+# ...and this far ahead of the housing's back face: at 11 their axis was
+# 17 mm off the timing case, and a hose over a 28 mm stub is 36 across
+STAT_STUB_X = 8.0
 
 
 def oil_pump_port(k):
