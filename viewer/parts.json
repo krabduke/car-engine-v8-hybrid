@@ -195,7 +195,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 41,
-   "faces": 389905
+   "faces": 380551
   }
  ],
  "parts": {
@@ -3081,7 +3081,7 @@
    "mat": "alu_forged",
    "x0": -324.0,
    "x1": 247.5,
-   "f": 20382
+   "f": 10836
   },
   "dry_sump_lines": {
    "g": "07 Drive and Ancillaries",
@@ -3970,7 +3970,7 @@
    "mat": "alu_cast",
    "x0": -324.0,
    "x1": -290.0,
-   "f": 2214
+   "f": 2406
   },
   "harness": {
    "g": "06 Hybrid",

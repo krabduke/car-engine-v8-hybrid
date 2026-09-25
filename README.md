@@ -106,7 +106,8 @@ engine/
 ```
 
 The engine stops where a vehicle takes over, and says where: the main
-radiator's two hose stubs on the thermostat and the water pump, and the
+radiators' stubs -- an outlet each side of the thermostat, and the return
+on the tee at the pump's inlet -- and the
 charge coolers' low-temperature loop, in and out, on a stub pair on each
 plenum's outboard face. The pump and core for that loop are the vehicle's;
 the VX-1 carries them in its sidepods.

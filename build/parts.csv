@@ -344,7 +344,7 @@ pump_oil,07 Drive and Ancillaries,alu_forged,,,,,,,,,,13372,13811,-244.0,-121.4,
 pump_water,07 Drive and Ancillaries,alu_forged,,,,,,,,,,7320,7236,-362.2,-247.0,130.2,281.2,-119.5,-6.4
 compressor_wheel_1,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,-116.4,-79.7,-38.3,38.3,217.0,292.8
 compressor_wheel_2,05 Turbo and Exhaust,anodised,,,,,,,,,,2284,2132,79.7,116.4,-38.3,38.3,217.0,292.8
-coolant_plumbing,07 Drive and Ancillaries,alu_forged,,,,,,,,,,20670,20382,-324.0,247.5,-191.8,253.0,-86.5,210.0
+coolant_plumbing,07 Drive and Ancillaries,alu_forged,,,,,,,,,,11124,10836,-324.0,247.5,-191.8,290.0,-86.5,210.0
 dry_sump_lines,07 Drive and Ancillaries,alu_forged,,,,,,,,,,49358,48854,-264.0,119.0,-279.7,-68.7,-217.7,17.3
 head_studs,03 Heads and Valvetrain,alu_cast,,,,,,,,,,12576,15680,-162.5,294.5,-127.0,127.0,39.2,127.0
 heat_shields,05 Turbo and Exhaust,inconel,,,,,,,,,,48648,48648,-197.2,197.2,-18.0,71.3,308.3,375.2
@@ -471,5 +471,5 @@ knock_sensor_l,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0
 knock_sensor_r,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0,116.0,163.5,-9.9,34.0
 oil_cooler,07 Drive and Ancillaries,anodised,,,,,,,,,,2018,1704,-111.0,88.8,-293.2,-199.0,-118.2,-29.8
 oil_filter,07 Drive and Ancillaries,anodised,,,,,,,,,,3804,4418,-33.4,85.4,-229.2,-100.5,-129.4,-10.6
-thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,1998,2214,-324.0,-290.0,-80.0,46.0,94.0,178.0
+thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2190,2406,-324.0,-290.0,-80.0,80.0,94.0,178.0
 harness,06 Hybrid,rubber_blk,,,,,,,,,,26124,23954,-201.5,260.9,-228.0,228.0,-157.5,261.6

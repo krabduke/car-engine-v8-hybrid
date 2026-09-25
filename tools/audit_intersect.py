@@ -160,7 +160,6 @@ EXPECTED = [
     ("dry_sump_lines", "sump"), ("breathers", "camcover"),
     ("port_covers", "compressor_inlet"),
     ("oil_filter", "oil_cooler"),
-    ("thermostat", "coolant_plumbing"),
     ("catch_tank", "breathers"),
     ("engine_mount_", "mount_bosses"),
     ("sensors", "block_"),
