@@ -24,7 +24,7 @@ to beat Formula 1 cars on a Formula 1 circuit.
 | Hybrid | 200 kW MGU-K + 80 kW MGU-H |
 | Combined | 935 kW (1,254 hp) deployable |
 | Mass | 146 kg — 6.40 kW/kg |
-| Envelope | 658 × 523 × 589 mm |
+| Envelope | 738 × 762 × 682 mm, dressed |
 
 **Why a V8 and not something bigger.** F1's power unit is capped near 1000 hp
 by regulation, not by physics. Nothing here is regulated, so the constraint is
@@ -92,6 +92,11 @@ engine/
     turbo.py     turbos, hot-vee manifolds, wastegates, tailpipes
     hybrid.py    MGU-K, MGU-H, inverter, battery, ECU
     drive.py     flywheel, clutch, bellhousing, pumps
+    plumbing.py  coolant, oil and fuel lines, breathers, pulleys and belt
+    ancillaries.py  oil filter and cooler, thermostat, water-to-air charge
+                 coolers in the plenums, gear-driven accessories
+    harness.py   the wiring loom, routed through the engine by the solver
+    detail.py    sensors, fasteners, gallery plugs
   materials.py   PBR: cast aluminium, magnesium, titanium, nitrided steel,
                  carbon, heat-tinted Inconel, copper windings
   assemble.py    the Blender stage
@@ -99,6 +104,12 @@ engine/
   render.py      lighting, cameras, the castings-only cutaway
   export.py      GLB / per-part STL
 ```
+
+The engine stops where a vehicle takes over, and says where: the main
+radiator's two hose stubs on the thermostat and the water pump, and the
+charge coolers' low-temperature loop, in and out, on a stub pair on each
+plenum's outboard face. The pump and core for that loop are the vehicle's;
+the VX-1 carries them in its sidepods.
 
 Everything up to and including `parts/` is pure Python with no `bpy` import, so
 the geometry can be generated and tested without Blender.

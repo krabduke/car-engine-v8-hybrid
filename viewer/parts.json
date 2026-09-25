@@ -174,7 +174,7 @@
    "label": "Induction",
    "color": "#5A6B74",
    "parts": 41,
-   "faces": 71136
+   "faces": 72384
   },
   {
    "key": "05 Turbo and Exhaust",
@@ -3926,16 +3926,16 @@
   "intercooler_l": {
    "g": "04 Induction",
    "mat": "anodised",
-   "x0": -164.0,
-   "x1": 180.0,
-   "f": 2496
+   "x0": -153.0,
+   "x1": 181.0,
+   "f": 3120
   },
   "intercooler_r": {
    "g": "04 Induction",
    "mat": "anodised",
-   "x0": -164.0,
-   "x1": 180.0,
-   "f": 2496
+   "x0": -153.0,
+   "x1": 181.0,
+   "f": 3120
   },
   "knock_sensor_l": {
    "g": "07 Drive and Ancillaries",
