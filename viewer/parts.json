@@ -160,7 +160,7 @@
    "label": "Bottom end",
    "color": "#8E939A",
    "parts": 92,
-   "faces": 134435
+   "faces": 135423
   },
   {
    "key": "03 Heads and Valvetrain",
@@ -195,7 +195,7 @@
    "label": "Drive",
    "color": "#77706A",
    "parts": 41,
-   "faces": 383777
+   "faces": 389717
   }
  ],
  "parts": {
@@ -454,9 +454,9 @@
   "crank_damper": {
    "g": "02 Bottom End",
    "mat": "steel_nitrided",
-   "x0": -368.0,
+   "x0": -379.0,
    "x1": -330.0,
-   "f": 3141
+   "f": 4129
   },
   "crank_trigger": {
    "g": "02 Bottom End",
@@ -2260,9 +2260,9 @@
   "accessory_pulleys": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -360.7,
+   "x0": -369.2,
    "x1": -335.2,
-   "f": 1338
+   "f": 3000
   },
   "alternator": {
    "g": "07 Drive and Ancillaries",
@@ -3058,9 +3058,9 @@
   "pump_water": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -360.7,
+   "x0": -362.2,
    "x1": -247.0,
-   "f": 6282
+   "f": 7236
   },
   "compressor_wheel_1": {
    "g": "05 Turbo and Exhaust",
@@ -3842,16 +3842,16 @@
   "belt_idler": {
    "g": "07 Drive and Ancillaries",
    "mat": "steel_nitrided",
-   "x0": -360.7,
+   "x0": -369.2,
    "x1": -290.0,
-   "f": 2398
+   "f": 4060
   },
   "belt_tensioner": {
    "g": "07 Drive and Ancillaries",
    "mat": "alu_forged",
-   "x0": -360.7,
+   "x0": -369.2,
    "x1": -290.0,
-   "f": 3113
+   "f": 4775
   },
   "blowoff": {
    "g": "04 Induction",
