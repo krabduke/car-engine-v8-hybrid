@@ -52,6 +52,8 @@ make build      # generate geometry, assemble build/engine.blend, write parts.cs
 make verify     # 38 architecture, kinematic and output checks
 make render     # hero, front, cutaway and exploded views
 make bom        # bom.csv: every part, its group, material, pieces and size
+make drawings   # drawings.pdf: A1 GA and assembly sheets, third angle, to scale, dimensioned,
+                #   ballooned, with parts lists
 make export     # build/engine.glb
 make manifest   # viewer/parts.json
 make viewer     # serve the interactive viewer

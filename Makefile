@@ -2,7 +2,7 @@ BLENDER := /Applications/Blender.app/Contents/MacOS/Blender
 BLEND   := build/engine.blend
 SAMPLES ?= 128
 
-.PHONY: all build verify render export stl manifest viewer clean
+.PHONY: all build verify render export stl manifest viewer clean bom drawings
 
 all: build verify render export
 
@@ -46,3 +46,7 @@ clean:
 
 bom:                         ## bill of materials: every part, its group, material, pieces, size
 	python3 ../_shared/tools/make_bom.py . build/engine.blend bom.csv
+
+drawings:                    ## drawings.pdf: a GA sheet and one per assembly, A1, dimensioned, with parts lists
+	python3 ../_shared/tools/make_drawings.py . build/engine.blend build/drawings
+	cp build/drawings/drawings.pdf drawings.pdf
