@@ -123,17 +123,21 @@
   /* --- engine run controls --------------------------------------------- */
   #run{display:flex; align-items:center; gap:9px; margin-right:10px}
   #run label{font-size:11px; color:var(--ink-soft)}
-  #rpm{
+  #apartrow{display:flex; align-items:center; gap:9px}
+  #apartrow label{font-size:11px; color:var(--ink-soft)}
+  #apartval{font-size:11px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums;
+            min-width:56px}
+  #rpm, #apart{
     -webkit-appearance:none; appearance:none; width:118px; height:2px;
     background:#36444B; border-radius:2px; outline:none;
   }
-  #rpm::-webkit-slider-thumb{
+  #rpm::-webkit-slider-thumb, #apart::-webkit-slider-thumb{
     -webkit-appearance:none; width:13px; height:13px; border-radius:50%;
     background:#C99A5E; cursor:grab; border:2px solid #12181B;
   }
-  #rpm::-moz-range-thumb{width:13px; height:13px; border-radius:50%;
+  #rpm::-moz-range-thumb, #apart::-moz-range-thumb{width:13px; height:13px; border-radius:50%;
     background:#C99A5E; cursor:grab; border:2px solid #12181B}
-  #rpm:focus-visible{outline:2px solid #C99A5E; outline-offset:3px}
+  #rpm:focus-visible, #apart:focus-visible{outline:2px solid #C99A5E; outline-offset:3px}
   #rpmval{font-size:11px; color:var(--ink); font-weight:600; font-variant-numeric:tabular-nums;
           min-width:64px; text-align:right}
 
@@ -208,6 +212,12 @@
       <input type="range" id="rpm" min="600" max="16000" step="100" value="3200">
       <span id="rpmval">3,200</span>
     </div>
+    <div id="apartrow">
+      <label for="apart">apart</label>
+      <input type="range" id="apart" min="0" max="100" step="1" value="0">
+      <span id="apartval">together</span>
+    </div>
+    <button class="btn" id="build" type="button">Assemble it</button>
     <button class="btn" id="skin" type="button" aria-pressed="false">Show internals</button>
     <button class="btn" id="air" type="button" aria-pressed="false">Show airflow</button>
     <button class="btn" id="spin" type="button" aria-pressed="false">Spin</button>
@@ -282,6 +292,7 @@ let hidden = new Set(), hovered = null, corners = [], viewDir, spinning = false;
 // each part with the cylinder it belongs to and how it moves; `kin` is the
 // geometry it moves by, straight out of the spec the block was built from.
 let moving = [], kin = null, running = false, crankDeg = 0, rpmVal = 3200;
+let apartParts = [], apart = {s: 0, target: 0, playing: false, then: null};
 
 init();
 
@@ -513,8 +524,73 @@ function ready(model){
   if(data.gas_path) gas = new GasFlow(THREE, root, data.gas_path);
   window.__dbg = {scene, camera, renderer, root, moving, setCrank, byGroup, controls, gas};
   kin = data.kinematics || null;
+  setupApart();
   $('#load').classList.add('done');
   renderer.setAnimationLoop(tick);
+}
+
+/* Taking it apart, the way a builder strips one on the bench.
+ *
+ * A V engine does not come apart along one axis: each head lifts off along
+ * its own bank's bore line and each piston follows it up the bore, so a
+ * part's direction is where it sits from the crank, square to the crank.
+ * The crank and the sump drop out underneath, the front drive comes off
+ * forward and the flywheel and clutch aft. They go back in the order the
+ * engine is built up, which "Assemble it" plays. Distances in metres.
+ */
+const APART = {                      // group -> [order, distance, along-crank weight]
+  '02 Bottom End':            [0, 0.26, 0],
+  '03 Heads and Valvetrain':  [1, 0.46, 0],
+  '07 Drive and Ancillaries': [2, 0.30, 1],
+  '04 Induction':             [3, 0.62, 0.3],
+  '05 Turbo and Exhaust':     [4, 0.58, 0.3],
+  '06 Hybrid':                [5, 0.52, 0.5],
+  '01 Block':                 [6, 0.40, 0.5],
+};
+const APART_STAY = ['block_bank_l', 'block_bank_r', 'block_crankcase', 'block_liners', 'port_covers'];
+const APART_DOWN = {crankshaft: 0.16, crank_damper: 0.16, crank_trigger: 0.16, main_cap_bolts: 0.2,
+                    bedplate: 0.30, windage_tray: 0.40, sump_baffles: 0.46, sump: 0.52,
+                    sump_drain: 0.52, sump_bolts: 0.56, oil_pickup: 0.44};
+function setupApart(){
+  const crank = root.getObjectByName('crankshaft');
+  const o = crank ? new THREE.Box3().setFromObject(crank).getCenter(new THREE.Vector3())
+                  : new THREE.Vector3();
+  const n = Math.max(...Object.values(APART).map(a => a[0])) + 1;
+  const q = new THREE.Quaternion();
+  for(const m of pickable){
+    const g = info.get(m).g;
+    if(APART_STAY.includes(m.name) || !(g in APART)) continue;
+    const [k, dist, wx] = APART[g];
+    let off;
+    if(m.name in APART_DOWN) off = new THREE.Vector3(0, -APART_DOWN[m.name], 0);
+    else {
+      const c = new THREE.Box3().setFromObject(m).getCenter(new THREE.Vector3()).sub(o);
+      c.x *= wx;
+      if(c.length() < 0.02) c.set(0, -1, 0);
+      off = c.normalize().multiplyScalar(dist);
+    }
+    // into the part's parent's frame, once, with the engine square
+    m.parent.getWorldQuaternion(q).invert();
+    off.applyQuaternion(q);
+    const mv = moving.find(v => v.o === m);
+    apartParts.push({m, mv, base: (mv ? mv.base : m.position).clone(), off,
+                     k: m.name in APART_DOWN ? 0 : k, n});
+  }
+}
+function applyApart(){
+  const STAGGER = 0.1;
+  for(const a of apartParts){
+    const w = 1 - (a.n - 1) * STAGGER;
+    const p = Math.min(1, Math.max(0, (apart.s - (a.n - 1 - a.k) * STAGGER) / w));
+    const e = p * p * (3 - 2 * p);
+    const pos = a.base.clone().addScaledVector(a.off, e);
+    if(a.mv) a.mv.base.copy(pos);      // the slider-crank moves it from here
+    a.m.position.copy(pos);
+  }
+  if(kin) setCrank(crankDeg);
+  if(gas) gas.setVisible(gasOn && apart.s === 0);
+  const pct = Math.round(apart.s * 100);
+  $('#apartval').textContent = pct === 0 ? 'together' : pct === 100 ? 'all apart' : `${pct} %`;
 }
 
 function fitDistance(dirv, margin = 1.03){
@@ -604,6 +680,19 @@ function tick(){
     if(!running) cyclePhase = (cyclePhase + dt * 190.0) % 720;
     gas.setPhase(cyclePhase);
     gas.tick(dt);
+  }
+  // apart and back: a slider drag follows quickly; the build plays slowly
+  if(apart.s !== apart.target){
+    const v = dt / (apart.playing ? 7.0 : 0.6);
+    apart.s = reducedMotion ? apart.target
+      : Math.abs(apart.target - apart.s) < v ? apart.target
+      : apart.s + Math.sign(apart.target - apart.s) * v;
+    if(apart.playing) $('#apart').value = Math.round(apart.s * 100);
+    if(apart.s === apart.target && apart.playing){
+      if(apart.then != null){ apart.target = apart.then; apart.then = null; }
+      else apart.playing = false;
+    }
+    applyApart();
   }
   if(spinning && root) root.rotation.y += dt * 0.35;
   controls.update();
@@ -702,7 +791,7 @@ function buildRail(){
     gasOn = !gasOn;
     b.setAttribute('aria-pressed', String(gasOn));
     b.textContent = gasOn ? 'Hide airflow' : 'Show airflow';
-    if(gas) gas.setVisible(gasOn);
+    if(gas) gas.setVisible(gasOn && apart.s === 0);
     if(gasOn){
       // keep the real material and swap in a ghost clone, so restoring is
       // putting the original back rather than trying to undo edits to it
@@ -728,6 +817,23 @@ function buildRail(){
       : 'Click an assembly to hide it. Drag to orbit.';
   });
 
+  $('#apart').addEventListener('input', e => {
+    apart.playing = false;
+    apart.target = +e.target.value / 100;
+  });
+  $('#build').addEventListener('click', () => {
+    // from wherever it is, out to all apart and back together, in order
+    apart.playing = true;
+    apart.target = apart.s > 0.5 ? 0 : 1;
+    apart.then = apart.target === 1 ? 0 : null;
+    // stand back far enough to see it all apart
+    const d = camera.position.distanceTo(controls.target);
+    const want = fitDistance(viewDir) * 1.7;
+    if(d < want) flyCamera(camera, controls,
+      controls.target.clone().add(camera.position.clone().sub(controls.target).setLength(want)),
+      {duration: 1100});
+  });
+
   $('#spin').addEventListener('click', () => {
     spinning = !spinning;
     $('#spin').setAttribute('aria-pressed', String(spinning));
@@ -736,6 +842,7 @@ function buildRail(){
   $('#reset').addEventListener('click', () => {
     resetView();
     if(root) root.rotation.y = 0;
+    apart.playing = false; apart.then = null; apart.target = 0; $('#apart').value = 0;
     spinning = false;
     $('#spin').setAttribute('aria-pressed','false');
     hidden.clear();
