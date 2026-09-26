@@ -43,3 +43,6 @@ viewer:
 
 clean:
 	rm -rf build renders
+
+bom:                         ## bill of materials: every part, its group, material, pieces, size
+	python3 ../_shared/tools/make_bom.py . build/engine.blend bom.csv

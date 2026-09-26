@@ -51,6 +51,7 @@ Requires Blender (`brew install --cask blender`). Nothing else.
 make build      # generate geometry, assemble build/engine.blend, write parts.csv
 make verify     # 38 architecture, kinematic and output checks
 make render     # hero, front, cutaway and exploded views
+make bom        # bom.csv: every part, its group, material, pieces and size
 make export     # build/engine.glb
 make manifest   # viewer/parts.json
 make viewer     # serve the interactive viewer
