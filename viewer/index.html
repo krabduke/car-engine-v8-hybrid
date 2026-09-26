@@ -337,7 +337,11 @@ async function init(){
 
   const draco = new DRACOLoader().setDecoderPath(
     'https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/libs/draco/gltf/');
-  new GLTFLoader().setDRACOLoader(draco).load('../build/engine.glb?nocache=' + Date.now(),
+  // the decimated model, under its own hash: the browser keeps it until it
+  // changes, rather than fetching 7 MB again on every visit
+  let ver = '';
+  try { ver = (await (await fetch('../build/engine_web.json', {cache: 'no-cache'})).json()).v; } catch (e) {}
+  new GLTFLoader().setDRACOLoader(draco).load('../build/engine_web.glb?v=' + ver,
     g => ready(g.scene),
     ev => {
       if(!ev.total) return;
@@ -356,7 +360,7 @@ async function init(){
       const msg = e && (e.message || e.type) ? String(e.message || e.type) : 'unknown error';
       const missing = /404|not found|fetch|network/i.test(msg);
       fail(missing
-        ? 'Could not load <code>build/engine.glb</code>. Run <code>make export</code> to generate it.'
+        ? 'Could not load <code>build/engine_web.glb</code>. Run <code>make export</code> to generate it.'
         : 'The model loaded but the viewer failed to start: <code>' +
           msg.replace(/[<>&]/g, '') + '</code>');
       console.error(e);

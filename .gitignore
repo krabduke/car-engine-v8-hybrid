@@ -3,3 +3,5 @@ __pycache__/
 build/*
 !build/engine.glb
 !build/parts.csv
+!build/engine_web.glb
+!build/engine_web.json

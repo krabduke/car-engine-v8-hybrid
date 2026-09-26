@@ -27,8 +27,9 @@ verify:
 render:
 	$(BLENDER) -b $(BLEND) -P engine/render.py -- all $(SAMPLES)
 
-export:
+export:                      ## full GLB, and the decimated one the viewer loads
 	$(BLENDER) -b $(BLEND) -P engine/export.py -- glb
+	$(BLENDER) -b $(BLEND) -P engine/export.py -- web
 
 stl:
 	$(BLENDER) -b $(BLEND) -P engine/export.py -- stl
