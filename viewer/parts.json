@@ -152,8 +152,8 @@
    "key": "01 Block",
    "label": "Block",
    "color": "#6E7478",
-   "parts": 19,
-   "faces": 162234
+   "parts": 20,
+   "faces": 165102
   },
   {
    "key": "02 Bottom End",
@@ -173,8 +173,8 @@
    "key": "04 Induction",
    "label": "Induction",
    "color": "#5A6B74",
-   "parts": 41,
-   "faces": 69754
+   "parts": 43,
+   "faces": 72114
   },
   {
    "key": "05 Turbo and Exhaust",
@@ -188,7 +188,7 @@
    "label": "Hybrid",
    "color": "#C06A30",
    "parts": 10,
-   "faces": 60184
+   "faces": 64076
   },
   {
    "key": "07 Drive and Ancillaries",
@@ -2803,6 +2803,20 @@
    "x1": 56.0,
    "f": 2105
   },
+  "throttle_motor_l": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": 44.0,
+   "x1": 104.0,
+   "f": 1180
+  },
+  "throttle_motor_r": {
+   "g": "04 Induction",
+   "mat": "rubber_blk",
+   "x0": 44.0,
+   "x1": 104.0,
+   "f": 1180
+  },
   "throttle_r": {
    "g": "04 Induction",
    "mat": "alu_forged",
@@ -3860,6 +3874,13 @@
    "x1": -86.4,
    "f": 572
   },
+  "boost_reference_lines": {
+   "g": "01 Block",
+   "mat": "rubber_blk",
+   "x0": -166.0,
+   "x1": 124.4,
+   "f": 2868
+  },
   "cam_sensor_l": {
    "g": "03 Heads and Valvetrain",
    "mat": "anodised",
@@ -3975,9 +3996,9 @@
   "harness": {
    "g": "06 Hybrid",
    "mat": "rubber_blk",
-   "x0": -201.5,
+   "x0": -218.0,
    "x1": 260.9,
-   "f": 30706
+   "f": 34598
   }
  },
  "kinematics": {

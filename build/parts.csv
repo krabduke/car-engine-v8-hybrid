@@ -305,6 +305,8 @@ pfi_plug_8,04 Induction,rubber_blk,,,,,,,,,,536,590,143.4,159.5,215.8,227.8,118.
 plenum_l,04 Induction,carbon,,,,,,,,,,3048,3048,-212.0,212.0,-271.5,-192.5,30.5,109.5
 plenum_r,04 Induction,carbon,,,,,,,,,,3048,3048,-212.0,212.0,192.5,271.5,30.5,109.5
 throttle_l,04 Induction,alu_forged,,,,,,,,,,2009,2105,-56.0,56.0,-326.7,-264.7,14.0,126.0
+throttle_motor_l,04 Induction,rubber_blk,,,,,,,,,,1072,1180,44.0,104.0,-309.7,-273.7,44.0,109.0
+throttle_motor_r,04 Induction,rubber_blk,,,,,,,,,,1072,1180,44.0,104.0,273.7,309.7,44.0,109.0
 throttle_r,04 Induction,alu_forged,,,,,,,,,,2009,2105,-56.0,56.0,264.7,326.7,14.0,126.0
 trumpets,04 Induction,carbon,,,,,,,,,,3312,3312,-195.5,195.5,-254.8,254.8,37.0,103.0
 compressor_housing_1,05 Turbo and Exhaust,alu_cast,,,,,,,,,,2562,2546,-142.9,-40.4,-72.9,72.9,182.1,327.9
@@ -456,6 +458,7 @@ valve_spring_8_3,03 Heads and Valvetrain,spring_steel,,,,,,,,,,40612,40564,166.0
 belt_idler,07 Drive and Ancillaries,steel_nitrided,,,,,,,,,,3620,4060,-369.2,-290.0,-155.0,-89.0,119.0,185.0
 belt_tensioner,07 Drive and Ancillaries,alu_forged,,,,,,,,,,4254,4775,-369.2,-290.0,74.0,161.0,117.0,204.0
 blowoff,04 Induction,rubber_blk,,,,,,,,,,572,572,-154.4,-86.4,-313.9,-246.0,136.0,228.0
+boost_reference_lines,01 Block,rubber_blk,,,,,,,,,,3168,2868,-166.0,124.4,-284.2,101.0,88.6,321.2
 cam_sensor_l,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,261.0,-140.6,-79.3,170.9,247.8
 cam_sensor_r,03 Heads and Valvetrain,anodised,,,,,,,,,,2004,2192,222.0,261.0,79.4,140.7,170.9,247.8
 charge_pipes,04 Induction,rubber_blk,,,,,,,,,,13040,12540,-150.0,150.0,-381.2,381.2,32.0,296.2
@@ -472,4 +475,4 @@ knock_sensor_r,07 Drive and Ancillaries,anodised,,,,,,,,,,2496,2658,-124.0,124.0
 oil_cooler,07 Drive and Ancillaries,anodised,,,,,,,,,,2018,1704,-111.0,88.8,-293.2,-199.0,-118.2,-29.8
 oil_filter,07 Drive and Ancillaries,anodised,,,,,,,,,,3804,4418,-33.4,85.4,-229.2,-100.5,-129.4,-10.6
 thermostat,07 Drive and Ancillaries,alu_cast,,,,,,,,,,2190,2406,-327.0,-290.0,-80.0,80.0,94.0,178.0
-harness,06 Hybrid,rubber_blk,,,,,,,,,,32876,30706,-201.5,260.9,-228.0,228.0,-157.5,261.6
+harness,06 Hybrid,rubber_blk,,,,,,,,,,37160,34598,-218.0,260.9,-297.7,297.7,-230.0,261.6

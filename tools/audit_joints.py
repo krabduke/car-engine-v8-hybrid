@@ -142,6 +142,16 @@ CIRCUITS = [
     # ---- the wiring: every device on the engine plugged into the loom, and
     # the loom into the ECU
     ("the harness reaches the ECU", ["ecu", "ecu_connector", "harness"]),
+    ("the crank, phase, pressure and temperature sensors are wired",
+     ["harness", "sensors"]),
+    ("each throttle is turned by its wired motor",
+     ["harness", "throttle_motor_l", "throttle_l"]),
+    ("", ["harness", "throttle_motor_r", "throttle_r"]),
+    ("each wastegate listens to its own compressor",
+     ["compressor_housing_1", "boost_reference_lines", "wastegate_1"]),
+    ("", ["compressor_housing_2", "boost_reference_lines", "wastegate_2"]),
+    ("and the blow-off valve to the plenum",
+     ["plenum_l", "boost_reference_lines", "blowoff"]),
     ("every coil is wired", ["harness", "coil_1"]), ("", ["harness", "coil_2"]),
     ("", ["harness", "coil_3"]), ("", ["harness", "coil_4"]),
     ("", ["harness", "coil_5"]), ("", ["harness", "coil_6"]),

@@ -31,6 +31,17 @@ import _intersect
 # heads on the wrong banks, the harmonic damper buried in the timing cover,
 # and the trigger wheel inside the damper.
 EXPECTED = [
+    # the harness's mating plugs on the sensors' and throttle motors' plugs
+    ("harness", "sensors"), ("harness", "throttle_motor_"),
+    # the boost control's pressure lines: each hose pushed over its nipple
+    # (a wastegate canister's, the blow-off valve's) and over its tap, each
+    # tap screwed into its compressor's scroll or the plenum's shoulder
+    ("boost_reference_lines", "wastegate_"), ("blowoff", "boost_reference_lines"),
+    ("boost_reference_lines", "compressor_housing_"),
+    ("boost_reference_lines", "plenum_l"),
+    # each throttle's motor case is bolted to its body's side, on the
+    # spindle's end
+    ("throttle_", "throttle_motor_"),
     # each MGU-H's connector is on a boss let into its bearing housing, its
     # pins in the machine's stator
     ("hv_motor_h_connector_", "turbo_centre_"), ("hv_motor_h_connector_", "mguh"),
