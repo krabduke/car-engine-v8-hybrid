@@ -187,8 +187,8 @@
    "key": "06 Hybrid",
    "label": "Hybrid",
    "color": "#C06A30",
-   "parts": 10,
-   "faces": 64076
+   "parts": 11,
+   "faces": 127118
   },
   {
    "key": "07 Drive and Ancillaries",
@@ -3999,6 +3999,13 @@
    "x0": -218.0,
    "x1": 260.9,
    "f": 34598
+  },
+  "harness_clips": {
+   "g": "06 Hybrid",
+   "mat": "steel_nitrided",
+   "x0": -163.0,
+   "x1": 264.0,
+   "f": 63042
   }
  },
  "kinematics": {

@@ -142,6 +142,8 @@ CIRCUITS = [
     # ---- the wiring: every device on the engine plugged into the loom, and
     # the loom into the ECU
     ("the harness reaches the ECU", ["ecu", "ecu_connector", "harness"]),
+    ("and is clipped to the engine along its runs",
+     ["harness", "harness_clips", "camcover_l"]),
     ("the crank, phase, pressure and temperature sensors are wired",
      ["harness", "sensors"]),
     ("each throttle is turned by its wired motor",

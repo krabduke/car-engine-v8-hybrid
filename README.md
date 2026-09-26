@@ -5,7 +5,7 @@ from a single specification file. Built to power the
 [VX-1 Vortex](https://github.com/krabduke/aero-hypercar), a car whose brief is
 to beat Formula 1 cars on a Formula 1 circuit.
 
-**477 parts · 2.0 L · 1,254 hp combined · 16,000 rpm · 146 kg**
+**478 parts · 2.0 L · 1,254 hp combined · 16,000 rpm · 146 kg**
 
 ![hero](renders/01_hero.png)
 

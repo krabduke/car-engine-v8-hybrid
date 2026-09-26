@@ -31,6 +31,11 @@ import _intersect
 # heads on the wrong banks, the harmonic damper buried in the timing cover,
 # and the trigger wheel inside the damper.
 EXPECTED = [
+    # the harness's P-clips, each on a stand-off bolted to the head, the cam
+    # cover, the plenum, the bellhousing or the sump (under a sump bolt)
+    ("harness_clips", "camcover_"), ("harness_clips", "head_"),
+    ("harness_clips", "plenum_"), ("bellhousing", "harness_clips"),
+    ("harness_clips", "sump"),
     # the harness's mating plugs on the sensors' and throttle motors' plugs
     ("harness", "sensors"), ("harness", "throttle_motor_"),
     # the boost control's pressure lines: each hose pushed over its nipple
