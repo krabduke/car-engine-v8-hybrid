@@ -7,6 +7,8 @@ to beat Formula 1 cars on a Formula 1 circuit.
 
 **478 parts · 2.0 L · 1,254 hp combined · 16,000 rpm · 146 kg**
 
+![studio](renders/studio/v8_hero.jpg)
+
 ![hero](renders/01_hero.png)
 
 ## The engine
